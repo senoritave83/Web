@@ -1,0 +1,119 @@
+﻿*{
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#favoritos_popup {
+	width:500px;
+	height:370px;
+	background-color: #F2F2F2;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	padding:14px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-261px;
+    margin-top:-217px;
+	
+
+}
+
+#favoritos_popup label {
+	display:block;
+	float:left;
+	font-size:15px;
+	font-weight:bold;
+	margin-right:19px;
+}	
+
+#favoritos_popup ul {
+	padding:0px;
+	margin:0px;
+
+}
+
+
+#favoritos_popup ul li {
+	list-style:none;
+	padding:0px;
+	margin:11px 0px 11px 0px;
+
+}
+
+	
+
+#favoritos_popup img {
+	float:left;
+	margin-right:5px;
+	padding-top:2px;
+}
+
+#favoritos_popup h3 {
+	margin:0px 0px 0px 5px;
+	color:#666666;
+	font-size:21px;
+	font-weight:bold;
+	width:100px;
+	float:left;
+	margin-bottom:10px;
+	
+	
+}
+
+#lista_favoritos {
+	background-color:#F9F9F9;
+	border:1px #CCCCCC solid;
+	width:498px;
+	height:297px;
+	margin-top:11px;
+	overflow:scroll;
+}
+
+#favoritos_popup .form {
+	border:1px #CCCCCC solid;
+	margin:0px;
+	width:397px;
+}
+
+
+#favoritos_popup input {
+	border:none;
+	color:#808080;
+	padding:3px;
+	margin-top:10px;
+	font-size:14px;
+	width:85px;
+}
+
+
+#favoritos_popup input:hover {
+	color:#137FC0;
+	text-decoration:underline;
+}
+
+
+#bt_Gravar {
+	background-image:url('ico_gravar.png');
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+#bt_Gravar:hover {
+	background-image:url('ico_gravar_over.png');
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+
+
+
+#bt_Voltar {
+	background-image:url('bt_voltar.png');
+	background-repeat:no-repeat;
+	background-position:left;
+}
+
+#bt_Voltar:hover {
+	background-image:url('bt_voltar_over.png');
+	background-repeat:no-repeat;
+	background-position:left;
+}

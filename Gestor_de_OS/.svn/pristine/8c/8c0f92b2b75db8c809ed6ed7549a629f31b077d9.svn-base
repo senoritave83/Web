@@ -1,0 +1,448 @@
+﻿body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px; /*background: url(../images/bg_interna_container.jpg) no-repeat top left;*/;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	background-color:#FFFFFF;
+}
+
+td
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+}
+
+#dtgGrid tbody tr:nth-child(2n+1){
+	background-color:#ECF6FC;
+}
+
+.areabotoes input
+{
+    margin-left:5px;
+}
+
+.griditem
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 12px;
+	color: #000000;
+	padding-left: 10px;
+}
+
+.griditem a
+{
+	font-size: 11px;	
+	color:#000000;
+	text-decoration:none;
+	background-repeat:none;
+}
+
+.griditem a:hover
+{
+	text-decoration:underline;
+}
+
+.griditem_inativo
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#666666;
+    padding-left:5px;
+}
+
+.griditem_inativo a
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#666666;
+	text-decoration:none;
+}
+
+.griditem_inativo a:hover
+{
+	text-decoration:underline;
+}
+
+.griditemAgendamento
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#666666;
+	text-decoration:none;
+}
+
+.griditemAgendamento:hover
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#666666;
+	background-color:#999999;
+	text-decoration:none;
+}
+
+.PaginateControl {
+	height:20px*;
+}
+
+
+.griditemAgendamento_inativo a:hover
+{
+	text-decoration:underline;
+	background-color:#999999;
+}
+
+
+.formulario
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#000000;
+}
+
+.texto
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#FFFFFF;
+}
+.texto_orange
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#f29400;
+	text-decoration:none;
+}
+a.texto_orange {color: #f29400;}
+
+a.texto_orange:hover {color: #FFFFFF; text-decoration:none;}
+
+/*
+.sair
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	color:#f29400;
+	height: 16px;
+	margin: 7px 0px 0px 0px;
+	display:block;
+	text-indent: -999999px;
+	border: 0px red solid;
+	text-decoration:none;
+}
+a.sair {color: #f29400;}
+
+a.sair:hover {color: #f29400; 
+	text-decoration:none;
+}
+*/
+
+.menuhelp
+{
+	height: 16px;
+	margin: 7px 0px 0px 0px;
+	color:#f29400;
+	display:block;
+	text-indent: -999999px;
+	border: 0px red solid;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	text-decoration:none;
+}
+
+a.menuhelp {color: #f29400;}
+
+a.menuhelp:hover {color: #f29400; text-decoration:none;}
+
+a.menu {color: #000000;}
+
+a.menu:hover {color: #000000; text-decoration:UNDERLINE;}
+
+.menuitem
+{
+	color:#FFFFFF;
+	font-size: 11px;
+	text-transform: uppercase;
+	
+}
+
+a.menuitem 
+{
+	color: #ffffff; 
+	text-decoration:none; 
+	height:17px; 
+	display:block;
+}
+
+a.menuitem:hover {color: #f29400;}
+
+td.menuitem 
+{
+	text-align:center;
+	width:130px;
+	padding:6px 0 0 0;
+	display:table;	
+	letter-spacing:-1px;
+}
+
+td.menusepara
+{
+	width: 1px;
+	text-align:center;
+}
+.menusepara
+{
+	color:#FFFFFF;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.submenu
+{
+	position: absolute;
+	top:-40px;
+	background:#f29400;
+	border: 1px solid #c55001;
+
+}
+
+.menu2
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	text-decoration:none;
+}
+
+a.menu2 {color: #8c001b;}
+
+a.menu2:hover {color: #8c001b; text-decoration:underline;}
+
+.divmenu table
+{
+	margin-left:2px;
+	display:block;
+	width:120px;
+	_width:110px;
+}
+
+a.link {color: #FFFFFF;}
+
+a.linktable {color: #000000;}
+
+a.linktable:hover {color: #8c001b;}
+
+.lblTitulo
+{
+    color:White;
+    font-family:Tahoma;
+    font-size:12pt;
+    text-transform:uppercase; 
+    letter-spacing:-1px;
+    word-spacing:0px;   
+}
+
+.Header1
+{
+    background-color:#097BB9;
+    color:#FFFFFF;
+    height:18px;
+    text-transform:uppercase;
+}
+
+.Header1 td
+{
+    padding-left:5px;
+}
+
+.Header2 td
+{
+	padding-left: 2px;
+}
+
+.Header2 th
+{
+    font-weight:lighter;
+}
+
+.Header2
+{
+    color:#766A62;
+    height:24px;
+    background-color:#D6D1CB;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	text-decoration:none;
+    text-transform:uppercase;
+
+}
+
+.Header2 a {color:#766A62;}
+
+.Header2 a:hover {color:#766A62; text-decoration:none;}
+
+
+.Footer1
+{
+    color:#8c001b;
+    height:20px;
+    background-color:#999999;
+}
+
+.Footer1 td
+{
+    padding-left:5px;
+}
+
+.Footer1 a {color: #FFFFFF;}
+.Footer1 a:hover {color: #ffffff; text-decoration:underline;}
+
+
+.Table1
+{
+    padding:0px 0px 0px 0px;
+    width:100%;
+    border-width:0px;
+    border-collapse:collapse;
+    
+}
+
+.Table1 tddd
+{
+    padding:2px 2px 2px 2px;
+}
+
+.Linha1
+{
+    background-color:#8f0028;
+    height:1px;
+    padding:0px 0px 0px 0px;
+}
+
+.Rows1
+{
+    background-color:White;
+    color:black;
+}
+
+
+Rows1 a
+{
+    text-decoration:none;
+}
+.Rows2
+{
+    background-color:White;
+}
+
+.menuAjuda
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#000000;
+	text-decoration:none;
+	line-height:normal;
+	padding:0px 0px 0px 0px;
+	
+}
+
+.menuAjuda a
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#000000;
+	text-decoration:none;
+}
+
+.menuAjuda img
+{
+	padding:0px 0px 0px 0px;
+	border: none 0px;
+}
+
+.texto_red
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	text-decoration:none;
+}
+a.texto_red {color: #8c001b;}
+
+a.texto_red:hover {color: #8c001b; text-decoration:none;
+}
+
+.Configen table{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	color:#8c001b;
+	text-decoration:none;
+}
+
+.Configen a {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	color:#8c001b;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+
+.apagar_os a {
+	padding-left:15px;
+	color:#097BB9;
+	font-size:11px;
+	}
+	
+.apagar_os a a:hover{
+	color:#5AACD6;
+	text-decoration:underline;
+
+	}
+
+
+
+td.Configen a:hover {color: #8c001b; text-decoration:underline;}
+
+.ListError{
+	display: block;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+	border:solid 0x red;
+	background-color:#ffffff;
+	color: #9f0b35;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	text-transform:uppercase;
+
+}
+
+.PanelDia
+{
+	background-color:#eeeeee;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:8px;
+	color:#8c001b;
+}
+.PanelMes
+{
+	background-color:#eeeeee;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:8px;
+	color:#8c001b;
+}
+.PanelDiaSemana
+{
+	background-color:#eeeeee;
+	height:180px;
+	width:33%;
+	float:left;
+	color:#8c001b;
+	clear:right;
+}

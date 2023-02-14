@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/default.aspx#" title="Home" description="Home" caption="Home" img="~/imagens/XMPromotores.jpg">
+    <siteMapNode url="~/cadastros/default.aspx" title="Cadastros"  description="" caption="Cadastros do sistema"  Secao="Cadastros">
+      <siteMapNode url="~/cadastros/clientes.aspx" title="Bandeiras" description="Lista as bandeiras cadastradas no sistema" caption="Lista de Bandeiras" Secao="Cadastro de Bandeira">
+        <siteMapNode url="~/cadastros/cliente.aspx" title="Bandeira" description="Editar os dados da bandeira selecionada" parameters="IDCliente" caption="Edição da bandeira"  Secao="Cadastro de Bandeira"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/regioes.aspx" title="Regiões" description="Lista de regiões cadastradas no sistema" caption="Lista de regiões" Secao="Cadastro de Região">
+        <siteMapNode url="~/cadastros/regiao.aspx" title="Região" description="Editar a região selecionada" parameters="IDRegiao" caption="Edição de região" Secao="Cadastro de Região" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/tipolojas.aspx" title="Categoria do IMS" description="Lista de Categoria do IMS cadastradas" caption="Lista de Categoria do IMS" Secao="Cadastro de Categoria do IMS">
+        <siteMapNode url="~/cadastros/tipoloja.aspx" title="Categoria do IMS" description="Editar a Categoria do IMS" parameters="IDTipoLoja" caption="Edição de Categoria do IMS" Secao="Cadastro de Categoria do IMS" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/lojas.aspx" title="Lojas" description="Lista as lojas cadastradas no sistema" caption="Lista de Lojas" Secao="Cadastro de Loja">
+        <siteMapNode url="~/cadastros/loja.aspx" title="Loja" description="Editar os dados da loja selecionada" parameters="IdLoja" caption="Edição da Loja" Secao="Cadastro de Loja" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/categorias.aspx" title="Segmentos" description="Exibe a lista de segmentos cadastrados no sistema" caption="Lista de segmentos" Secao="Cadastro de Segmentos" >
+        <siteMapNode url="~/cadastros/categoria.aspx" title="Segmento" description="Edição de um segmento de produto" parameters="IDCategoria" caption="Edição de segmento" Secao="Cadastro de Segmentos"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/subcategorias.aspx" title="Categorias" description="Lista das categorias cadastradas no sistema" caption="Lista de categorias" Secao="Cadastro de Categoria">
+        <siteMapNode url="~/cadastros/subcategoria.aspx" title="Categoria" description="Editar uma categoria de produto" parameters="IDSubcategoria" caption="Edição de categoria" Secao="Cadastro de Categoria" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/fornecedores.aspx" title="Marcas" description="Exibe a lista de marcas cadastradas no sistema" caption="Lista de marcas" Secao="Cadastro de Marcas" >
+        <siteMapNode url="~/cadastros/fornecedor.aspx" title="Marca" description="Edição de uma merca de produto" parameters="IDFornecedor" caption="Edição de marcas" Secao="Cadastro de Marcas"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/produtos.aspx" title="Produtos" description="Lista os produtos cadastrados no sistema" caption="Lista de produtos" Secao="Cadastro de Produto">
+        <siteMapNode url="~/cadastros/produto.aspx" title="Produto" description="Editar um produto" parameters="IDProduto" caption="Edição de produto" Secao="Cadastro de Produto" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/coordenadores.aspx" title="Supervisores" description="Exibe a lista de supervisores cadastrados no sistema" caption="Lista de Supervisores" Secao="Cadastro de Supervisor">
+        <siteMapNode url="~/cadastros/coordenador.aspx" title="Supervisor" description="Editar o supervisor" parameters="IDcoordenador" caption="Edição de supervisor" Secao="Cadastro de Supervisor" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/lideres.aspx" title="Coordenadores" description="Exibe a lista de cordenadores cadastrados no sistema" caption="Lista de coordenadores" Secao="Cadastro de Coordenador">
+        <siteMapNode url="~/cadastros/lider.aspx" title="Coordenador" description="Editar o coordenador" parameters="IDPergunta" caption="Edição de coordenador"  Secao="Cadastro de Coordenador"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/promotores.aspx" title="Promotores" description="Lista de promotores cadastrados no sistema" caption="Lista de promotores" Secao="Cadastro de Promotores">
+        <siteMapNode url="~/cadastros/promotor.aspx" title="Promotor" description="Editar os dados cadastrais do promotor" parameters="IDPromotor" caption="Edição do promotor" Secao="Cadastro de Promotores">
+          <siteMapNode url="~/cadastros/Promotor_Roteiro.aspx" title="Roteiros" description="Lista de roteiros associados ao promotor" parameters="IDPromotor,IDRoteiro" caption="Lista de roteiros" Secao="Cadastro de Roteiro">
+            <siteMapNode url="~/cadastros/Roteiro.aspx" title="Roteiro" description="Edição de um roteiro associado a um promotor" parameters="IDPromotor,IDRoteiro" caption="Edição de roteiro" Secao="Cadastro de Roteiro" />
+            <siteMapNode url="~/cadastros/Roteiro_Periodo.aspx" title="Roteiros" description="Lista de roteiros por periodo" parameters="IDPromotor" caption="Roteiro por periodo" Secao="Cadastro de Roteiro" />
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/JustificativaRupturas.aspx" title="Justificativa de Ruptura" description="Lista de motivos de ruptura cadastradas" caption="Lista de motivos de ruptura" img="~/imagens/logo.jpg" Secao="Cadastro de Motivos de Ruptura">
+        <siteMapNode url="~/cadastros/JustificativaRuptura.aspx" title="Justificativa de Ruptura" description="Editar o motivo de ruptura" parameters="IDTipoLoja" caption="Edição de tipo de loja" img="~/imagens/logo.jpg" Secao="Cadastro de Motivos de Ruptura" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/roteiros/listaroteiros.aspx" title="Roteiros" description="Lista os promotores e seus roteiros" caption="Lista de Roteiros" Secao="Cadastro de Roteiros">
+        <siteMapNode url="~/cadastros/roteiros/Promotor_Roteiro.aspx?tp=2" title="Roteiros" description="Lista de roteiros associados ao promotor" parameters="IDPromotor,IDRoteiro" caption="Lista de roteiros" Secao="Cadastro de Roteiro">
+          <siteMapNode url="~/cadastros/roteiros/Roteiro.aspx?tp=2" title="Roteiro" description="Edição de um roteiro associado a um promotor" parameters="IDPromotor,IDRoteiro" caption="Edição de roteiro" Secao="Cadastro de Roteiro" />
+          <siteMapNode url="~/cadastros/roteiros/Roteiro_Periodo.aspx?tp=2" title="Roteiros" description="Lista de roteiros por periodo" parameters="IDPromotor" caption="Roteiro por periodo" Secao="Cadastro de Roteiro" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/perguntas.aspx" title="Perguntas" description="Exibe a lista de perguntas cadastradas no sistema" caption="Lista de perguntas" Secao="Cadastro de Pergunta">
+        <siteMapNode url="~/cadastros/pergunta.aspx" title="Pergunta" description="Editar a pergunta, suas respostas e a associação aos produtos" parameters="IDPergunta" caption="Edição de pergunta"  Secao="Cadastro de Pergunta"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/pesquisas.aspx" title="Pesquisas" description="Lista de pesquisas cadastradas no sistema"  caption="Lista de pesquisas" Secao="Cadastro de Pesquisa">
+        <siteMapNode url="~/cadastros/pesquisa.aspx" title="Pesquisa" description="Edição da regras da pesquisa" caption="Edição da Pesquisa" Secao="Cadastro de Pesquisa" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/tipojustificativas.aspx" title="Tipos de Justificativa" description="Lista os tipos de justificativa cadastrados no sistema" caption="Lista de tipos de justificativa" Secao="Cadastro de Justificativa">
+        <siteMapNode url="~/cadastros/tipojustificativa.aspx" title="Tipos de Justificativa" description="Editar os tipos de justificativa" parameters="IdTipoJustificativa" caption="Edição tipos de justificativa" Secao="Cadastro de Justificativa" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/mensagemdias.aspx" title="Mensagens" description="Lista de mensagens cadastradas no sistema" caption="Lista de mensagens" Secao="Cadastro de Mensagem">
+        <siteMapNode url="~/cadastros/mensagemdia.aspx" title="Mensagem" description="Editar a mensagem e suas datas de exibição" parameters="IDMensagemDia" caption="Edição de mensagem" Secao="Cadastro de Mensagem" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/sistema/default.aspx" title="Sistema"  description="" caption="Informações do sistema" Secao="Sistema">
+      <siteMapNode url="~/Sistema/config.aspx" title="Configurações do Sistema" description="Editar as configurações do sistema" caption="Configurações do Sistema" Secao="Configurações do Sistema" />
+      <siteMapNode url="~/sistema/permissoes.aspx" title="Permissões do Sistema" description="Permissões dos Usuários do Sistema" caption="Permissões do Sistema" Secao="Permissões do Sistema" >
+        <siteMapNode url="~/sistema/permissao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" Secao="Permissões do Sistema" />
+      </siteMapNode>
+      <siteMapNode url="~/sistema/usuarios.aspx" title="Usuários do Sistema" description="Visualização dos Usuários do Sistema" caption="Usuários do Sistema"  Secao="Usuários do Sistema">
+        <siteMapNode url="~/sistema/usuario.aspx" title="Usuários do Sistema" description="Visualização dos Usuários do Sistema" parameters="IDUsuario" caption="Usuários do Sistema"  Secao="Usuários do Sistema">
+          <siteMapNode url="~/sistema/UsuarioAltSenha.aspx" title="Usuários do Sistema / Alterar Senha" description="Alteração de Senha do usuário" parameters="IDUsuario" caption="Alteração de Senha do usuário" Secao="Usuários do Sistema" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Recados.aspx" title="Envio de Recados" description="Lista os envios de recados do sistema" caption="Lista de Envios de Recados" img="~/imagens/default.png" Secao="Envio de Recado"> </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/reports/default.aspx" title="Relatórios"  description="" caption="Relatórios do sistema"  Secao="Relatórios">
+      <siteMapNode url="~/reports/exportar.aspx" title="Exportar dados" description="Exportação dos dados das visitas e coletas realizadas" caption="Exportar Dados" Secao="Exportação de Dados"/>
+      <siteMapNode url="~/reports/reportlist.aspx" title="Relatórios" description="Lista os relatórios disponíveis no serviço de relatório" caption="Serviço de Relatórios" Secao="Serviço de Relatórios">
+	      <siteMapNode url="~/reports/relatorio.aspx" title="Exibir relatório" description="Exibe as opções de filtragem do relatório selecionado" caption="Exibir relatório" Secao="Serviço de Relatórios"/>
+      </siteMapNode>	
+      <siteMapNode url="~/reports/schedule.aspx" title="Relatórios Agendados"  description="Lista os relatórios agendados no serviço de relatório" caption="Relatórios Agendados" Secao="Serviço de Relatórios - Relatórios Agendados" />
+      <siteMapNode url="~/Visita/visitas.aspx" title="Visitas" description="Lista as visitas cadastradas no sistema" caption="Lista de Visitas" Secao="Visualização de Visita">
+        <siteMapNode url="~/Visita/visita.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" Secao="Visualização de Visita">
+          <siteMapNode url="~/Visita/visitaproduto.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" Secao="Visualização de Visita" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

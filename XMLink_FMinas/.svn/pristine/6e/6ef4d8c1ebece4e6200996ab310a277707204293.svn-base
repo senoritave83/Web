@@ -1,0 +1,152 @@
+﻿Imports Microsoft.VisualBasic
+Imports System.Data
+Imports System.Data.SqlClient
+
+Namespace Classes
+
+
+    Public Class clsRelatorio
+        Inherits BaseClass
+
+        Public Function GetRelatorioVendas(ByVal vTipo As Integer, ByVal vMes As Short, ByVal vAno As Short, ByVal vIDSupervisor As Integer, ByVal vIDLinhaNegocio As Integer) As IDataReader
+            Dim cmd As New SqlCommand()
+            If vTipo = 1 Then
+                cmd.CommandText = PREFIXO & "RLT_RELATORIO_PEDIDOS"
+            Else
+                cmd.CommandText = PREFIXO & "RLT_RELATORIO_CAIXAS"
+            End If
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@MES", SqlDbType.SmallInt).Value = vMes
+            cmd.Parameters.Add("@ANO", SqlDbType.SmallInt).Value = vAno
+            cmd.Parameters.Add("@IDSUPERVISOR", SqlDbType.Int).Value = vIDSupervisor
+            cmd.Parameters.Add("@IDCATEGORIA", SqlDbType.Int).Value = vIDLinhaNegocio
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+        End Function
+
+        Public Function GetRelatorioDevolucaoImproprias(ByVal vIDFilial As Integer, ByVal vIDVendedor As Integer, ByVal vdataInicio As String, ByVal vDataFim As String) As IDataReader
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_PEDIDOS_DEVOLUCAO_IMPROPRIAS"
+            
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@IDFILIAL", SqlDbType.Int).Value = vIDFilial
+            cmd.Parameters.Add("@IDVENDEDOR", SqlDbType.Int).Value = vIDVendedor
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vdataInicio
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFim
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+        End Function
+
+        Public Function GetRelatorioPedidosIndiretos(ByVal vIDFilial As Integer, ByVal vIDVendedor As Integer, ByVal vdataInicio As String, ByVal vDataFim As String) As IDataReader
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_PEDIDOS_INDIRETOS"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@IDFILIAL", SqlDbType.Int).Value = vIDFilial
+            cmd.Parameters.Add("@IDVENDEDOR", SqlDbType.Int).Value = vIDVendedor
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vdataInicio
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFim
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+        End Function
+
+
+        Public Function GetRelatorioDevolucao(ByVal vDataInicial As String, ByVal vDataFinal As String, ByVal vTipo As Integer) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_DEVOLUCAO"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFinal
+            cmd.Parameters.Add("@TIPO", SqlDbType.Int).Value = vTipo
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+
+
+        Public Function GetRelatorioStatus(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_STATUS"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINI", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFIM", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+        Public Function GetRelatorioClientes(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_CLIENTES"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+        Public Function GetRelatorioPeriodo(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_PERIODO"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+        Public Function GetRelatorioVendedor(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_VENDEDOR"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINI", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFIM", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+        Public Function GetRelatorioProdutos(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_PRODUTOS"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINI", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFIM", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+
+        Public Function GetRelatorioContabilidade(ByVal vDataInicial As String, ByVal vDataFinal As String) As IDataReader
+
+            Dim cmd As New SqlCommand()
+            cmd.CommandText = PREFIXO & "RPT_CONTABILIDADE"
+
+            cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = User.IDEmpresa
+            cmd.Parameters.Add("@DATAINICIAL", SqlDbType.DateTime).Value = vDataInicial
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = vDataFinal
+
+            Return MyBase.ExecuteCommand(cmd, enReturnType.DataReader)
+
+        End Function
+
+    End Class
+
+End Namespace

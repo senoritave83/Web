@@ -1,0 +1,15 @@
+Código;Categoria
+1;Country
+9;Chopard
+12;Etro
+7;Escada
+6;Ermenegildo Zegna
+11;Givenchy
+8;Jeau Paul Gaultier
+10;Police
+3;Snoopy
+15;Sting
+2;Country Titaniune
+16;Victor Hugo
+4;Wilvale
+5;Wilvale Kids

@@ -1,0 +1,40 @@
+<%@ Page Language="VB" MasterPageFile="~/XMPromotores.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" title="XM Promotores - Grupo é Ouro" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:Panel runat="server" ID="pnlBemVindo">
+	    <div id="divHome" align="center">
+	     <img src="../imagens/bem_vindo.png"/>
+	    </div>
+    </asp:Panel>
+    <asp:Panel runat="server" ID="pnlMostraGrafico">
+        <asp:UpdateProgress ID="updProgress" runat="Server" AssociatedUpdatePanelID="pnlGrafico" DisplayAfter='0' DynamicLayout='false'>
+            <ProgressTemplate>
+                 <span style="margin-left:10px;">Por favor aguarde...</span><br>
+                 <asp:Image ID="Image1" runat="Server" ImageUrl="~/imagens/loading11.gif" alt='Aguarde por favor...' />
+            </ProgressTemplate>
+        </asp:UpdateProgress> 
+        <asp:UpdatePanel runat='server' id='pnlGrafico'>
+             <ContentTemplate>
+                <!-- 
+                    VERIFICA O ARQUIVO SETTINGS.XML ELEMENTO REPORTVIEWER
+                -->
+                <asp:RadioButtonList runat="server" ID="rdlGrafico" AutoPostBack='True' RepeatDirection="Horizontal" Visible='<%$ Settings:visible, Default.ReportViewer, false %>'>
+                </asp:RadioButtonList>
+                <rsweb:ReportViewer AsyncRendering="true" ID="ReportViewer1" runat="server" ShowParameterPrompts='false'></rsweb:ReportViewer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </asp:Panel>
+<div id="example" style="color:White"></div>
+
+<script type="text/javascript">
+    txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+    txt += "<p>Browser Name: " + navigator.appName + "</p>";
+    txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+    txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+    txt += "<p>Platform: " + navigator.platform + "</p>";
+    txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+    //document.getElementById("example").innerHTML = txt; 
+</script>
+</asp:Content>
+

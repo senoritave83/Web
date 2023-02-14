@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Portal de Serviços">
+    <siteMapNode url="~/default.aspx" title="Equipe Online"  area="1">
+		
+	  <siteMapNode url="~/inicio/termos_condicoes.aspx" title="Termos e Condições"/>	
+      <siteMapNode url="~/inicio/esqueci.aspx" title="Esqueci minha senha"/>
+      <siteMapNode url="~/inicio/cadastro.aspx" title="Quero me cadastrar"/>
+      <siteMapNode url="~/inicio/registro.aspx" title="Quero me cadastrar"/>
+      <siteMapNode url="~/inicio/finaliza.aspx" title="Quero me cadastrar"/>
+      <siteMapNode url="~/inicio/esqueceumaster.aspx" title="Esqueci senha master"/>
+
+      <siteMapNode url="~/home/default.aspx" title="Ordens de Serviço"  description="Monitore as ordens de serviço enviadas a campo. Visualize os detalhes de cada OS e gerencie as atividades diárias de sua equipe de campo." img="tit_listaos.gif" ajuda="Lista_Ordens_Servico.htm" area="1" >        
+        <siteMapNode url="~/home/recados.aspx" title="Histórico de Recados Enviados"  description="Envie mensagens de Texto informativas para os seus funcionários - Sem possibilidade de respostas." img="tit_recados.gif" ajuda="Tela_Recado_Digital.htm"  area="1" />
+        <siteMapNode url="~/home/exportar.aspx" title="Exportar O.S."  description=" Exporte as informações das Ordens de Serviço para o desenvolvimento de relatórios gerenciais." img="tit_exportar.gif" ajuda="Exportacao_Dados.htm"  area="1" />
+        <siteMapNode url="~/home/resumo.aspx" title="Resumo das ordens de serviço"  description="Obtenha uma visão geral do status de todas as ordens de serviço que estão no sistema." img="tit_resumo.gif" ajuda="resumo.htm"  area="1"  />        
+        <siteMapNode url="~/home/novaordem.aspx" title="Nova Ordem de Serviço"  description="Crie e Envie Ordens de Serviço para os radios de sua Equipe de Campo." img="tit_novaordem.gif" ajuda="Nova_Ordem_Servico.htm"  area="1"  />
+        <siteMapNode url="~/home/pasta.aspx" title="Ordens de serviço armazenadas"  description="Visualize e envie uma ou mais Ordens de Serviço armazenadas por usuários." img="tit_pasta.gif" ajuda="Pastas.htm"  area="1" />
+      </siteMapNode>
+      <siteMapNode title="Avançado">
+        <siteMapNode url="~/home/calendario.aspx" title="Calendário"  description="No calendário você visualiza os agendamentos programados no sistema." img="tit_calendario.gif" ajuda="Calendario.htm" area="2" />
+        <siteMapNode url="~/home/agendamento.aspx" title="Nova O.S. Programada"  description="Cadastre e edite os dados dos agendamentos programados no sistema." img="tit_agendamento.gif" ajuda="Nova_OS_Programada.htm" area="2"  />
+        <siteMapNode url="~/home/agendamentos.aspx" title="Agendamentos"  description="Cadastre e edite os dados dos agendamentos programados no sistema." img="tit_agendamento.gif" ajuda="Agendamento.htm" area="2"  />
+        <siteMapNode url="~/integracao/default.aspx" title="Integração"  description="Integre os dados da sua empresa ao Equipe Online 2.0" img="tit_integracao.png" ajuda="Integracao.htm" area="2" />
+      </siteMapNode>
+      <siteMapNode title="Relatórios">
+        <siteMapNode url="~/relatorios/default.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relstatus.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relclientes.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relperformance.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relperiodo.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/reletapas.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relradios.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+        <siteMapNode url="~/relatorios/relatorios.aspx" title="Relatórios"  description="Visualize gráficos das Ordens de Serviço por Status, Rádios, Clientes e Período." img="tit_relatorios.gif" ajuda="Tela_Relatorios.htm" area="3" />
+      </siteMapNode>
+      <siteMapNode url="~/home/ordemservico.aspx" title="Visualize os detalhes da OS."  description="" img="tit_ordemservico.gif" ajuda="Detalhes_Ordem_Servico.htm" area="1" />    
+      <siteMapNode url="~/home/reenviar.aspx" title="Reenviar Ordem de Serviço"  description="Reenvie uma O.S. para o mesmo responsável ou outro qualquer." img="tit_reenviar.gif" ajuda="reenviar.htm" area="1" />
+      <siteMapNode url="~/home/agenda.aspx" title="Ordens de serviço agendadas"  description="Visualize e edite uma ou mais Ordens de Serviço agendadas por dia." img="tit_reenviar.gif" ajuda="agenda.htm" area="1" />
+    
+      <siteMapNode url="~/ajuda/default.aspx" title="Ajuda do Sistema"  description="Encontre a informação necessária para começar a utilizar todo o potencial do sistema." img="tit_ajuda.gif" />
+
+      <siteMapNode title="Configurações">      
+        <siteMapNode url="~/configuracoes/default.aspx" title="Configurações Básicas"  description="Configurações do Sistema" img="tit_configuracoes.gif" ajuda="1_tela_configuracoes.htm" area="4">
+          <siteMapNode url="~/configuracoes/usuarios.aspx" title="Operadores / Administradores" description="Cadastre e edite os dados dos operadores e administradores do sistema." img="tit_usuarios.gif" ajuda="2_operadores_administradores_lista.htm" area="4">
+            <siteMapNode url="~/configuracoes/usuariodet.aspx" title="Operadores / Administradores" description="Cadastre e edite os dados dos operadores e administradores do sistema." img="tit_usuarios.gif" ajuda="2_operadores_administradores_cadastro.htm" area="4" />
+          </siteMapNode>
+          <siteMapNode url="~/configuracoes/grupos.aspx" title="Grupos" description="Cadastre e edite os dados dos membros das Equipes de Campo" img="tit_grupos.gif" ajuda="4_grupos_lista.htm" area="4">
+            <siteMapNode url="~/configuracoes/grupo_det.aspx" title="Grupos" description="Cadastre e edite os dados dos membros das Equipes de Campo" img="tit_grupos.gif" ajuda="4_grupos_cadastro.htm" area="4" />
+          </siteMapNode>
+          <siteMapNode url="~/configuracoes/responsaveis.aspx" title="Rádios"  description="Cadastre e edite os dados dos rádios das Equipes de Campo." img="tit_responsaveis.gif" ajuda="3_radios_lista.htm" area="4">
+            <siteMapNode url="~/configuracoes/responsavel_det.aspx" title="Rádio"  description="Cadastre e edite os dados dos rádios das Equipes de Campo." img="tit_responsaveis.gif" ajuda="3_radios_cadastro.htm" area="4" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/configuracoes/default2.aspx" title="Configurações Especiais"  description="Configurações do Sistema" img="tit_configuracoes.gif" ajuda="1_tela_configuracoes.htm" area="4">
+          <siteMapNode url="~/configuracoes/configgerais.aspx" title="Configurações Gerais"  description="Configuraçoes gerais do sistema." img="tit_configgerais.gif" ajuda="configgerais.htm" area="4" />
+          <siteMapNode url="~/configuracoes/respostas.aspx" title="Respostas" description="Cadastre e edite as respostas programadas que serão utilizadas pelas Equipes de Campo." img="tit_respostas.gif" ajuda="Cadastro_Respostas.htm" area="4">
+            <siteMapNode url="~/configuracoes/respostadet.aspx" title="Opções de Resposta" description="Adicione campos de requisição de informações de quem responde" img="tit_respostas.gif" ajuda="opcoes_respostas.htm" area="4"/>
+          </siteMapNode>
+          <siteMapNode url="~/configuracoes/clientes.aspx" title="Clientes" description="Cadastro e edite os dados de seus clientes." img="tit_clientes.gif" ajuda="Lista_Clientes.htm" area="4">
+            <siteMapNode url="~/configuracoes/clientesdet.aspx" title="Cliente" description="Cadastro e edite os dados de seus clientes." img="tit_clientes.gif" ajuda="Cadastro_Clientes.htm" area="4" />
+          </siteMapNode>
+          <siteMapNode url="~/configuracoes/contingencia.aspx" title="Contingência"  description="Coloca o sistema em modo de emergência permitindo apenas o envio de Recados Digitais." img="tit_contingencia.gif" ajuda="contingencia.htm" area="4" />
+          <siteMapNode url="~/configuracoes/mensagens.aspx" title="Mensagens Padrão"  description="Cadastre e edite mensagens padronizadas para as Ordens de Serviço." img="tit_mensagens.gif" ajuda="Mensagens_Padrao.htm" area="4">
+            <siteMapNode url="~/configuracoes/mensagemdet.aspx" title="Mensagens Padrão"  description="Cadastre e edite mensagens padronizadas para as Ordens de Serviço." img="tit_mensagens.gif" ajuda="Mensagens_Padrao.htm" area="4" />
+          </siteMapNode>
+          <siteMapNode url="~/configuracoes/etapas.aspx" title="Etapas" description="Cadastro e edite as etapas cadastradas no sistema." img="tit_etapas.gif" ajuda="Etapas.htm" area="4" />
+          <siteMapNode url="~/configuracoes/numeracao.aspx" title="Numeração de O.S."  description="Configure o formato e numeração das Ordens de Serviço." img="tit_numeracao.gif" ajuda="Numeracao_Ordem_Servico.htm" area="4" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/integracao/importar.aspx" title="Importação de arquivos"  description="Integre os dados da sua empresa ao Equipe Online 2.0" img="tit_imparq.png" ajuda="importar.htm" area="2" />
+    </siteMapNode >
+  </siteMapNode>
+</siteMap>

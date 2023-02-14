@@ -1,0 +1,203 @@
+﻿<%@ Page Language="VB" MasterPageFile="~/Principal.master" AutoEventWireup="false" CodeFile="produtos.aspx.vb" Inherits="pedidos_produtos" title="Untitled Page" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+    <script language="javascript" type="text/javascript">
+
+        function SomenteNumero() {
+            if (event.keyCode < 48 || event.keyCode > 57) {
+                return false;
+            }
+        } 
+
+        function MascaraMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e) {
+            var sep = 0;
+            var key = '';
+            var i = j = 0;
+            var len = len2 = 0;
+            var strCheck = '0123456789';
+            var aux = aux2 = '';
+            var whichCode = (window.Event) ? e.which : e.keyCode;
+            if (whichCode == 13) return true;
+            key = String.fromCharCode(whichCode); // Valor para o código da Chave
+            if (strCheck.indexOf(key) == -1) return false; // Chave inválida
+            len = objTextBox.value.length;
+            for (i = 0; i < len; i++)
+                if ((objTextBox.value.charAt(i) != '0') && (objTextBox.value.charAt(i) != SeparadorDecimal)) break;
+            aux = '';
+            for (; i < len; i++)
+                if (strCheck.indexOf(objTextBox.value.charAt(i)) != -1) aux += objTextBox.value.charAt(i);
+            aux += key;
+            len = aux.length;
+            if (len == 0) objTextBox.value = '';
+            if (len == 1) objTextBox.value = '0' + SeparadorDecimal + '0' + aux;
+            if (len == 2) objTextBox.value = '0' + SeparadorDecimal + aux;
+            if (len > 2) {
+                aux2 = '';
+                for (j = 0, i = len - 3; i >= 0; i--) {
+                    if (j == 3) {
+                        aux2 += SeparadorMilesimo;
+                        j = 0;
+                    }
+                    aux2 += aux.charAt(i);
+                    j++;
+                }
+                objTextBox.value = '';
+                len2 = aux2.length;
+                for (i = len2 - 1; i >= 0; i--)
+                    objTextBox.value += aux2.charAt(i);
+                objTextBox.value += SeparadorDecimal + aux.substr(len - 2, len);
+            }
+            return false;
+        }
+
+    </script>
+
+   <asp:ScriptManager runat='server' />
+   <div class='EditArea'>
+		<table id='tblEditArea'>
+			<tr class="trEditHeader">
+			    <td colspan='4'>&nbsp;</td>
+			</tr>
+			<tr class='trEditSpace'>
+			    <td colspan='4'>&nbsp;</td>
+			</tr>
+			<tr class='trField'>
+				<td class='tdFieldHeader'>
+				    Cliente: 
+				</td>
+				<td class='tdField' colspan='3'>
+					<asp:Label runat='server' ID='lblCliente' />
+				</td>
+			</tr>
+			<tr class='trField'>
+				<td class='tdFieldHeader'>
+				    Codigo:
+				</td>
+				<td class='tdField' colspan='3'>
+					<asp:Label runat='server' ID='lblCodigoCliente' />
+				</td>
+            </tr>
+            <tr class='trField'>
+			    <td class='tdFieldHeader'>
+			        CNPJ:
+				</td>
+			    <td class='tdField' colspan='3'>
+				    <asp:Label runat='server' ID='lblCNPJ' />&nbsp;
+			    </td>
+		    </tr>
+			<tr class="trEditFooter">
+			    <td colspan='4'>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div class='ListArea' style="width:100%">
+        <asp:UpdatePanel runat='server' ID='updProdutos'>
+            <ContentTemplate>
+                <b>Itens do Pedido</b>
+                <asp:GridView runat='server' ID='grdProdutos' AutoGenerateColumns="false" DataKeyNames="IDItemPedido">
+                    <HeaderStyle HorizontalAlign='Left' />
+                    <Columns>
+                        <asp:TemplateField HeaderText='C&oacute;digo'>
+                            <ItemTemplate>
+                                <asp:LinkButton runat='server' CommandName='Editar' CommandArgument='<%# Eval("Codigo") %>' Text='<%# Eval("Codigo")%>' CausesValidation="False" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField='Descricao' HeaderText='Produto' />
+                        <asp:BoundField DataField='Quantidade' HeaderText='Quantidade' />
+                        <asp:BoundField DataField='ValorUnitario' HeaderText='Pre&ccedil;o Base' DataFormatString='{0:c}' Visible='false'/>
+                        <asp:TemplateField HeaderText='Preço Unitário' Visible='true'>
+                            <ItemTemplate>
+                                <%# FormatCurrency(Eval("ValorUnitario") , 2)  %>
+                            </ItemTemplate> 
+                        </asp:TemplateField>
+                         <asp:TemplateField HeaderText='Sub Total' Visible='true'>
+                            <ItemTemplate>
+                                <%# FormatCurrency(Eval("ValorUnitario") * Eval("Quantidade"), 2)%>
+                            </ItemTemplate> 
+                        </asp:TemplateField>
+                        <asp:ButtonField ButtonType='Image' ImageUrl="~/imagens/Excluir.gif" CommandName="Excluir" /> 
+                    </Columns>
+                    <EmptyDataTemplate>
+                        O pedido não possui itens.
+                    </EmptyDataTemplate>
+                </asp:GridView>
+                <div id='divTotal' style="display:none;">
+                    Total: <b><asp:Literal runat='server' ID='ltrTotal'></asp:Literal></b>
+	            </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+    <br />
+    <br />
+    <asp:UpdatePanel runat='server' ID='updAdicionar'>
+        <ContentTemplate>
+            <asp:Panel runat="server" ID="pnlProdutos"  Width="70%">
+	            <div class='ListArea' runat="server" id="divAdicionarProduto">
+                    <table id='tblAdicionarProduto' runat="server" width="100%">
+			            <tr class="trEditHeader">
+			                <td colspan='5'>Adicione Produtos ao Pedido</td>
+			            </tr>
+			            <tr class='trEditSpace'>
+			                <td colspan='5'>&nbsp;</td>
+			            </tr>
+			            <tr class='trField'>
+				            <td class='tdFieldHeader' width="19%">
+				                <asp:Label runat='server' ID='Label3'>Categorias de Produtos:</asp:Label> 
+				            </td>
+				            <td class='tdField'>
+					            <asp:DropDownList runat='server' ID='drpCategoria' AutoPostBack="true" DataTextField="Categoria" DataValueField="IDCategoria" ValidationGroup="Itens" />
+				            </td>
+			            </tr>
+                    </table>
+                    <br class="cb" />
+                </div>
+                <br class="cb" />
+                <br class="cb" />
+                <div class='ListArea' runat="server" ID="divMovItens" visible="false">
+                    <asp:Label runat="server" Font-Bold="true" ID="lblCategoria" />
+	                <asp:GridView runat='server' ID='grdAddProdutos' AutoGenerateColumns='false'>
+	                    <HeaderStyle HorizontalAlign='Left' />
+			            <Columns>
+			                <asp:BoundField DataField='Codigo' HeaderText='C&oacute;digo' ItemStyle-Width="20%" />
+			                <asp:BoundField DataField='Produto' HeaderText='Produto' ItemStyle-Width="20%" />
+                            <asp:TemplateField HeaderText="Quantidade" ItemStyle-Width="30%">
+                                <ItemTemplate>
+                                    <asp:HiddenField runat="server" ID="hidIdProduto" Value='<%#Eval("IDProduto")%>' />
+                                    <asp:TextBox runat="server" autocomplete="off" ID="txtQuantidade" Text='<%#Eval("Quantidade")%>' Width="90px" OnKeyPress="return SomenteNumero(this)" />
+			                        <asp:CompareValidator runat="server" ID="CompareValidator4" Display="Dynamic" ErrorMessage="Quantidade inválida" ControlToValidate="txtQuantidade" Operator="DataTypeCheck" Type="Integer" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Preço Unitário" ItemStyle-Width="30%">
+                                <ItemTemplate>
+                                    <asp:TextBox runat="server" autocomplete="off" ID="txtPreco" Text='<%#FormatNumber(Eval("PrecoProduto"))%>' Width="90px" onKeyPress="return(MascaraMoeda(this,'.',',',event))" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+	                </asp:GridView>
+                    <asp:Button runat='server' ID='btnAdicionarProduto' Text="Adicionar" CssClass='Botao' style="float:none;margin-left:710;" />
+                </div>
+            </asp:Panel>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+    <br class='cb' />
+    <br />
+    <asp:UpdatePanel runat='server' ID='updBotoes'>
+        <ContentTemplate>
+            <div class='AreaBotoes'>
+                <asp:Button runat='server' ID='btnCancelarEdicao' Text='Cancelar' />
+                <asp:Button runat='server' ID='btnAvancar' Text='Avancar' />
+            </div>
+            <div id='divErros'>
+                <asp:BulletedList runat='server' ID='lstErros' SkinID='lstErros' />
+                <asp:ValidationSummary runat='server' ID='valSummary' ValidationGroup='Produtos' />
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+
+</asp:Content>
+
+
+

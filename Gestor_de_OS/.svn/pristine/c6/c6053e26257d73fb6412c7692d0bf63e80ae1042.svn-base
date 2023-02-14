@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<settings theme="Default" title="Gestor_de_Os">
+  <ConfiguracoesGerais>
+    <Menu>
+    <rptHistorico  visible="True"></rptHistorico>
+    <Numero caption="Numero" label="Numero"></Numero>
+    <Cliente caption="Cliente" label="Cliente"></Cliente>
+    <Enviada caption="Enviada" label="Enviada"></Enviada>
+    <Responsavel caption="Responsavel" label="Responsavel"></Responsavel>
+    <Status caption="Status" label="Status"></Status>
+    <Data caption="Data" label="Data"></Data>
+    <Prioridade caption="Prioridade" label="Prioridade"></Prioridade>
+    </Menu>
+  </ConfiguracoesGerais>
+</settings>

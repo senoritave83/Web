@@ -1,0 +1,65 @@
+﻿<%@ Master Language="VB" %>
+<%@ Register Src="../../controls/XMTitulo.ascx" TagName="XMTitulo" TagPrefix="uc1" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+<%@ Register src="../../controls/MenuOptions.ascx" tagname="MenuOptions" tagprefix="uc3" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<html>
+<head id="Head1" runat="server">
+    <title>XM Promotores - Johnson</title>
+    <script src="../../Js/functions.js"></script>
+    <script src="../../Js/jquery-1.6.2.min.js"></script>
+    <script src="../../Js/jquery-1.8.2.min.js"></script>
+    <script src="../../Js/jquery-ui-1.8.16.custom.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ajaxToolkit:ToolkitScriptManager runat="Server" ID="scriptManager">
+        </ajaxToolkit:ToolkitScriptManager>
+        <div id='MainArea'>
+            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <div class='Main'>
+                            <div class='MainHeader'>
+                            	<div id="logo_promotores"></div>
+                            </div>                            
+                            <div id="Main-Menu">
+                           		<span id="next"></span> 
+                           		<span style="float:left; border-left:1px solid #F2F2F2; border-right:1px solid #F2F2F2;" ><img src="~/imagens/next_ico.png" runat="server" /></span>
+								<uc3:MenuOptions ID="MenuOptions1" runat="server" IDMenuSuperior='mnuSuperior' IDMenuLateral='mnuLateral' SideMenuCascading='true' SideMenuVisible='true' SideMenuShowFirstNode='true' TopMenuVisible='true' TopMenuShowFirstNode='true'   />                            
+                                <asp:Menu ID="mnuSuperior" runat="server" SkinID='Superior' />
+                            </div>
+                            <div class='MainUserPanel' runat="server" id="divMainUserPainel">
+                                <asp:LoginView runat="server" SkinID="BarraLateral" ID='ljvLoginView'>
+                                    <LoggedInTemplate>
+                                        <div class='divUserPanel'>
+                                            <h5>logado como</h5> <asp:LoginName ID="LoginName1" runat="server"  />
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="sair" />
+                                        </div> 
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div> 
+                            <div class='MainLateral'>
+                                <asp:Menu ID="mnuLateral" runat="server" SkinID='Lateral' />
+                            </div>                           
+                            <div class='MainContent' >
+                            	<uc1:XMTitulo ID="XMTitulo1" runat="server"/>
+                                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                                </asp:contentplaceholder>
+                            </div>
+               			    <asp:Image runat='server' ImageUrl="~/imagens/minwidth.gif" width='650px' id='imgMinWidth' />
+                        </div>
+                    </td>
+                </tr> 
+                <tr height=20px>
+                    <td class="bg_footer">
+                        <div id='MainFooter'>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<%@ Master Language="VB"  %>
+
+<%@ Register Src="controls/XMTitulo.ascx" TagName="XMTitulo" TagPrefix="uc1" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+<%@ Register src="controls/MenuOptions.ascx" tagname="MenuOptions" tagprefix="uc3" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
+<html>
+<head id="Head1" runat="server">
+
+		
+    <title>XM Promotores - Yes Mobile</title>
+    <script src="../Js/functions.js"></script>
+    <script src="../Js/jquery-1.6.2.min.js"></script>
+    <script src="../Js/jquery-1.8.2.min.js"></script>
+    <script src="../Js/jquery-ui-1.8.16.custom.min.js"></script>
+<asp:ContentPlaceHolder id="head" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+	<body>
+		<form id="form1" runat="server">
+		    <ajaxToolkit:ToolkitScriptManager runat="Server" ID="scriptManager">
+		    </ajaxToolkit:ToolkitScriptManager>
+		
+			<div id="Main">
+				<div id="Header">
+					<span class="logoXM">&nbsp;</span>
+				</div>
+								
+				<div id="MainContentLogin">
+					<uc1:XMTitulo ID="XMTitulo1" runat="server"/>
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                        </asp:contentplaceholder>
+				</div>
+				
+				<div id="footer" style="position:absolute; bottom:0px;">
+					<p>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.<img src="../imagens/logo_xm_pq.png"/></p>
+				</div>
+			</div>
+		</form>	
+	</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<settings theme="Default" title="Gestor_de_Os">
+  <ConfiguracoesGerais>
+    <ListaDeOs visible="true"></ListaDeOs>
+    <EnviodeOS visible="true"></EnviodeOS>
+    <Pasta visible="true"></Pasta>
+    <exportar visible="true"></exportar>
+  </ConfiguracoesGerais>
+  
+  <ListaDeOs>
+    <rptHistorico  visible="True"></rptHistorico>
+    <Numero caption="Numero" label="Numero"></Numero>
+    <Cliente caption="Cliente" label="Cliente"></Cliente>
+    <Enviada caption="Enviada" label="Enviada"></Enviada>
+    <Responsavel caption="Responsavel" label="Responsavel"></Responsavel>
+    <Status caption="Status" label="Status"></Status>
+    <Data caption="Data" label="Data"></Data>
+    <Prioridade caption="Prioridade" label="Prioridade"></Prioridade>
+  </ListaDeOs>
+
+  <EnviodeOS>
+    <cliente caption="Cliente" label="Cliente"></cliente>
+    <Endereco caption="Endereco" label="Endereco"></Endereco>
+    <LocalRef caption="Local de Referência" label="Local de Referência"></LocalRef>
+    <Responsavel caption="Responsavel" label="Responsavel"></Responsavel>
+    <Prioridade caption="Prioridade" label="Prioridade"></Prioridade>
+    <Descricao caption="Descrição" label="Descrição"></Descricao>
+    <Mensagem caption="Mensagem Padrão" label="Mensagem Padrão"></Mensagem>
+  </EnviodeOS>
+
+  <Pasta>
+    <os caption="#OS" label="#OS"></os>
+    <cliente caption="Cliente" label="Cliente"></cliente>
+    <Criado caption="Criado em" label="Criado em" ></Criado>
+    <Responsaveis caption="Responsáveis" label="Responsáveis"></Responsaveis>
+  </Pasta>
+
+  <exportar>
+    <cliente caption="Cliente"></cliente>
+    <Responsavel caption="Responsavel"></Responsavel>
+    <Status caption="Status" label="Status"></Status>
+    <DE caption="De"></DE>
+    <Ate caption="Até"></Ate>
+  </exportar>
+</settings>

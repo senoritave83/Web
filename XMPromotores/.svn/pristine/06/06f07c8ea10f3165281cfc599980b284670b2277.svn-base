@@ -1,0 +1,91 @@
+
+Imports Classes
+Imports System.Data
+
+Namespace Pages.Cadastros
+
+    Partial Public Class Usuarios
+        Inherits XMWebPage
+        Dim cls As clsUsuario
+
+        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+            cls = New clsUsuario()
+            If Not Page.IsPostBack Then
+                btnNovo.Disabled = Not VerificaPermissao(SECAO, ACAO_ADICIONAR)
+
+                'Bind Combos
+                Dim car As New clsCargo
+                Dim dr As IDataReader = car.Listar()
+                Do While dr.Read
+                    If VerificaPermissao(Secao, "Visualizar usuários do cargo " & dr.GetString(dr.GetOrdinal("Cargo"))) Then
+                        cboIDCargo.Items.Add(New ListItem(dr.GetString(dr.GetOrdinal("Cargo")), dr.GetInt32(dr.GetOrdinal("IDCargo"))))
+                    End If
+                Loop
+                If cboIDCargo.Items.Count <> 1 Then
+                    cboIDCargo.Items.Insert(0, New ListItem("TODOS", 0))
+                End If
+                car = Nothing
+
+                Me.RecuperaFiltro(txtFiltro, Paginate1, Letras1, cboIDCargo, cboStatus)
+                FiltroSuperior1.IDCargoBase = cboIDCargo.SelectedValue
+                Me.RecuperaFiltro(FiltroSuperior1)
+
+                BindGrid()
+            End If
+        End Sub
+
+        Public Sub BindGrid()
+            Dim ret As IPaginaResult = cls.Listar(Paginate1.Filtro, cboIDCargo.SelectedValue, FiltroSuperior1.IDSuperior, clsUsuario.enOpcaoTeste.Todos, "", cboStatus.SelectedValue, 0, Paginate1.SortExpression, Paginate1.SortDirection, Paginate1.CurrentPage, PAGESIZE)
+            GridView1.DataSource = ret.Data
+            GridView1.DataBind()
+            Paginate1.DataSource = ret
+            Paginate1.DataBind()
+			ret = Nothing
+
+            Me.GravaFiltro(txtFiltro, Letras1, Paginate1, cboIDCargo, FiltroSuperior1, cboStatus)
+		End Sub
+		
+        Private Sub Paginate1_OnPageChanged() Handles Paginate1.OnPageChanged
+            BindGrid()
+        End Sub
+
+        Private Sub txtFiltro_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtFiltro.TextChanged
+            Paginate1.CurrentPage = 0
+            Letras1.Letra = ""
+            Paginate1.Filtro = txtFiltro.Text
+            BindGrid()
+        End Sub
+
+        Private Sub GridView1_Sorted(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView1.Sorted
+            BindGrid()
+        End Sub
+		
+
+        Protected Sub Letras1_Item_Selected(ByVal vLetra As String) Handles Letras1.Item_Selected
+            Paginate1.CurrentPage = 0
+            Paginate1.Filtro = vLetra
+            txtFiltro.Text = ""
+            BindGrid()
+        End Sub
+
+        Protected Sub btnFiltrar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
+            Paginate1.CurrentPage = 0
+            BindGrid()
+        End Sub		
+
+
+        Private Sub GridView1_Sorting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewSortEventArgs) Handles GridView1.Sorting
+            Paginate1.SortExpression = e.SortExpression
+        End Sub
+
+        Protected Sub FiltroSuperior1_SelectedIndexChanged(ByVal sender As Object, ByVal FiltroSuperiorEventArgs As System.EventArgs) Handles FiltroSuperior1.SelectedIndexChanged
+            BindGrid()
+        End Sub
+
+        Protected Sub cboIDCargo_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cboIDCargo.SelectedIndexChanged
+            FiltroSuperior1.IDCargoBase = cboIDCargo.SelectedValue
+        End Sub
+    End Class
+
+End Namespace
+

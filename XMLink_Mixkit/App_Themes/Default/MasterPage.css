@@ -1,0 +1,110 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family:Verdana,Arial,Helvetica;
+	font-size:8pt;
+}
+
+
+.MainArea 
+{
+	background-color:White;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:100%;
+}
+
+.MainHeader
+{
+	BACKGROUND-POSITION: left top; 
+	background: #330099 url(../../imagens/gradient.gif) repeat-x;
+	background-color:#330099;
+	height:71px;
+}
+
+.MainHeader img{
+	margin-right:15px;
+}
+
+.MainHeader tr td
+{
+	height:15px;	
+}
+
+
+.MainContent
+{
+	background-color:White;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	height:inherit;
+}
+
+.divUserPanel
+{
+	background-color:Black;
+	height:20px;
+	padding:5px 5px 5px 5px;
+	color:White;
+}
+
+.divuserPanel a
+{
+	color:White;
+	text-align:right;
+}
+
+#tdLateral
+{
+	background-color: #6699cc;
+}
+
+
+
+#MainFooter 
+{
+	height:20px;
+	background-color:Black;
+	color:White;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:3px;
+}
+
+
+
+/*---------------------------------------------------------------------- TITULO */
+
+.AreaTitulo
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+.AreaSubTitulo
+{
+	color:White;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}

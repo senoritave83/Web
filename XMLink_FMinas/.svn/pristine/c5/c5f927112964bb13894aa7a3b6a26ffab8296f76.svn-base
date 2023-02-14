@@ -1,0 +1,37 @@
+SE NÃO PUDER POSTAR ESSE TUTORIAL ALGUÉM APAGA!!!
+
+Se você não consegue atualizar o Windows XP, ou está com uma notificação de que o Windows é falso, siga o seguinte tutorial para validação.
+
+1. Vá em Iniciar > Executar
+
+2. Digite regedit e clique em OK.
+
+3. Já dentro do regedit, navegue até a chave:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\WPAEvents
+
+4. No painel à direita, clique duas vezes em OOBETimer
+
+5. Na janela que foi aberta, apague qualquer valor e clique em OK. Feche o regedit
+
+6. Vá novamente em Iniciar > Executar e dessa vez digite:
+%systemroot%\system32\oobe\msoobe.exe /a
+
+7. Na janela que foi aberta, escolha a opção Sim, desejo telefonar...
+
+8. Na próxima etapa, clique no botão Alterar chave de produto.
+
+9. Na etapa seguinte, digite a CD-Key: 
+THMPV-77D6F-94376-8HGKG-VRDRQ
+e clique no botão Atualizar
+
+10. Após clicar no botão Atualizar, o assistente para ativação voltará para a janela anterior, então, clique em Lembrar mais tarde e reinicie o Windows.
+
+11. Reiniciado o Windows vá novamente em Iniciar > Executar e digite: 
+%systemroot%\system32\oobe\msoobe.exe /a
+
+12. Aparecerá a seguinte mensagem:
+
+Ativação do Windows
+O Windows já está ativado. Clique em OK para sair.
+
+Pronto! Windows validado com sucesso! 

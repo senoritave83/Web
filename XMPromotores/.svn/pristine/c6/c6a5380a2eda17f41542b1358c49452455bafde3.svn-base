@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet"  href="favoritos.css"/>
+<title>Favoritos</title>
+</head>
+
+<body>
+	<div id="favoritos_popup" style="height:295px;">
+	  <ul>
+	  	<li style="margin-top:0px;">
+		<label>Relat&oacute;rio:</label>
+			<span>nome do relatório</span>
+		</li>
+		<li>	
+		<label>Nome:</label>
+			<input class="form" type="text" />
+		</li>
+		<li>	
+		<label style="margin-right:24px;">Pasta:</label>
+			<input class="form" type="text"/>
+		</li>
+		<li>
+		<label>Permissões:</label>
+			<span>admnistradores...</span>
+			
+		</li>
+		<li style="margin-bottom:0px;">
+		<label>Detalhes:</label>
+			<input class="form" type="text" style="width: 492px; height:85px; margin-top:7px;"/>
+		</li>
+	</ul>
+		<input id="bt_Voltar" type="button" value="Voltar" src="gravar.asp"  />
+		<input id="bt_Gravar" style="float:right;" type="button" value="Gravar" src="gravar.asp"/>
+	</div>
+	
+</body>
+
+</html>

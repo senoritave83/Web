@@ -1,0 +1,53 @@
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="ProcurarEmpresaContato.aspx.vb" ValidateRequest="False" Inherits="ITCOffLine.ProcurarEmpresaContato" %>
+<%@ Register TagPrefix="uc1" TagName="BarraNavegacao" Src="Inc/BarraNavegacao.ascx" %>
+<HTML>
+	<!-- #include file='inc/header.aspx' -->
+	<body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
+		<script language="javascript">
+			window.focus();
+		</script>
+		<table cellSpacing="0" cellPadding="0" width="100%">
+			<tr>
+				<td vAlign="top" align="middle" width="95%">
+					<form id="frmCad" runat="server">
+						<img src='imagens/TituloContatosObras.jpg' border="0" width="354" height="40">
+						<asp:table id="Table1" BackColor="#EFEFEF" runat="server" width="80%" BorderWidth="0">
+							<asp:TableRow BackColor="#003C6E">
+								<asp:TableCell HorizontalAlign="Center" ColumnSpan="4" CssClass="f8" ForeColor="#FFFFFF" Width="30%" Text="FILTRO"></asp:TableCell>
+							</asp:TableRow>
+							<asp:TableRow>
+								<asp:TableCell Width="30%" HorizontalAlign="Right" Wrap="False">
+									<asp:Label ID="Label5" Runat="server" CssClass="f8">Fantasia:</asp:Label>
+								</asp:TableCell>
+								<asp:TableCell Width="50%" HorizontalAlign="Left" Wrap="False" ColumnSpan="2">
+									<asp:TextBox Width="90%" ID="txtBusca" Runat="server" CssClass="f8"></asp:TextBox>
+								</asp:TableCell>
+								<asp:TableCell Width="50%" HorizontalAlign="Left" Wrap="False">
+									<asp:Button Runat="server" ID="btnProcurar" Text="Procurar" CssClass="f8"></asp:Button>
+								</asp:TableCell>
+							</asp:TableRow>
+						</asp:table>
+						<asp:table runat="server" width="90%" Height="250" id="Table2" BorderColor="black" BorderWidth="1">
+							<asp:TableRow>
+								<asp:TableCell Width="100%" HorizontalAlign="Center" Wrap="False" VerticalAlign="Top">
+									<asp:DataGrid PageSize=6 DataKeyField="Codigo" CssClass="f8" id="dtgEmpresas" runat="server" BorderColor="#999999" BorderStyle="None" BackColor="White" CellPadding="3" GridLines="Horizontal" AutoGenerateColumns="False" width="96%" OnItemCommand="SelItemProg">
+										<HeaderStyle BackColor="#003C6E" ForeColor="#FFFFFF"></HeaderStyle>
+										<Columns>
+											<asp:ButtonColumn Text="<img src='imagens/unselect.jpg' width=20 height=20 border='0'>"></asp:ButtonColumn>
+											<asp:BoundColumn DataField="Fantasia" HeaderText="FANTASIA"></asp:BoundColumn>
+											<asp:BoundColumn DataField="RazaoSocial" HeaderText="RAZÃO SOCIAL"></asp:BoundColumn>
+										</Columns>
+										<PagerStyle HorizontalAlign="Center" ForeColor="Black" BackColor="#999999" Mode="NumericPages"></PagerStyle>
+									</asp:DataGrid>
+								</asp:TableCell>
+							</asp:TableRow>
+						</asp:table><br>
+						<uc1:BarraNavegacao id="BarraNavegacao1" runat="server"></uc1:BarraNavegacao>
+						<br>
+						<asp:Literal Runat="server" ID="Literal1" Text="" EnableViewState="False"></asp:Literal>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</body>
+</HTML>

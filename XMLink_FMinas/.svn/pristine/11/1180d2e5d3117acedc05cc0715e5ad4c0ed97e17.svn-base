@@ -1,0 +1,79 @@
+****************************************
+Data:30/18/2009 16:07:37
+Error importing file: 1_0000000006.txt
+Message:Received an invalid column length from the bcp client for colid 11.
+Row: 15857
+Data:Exception: System.Data.SqlClient.SqlError: Received an invalid column length from the bcp client for colid 11.
+****************************************
+Data:30/18/2009 16:07:55
+Error importing file: 1_0000000006.txt
+Message:Received an invalid column length from the bcp client for colid 11.
+Row: 4000
+Data:I004034;COMERCIAL HIROTA LTDA;96.591.219/0002-62;1,16844E+11;R ABILIO SOARES,981;;;PARAISO;SAO PAULO;SP;4005003; Exception: System.Data.SqlClient.SqlError: Received an invalid column length from the bcp client for colid 11.
+****************************************
+Data:30/22/2009 16:07:21
+Error importing file: 1_0000000006.txt
+Message:Received an invalid column length from the bcp client for colid 11.
+Row: 4000
+Data:I004034;COMERCIAL HIROTA LTDA;96.591.219/0002-62;1,16844E+11;R ABILIO SOARES,981;;;PARAISO;SAO PAULO;SP;4005003; Exception: System.Data.SqlClient.SqlError: Received an invalid column length from the bcp client for colid 11.
+****************************************
+Data:30/22/2009 16:07:48
+Error importing file: 1_0000000006.txt
+Message:Received an invalid column length from the bcp client for colid 11.
+Row: 3900
+Data:I003933;COMERCIO DE ALIMENTOS PARQUE ELDORADO;02.854.361/0001-20;1670012392;R ANTONIO FIDELIS DOS SANTOS,100;;;CENTRO;ARROIO DOS RATOS;RS;96740000; Exception: System.Data.SqlClient.SqlError: Received an invalid column length from the bcp client for colid 11.
+****************************************
+Data:16/14/2010 14:06:07
+Error importing file: 1_0000000072.txt
+Message:Invalid column name 'DDD'.
+Row: 48
+Data:2029;2029;2029;Wagner Daminelli Vianna;;;SP;23.6
+Exception: System.Data.SqlClient.SqlError: Invalid column name 'DDD'.
+****************************************
+Data:30/40/2011 15:05:10
+Error importing file: 1_0000000086.txt
+Message:A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+Row: 0
+Data:100;1
+Exception: System.InvalidOperationException: A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+   em System.Data.SqlClient.SqlBulkCopy.AnalyzeTargetAndCreateUpdateBulkCommand(BulkCopySimpleResultSet internalResults)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServerInternal()
+   em System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServer(Int32 columnCount)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServer(IDataReader reader)
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 134
+****************************************
+Data:30/43/2011 15:05:17
+Error importing file: 1_0000000086.txt
+Message:A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+Row: 0
+Data:100;1
+Exception: System.InvalidOperationException: A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+   em System.Data.SqlClient.SqlBulkCopy.AnalyzeTargetAndCreateUpdateBulkCommand(BulkCopySimpleResultSet internalResults)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServerInternal()
+   em System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServer(Int32 columnCount)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServer(IDataReader reader)
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 134
+****************************************
+Data:30/43/2011 15:05:33
+Error importing file: 1_0000000086.txt
+Message:A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+Row: 0
+Data:100;1
+Exception: System.InvalidOperationException: A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+   em System.Data.SqlClient.SqlBulkCopy.AnalyzeTargetAndCreateUpdateBulkCommand(BulkCopySimpleResultSet internalResults)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServerInternal()
+   em System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServer(Int32 columnCount)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServer(IDataReader reader)
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 134
+****************************************
+Data:30/44/2011 15:05:08
+Error importing file: 1_0000000087.txt
+Message:A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+Row: 0
+Data:100;1
+Exception: System.InvalidOperationException: A propriedade ColumnMapping fornecida não corresponde a nenhuma coluna na origem ou no destino.
+   em System.Data.SqlClient.SqlBulkCopy.AnalyzeTargetAndCreateUpdateBulkCommand(BulkCopySimpleResultSet internalResults)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServerInternal()
+   em System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServer(Int32 columnCount)
+   em System.Data.SqlClient.SqlBulkCopy.WriteToServer(IDataReader reader)
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 134

@@ -1,0 +1,124 @@
+﻿
+.ui-selectmenu SPAN.ui-selectmenu-status {
+	BACKGROUND: url(../images/shapeButtonMiddle_form.png) repeat-x right top
+}
+.ui-selectmenu {
+	POSITION: relative; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 3px;   OUTLINE-WIDTH: medium; DISPLAY: block; BACKGROUND: url(../images/shapeButtonLeft_form.png) no-repeat left top; HEIGHT: 23px; COLOR: #766a62 !important; OVERFLOW: hidden; TEXT-DECORATION: none;
+}
+.ui-state-active SPAN.ui-selectmenu-status {
+	BACKGROUND-POSITION: right -23px; COLOR: #000
+}
+.ui-state-active:hover SPAN.ui-selectmenu-status {
+	BACKGROUND-POSITION: right -23px; COLOR: #000
+}
+.ui-selectmenu-icon {
+	POSITION: absolute; TOP: 0px; RIGHT: 9px
+}
+.ui-selectmenu-menu {
+	POSITION: absolute; BACKGROUND-COLOR: #fff; LIST-STYLE-TYPE: none; MARGIN: 0px; VISIBILITY: hidden; OVERFLOW: auto; TOP: 0px; LIST-STYLE-IMAGE: none
+}
+.ui-selectmenu-open {
+	VISIBILITY: visible
+}
+.ui-selectmenu-menu-popup {
+	MARGIN-TOP: -1px
+}
+.ui-selectmenu-menu-dropdown {
+	Z-INDEX: 110; MARGIN-TOP: 0px; PADDING-LEFT: 3px; BACKGROUND: url(../images/select_blc.png) no-repeat left bottom
+}
+.ui-selectmenu-menu-dropdown .jScrollPaneContainer {
+	FLOAT: none !important
+}
+.ui-selectmenu-menu-dropdown .jScrollPaneTrack {
+	BACKGROUND: #e2e2e2
+}
+.ui-selectmenu-menu-dropdown .jScrollPaneDrag {
+	BACKGROUND: #555
+}
+.ui-selectmenu-menu-dropdown .widget-wrap-outer {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 3px; BACKGROUND: url(../images/select_brc.png) no-repeat right bottom; PADDING-TOP: 5px
+}
+.ui-selectmenu-status {
+	FONT-SIZE: 11px
+}
+
+.ui-selectmenu-menu-dropdown LI A {
+	COLOR: #3e3e3e
+}
+.ui-selectmenu-menu-dropdown LI A:hover {
+	BACKGROUND-COLOR: #ebebeb; COLOR: #3e3e3e
+}
+.ui-selectmenu-menu LI {
+	BORDER-BOTTOM: #e1e1e1 1px solid; PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px !important; MARGIN: 0px 3px 0px 4px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; BORDER-LEFT-WIDTH: 0px !important; FONT-WEIGHT: normal !important; PADDING-TOP: 0px
+}
+.ui-selectmenu-menu-dropdown LI.ui-corner-bottom {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.ui-selectmenu-menu LI A {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; LINE-HEIGHT: 1.4em; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 5px; OUTLINE-WIDTH: medium; PADDING-RIGHT: 40px;  DISPLAY: block; FONT-WEIGHT: normal !important; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ui-selectmenu-status {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; LINE-HEIGHT: 1.4em; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 5px; OUTLINE-WIDTH: medium; PADDING-RIGHT: 40px; DISPLAY: block; FONT-WEIGHT: normal !important; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ui-selectmenu-menu LI.ui-selectmenu-hasIcon A {
+	POSITION: relative; PADDING-LEFT: 20px; MARGIN-LEFT: 5px
+}
+.ui-selectmenu-hasIcon .ui-selectmenu-status {
+	POSITION: relative; PADDING-LEFT: 20px; MARGIN-LEFT: 5px
+}
+.ui-selectmenu-menu LI .ui-icon {
+	POSITION: absolute; MARGIN-TOP: -8px; TOP: 1em; LEFT: 0px
+}
+.ui-selectmenu-status .ui-icon {
+	POSITION: absolute; MARGIN-TOP: -8px; TOP: 1em; LEFT: 0px
+}
+.ui-selectmenu-status {
+	LINE-HEIGHT: 2
+}
+.ui-selectmenu-menu LI SPAN {
+	DISPLAY: block; MARGIN-BOTTOM: 0.2em
+}
+.ui-selectmenu-status SPAN {
+	DISPLAY: block; MARGIN-BOTTOM: 0.2em
+}
+.ui-selectmenu-status SPAN {
+	DISPLAY: inline-block
+}
+.ui-selectmenu-menu LI .ui-selectmenu-item-header {
+	FONT-WEIGHT: bold
+}
+.ui-selectmenu-menu LI .ui-selectmenu-item-footer {
+	opacity: .8
+}
+.ui-selectmenu-menu .ui-selectmenu-group {
+	FONT-SIZE: 1em
+}
+.ui-selectmenu-menu .ui-selectmenu-group .ui-selectmenu-group-label {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.4em; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-WEIGHT: bold; PADDING-TOP: 0.6em
+}
+.ui-selectmenu-menu .ui-selectmenu-group UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.ui-selectmenu-status .ui-selectmenu-item-text {
+	PADDING-LEFT: 4px; FONT-WEIGHT: normal
+}
+.inline .ui-selectmenu {
+	FLOAT: left
+}
+
+.jScrollPaneContainer {
+	Z-INDEX: 1; POSITION: relative; OVERFLOW: hidden
+}
+.jScrollPaneTrack {
+	POSITION: absolute; BACKGROUND: #aaa; HEIGHT: 100%; TOP: 0px; CURSOR: pointer; RIGHT: 0px
+}
+.jScrollPaneDrag {
+	POSITION: absolute; BACKGROUND: #666; OVERFLOW: hidden; CURSOR: pointer
+}
+.jScrollPaneDragTop {
+	POSITION: absolute; OVERFLOW: hidden; TOP: 0px; LEFT: 0px
+}
+.jScrollPaneDragBottom {
+	POSITION: absolute; BOTTOM: 0px; OVERFLOW: hidden; LEFT: 0px
+}
+    

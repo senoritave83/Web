@@ -1,0 +1,27 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Principal.master" AutoEventWireup="false" CodeFile="Default2.aspx.vb" Inherits="Relatorios_Default2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<br />
+    <br />
+<div class="container-default">
+    <asp:Repeater runat='server' ID='rptItens' DataSourceID='SiteMapDataSource1'>
+        <ItemTemplate>
+            <div style="width:40%; width:45%\9; float:left; padding-left:70px; padding-top:30px;" runat='server' visible='<%# VerificaPermissao(Container.DataItem.Item("Secao"), "Visualizar") %>' >
+                <table>
+                    <tr>
+						<td valign=top><A href="<%#Eval("url") %>"><img id="Img1" src='<%#Container.DataItem.item("imgCZ") %>' runat='server' border='0' /></A>
+						</td>
+						<td valign=top>
+							<A class="TextDefaultBold" href="<%#Eval("url") %>"><%#Eval("title") %></A><br>
+							<font class="TextDefault"><%# Eval("Description") %></font>
+						</td>
+					</tr> 
+                </table>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+    </div>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" StartFromCurrentNode='true' ShowStartingNode='false' />
+
+</asp:Content>
+

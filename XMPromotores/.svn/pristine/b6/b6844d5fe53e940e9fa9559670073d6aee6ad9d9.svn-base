@@ -1,0 +1,41 @@
+Imports System.IO
+
+Partial Class login
+    Inherits XMWebPage
+
+    Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+
+        Response.Write("<!-- .Net " & System.Environment.Version.ToString() & " -->")
+
+        Dim strArquivoMensagem As String = System.Configuration.ConfigurationManager.AppSettings("ArquivoMensagem") & ""
+
+        If strArquivoMensagem <> "" Then
+
+            Dim FILENAME As String = Server.MapPath(strArquivoMensagem)
+
+            If File.Exists(FILENAME) Then
+                'Get a StreamReader class that can be used to read the file
+                Dim objStreamReader As StreamReader
+                objStreamReader = File.OpenText(FILENAME)
+
+                Dim contents As String = objStreamReader.ReadToEnd()
+
+                If contents <> "" Then
+                    ltHtml.Text = contents
+                End If
+
+                objStreamReader.Close()
+                objStreamReader = Nothing
+
+            End If
+
+        End If
+
+        If Login1.LoginButtonImageUrl = "" Then
+            Dim p_Path As String = SettingsExpression.GetProperty("imagepath", "ConfiguracoesGerais.Imagens", "~/imagens")
+            If p_Path = "" Then p_Path = "~/imagens"
+            Login1.LoginButtonImageUrl = p_Path & "/bt_ok.png"
+        End If
+
+    End Sub
+End Class

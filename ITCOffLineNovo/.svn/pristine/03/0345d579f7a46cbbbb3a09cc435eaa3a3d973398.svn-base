@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{DA269777-63B3-4646-8DB5-C7B2F096B1D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ITCOffLine</RootNamespace>
+    <AssemblyName>ITCOffLine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ITCOffLine.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ITCOffLine.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="agradecimento.aspx" />
+    <Content Include="Associados.aspx" />
+    <Content Include="AssociadosDet.aspx" />
+    <Content Include="AssociadosTiposRegioes.aspx" />
+    <Content Include="CartaAgradecimento.aspx" />
+    <Content Include="CartaArquivos2\Cabecalho_email_ITCnet.png" />
+    <Content Include="CartaArquivos2\CartaAgradecimento.htm" />
+    <Content Include="CartaArquivos2\image001.png" />
+    <Content Include="CartaArquivos2\image002.jpg" />
+    <Content Include="CartaArquivos2\image003.jpg" />
+    <Content Include="CartaArquivos2\image004.jpg" />
+    <Content Include="CartaArquivos2\image005.gif" />
+    <Content Include="CartaArquivos2\image006.gif" />
+    <Content Include="CartaArquivos2\image007.jpg" />
+    <Content Include="CartaArquivos2\image007_md.jpg" />
+    <Content Include="CartaArquivos2\image008.gif" />
+    <Content Include="CartaArquivos2\image009.png" />
+    <Content Include="CartaArquivos2\image010.jpg" />
+    <Content Include="CartaArquivos2\Rodape_emails_Guia.jpg" />
+    <Content Include="CartaArquivos\Cabecalho_email_ITCnet.jpg" />
+    <Content Include="CartaArquivos\Cabecalho_email_ITCnet.png" />
+    <Content Include="CartaArquivos\CartaAgradecimento.htm" />
+    <Content Include="CartaArquivos\image001.png" />
+    <Content Include="CartaArquivos\image002.jpg" />
+    <Content Include="CartaArquivos\image003.jpg" />
+    <Content Include="CartaArquivos\image004.jpg" />
+    <Content Include="CartaArquivos\image005.gif" />
+    <Content Include="CartaArquivos\image006.gif" />
+    <Content Include="CartaArquivos\image007.jpg" />
+    <Content Include="CartaArquivos\image007_md.jpg" />
+    <Content Include="CartaArquivos\image008.gif" />
+    <Content Include="CartaArquivos\image009.png" />
+    <Content Include="CartaArquivos\image010.jpg" />
+    <Content Include="CartaArquivos\Rodape_emails_Guia.jpg" />
+    <Content Include="ContatoAssociados.aspx" />
+    <Content Include="ContatosEmpresas.aspx" />
+    <Content Include="ContatosObras.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EmailPedido.aspx" />
+    <Content Include="EmailProposta.aspx" />
+    <Content Include="EmDesenvolvimento.aspx" />
+    <Content Include="emmanutencao.aspx" />
+    <Content Include="EmpresaObras.aspx" />
+    <Content Include="Empresas.aspx" />
+    <Content Include="EmpresasDet.aspx" />
+    <Content Include="EmpresasObras.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="FichaRosa.aspx" />
+    <Content Include="FormularioPedido.aspx" />
+    <Content Include="FormularioProposta.aspx" />
+    <Content Include="functions.js" />
+    <Content Include="Global.asax" />
+    <Content Include="gravado.aspx" />
+    <Content Include="Grupo.aspx" />
+    <Content Include="GrupoDet.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Imagens\arrow-left.gif" />
+    <Content Include="Imagens\arrow-right.gif" />
+    <Content Include="Imagens\arrow-right2.gif" />
+    <Content Include="Imagens\banner1.gif" />
+    <Content Include="Imagens\bannermbigucci.swf" />
+    <Content Include="Imagens\banner_cotacao_online.gif" />
+    <Content Include="Imagens\barra.gif" />
+    <Content Include="Imagens\BarraTituloITC.jpg" />
+    <Content Include="Imagens\bolalaranja.gif" />
+    <Content Include="Imagens\bolaverde.gif" />
+    <Content Include="Imagens\borda_demo1.gif" />
+    <Content Include="Imagens\borda_demo2.gif" />
+    <Content Include="Imagens\borda_demo3.gif" />
+    <Content Include="Imagens\borda_demo4.gif" />
+    <Content Include="Imagens\borda_login_1.gif" />
+    <Content Include="Imagens\borda_login_2.gif" />
+    <Content Include="Imagens\borda_login_3.gif" />
+    <Content Include="Imagens\borda_login_4.gif" />
+    <Content Include="Imagens\borda_login_direita.gif" />
+    <Content Include="Imagens\borda_login_direita2.gif" />
+    <Content Include="Imagens\borda_login_esquerda.gif" />
+    <Content Include="Imagens\borda_login_esquerda2.gif" />
+    <Content Include="Imagens\BotaoAdicionarEmpresa.gif" />
+    <Content Include="Imagens\BotaoApagar.gif" />
+    <Content Include="Imagens\BotaoApagarOrcamento.gif" />
+    <Content Include="Imagens\BotaoApagarProposta.gif" />
+    <Content Include="Imagens\BotaoAprovarProposta.gif" />
+    <Content Include="Imagens\BotaoAtualizarPermissoes.gif" />
+    <Content Include="Imagens\BotaoBarra.gif" />
+    <Content Include="Imagens\BotaoBarra.jpg" />
+    <Content Include="Imagens\BotaoBarra2.gif" />
+    <Content Include="Imagens\BotaoCancelarProposta.gif" />
+    <Content Include="Imagens\BotaoDadosAssinatura.gif" />
+    <Content Include="Imagens\BotaoDireita.gif" />
+    <Content Include="Imagens\botaoeditar.gif" />
+    <Content Include="Imagens\BotaoEditarProdutos.gif" />
+    <Content Include="Imagens\BotaoEnviar.jpg" />
+    <Content Include="Imagens\BotaoEnviarEmail.gif" />
+    <Content Include="Imagens\BotaoEsquerda.gif" />
+    <Content Include="Imagens\BotaoExcluirPesquisa.gif" />
+    <Content Include="Imagens\BotaoExportarPesquisa.gif" />
+    <Content Include="Imagens\BotaoFinalizarProposta.gif" />
+    <Content Include="Imagens\BotaoGerarPedido.gif" />
+    <Content Include="Imagens\BotaoGravar.gif" />
+    <Content Include="Imagens\BotaoGravarProposta.gif" />
+    <Content Include="Imagens\BotaoImprimirProposta.gif" />
+    <Content Include="Imagens\BotaoIncluir.gif" />
+    <Content Include="Imagens\BotaoIncluirOrcamento.gif" />
+    <Content Include="Imagens\BotaoIncluirProposta.gif" />
+    <Content Include="Imagens\BotaoNovaPesquisa.gif" />
+    <Content Include="Imagens\BotaoNovoContato.gif" />
+    <Content Include="Imagens\BotaoNovoUsuario.gif" />
+    <Content Include="Imagens\BotaoOK.gif" />
+    <Content Include="Imagens\BotaoPaginaAnterior.gif" />
+    <Content Include="Imagens\BotaoPermissoesUsuario.gif" />
+    <Content Include="Imagens\BotaoPesquisar.gif" />
+    <Content Include="Imagens\BotaoPrimeiraPagina.gif" />
+    <Content Include="Imagens\BotaoProximaPagina.gif" />
+    <Content Include="Imagens\BotaoRedefinirSenha.gif" />
+    <Content Include="Imagens\BotaoRenovarProposta.gif" />
+    <Content Include="Imagens\BotaoRenovarSenha.gif" />
+    <Content Include="Imagens\BotaoReprovarProposta.gif" />
+    <Content Include="Imagens\BotaoSalvarAssinatura.gif" />
+    <Content Include="Imagens\BotaoSalvarPermissoes.gif" />
+    <Content Include="Imagens\BotaoSalvarPesquisa.gif" />
+    <Content Include="Imagens\BotaoUltimaPagina.gif" />
+    <Content Include="Imagens\BotaoVisualizarPesquisa.gif" />
+    <Content Include="Imagens\BotaoVisualizarResumo.gif" />
+    <Content Include="Imagens\BotaoVoltar.gif" />
+    <Content Include="Imagens\BotaoVoltar2.gif" />
+    <Content Include="Imagens\BotaoVoltarProposta.gif" />
+    <Content Include="Imagens\BOTOES\btn_cancelar.png" />
+    <Content Include="Imagens\BOTOES\btn_confirmar.png" />
+    <Content Include="Imagens\BOTOES\btn_enviar_email.png" />
+    <Content Include="Imagens\BOTOES\btn_f_rosa.png" />
+    <Content Include="Imagens\BOTOES\btn_imprimir.png" />
+    <Content Include="Imagens\BOTOES\btn_imprimir_v.png" />
+    <Content Include="Imagens\BOTOES\FrmPropTopoTit.png" />
+    <Content Include="Imagens\BOTOES\LogoITCNET3D.png" />
+    <Content Include="Imagens\BOTOES\logoitcPed.png" />
+    <Content Include="Imagens\btn_cancelar.png" />
+    <Content Include="Imagens\btn_confirmar.png" />
+    <Content Include="Imagens\btn_enviar_email.png" />
+    <Content Include="Imagens\btn_f_rosa.png" />
+    <Content Include="Imagens\btn_imprimir.png" />
+    <Content Include="Imagens\btn_imprimir_v.png" />
+    <Content Include="Imagens\btn_proposta.png" />
+    <Content Include="Imagens\btn_renovacao.png" />
+    <Content Include="Imagens\canto.gif" />
+    <Content Include="Imagens\cantomenusd.gif" />
+    <Content Include="Imagens\cantomenuse.gif" />
+    <Content Include="Imagens\canto_bn2.gif" />
+    <Content Include="Imagens\CasasBahia.jpg" />
+    <Content Include="Imagens\Check1.png" />
+    <Content Include="Imagens\Checked.gif" />
+    <Content Include="Imagens\CimentoCaue.jpg" />
+    <Content Include="Imagens\clock.gif" />
+    <Content Include="Imagens\clock2.gif" />
+    <Content Include="Imagens\clock3.gif" />
+    <Content Include="Imagens\CLOSE.JPG" />
+    <Content Include="Imagens\CSN.jpg" />
+    <Content Include="Imagens\CSN2.jpg" />
+    <Content Include="Imagens\CSN_Peq.jpg" />
+    <Content Include="Imagens\Cursos.jpg" />
+    <Content Include="Imagens\CursosEventos.jpg" />
+    <Content Include="Imagens\Cursos_Eventos.JPG" />
+    <Content Include="Imagens\Cursos_Eventos2.JPG" />
+    <Content Include="Imagens\Demonstracao.JPG" />
+    <Content Include="Imagens\Demonstracao2.gif" />
+    <Content Include="Imagens\Editar.png" />
+    <Content Include="Imagens\Eliane.jpg" />
+    <Content Include="Imagens\excluir.gif" />
+    <Content Include="Imagens\FormularioProposta\FormPropSelo.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitBeneficios.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitContato.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitInfoITC.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitInfoITC2.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitModulos.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTitNegocios.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTraco.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTracoLar.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTracoLaranja.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTracoMod.jpg" />
+    <Content Include="Imagens\FormularioProposta\FormPropTracoVar.jpg" />
+    <Content Include="Imagens\FormularioProposta\FrmPropLarAC.jpg" />
+    <Content Include="Imagens\FormularioProposta\FrmPropTitObjetivo.jpg" />
+    <Content Include="Imagens\FormularioProposta\FrmPropTopoTit.jpg" />
+    <Content Include="Imagens\FormularioProposta\Guia_Negocios.png" />
+    <Content Include="Imagens\FormularioProposta\logoitcPed.png" />
+    <Content Include="Imagens\FormularioProposta\logoitcPed_Old.png" />
+    <Content Include="Imagens\FotoBloco1.jpg" />
+    <Content Include="Imagens\FotoBloco1Peq.jpg" />
+    <Content Include="Imagens\fotocap.jpg" />
+    <Content Include="Imagens\fototorrerepar.jpg" />
+    <Content Include="Imagens\fototorrerepar_peq.jpg" />
+    <Content Include="Imagens\Grafico.jpg" />
+    <Content Include="Imagens\Guia_Negocios.png" />
+    <Content Include="Imagens\ImagemCadastros.jpg" />
+    <Content Include="Imagens\ImagemManutencaoDados.jpg" />
+    <Content Include="Imagens\ImagemPesquisas.jpg" />
+    <Content Include="Imagens\ImagemRelatorios.jpg" />
+    <Content Include="Imagens\ImagemSair.jpg" />
+    <Content Include="Imagens\INVISIVEL.gif" />
+    <Content Include="Imagens\ITC1.JPG" />
+    <Content Include="Imagens\itc_fundo.gif" />
+    <Content Include="Imagens\itc_fundo2.gif" />
+    <Content Include="Imagens\itc_fundo3.gif" />
+    <Content Include="Imagens\i_flash2.gif" />
+    <Content Include="Imagens\Lafarge.jpg" />
+    <Content Include="Imagens\linha_cinza.GIF" />
+    <Content Include="Imagens\linha_preta.GIF" />
+    <Content Include="Imagens\linha_vermelha.GIF" />
+    <Content Include="Imagens\link.html" />
+    <Content Include="Imagens\logoedit.jpg" />
+    <Content Include="Imagens\logoinst.jpg" />
+    <Content Include="Imagens\logoitc.gif" />
+    <Content Include="Imagens\LogoITC.jpg" />
+    <Content Include="Imagens\LogoITC1.JPG" />
+    <Content Include="Imagens\LogoITC2.JPG" />
+    <Content Include="Imagens\LogoITCNet.jpg" />
+    <Content Include="Imagens\LogoITCNet2.jpg" />
+    <Content Include="Imagens\LogoItcNet3.jpg" />
+    <Content Include="Imagens\LogoITCNET3D.png" />
+    <Content Include="Imagens\LogoITCNET3D_old.png" />
+    <Content Include="Imagens\logoitcPed.jpg" />
+    <Content Include="Imagens\logoitcPed.png" />
+    <Content Include="Imagens\LogoITCRelatorio.jpg" />
+    <Content Include="Imagens\logo_aabic.gif" />
+    <Content Include="Imagens\logo_janiking.gif" />
+    <Content Include="Imagens\logo_matias.gif" />
+    <Content Include="Imagens\Logo_MBigucci.jpg" />
+    <Content Include="Imagens\Logo_MBigucci_Peq.jpg" />
+    <Content Include="Imagens\logo_mundial.gif" />
+    <Content Include="Imagens\logo_net.gif" />
+    <Content Include="Imagens\logo_otis.gif" />
+    <Content Include="Imagens\logo_planeta.gif" />
+    <Content Include="Imagens\logo_vtonline.gif" />
+    <Content Include="Imagens\pdc2003_banner.gif" />
+    <Content Include="Imagens\PiazzaDellaFortezza.jpg" />
+    <Content Include="Imagens\PiazzaDellaFortezzaPeq.jpg" />
+    <Content Include="Imagens\pixel_transparente.gif" />
+    <Content Include="Imagens\Policom01.gif" />
+    <Content Include="Imagens\Policom01_peq.jpg" />
+    <Content Include="Imagens\Policom02.gif" />
+    <Content Include="Imagens\ponta_tabela.gif" />
+    <Content Include="Imagens\Ponte.jpg" />
+    <Content Include="Imagens\pontverti.gif" />
+    <Content Include="Imagens\postIT3.JPG" />
+    <Content Include="Imagens\procurar.gif" />
+    <Content Include="Imagens\Procurar_Novo.gif" />
+    <Content Include="Imagens\SeloGypsumPRO.jpg" />
+    <Content Include="Imagens\sem_imagem.gif" />
+    <Content Include="Imagens\Sereia06.jpg" />
+    <Content Include="Imagens\setadireita.gif" />
+    <Content Include="Imagens\setadireita.jpg" />
+    <Content Include="Imagens\Setas.gif" />
+    <Content Include="Imagens\seta_azul.gif" />
+    <Content Include="Imagens\seta_azul_direita.gif" />
+    <Content Include="Imagens\ShoppBoaVista.gif" />
+    <Content Include="Imagens\SombraBotao.gif" />
+    <Content Include="Imagens\sombra_barra.gif" />
+    <Content Include="Imagens\TituloAEmpresa.jpg" />
+    <Content Include="Imagens\TituloAssociar.jpg" />
+    <Content Include="Imagens\TituloCadastreEmpresa.jpg" />
+    <Content Include="Imagens\TituloCadastreObra.jpg" />
+    <Content Include="Imagens\TituloCadastroAssociados.jpg" />
+    <Content Include="Imagens\TituloCadastroEmpresas.jpg" />
+    <Content Include="Imagens\TituloCadastroGrupos.jpg" />
+    <Content Include="Imagens\TituloCadastroIndices.jpg" />
+    <Content Include="Imagens\TituloCadastroObras.jpg" />
+    <Content Include="Imagens\TituloCadastroPedidos.jpg" />
+    <Content Include="Imagens\TituloCadastroProdutos.jpg" />
+    <Content Include="Imagens\TituloCadastroPropostas.jpg" />
+    <Content Include="Imagens\TituloCadastroUsuarios.jpg" />
+    <Content Include="Imagens\TituloCadastroVendedores.jpg" />
+    <Content Include="Imagens\TituloContatosEmpresas.jpg" />
+    <Content Include="Imagens\TituloContatosObras.jpg" />
+    <Content Include="Imagens\TituloControleAssociados.jpg" />
+    <Content Include="Imagens\TituloControleUsuarios.jpg" />
+    <Content Include="Imagens\TituloCUB.jpg" />
+    <Content Include="Imagens\TituloDemonstracao.gif" />
+    <Content Include="Imagens\TituloDemonstracao.jpg" />
+    <Content Include="Imagens\TituloDica.jpg" />
+    <Content Include="Imagens\TituloEmpresasParticipantes.jpg" />
+    <Content Include="Imagens\TituloEventos.jpg" />
+    <Content Include="Imagens\TituloFollowUpEmpresa.jpg" />
+    <Content Include="Imagens\TituloFollowUpObra.jpg" />
+    <Content Include="Imagens\TituloGuiaFornecedores.jpg" />
+    <Content Include="Imagens\TituloInclusaoOrcamento.jpg" />
+    <Content Include="Imagens\TituloLogUsuarios.jpg" />
+    <Content Include="Imagens\TituloMapaResumo.jpg" />
+    <Content Include="Imagens\TituloNoticias.jpg" />
+    <Content Include="Imagens\TituloPermissoesUsuario.jpg" />
+    <Content Include="Imagens\TituloPesquisaAssociados.jpg" />
+    <Content Include="Imagens\TituloPesquisaEmpresas.jpg" />
+    <Content Include="Imagens\TituloPesquisaObras.jpg" />
+    <Content Include="Imagens\TituloPesquisaTabelas.jpg" />
+    <Content Include="Imagens\TituloProdutosAssociado.jpg" />
+    <Content Include="Imagens\TituloRelatorioAssociados.jpg" />
+    <Content Include="Imagens\TituloRelatorioEmpresa.jpg" />
+    <Content Include="Imagens\TituloRelatorioObra.jpg" />
+    <Content Include="Imagens\TituloSalvandoPesquisa.jpg" />
+    <Content Include="Imagens\TituloTiposObras.jpg" />
+    <Content Include="Imagens\torrerepar.jpg" />
+    <Content Include="Imagens\UnSelect.JPG" />
+    <Content Include="Imagens\WorldTradeCenter.jpg" />
+    <Content Include="inc\arrow.down.gif" />
+    <Content Include="inc\arrow.right.gif" />
+    <Content Include="inc\BarraBotoes2.ascx" />
+    <Content Include="inc\BarraBotoes2.js" />
+    <Content Include="inc\BarraBotoesProposta.ascx" />
+    <Content Include="inc\BarraNavegacao.ascx" />
+    <Content Include="inc\BotaoApagar.gif" />
+    <Content Include="inc\BotaoGravar.gif" />
+    <Content Include="inc\BotaoIncluir.gif" />
+    <Content Include="inc\BotaoOK.gif" />
+    <Content Include="inc\BotaoVoltar.gif" />
+    <Content Include="inc\ComboBox.ascx" />
+    <Content Include="inc\comuns.js" />
+    <Content Include="inc\functions.js" />
+    <Content Include="inc\Header.aspx" />
+    <Content Include="inc\Login.ascx" />
+    <Content Include="inc\Menu.ascx" />
+    <Content Include="inc\Menu.asp" />
+    <Content Include="inc\menu.css" />
+    <Content Include="inc\Menu.js" />
+    <Content Include="inc\Rodape.ascx" />
+    <Content Include="inc\Rodape2.ascx" />
+    <Content Include="inc\Top.ascx" />
+    <Content Include="inc\Top2.ascx" />
+    <Content Include="inc\validate.js" />
+    <Content Include="ITCOffLine_Novo.vbproj" />
+    <Content Include="Job\EnvioEmail_Offline.vbs" />
+    <Content Include="Job\EnvioEmail_Pedido_Offline.vbs" />
+    <Content Include="Job\EnvioEmail_Proposta_Offline.vbs" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MudaSenha.aspx" />
+    <Content Include="Obras.aspx" />
+    <Content Include="ObrasDet.aspx" />
+    <Content Include="ObrasVersoes.aspx" />
+    <Content Include="Pedidos.aspx" />
+    <Content Include="PedidosDet.aspx" />
+    <Content Include="PermissaoRegiaoGestor.aspx" />
+    <Content Include="ProcurarEmpresa.aspx" />
+    <Content Include="ProcurarEmpresaContato.aspx" />
+    <Content Include="Produtos.aspx" />
+    <Content Include="ProdutosAssociados.aspx" />
+    <Content Include="ProdutosDet.aspx" />
+    <Content Include="Proposta.aspx" />
+    <Content Include="PropostaAdicOrc.aspx" />
+    <Content Include="Propostas.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles.css" />
+    <Content Include="UpgradeLog.XML" />
+    <Content Include="UpgradeLog2.XML" />
+    <Content Include="UpgradeLog3.XML" />
+    <Content Include="UsuarioPermissao.aspx" />
+    <Content Include="Usuarios.aspx" />
+    <Content Include="UsuariosDet.aspx" />
+    <Content Include="UsuariosSistema.aspx" />
+    <Content Include="UsuariosSistemaDet.aspx" />
+    <Content Include="VersoPedido.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agradecimento.aspx.vb">
+      <DependentUpon>agradecimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Associados.aspx.vb">
+      <DependentUpon>Associados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssociadosDet.aspx.vb">
+      <DependentUpon>AssociadosDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssociadosTiposRegioes.aspx.vb">
+      <DependentUpon>AssociadosTiposRegioes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartaAgradecimento.aspx.vb">
+      <DependentUpon>CartaAgradecimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContatoAssociados.aspx.vb">
+      <DependentUpon>ContatoAssociados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContatosEmpresas.aspx.vb">
+      <DependentUpon>ContatosEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContatosObras.aspx.vb">
+      <DependentUpon>ContatosObras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailPedido.aspx.vb">
+      <DependentUpon>EmailPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailProposta.aspx.vb">
+      <DependentUpon>EmailProposta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmDesenvolvimento.aspx.vb">
+      <DependentUpon>EmDesenvolvimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpresaObras.aspx.vb">
+      <DependentUpon>EmpresaObras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresas.aspx.vb">
+      <DependentUpon>Empresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpresasDet.aspx.vb">
+      <DependentUpon>EmpresasDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpresasObras.aspx.vb">
+      <DependentUpon>EmpresasObras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FichaRosa.aspx.vb">
+      <DependentUpon>FichaRosa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioPedido.aspx.vb">
+      <DependentUpon>FormularioPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioProposta.aspx.vb">
+      <DependentUpon>FormularioProposta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Funcoes.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="gravado.aspx.vb">
+      <DependentUpon>gravado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grupo.aspx.vb">
+      <DependentUpon>Grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GrupoDet.aspx.vb">
+      <DependentUpon>GrupoDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\BarraBotoes2.ascx.designer.vb">
+      <DependentUpon>BarraBotoes2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\BarraBotoes2.ascx.vb">
+      <DependentUpon>BarraBotoes2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\BarraBotoesProposta.ascx.vb">
+      <DependentUpon>BarraBotoesProposta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\BarraNavegacao.ascx.vb">
+      <DependentUpon>BarraNavegacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\ComboBox.ascx.vb">
+      <DependentUpon>ComboBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Header.aspx.vb">
+      <DependentUpon>Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Login.ascx.vb">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Menu.ascx.vb">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Rodape.ascx.vb">
+      <DependentUpon>Rodape.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Top.ascx.vb">
+      <DependentUpon>Top.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Top2.ascx.vb">
+      <DependentUpon>Top2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\Associados.vb" />
+    <Compile Include="lib\Atividades.vb" />
+    <Compile Include="lib\Cargos.vb" />
+    <Compile Include="lib\Cidades.vb" />
+    <Compile Include="lib\ContatoAssociados.vb" />
+    <Compile Include="lib\ContatoEmpresas.vb" />
+    <Compile Include="lib\ContatoObras.vb" />
+    <Compile Include="lib\Empresas.vb" />
+    <Compile Include="lib\EmpresasObras.vb" />
+    <Compile Include="lib\Estados.vb" />
+    <Compile Include="lib\Estagios.vb" />
+    <Compile Include="lib\Fases.vb" />
+    <Compile Include="lib\FormaPagamento.vb" />
+    <Compile Include="lib\Grupos.vb" />
+    <Compile Include="lib\Modalidades.vb" />
+    <Compile Include="lib\Obras.vb" />
+    <Compile Include="lib\PedidoPlanos.vb" />
+    <Compile Include="lib\Pedidos.vb" />
+    <Compile Include="lib\Pesquisadores.vb" />
+    <Compile Include="lib\Planos.vb" />
+    <Compile Include="lib\Posicao.vb" />
+    <Compile Include="lib\Produtos.vb" />
+    <Compile Include="lib\ProdutosAssociado.vb" />
+    <Compile Include="lib\PropostaOrcamentos.vb" />
+    <Compile Include="lib\Propostas.vb" />
+    <Compile Include="lib\Ramos_Atividades.vb" />
+    <Compile Include="lib\Status.vb" />
+    <Compile Include="lib\Tipos.vb" />
+    <Compile Include="lib\Usuarios.vb" />
+    <Compile Include="lib\Vendedores.vb" />
+    <Compile Include="lib\XMLConfig.vb" />
+    <Compile Include="lib\XMWebPage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MudaSenha.aspx.vb">
+      <DependentUpon>MudaSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Obras.aspx.vb">
+      <DependentUpon>Obras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObrasDet.aspx.vb">
+      <DependentUpon>ObrasDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObrasVersoes.aspx.vb">
+      <DependentUpon>ObrasVersoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos.aspx.vb">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidosDet.aspx.vb">
+      <DependentUpon>PedidosDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissaoRegiaoGestor.aspx.vb">
+      <DependentUpon>PermissaoRegiaoGestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcurarEmpresa.aspx.vb">
+      <DependentUpon>ProcurarEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcurarEmpresaContato.aspx.vb">
+      <DependentUpon>ProcurarEmpresaContato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produtos.aspx.vb">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProdutosAssociados.aspx.vb">
+      <DependentUpon>ProdutosAssociados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProdutosDet.aspx.vb">
+      <DependentUpon>ProdutosDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proposta.aspx.vb">
+      <DependentUpon>Proposta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PropostaAdicOrc.aspx.vb">
+      <DependentUpon>PropostaAdicOrc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Propostas.aspx.vb">
+      <DependentUpon>Propostas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioPermissao.aspx.vb">
+      <DependentUpon>UsuarioPermissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.vb">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuariosDet.aspx.vb">
+      <DependentUpon>UsuariosDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuariosSistema.aspx.vb">
+      <DependentUpon>UsuariosSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuariosSistemaDet.aspx.vb">
+      <DependentUpon>UsuariosSistemaDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VersoPedido.aspx.vb">
+      <DependentUpon>VersoPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="agradecimento.aspx.resx">
+      <DependentUpon>agradecimento.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Associados.aspx.resx">
+      <DependentUpon>Associados.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociadosDet.aspx.resx">
+      <DependentUpon>AssociadosDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociadosTiposRegioes.aspx.resx">
+      <DependentUpon>AssociadosTiposRegioes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartaAgradecimento.aspx.resx">
+      <DependentUpon>CartaAgradecimento.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatoAssociados.aspx.resx">
+      <DependentUpon>ContatoAssociados.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatosEmpresas.aspx.resx">
+      <DependentUpon>ContatosEmpresas.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatosObras.aspx.resx">
+      <DependentUpon>ContatosObras.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailPedido.aspx.resx">
+      <DependentUpon>EmailPedido.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailProposta.aspx.resx">
+      <DependentUpon>EmailProposta.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmDesenvolvimento.aspx.resx">
+      <DependentUpon>EmDesenvolvimento.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpresaObras.aspx.resx">
+      <DependentUpon>EmpresaObras.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpresasObras.aspx.resx">
+      <DependentUpon>EmpresasObras.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorPage.aspx.resx">
+      <DependentUpon>ErrorPage.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FichaRosa.aspx.resx">
+      <DependentUpon>FichaRosa.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPedido.aspx.resx">
+      <DependentUpon>FormularioPedido.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioProposta.aspx.resx">
+      <DependentUpon>FormularioProposta.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gravado.aspx.resx">
+      <DependentUpon>gravado.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupo.aspx.resx">
+      <DependentUpon>Grupo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoDet.aspx.resx">
+      <DependentUpon>GrupoDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.aspx.resx">
+      <DependentUpon>Home.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\BarraBotoesProposta.ascx.resx">
+      <DependentUpon>BarraBotoesProposta.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\BarraNavegacao.ascx.resx">
+      <DependentUpon>BarraNavegacao.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\ComboBox.ascx.resx">
+      <DependentUpon>ComboBox.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Header.aspx.resx">
+      <DependentUpon>Header.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Login.ascx.resx">
+      <DependentUpon>Login.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Menu.ascx.resx">
+      <DependentUpon>Menu.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Rodape.ascx.resx">
+      <DependentUpon>Rodape.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Top.ascx.resx">
+      <DependentUpon>Top.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\Top2.ascx.resx">
+      <DependentUpon>Top2.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout.aspx.resx">
+      <DependentUpon>Logout.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudaSenha.aspx.resx">
+      <DependentUpon>MudaSenha.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasDet.aspx.resx">
+      <DependentUpon>ObrasDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasVersoes.aspx.resx">
+      <DependentUpon>ObrasVersoes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.aspx.resx">
+      <DependentUpon>Pedidos.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosDet.aspx.resx">
+      <DependentUpon>PedidosDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PermissaoRegiaoGestor.aspx.resx">
+      <DependentUpon>PermissaoRegiaoGestor.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcurarEmpresa.aspx.resx">
+      <DependentUpon>ProcurarEmpresa.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcurarEmpresaContato.aspx.resx">
+      <DependentUpon>ProcurarEmpresaContato.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos.aspx.resx">
+      <DependentUpon>Produtos.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosAssociados.aspx.resx">
+      <DependentUpon>ProdutosAssociados.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosDet.aspx.resx">
+      <DependentUpon>ProdutosDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proposta.aspx.resx">
+      <DependentUpon>Proposta.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropostaAdicOrc.aspx.resx">
+      <DependentUpon>PropostaAdicOrc.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propostas.aspx.resx">
+      <DependentUpon>Propostas.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioPermissao.aspx.resx">
+      <DependentUpon>UsuarioPermissao.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.aspx.resx">
+      <DependentUpon>Usuarios.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosDet.aspx.resx">
+      <DependentUpon>UsuariosDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosSistema.aspx.resx">
+      <DependentUpon>UsuariosSistema.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosSistemaDet.aspx.resx">
+      <DependentUpon>UsuariosSistemaDet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VersoPedido.aspx.resx">
+      <DependentUpon>VersoPedido.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CartaArquivos2\Thumbs.db" />
+    <None Include="CartaArquivos\Thumbs.db" />
+    <None Include="CartaArquivos\vssver2.scc" />
+    <None Include="Imagens\BOTOES\Thumbs.db" />
+    <None Include="Imagens\FormularioProposta\Thumbs.db" />
+    <None Include="Imagens\FormularioProposta\vssver2.scc" />
+    <None Include="Imagens\Thumbs.db" />
+    <None Include="Imagens\vssver2.scc" />
+    <None Include="inc\vssver2.scc" />
+    <None Include="ITCOffLine_Novo.suo" />
+    <None Include="ITCOffLine_Novo.vbproj.webinfo" />
+    <None Include="Job\vssver2.scc" />
+    <None Include="lib\vssver2.scc" />
+    <None Include="mssccprj.scc" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49380</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

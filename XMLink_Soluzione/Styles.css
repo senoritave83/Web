@@ -1,0 +1,183 @@
+.Banner { FONT-WEIGHT: bolder; FONT-SIZE: 12pt; COLOR: #000000; FONT-STYLE: normal; font-family: Verdana, Arial, Helvetica, sans-serif }
+
+.Menu
+	{
+		background-color:#990000;
+		cursor:hand;
+	}
+
+.RedText
+	{
+		font-family: verdana, arial, helvetica; 
+		text-decoration:none; 
+		font-weight:bold; 
+		color: #8e0122; 
+		font-size: 8pt;  
+	}
+	
+.Header
+	{
+		/*background-color:#8e0122;*/
+		background-color:Black;
+		font-family: verdana, arial, helvetica; 
+		text-decoration:none; 
+		font-weight:bold; 
+		color: #FFFFFF; 
+		font-size: 8pt;  
+		height:25px;
+	}
+
+.fundo
+{
+	background-color:Black;
+	color:White;
+}
+
+.frente
+{
+	color:White;
+}
+
+.frente td 
+{
+	color:White;
+}
+
+#divReport .GridItem {FONT-SIZE: 7pt}
+.GridItem
+	{
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 8pt; 
+	COLOR: #444444; 
+	FONT-STYLE: normal; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color:#eeeeee;
+	}
+	
+a:link
+{
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+; text-decoration: underline
+}
+a:visited
+{
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Arial, Helvetica, "sans-serif font-size"
+}
+
+
+
+a:hover {  color: #990000}
+.TextFooter:link { FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.TextFooter:visited { FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.TextFooter:hover { FONT-SIZE: 8pt; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.CellLeftColor {  background-color: #66CCFF}
+.CellCenterColor { background-color: #FFFFFF}
+.BackgrBlack {  background-color: #666666}
+.BackgrGray1 {  background-color: #cccccc}
+a:active {  color: #FF0000}
+.BackgrWhite { background-color: #FFFFFF}
+.TextSmall { FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif }
+.BackgrGray2 { background-color: #999999}
+.BackgrWhite { background-color: #FFFFFF}
+.BackgrGray3 { background-color: #333333}
+.TextFooter { FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif text-decoration: none }
+.TextFooter:active { FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none }
+
+.logo {  background-image: url(/edispatch/imagens/e-dispatch.gif)}
+.TextHeader{ FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #000000; FONT-STYLE: normal; text-transform:none; font-family: Arial, Verdana, Helvetica, sans-serif;}
+.DescHeader{ FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; font-family: Arial, Verdana, Helvetica, sans-serif;}
+
+.TextOnline:link { FONT-WEIGHT: bold; FONT-SIZE: 7pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.TextOnline:visited { FONT-WEIGHT: bold; FONT-SIZE: 7pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.TextOnline:hover { FONT-WEIGHT: bold; FONT-SIZE: 7pt; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none}
+.TextOnline { FONT-WEIGHT: bold; FONT-SIZE: 7pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif text-decoration: none }
+.TextOnline:active { FONT-WEIGHT: bold; FONT-SIZE: 7pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-decoration: none }
+
+.Botao{ font-family:Verdana, Arial, Sans-Serif; font-size:8pt;width:100;}
+.Caixa{ border-width:1; border-style:solid; font-family:Verdana, Arial, Sans-Serif; font-size:8pt;}
+.Check{ border-width:0; border-style:none;}
+
+.BackgrStripes { background-image: url(imagens/backgr_main1.gif)}
+.PromoHeadline { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000000}
+.PromoHeadline:link { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000000 ; text-decoration: none}
+.PromoHeadline:visited { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000000 ; text-decoration: none}
+.PromoHeadline:hover { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000000 ; text-decoration: underline}
+.TextDefaultBold:hover { FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #990000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif }
+.PromoHeadline:active { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold; color: #000000 ; text-decoration: underline }
+.BackgrRed { background-color: #8e0122}
+.BackgrSidemenu { background-color: #ff9900}
+.BackgrRed1 {  background-image: url(imagens/spacer_tit1.jpg)}
+.Backgr01 {  background-image: url(imagens/fundo_baixo.jpg)}
+.Backgr01_a {  background-image: url(imagens/fundo_baixo_a.jpg)}
+.Backgr02 {  background-image: url(imagens/fundo_baixo2.jpg)}
+.Backgr03 {  background-color: Black}
+.Backgr04 {  background-image: url(imagens/fundo_baixo4.gif)}
+.Backgr05 {  background-image: url(imagens/fundo_baixo5.jpg)}
+.Backgr06 {  background-image: url(imagens/menu_interna.gif)}
+.Backgr07 {  background-image: url(imagens/fundo_menu.jpg)}
+.Backgr08 {  background-image: url(imagens/fundo_menu_tit.jpg)}
+.TextSmallwhite { FONT-SIZE: 10px; COLOR: #FFFFFF; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif}
+.TextSmallBald { FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; font-weight: bold}
+
+p { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: Verdana, Arial, Helvetica, sans-serif }
+
+
+.TextDefault { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: Verdana, Arial, Helvetica, sans-serif }
+a.TextDefault:link { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: text-decoration:none; Verdana, Arial, Helvetica, sans-serif }
+a.TextDefault:active { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: text-decoration:none; Verdana, Arial, Helvetica, sans-serif }
+a.TextDefault:visited { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: text-decoration:none; Verdana, Arial, Helvetica, sans-serif  }
+a.TextDefault:hover { FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-STYLE: normal; font-family: text-decoration:underline; Verdana, Arial, Helvetica, sans-serif  }
+
+.TextDefaultBold { FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; text-decoration: none}
+a.TextDefaultBold:link { FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; text-decoration: underline}
+a.TextDefaultBold:active { FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; text-decoration: underline}
+a.TextDefaultBold:visited { FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #333333; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; text-decoration: underline}
+a.TextDefaultBold:hover { FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #990000; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; text-decoration: underline}
+
+
+.TextRoxoEntrada { font-family: arial, helvetica; text-decoration:none; font-weight:bold; color: #000000; font-size: 10pt  }
+a.TextRoxoEntrada:link { font-family: arial, helvetica; text-decoration:none; font-weight:bold; color: #000000; font-size: 10pt  }
+a.TextRoxoEntrada:active { font-family: arial, helvetica; text-decoration:none; font-weight:bold; color: #000000; font-size: 10pt  }
+a.TextRoxoEntrada:visited { font-family: arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+a.TextRoxoEntrada:hover { font-family: arial, helvetica; text-decoration:underline;  font-weight:bold; color: #990000; font-size: 10pt  }
+
+.TextSmall01 { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #666666; font-size: 10pt  }
+a.TextSmall01:link { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #666666; font-size: 10pt  }
+a.TextSmall01:active { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #666666; font-size: 10pt  }
+a.TextSmall01:visited { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #666666; font-size: 10pt  }
+a.TextSmall01:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  font-weight:bold; color: #990000; font-size: 10pt  }
+
+
+.TextSmall02 { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+a.TextSmall01:link { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+a.TextSmall01:active { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+a.TextSmall01:visited { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+a.TextSmall01:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  font-weight:bold; color: #FFFFFF; font-size: 10pt  }
+
+.TextRoxoBold { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 8pt;  }
+a.TextRoxoBold:link { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 8pt  }
+a.TextRoxoBold:active { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 8pt  }
+a.TextRoxoBold:visited { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #FFFFFF; font-size: 8pt  }
+a.TextRoxoBold:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  font-weight:bold; color: #990000; font-size: 8pt  }
+
+.TextRoxoBold02 { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 9pt; line-height: 18px  }
+a.TextRoxo:link { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 9pt  }
+a.TextRoxo:active { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 9pt  }
+a.TextRoxo:visited { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 9pt  }
+a.TextRoxo:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  color: #990000; font-size: 9pt  }
+
+.Textclique { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #990000; font-size: 8pt  }
+a.Textclique:link { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #990000; font-size: 8pt  }
+a.Textclique:active { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #990000; font-size: 8pt  }
+a.Textclique:visited { font-family: verdana, arial, helvetica; text-decoration:none; font-weight:bold; color: #990000; font-size: 8pt  }
+a.Textclique:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  font-weight:bold; color: #000000; font-size: 8pt  }
+
+.TextRoxo { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 8pt; line-height: 18px  }
+a.TextRoxo:link { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 8pt  }
+a.TextRoxo:active { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 8pt  }
+a.TextRoxo:visited { font-family: verdana, arial, helvetica; text-decoration:underline; color: #000000; font-size: 8pt  }
+a.TextRoxo:hover { font-family: verdana, arial, helvetica; text-decoration:underline;  color: #990000; font-size: 8pt  }
+
+.TextRoxo01 { font-family: verdana, arial, helvetica; text-decoration: none; color: #000000; font-size: 8pt; line-height: 18px  }

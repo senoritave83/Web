@@ -1,0 +1,188 @@
+Imports System.Data.SqlClient
+Imports System.Web.Mail
+
+Public Class XMWebPage
+    Inherits System.Web.UI.Page
+    Protected m_Usuario As UsuarioLogged
+    Protected Inc_menu1 As inc_menu
+    Public PageSize As Integer = 20
+    Public EditCodigos As Boolean = True
+
+    Public ReadOnly Property IDEmpresa() As Integer
+        Get
+            On Error Resume Next
+            Return CLng("0" & Session("IDEmpresa"))
+        End Get
+    End Property
+
+    Public ReadOnly Property ConnectionString() As String
+        Get
+            On Error Resume Next
+            Return Application("cnStr")
+        End Get
+    End Property
+
+    Public Sub LogError(ByVal e As Exception, ByVal vModule As String)
+        If GetSetting("Debug", "False") = "False" Then
+            '        m_DataClass.ExecuteNonQuery(PREFIXO & "IN_ERROS 0, '" & e.Message.Replace("'", "''") & "', '" & e.Source.Replace("'", "''") & "', '" & vModule.Replace("'", "''") & "', 'LeadCom', '" & System.Environment.Version.ToString.Replace("'", "''") & "', '" & e.TargetSite.Name.Replace("'", "''") & e.StackTrace.Replace("'", "''") & "'")
+        Else
+            Throw e
+        End If
+    End Sub
+
+    Public Function GetSetting(ByVal vKey As String, ByVal vDefault As String) As String
+        Dim cfg As New System.Configuration.AppSettingsReader
+        Try
+            Return cfg.GetValue(vKey, GetType(System.String))
+        Catch e As Exception
+            Return vDefault
+        End Try
+        cfg = Nothing
+    End Function
+
+    Public Sub ShowError(ByVal vError As String)
+        Response.Redirect("mostraerro.aspx?Volta=" & Server.UrlEncode(Request.Url.ToString) & "&Erro=" & Server.UrlEncode(vError), True)
+    End Sub
+
+    Public Sub ShowMsg(ByVal vCaption As String)
+        Response.Write("<script>alert('" & vCaption & "');</script>")
+    End Sub
+
+    Public Overridable Function CheckPermission(ByVal vSecao As String, ByVal vAcao As String) As Boolean
+        Return True
+    End Function
+
+    Public ReadOnly Property Usuario() As UsuarioLogged
+        Get
+            Return m_Usuario
+        End Get
+    End Property
+
+    Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'm_DataClass = New DataClass(Me)
+        EnsureChildControls()
+        If m_Usuario Is Nothing Then m_Usuario = New UsuarioLogged(Me)
+        If Not Inc_menu1 Is Nothing Then
+            Inc_menu1.SetUser(m_Usuario)
+        End If
+    End Sub
+
+    Public Sub SendMessage(ByVal vMessage As Mail.MailMessage)
+        Dim smtp As Mail.SmtpMail
+        smtp.SmtpServer = "192.168.0.1"
+        smtp.Send(vMessage)
+    End Sub
+
+    Public Sub MostraGravado(ByVal vVolta As String)
+        Response.Redirect(vVolta, True)
+        'Response.Redirect("gravado.aspx?Volta=" & Server.UrlEncode(vVolta), True)
+    End Sub
+End Class
+
+
+Public Enum enAuthorize
+    NotAuthorized = 0
+    Authorized = 1
+    PasswordNotSet = 2
+    Denied = 3
+End Enum
+
+
+Public Class clsBaseClass
+    Private m_XMWebPage As XMWebPage
+    Protected m_DataClass As DataClass
+
+    Public Sub New(ByVal vXMPage As XMWebPage)
+        m_XMWebPage = vXMPage
+        m_DataClass = New DataClass(m_XMWebPage.ConnectionString)
+    End Sub
+
+    Protected Function GetDataSet(ByVal SQL As String) As DataSet
+        Return m_DataClass.GetDataSet(SQL)
+    End Function
+
+    Protected Function ExecuteNonQuery(ByVal SQL As String)
+        Return m_DataClass.ExecuteNonQuery(SQL)
+    End Function
+
+    Protected Function GetXML(ByVal SQL As String) As String
+        Return m_DataClass.GetXML(SQL)
+    End Function
+
+    Protected ReadOnly Property XMPage() As XMWebPage
+        Get
+            Return m_XMWebPage
+        End Get
+    End Property
+
+    Public ReadOnly Property DefaultPage() As String
+        Get
+
+        End Get
+    End Property
+End Class
+
+
+
+Public Class XMProtectedPage
+    Inherits XMWebPage
+
+    Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If m_Usuario.IDUsuario = -1 Or m_Usuario.IDUsuario = 0 Then
+            Dim StrPath, StrQS As String
+            StrPath = Request.Path
+            StrQS = Request.ServerVariables("QUERY_STRING")
+            StrPath = StrPath & "?" & StrQS
+            Response.Redirect(GetDefaultPage() & IIf(StrPath = "", "", "?RedirectTo=" & Server.UrlEncode(StrPath)), True)
+        End If
+    End Sub
+
+    Protected Function GetDefaultPage() As String
+        Dim strURL As String
+        strURL = Request.ServerVariables("PATH_INFO")
+        If Left(strURL, 1) = "/" Then strURL = Mid(Request.ServerVariables("PATH_INFO"), 2)
+        Return "/" & Left(strURL, InStr(strURL, "/")) & "default.aspx"
+    End Function
+
+    Public Overrides Function CheckPermission(ByVal vSecao As String, ByVal vAcao As String) As Boolean
+        Dim cmd As New SqlCommand
+        Dim cn As New SqlConnection(ConnectionString)
+        Dim prm As SqlParameter
+        cn.Open()
+        cmd.Connection = cn
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = PREFIXO & "BS_VERIFICAR_PERMISSAO"
+
+        prm = New SqlParameter("@RETURN_VALUE", SqlDbType.Int)
+        prm.Direction = ParameterDirection.ReturnValue
+        cmd.Parameters.Add(prm)
+
+        prm = New SqlParameter("@IDEMPRESA", SqlDbType.Int)
+        prm.Value = Me.IDEmpresa
+        cmd.Parameters.Add(prm)
+
+        prm = New SqlParameter("@IDUSUARIO", SqlDbType.Int)
+        prm.Value = Me.Usuario.IDUsuario
+        cmd.Parameters.Add(prm)
+
+        prm = New SqlParameter("@SECAO", SqlDbType.VarChar, 50)
+        prm.Value = vSecao
+        cmd.Parameters.Add(prm)
+
+        prm = New SqlParameter("@ACAO", SqlDbType.VarChar, 50)
+        prm.Value = vAcao
+        cmd.Parameters.Add(prm)
+
+        cmd.ExecuteNonQuery()
+        If cmd.Parameters("@RETURN_VALUE").Value = 0 Then
+            CheckPermission = False
+        Else
+            CheckPermission = True
+        End If
+        'clean up
+        cn.Close()
+        cmd = Nothing
+        cn = Nothing
+    End Function
+
+End Class

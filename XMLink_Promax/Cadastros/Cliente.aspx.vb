@@ -1,0 +1,104 @@
+
+Imports Classes
+
+Namespace Pages.Cadastros
+
+    Partial Public Class Cliente
+        Inherits XMWebPage
+		
+        Protected Const SECAO As String = "Cadastro de Clientes"
+        Dim cls As clsCliente
+        Protected Const VW_IDCLIENTE As String = "IDCliente"
+
+        
+        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+            cls = New clsCliente()
+            If Not Page.IsPostBack Then
+                subAddConfirm(btnApagar, "Deseja realmente apagar esta cliente?")
+                ViewState(VW_IDCLIENTE) = Cint("0" & Request("IDCliente"))
+                cls.Load(ViewState(VW_IDCLIENTE))
+				
+				btnGravar.Enabled = iif(cls.IsNew(), VerificaPermissao(SECAO, ACAO_ADICIONAR), VerificaPermissao(SECAO, ACAO_EDITAR))
+				btnNovo.Disabled = Not VerificaPermissao(SECAO, ACAO_ADICIONAR)
+				btnApagar.Enabled = iif(cls.IsNew(), false, VerificaPermissao(SECAO, ACAO_APAGAR))
+
+                'Bind Combos
+                Dim ven As New clsVendedor
+                cboIDVendedor.DataSource = ven.Listar
+                cboIDVendedor.DataBind()
+                cboIDVendedor.Items.Insert(0, New ListItem("Selecione...", 0))
+
+                pnlEnderecos.Visible = cls.IDCliente > 0
+
+				Inflate()
+            Else
+                cls.Load(ViewState(VW_IDCLIENTE))
+          End If
+        End Sub
+
+
+
+        Protected Sub Inflate()
+			txtCodigo.Text = cls.Codigo
+			SetComboValue(cboIDVendedor, cls.IDVendedor)
+			txtCliente.Text = cls.Cliente
+			txtCNPJ.Text = cls.CNPJ
+            txtObservacao.Text = cls.Observacao
+            setComboValue(cboIDVendedor, cls.IDVendedor)
+            txtListaPreco.Text = cls.ListaPreco
+            lblStatus.Text = cls.Status
+			If cls.Criado = "" Then
+			    lblCriado.Text = "Sem data de cria&ccedil;&atilde;o"
+			Else
+			    lblCriado.Text = cls.Criado
+			End If
+            BindEnderecos()
+
+        End Sub
+
+        Protected Sub BindEnderecos()
+            grdEnderecos.DataSource = cls.ListaEnderecos(DataClass.enReturnType.DataSet)
+            grdEnderecos.DataBind()
+            pnlEnderecos.Visible = cls.IDCliente > 0
+        End Sub
+
+        Protected Sub Deflate()
+			cls.Codigo = txtCodigo.Text
+			cls.IDVendedor = cboIDVendedor.SelectedValue
+			cls.Cliente = txtCliente.Text
+			cls.CNPJ = txtCNPJ.Text
+			cls.Observacao = txtObservacao.Text
+            cls.ListaPreco = txtListaPreco.Text
+            cls.Status = lblStatus.Text
+        End Sub
+
+        Protected Sub btnGravar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGravar.Click
+			
+			if (cls.IsNew() and VerificaPermissao(SECAO, ACAO_ADICIONAR) = false) OR (cls.IsNew() = false and VerificaPermissao(SECAO, ACAO_EDITAR) = false) Then  
+				Exit Sub
+			end if
+			
+            Deflate()
+            If cls.isValid Then
+                cls.Update()
+                Inflate()
+                MostraGravado("~/Cadastros/Cliente.aspx?idcliente=" & cls.idcliente)
+            End If
+            lstErros.DataSource = cls.BrokenRules
+            lstErros.DataBind()
+
+        End Sub
+
+        Private Sub btnApagar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnApagar.Click
+			if VerificaPermissao(SECAO, ACAO_APAGAR) then 
+				cls.Delete()
+				Response.Redirect("Clientes.aspx")
+			end if
+        End Sub
+
+
+
+    End Class
+
+End Namespace
+

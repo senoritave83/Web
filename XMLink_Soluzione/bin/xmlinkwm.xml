@@ -1,0 +1,171 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+xmlinkwm
+</name>
+</assembly>
+<members>
+<member name="F:xmlinkwm.distribuidorpontos.Form1">
+	<summary>
+Form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.Titulo2">
+	<summary>
+Titulo2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lblDistribuidor">
+	<summary>
+lblDistribuidor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.drpTipoOperacao">
+	<summary>
+drpTipoOperacao control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.txtValor">
+	<summary>
+txtValor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.RequiredFieldValidator2">
+	<summary>
+RequiredFieldValidator2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.compMeta">
+	<summary>
+compMeta control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.txtMotivo">
+	<summary>
+txtMotivo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.btnVoltar">
+	<summary>
+btnVoltar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.dtgGridPontosDistribuidor">
+	<summary>
+dtgGridPontosDistribuidor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lblSaldoInicial">
+	<summary>
+lblSaldoInicial control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lblTotalCreditos">
+	<summary>
+lblTotalCreditos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lblTotalDebitos">
+	<summary>
+lblTotalDebitos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lblSaldoFinal">
+	<summary>
+lblSaldoFinal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lnkPrevious">
+	<summary>
+lnkPrevious control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:xmlinkwm.distribuidorpontos.lnkNext">
+	<summary>
+lnkNext control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.#ctor">
+	<remarks/>
+</member><member name="E:xmlinkwm.com.xmsistemas.maps.GMapService.RegistraPosicionamentoCompleted">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.RegistraPosicionamento(System.String)">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.BeginRegistraPosicionamento(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.EndRegistraPosicionamento(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.RegistraPosicionamentoAsync(System.String)">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.RegistraPosicionamentoAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:xmlinkwm.com.xmsistemas.maps.GMapService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:xmlinkwm.com.xmsistemas.maps.GMapService">
+	<remarks/>
+</member><member name="T:xmlinkwm.com.xmsistemas.maps.RegistraPosicionamentoCompletedEventHandler">
+	<remarks/>
+</member><member name="P:xmlinkwm.com.xmsistemas.maps.RegistraPosicionamentoCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:xmlinkwm.com.xmsistemas.maps.RegistraPosicionamentoCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

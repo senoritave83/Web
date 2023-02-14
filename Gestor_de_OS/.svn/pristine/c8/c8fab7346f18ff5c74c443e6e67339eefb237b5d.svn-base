@@ -1,0 +1,666 @@
+Imports System.Data.SqlClient
+Imports XMSistemas.Web.Base
+
+
+Public Class clsOrdemServico
+    Inherits DataClass
+    Private m_intIDOrdemServico As Integer
+    Private m_strCliente As String
+    Private m_strResponsavel As String
+    Private m_strDescricao As String
+    Private m_strNumeroOS As String
+    Private m_strAgendada As String
+    Private m_strInicio As String
+    Private m_strTermino As String
+    Private m_strStatus As String
+    Private m_strDataStatus As String
+    Private m_strObservacao As String
+    Private m_intIDResponsavel As Integer
+    Private m_strRespostaXML As String = ""
+    Private m_strPrioridade As String
+    Private m_strFotoOS As String
+    Private m_indCapturaPosicaoGPS As Boolean
+
+    Public Enum STATUS_ORDEMSERVICO
+        Nova = 1
+        Agendada = 2
+        Guardada = 3
+        Cancelada = 4
+        Enviando = 5
+        Enviada = 6
+        Lida = 7
+        Respondida = 8
+        Apagada = 9
+        Finalizada = 10
+        EnviadoviaSMS = 11
+        ErronoEnvio = 12
+        Recebido = 13
+    End Enum
+
+#Region "Propriedades"
+
+    Public ReadOnly Property IDOrdemServico() As Integer
+        Get
+            Return m_intIDOrdemServico
+        End Get
+    End Property
+
+    Public ReadOnly Property Cliente() As String
+        Get
+            Return m_strCliente
+        End Get
+    End Property
+
+    Public ReadOnly Property Responsavel() As String
+        Get
+            Return m_strResponsavel
+        End Get
+    End Property
+
+    Public ReadOnly Property Descricao() As String
+        Get
+            Return m_strDescricao
+        End Get
+    End Property
+
+    Public ReadOnly Property NumeroOS() As String
+        Get
+            Return m_strNumeroOS
+        End Get
+    End Property
+
+    Public ReadOnly Property Agendada() As String
+        Get
+            Return Me._getDateTimePropertyValue(m_strAgendada)
+        End Get
+    End Property
+
+    Public ReadOnly Property Inicio() As String
+        Get
+            Return Me._getDateTimePropertyValue(m_strInicio)
+        End Get
+    End Property
+
+    Public ReadOnly Property Termino() As String
+        Get
+            Return Me._getDateTimePropertyValue(m_strTermino)
+        End Get
+    End Property
+
+    Public ReadOnly Property Status() As String
+        Get
+            Return m_strStatus
+        End Get
+    End Property
+
+    Public ReadOnly Property IDResponsavel() As Integer
+        Get
+            Return m_intIDResponsavel
+        End Get
+    End Property
+
+
+    Public ReadOnly Property DataStatus() As String
+        Get
+            Return Me._getDateTimePropertyValue(m_strDataStatus)
+        End Get
+    End Property
+
+    Public ReadOnly Property Observacao() As String
+        Get
+            Return m_strObservacao
+        End Get
+    End Property
+
+    Public ReadOnly Property Prioridade() As String
+        Get
+            Return m_strPrioridade
+        End Get
+    End Property
+
+    Public Overridable Property Foto() As String
+        Get
+            Return m_strFotoOS
+        End Get
+        Set(ByVal Value As String)
+            m_strFotoOS = Value
+        End Set
+    End Property
+
+    Public Overridable Property CapturaPosicaoGPS() As Boolean
+        Get
+            Return m_indCapturaPosicaoGPS
+        End Get
+        Set(ByVal value As Boolean)
+            m_indCapturaPosicaoGPS = value
+        End Set
+    End Property
+
+#End Region
+
+
+    Public Function GetRespostaXML() As String
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "SE_ORDEM_SERVICO_RESPOSTA_XML"
+        cmd.Parameters.Add("@IDOS", SqlDbType.Int).Value = m_intIDOrdemServico
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        Dim ret As New StringBuilder
+        ret.AppendLine("<?xml version=""1.0"" encoding=""iso-8859-1""?>")
+        ret.AppendLine("<xml>")
+
+        Dim dr As IDataReader = ExecuteReader(cmd)
+        Do
+            Do While dr.Read
+                ret.AppendLine(dr.GetString(0))
+            Loop
+        Loop While dr.NextResult
+
+        ret.AppendLine("</xml>")
+        Return ret.ToString
+    End Function
+
+
+    Protected Overridable Sub Inflate(ByRef dr As IDataReader)
+        m_intIDOrdemServico = dr.GetInt32(dr.GetOrdinal("ors_OrdemServico_int_PK"))
+        If dr.IsDBNull(dr.GetOrdinal("cli_Cliente_chr")) Then
+            m_strCliente = ""
+        Else
+            m_strCliente = dr.GetString(dr.GetOrdinal("cli_Cliente_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("rsp_Responsavel_int_FK")) Then
+            m_intIDResponsavel = 0
+        Else
+            m_intIDResponsavel = dr.GetInt32(dr.GetOrdinal("rsp_Responsavel_int_FK"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("rsp_Responsavel_chr")) Then
+            m_strResponsavel = ""
+        Else
+            m_strResponsavel = dr.GetString(dr.GetOrdinal("rsp_Responsavel_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Observacao_chr")) Then
+            m_strDescricao = ""
+        Else
+            m_strDescricao = dr.GetString(dr.GetOrdinal("ors_Observacao_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Comentario_chr")) Then
+            m_strObservacao = ""
+        Else
+            m_strObservacao = dr.GetString(dr.GetOrdinal("ors_Comentario_chr"))
+        End If
+
+        If dr.IsDBNull(dr.GetOrdinal("ors_Inclusao_dtm")) Then
+            m_strAgendada = ""
+        Else
+            m_strAgendada = _getDateTimeDBValue(dr.GetDateTime(dr.GetOrdinal("ors_Inclusao_dtm")))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Status_chr")) Then
+            m_strStatus = ""
+        Else
+            m_strStatus = dr.GetString(dr.GetOrdinal("ors_Status_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Status_dtm")) Then
+            m_strDataStatus = ""
+        Else
+            m_strDataStatus = _getDateTimeDBValue(dr.GetDateTime(dr.GetOrdinal("ors_Status_dtm")))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Finalizada_dtm")) Then
+            m_strTermino = ""
+        Else
+            m_strTermino = _getDateTimeDBValue(dr.GetDateTime(dr.GetOrdinal("ors_Finalizada_dtm")))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Inicio_dtm")) Then
+            m_strInicio = ""
+        Else
+            m_strInicio = _getDateTimeDBValue(dr.GetDateTime(dr.GetOrdinal("ors_Inicio_dtm")))
+        End If
+
+        If dr.IsDBNull(dr.GetOrdinal("ors_OrdemServico_chr")) Then
+            m_strNumeroOS = ""
+        Else
+            m_strNumeroOS = dr.GetString(dr.GetOrdinal("ors_OrdemServico_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("Prioridade")) Then
+            m_strPrioridade = ""
+        Else
+            m_strPrioridade = dr.GetString(dr.GetOrdinal("Prioridade"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_Foto_chr")) Then
+            m_strFotoOS = ""
+        Else
+            m_strFotoOS = dr.GetString(dr.GetOrdinal("ors_Foto_chr"))
+        End If
+        If dr.IsDBNull(dr.GetOrdinal("ors_PosicaoGPS_ind")) Then
+            m_indCapturaPosicaoGPS = 0
+        Else
+            m_indCapturaPosicaoGPS = dr.GetByte(dr.GetOrdinal("ors_PosicaoGPS_ind"))
+        End If
+
+        'm_intIDOrdemServico = CLng(0 & row("ors_OrdemServico_int_PK"))
+        'm_strCliente = row("cli_Cliente_chr") & ""
+        'm_strResponsavel = row("rsp_Responsavel_chr") & ""
+        'm_strDescricao = row("ors_Observacao_chr") & ""
+        'm_strNumeroOS = row("ors_OrdemServico_chr") & ""
+        'm_strAgendada = row("ors_Inclusao_dtm") & ""
+        'm_strInicio = row("ors_Inicio_dtm") & ""
+        'm_strTermino = row("ors_Finalizada_dtm") & ""
+        'm_strStatus = row("ors_Status_chr") & ""
+        'm_strDataStatus = row("ors_Status_dtm") & ""
+        'm_strObservacao = row("ors_Comentario_chr") & ""
+        'm_intIDResponsavel = CLng(0 & row("rsp_Responsavel_int_FK"))
+    End Sub
+
+    Public Sub Load(ByVal p_intIDOS As Integer)
+        If p_intIDOS = 0 Then
+            Clear()
+            Exit Sub
+        End If
+
+        Dim dr As IDataReader = Nothing
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "SE_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDOS", SqlDbType.Int).Value = p_intIDOS
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        dr = ExecuteReader(cmd)
+        Try
+            If dr.Read Then
+                Inflate(dr)
+            Else
+                Throw New ArgumentException("This key does not exist!")
+            End If
+        Finally
+            If (Not dr Is Nothing) Then
+                dr.Close()
+                dr = Nothing
+            End If
+        End Try
+        cmd.Dispose()
+    End Sub
+
+    Protected Sub Clear()
+        m_intIDOrdemServico = 0
+        m_strCliente = ""
+        m_strResponsavel = ""
+        m_strDescricao = ""
+        m_strNumeroOS = ""
+        m_strAgendada = ""
+        m_strInicio = ""
+        m_strTermino = ""
+        m_strStatus = ""
+        m_strDataStatus = ""
+        m_strObservacao = ""
+        m_strRespostaXML = ""
+        m_strPrioridade = ""
+        m_strFotoOS = ""
+        m_indCapturaPosicaoGPS = False
+    End Sub
+
+
+    'Public Function ListarOrdens(ByVal vCliente As String, ByVal vIDResponsavel As Integer, ByVal vStatus As String, ByVal vOrder As String, ByVal vPage As Integer, ByVal vPageSize As Integer, ByVal vDesc As Boolean) As IPaginaResult
+
+    '    Dim ret As New PaginateResult
+    '    Dim cmd As New SqlCommand()
+    '    cmd.CommandType = CommandType.StoredProcedure
+    '    cmd.CommandText = SQLPREFIXO & "LS_ORDEM_SERVICO_INICIO"
+
+    '    cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+    '    cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar).Value = vCliente
+    '    cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDResponsavel
+    '    cmd.Parameters.Add("@STATUS", SqlDbType.VarChar, 50).Value = vStatus
+    '    cmd.Parameters.Add("@ORDER", SqlDbType.VarChar, 50).Value = vOrder
+    '    cmd.Parameters.Add("@PAGE", SqlDbType.Int).Value = vPage
+    '    cmd.Parameters.Add("@PAGESIZE", SqlDbType.Int).Value = vPageSize
+    '    cmd.Parameters.Add("@DESC", SqlDbType.TinyInt).Value = IIf(vDesc, 1, 0)
+    '    cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+    '    Dim ds As DataSet = ExecuteDataSet(cmd)
+    '    ret.DataSet = ds
+    '    ret.CurrentPage = vPage
+    '    ret.PageSize = vPageSize
+    '    ret.RecordCount = ds.Tables(1).Rows(0).Item(0)
+    '    Return ret
+    'End Function
+
+    'Public Function ListarOrdens2(ByVal vIDCliente As Integer, ByVal vIDResponsavel As Integer, ByVal vStatus As String, ByVal vOrder As String, ByVal vPage As Integer, ByVal vPageSize As Integer, ByVal vDesc As Boolean) As DataSet
+    '    Return GetDataSet("SP_WEB_LS_ORDEM_SERVICO_INICIO " & Identity.IDEmpresa & ", " & vIDCliente & ", " & vIDResponsavel & ", '" & vStatus.Replace("'", "''") & "','" & vOrder.Replace("'", "''") & "', " & vPage & ", " & vPageSize & ", " & IIf(vDesc, 1, 0) & ", " & Identity.IDUsuario)
+    'End Function
+
+    Public Function ListarEtapa(Optional ByVal vReturnType As enReturnType = enReturnType.DataReader) As Object
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "LS_ORDEM_SERVICO_ETAPAS"
+
+        cmd.Parameters.Add("IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("IDOS", SqlDbType.Int).Value = m_intIDOrdemServico
+
+        Return ExecuteCommand(cmd, vReturnType)
+
+    End Function
+
+    Public Function ListarOrdens(ByVal vCliente As String, ByVal vResponsavel As String, ByVal vDataInicio As String, ByVal vDataFim As String, ByVal vStatus As String, ByVal vOrder As String, ByVal vPage As Integer, ByVal vPageSize As Integer, ByVal vDesc As Boolean) As IPaginaResult
+
+        Dim ret As New PaginateResult
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "NV_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar).Value = vCliente
+        cmd.Parameters.Add("@RESPONSAVEL", SqlDbType.VarChar).Value = vResponsavel
+        cmd.Parameters.Add("@DATAINI", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataInicio)
+        cmd.Parameters.Add("@DATAFIM", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataFim)
+        cmd.Parameters.Add("@STATUS", SqlDbType.VarChar, 50).Value = vStatus
+        cmd.Parameters.Add("@ORDER", SqlDbType.VarChar, 50).Value = vOrder
+        cmd.Parameters.Add("@PAGE", SqlDbType.Int).Value = vPage
+        cmd.Parameters.Add("@PAGESIZE", SqlDbType.Int).Value = vPageSize
+        cmd.Parameters.Add("@DESC", SqlDbType.TinyInt).Value = vDesc
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        'Dim ds As DataSet = ExecuteDataSet(cmd)
+        ret = ExecutePaginate(cmd, enReturnType.DataSet, vPageSize, vPage)
+        ret.CurrentPage = vPage
+        ret.PageSize = vPageSize
+        ret.RecordCount = ret.Tables(1).Rows(0).Item(0)
+        Return ret
+    End Function
+
+    Public Function ExportarOrdens(ByVal vCliente As String, ByVal vResponsavel As String, ByVal vDataInicio As String, ByVal vDataFim As String, ByVal vStatus As String, ByVal vRespostas As Boolean, ByVal vXML As Boolean, ByVal vSeparador As String) As String
+
+        Dim strTemp As String = ""
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+
+        If vXML Then
+            cmd.CommandText = SQLPREFIXO & "BS_EXPORTAR_XML"
+        Else
+            cmd.CommandText = SQLPREFIXO & "BS_EXPORTAR"
+        End If
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar).Value = vCliente
+        cmd.Parameters.Add("@RESPONSAVEL", SqlDbType.VarChar).Value = vResponsavel
+        If IsDate(vDataInicio) Then cmd.Parameters.Add("@DATAINI", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataInicio)
+        If IsDate(vDataFim) Then cmd.Parameters.Add("@DATAFIM", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataFim)
+        cmd.Parameters.Add("@STATUS", SqlDbType.VarChar, 30).Value = vStatus
+        cmd.Parameters.Add("@RESPOSTAS", SqlDbType.Int).Value = vRespostas
+        If Not vXML Then
+            cmd.Parameters.Add("@SEPARADOR", SqlDbType.VarChar, 10).Value = vSeparador
+        End If
+
+
+        If vXML Then
+            strTemp = ExecuteXML(cmd)
+        Else
+            Dim dr As IDataReader
+            Dim strBuilder As New StringBuilder
+            dr = ExecuteReader(cmd)
+            Do While dr.Read
+                strBuilder.AppendLine(dr.GetString(0))
+            Loop
+            dr.Close()
+            dr.Dispose()
+            strTemp = strBuilder.ToString
+            strBuilder = Nothing
+        End If
+        Return strTemp
+    End Function
+
+    Public Sub Enviar(ByVal vIDOS As Integer)
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "BS_OS_ENVIADA"
+
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@ors_OrdemServico_int_FK", SqlDbType.Int).Value = vIDOS
+        ExecuteNonQuery(cmd)
+    End Sub
+
+    Public Sub Reenviar(ByVal vIDOS As Integer, ByVal vIDResponsavel As Integer)
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "BS_REENVIAR_OS"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDOS", SqlDbType.Int).Value = vIDOS
+        cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDResponsavel
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        ExecuteNonQuery(cmd)
+    End Sub
+
+    Public Sub Cancelar(ByVal vIDOS As Integer)
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "BS_ORDEM_SERVICO_CANCELAR"
+
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@ors_OrdemServico_int_FK", SqlDbType.Int).Value = vIDOS
+        ExecuteNonQuery(cmd)
+    End Sub
+
+    Public Sub Delete(ByVal vIDs As String)
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "DE_ORDEM_SERVICO_SEL"
+
+        cmd.Parameters.Add("@IDS", SqlDbType.VarChar, 1000).Value = vIDs
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+        ExecuteNonQuery(cmd)
+    End Sub
+
+    Public Sub Excluir(ByVal vIDs As String)
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "DE_EXCLUIR_ORDEMSERVICO"
+
+        cmd.Parameters.Add("@IDS", SqlDbType.VarChar, 1000).Value = vIDs
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        ExecuteNonQuery(cmd)
+    End Sub
+
+    Public Function ListarOrdensGuardadas(ByVal vIDResponsavel As Integer, ByVal vOrder As String, ByVal vPage As Integer, ByVal vPageSize As Integer, ByVal vDesc As Integer) As IPaginaResult
+        Dim ret As New PaginateResult
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "NV_ORDEM_SERVICO_GUARDADAS"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDResponsavel
+        cmd.Parameters.Add("@ORDER", SqlDbType.VarChar, 50).Value = vOrder
+        cmd.Parameters.Add("@PAGE", SqlDbType.Int).Value = vPage
+        cmd.Parameters.Add("@PAGESIZE", SqlDbType.Int).Value = vPageSize
+        cmd.Parameters.Add("@DESC", SqlDbType.TinyInt).Value = vDesc
+
+        'Dim ds As DataSet = ExecuteDataSet(cmd)
+        ret = ExecutePaginate(cmd, enReturnType.DataSet, vPageSize, vPage)
+        ret.CurrentPage = vPage
+        ret.PageSize = vPageSize
+        ret.RecordCount = ret.Tables(1).Rows(0).Item(0)
+        Return ret
+    End Function
+
+    Public Function AlterarStatus(ByVal vIds As String, ByVal vStatus As STATUS_ORDEMSERVICO) As IDataReader
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "BS_ALTERARSTATUS_ORDEMSERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@IDS", SqlDbType.VarChar, 1000).Value = vIds
+        cmd.Parameters.Add("@IdStatus", SqlDbType.Int).Value = vStatus
+
+        Return ExecuteReader(cmd)
+    End Function
+
+    Public Function StatusOrdem() As IDataReader
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "SE_STATUS_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+
+        Return ExecuteReader(cmd)
+    End Function
+
+
+    Public Function ListarHistorico() As IDataReader
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "LS_RETORNO_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDOS", SqlDbType.Int).Value = m_intIDOrdemServico
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+
+        Return ExecuteReader(cmd)
+    End Function
+
+    Public Function EnviarOS(ByVal vCliente As String, ByVal vEndereco As String, ByVal vReferencia As String, _
+                             ByVal vIDDestinatario As Integer, ByVal vObservacao As String, ByVal vTempoLimite As Integer, _
+                             ByVal vIDPrioridade As Integer, ByVal vFoto As String, ByVal vPosicaoGPS As Boolean) As Boolean
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "IN_ENVIAR_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar, 100).Value = vCliente
+        cmd.Parameters.Add("@ENDERECO", SqlDbType.VarChar, 50).Value = vEndereco
+        cmd.Parameters.Add("@REFERENCIA", SqlDbType.VarChar, 30).Value = vReferencia
+        cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDDestinatario
+        cmd.Parameters.Add("@OBSERVACAO", SqlDbType.VarChar, 500).Value = vObservacao
+        cmd.Parameters.Add("@TEMPOLIMITE", SqlDbType.Int).Value = vTempoLimite
+        cmd.Parameters.Add("@IDPRIORIDADE", SqlDbType.Int).Value = vIDPrioridade
+        cmd.Parameters.Add("@FOTO", SqlDbType.VarChar, 255).Value = vFoto
+        cmd.Parameters.Add("@POSICAOGPS", SqlDbType.TinyInt).Value = vPosicaoGPS
+        ExecuteNonQuery(cmd)
+        Return True
+    End Function
+
+    Public Function AgendarOS(ByVal vCliente As String, ByVal vEndereco As String, ByVal vReferencia As String, _
+                              ByVal vIDDestinatario As Integer, ByVal vObservacao As String, ByVal vTempoLimite As Integer, _
+                              ByVal vDataEnvio As Date, ByVal vIDPrioridade As Integer, ByVal vFoto As String, ByVal vPosicaoGPS As Boolean) As Boolean
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "IN_ENVIAR_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar, 100).Value = vCliente
+        cmd.Parameters.Add("@ENDERECO", SqlDbType.VarChar, 50).Value = vEndereco
+        cmd.Parameters.Add("@REFERENCIA", SqlDbType.VarChar, 30).Value = vReferencia
+        cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDDestinatario
+        cmd.Parameters.Add("@OBSERVACAO", SqlDbType.VarChar, 500).Value = vObservacao
+        cmd.Parameters.Add("@TEMPOLIMITE", SqlDbType.Int).Value = vTempoLimite
+        cmd.Parameters.Add("@IDPRIORIDADE", SqlDbType.Int).Value = vIDPrioridade
+        cmd.Parameters.Add("@FOTO", SqlDbType.VarChar, 255).Value = vFoto
+        cmd.Parameters.Add("@POSICAOGPS", SqlDbType.TinyInt).Value = vPosicaoGPS
+        cmd.Parameters.Add("@DATAAGENDA", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataEnvio)
+        ExecuteNonQuery(cmd)
+        Return True
+    End Function
+
+    Public Function AgendarOS(ByVal vCliente As String, ByVal vEndereco As String, ByVal vReferencia As String, _
+                              ByVal vIDDestinatario As Integer, ByVal vObservacao As String, ByVal vTempoLimite As Integer, _
+                              ByVal vNome As String, ByVal vDias As Integer, ByVal vMeses As Integer, ByVal vDiasSemana As Integer, _
+                              ByVal vTipoFrequencia As Integer, ByVal vHoraExecucao As Integer, ByVal vHoraFinal As Integer, _
+                              ByVal vIntervalo As Integer, ByVal vDataInicio As String, ByVal vDataFinal As String, ByVal vIDPrioridade As Integer, _
+                              ByVal vFoto As String, ByVal vPosicaoGPS As Boolean) As Boolean
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "IN_AGENDAR_RECORRENTE_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDUSUARIO", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar, 100).Value = vCliente
+        cmd.Parameters.Add("@ENDERECO", SqlDbType.VarChar, 50).Value = vEndereco
+        cmd.Parameters.Add("@REFERENCIA", SqlDbType.VarChar, 30).Value = vReferencia
+        cmd.Parameters.Add("@IDRESPONSAVEL", SqlDbType.Int).Value = vIDDestinatario
+        cmd.Parameters.Add("@OBSERVACAO", SqlDbType.VarChar, 500).Value = vObservacao
+        cmd.Parameters.Add("@TEMPOLIMITE", SqlDbType.Int).Value = vTempoLimite
+
+        cmd.Parameters.Add("@AGENDAMENTO", SqlDbType.VarChar, 50).Value = vNome
+        cmd.Parameters.Add("@DIA", SqlDbType.Int).Value = vDias
+        cmd.Parameters.Add("@MES", SqlDbType.Int).Value = vMeses
+        cmd.Parameters.Add("@DIASEMANA", SqlDbType.Int).Value = vDiasSemana
+        cmd.Parameters.Add("@FREQUENCIATIPO", SqlDbType.TinyInt).Value = vTipoFrequencia
+        cmd.Parameters.Add("@INTERVALO", SqlDbType.Int).Value = vIntervalo
+        cmd.Parameters.Add("@DATAINICIO", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataInicio)
+        If vDataFinal <> "" Then
+            cmd.Parameters.Add("@DATAFINAL", SqlDbType.DateTime).Value = _setDateTimeDBValue(vDataFinal)
+        End If
+        cmd.Parameters.Add("@HORAINICIO", SqlDbType.Int).Value = vHoraExecucao
+        cmd.Parameters.Add("@HORAFINAL", SqlDbType.Int).Value = vHoraFinal
+        cmd.Parameters.Add("@IDPRIORIDADE", SqlDbType.Int).Value = vIDPrioridade
+        cmd.Parameters.Add("@FOTO", SqlDbType.VarChar, 255).Value = vFoto
+        cmd.Parameters.Add("@POSICAOGPS", SqlDbType.TinyInt).Value = vPosicaoGPS
+
+        ExecuteNonQuery(cmd)
+        Return True
+    End Function
+
+
+    Public Function GuardarOS(ByVal vCliente As String, ByVal vEndereco As String, ByVal vReferencia As String, _
+                              ByVal vIDDestinatario As Integer, ByVal vObservacao As String, ByVal vTempoLimite As Integer, _
+                              ByVal vIDPrioridade As Integer, ByVal vFoto As String, ByVal vPosicaoGPS As Boolean) As Boolean
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "IN_GUARDAR_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@usu_Usuario_int_FK", SqlDbType.Int).Value = Identity.IDUsuario
+        cmd.Parameters.Add("@cli_Cliente_chr", SqlDbType.VarChar, 100).Value = vCliente
+        cmd.Parameters.Add("@ors_Endereco_chr", SqlDbType.VarChar, 50).Value = vEndereco
+        cmd.Parameters.Add("@ors_Referencia_chr", SqlDbType.VarChar, 30).Value = vReferencia
+        cmd.Parameters.Add("@rsp_Responsavel_int_FK", SqlDbType.Int).Value = vIDDestinatario
+        cmd.Parameters.Add("@ors_Observacao_chr", SqlDbType.VarChar, 500).Value = vObservacao
+        cmd.Parameters.Add("@ors_TempoLimite_int", SqlDbType.Int).Value = vTempoLimite
+        cmd.Parameters.Add("@ors_IDPrioridade_ind", SqlDbType.Int).Value = vIDPrioridade
+        cmd.Parameters.Add("@FOTO", SqlDbType.VarChar, 255).Value = vFoto
+        cmd.Parameters.Add("@POSICAOGPS", SqlDbType.TinyInt).Value = vPosicaoGPS
+        ExecuteNonQuery(cmd)
+        Return True
+    End Function
+
+    Public Function ListaResumo() As IDataReader
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "LS_ORDEM_SERVICO_STATUS"
+
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+
+        Return ExecuteReader(cmd)
+    End Function
+
+    Public Function Total_OS() As Integer
+
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "SE_ORDEM_SERVICO_COUNT"
+
+        cmd.Parameters.Add("@emp_Empresa_int_FK", SqlDbType.Int).Value = Identity.IDEmpresa
+        Return ExecuteScalar(cmd)
+    End Function
+
+
+    Public Function AlterarOS(ByVal vIDOrdemServico As Integer, ByVal vIDPrioridade As Integer) As Boolean
+
+        Dim cmd As New SqlCommand()
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = SQLPREFIXO & "UP_ORDEM_SERVICO"
+
+        cmd.Parameters.Add("@IDEMPRESA", SqlDbType.Int).Value = Identity.IDEmpresa
+        cmd.Parameters.Add("@IDORDEMSERVICO", SqlDbType.Int).Value = vIDOrdemServico
+        cmd.Parameters.Add("@IDPRIORIDADE", SqlDbType.Int).Value = vIDPrioridade
+        ExecuteNonQuery(cmd)
+        Return True
+    End Function
+
+End Class

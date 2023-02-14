@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+    <Reference URI="#License">
+      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <DigestValue>AQqynQQmU2y67bMy6fk98xtmLVE=</DigestValue>
+    </Reference>
+  </SignedInfo>
+  <SignatureValue>Yg3SHlvHWohlEbjvdxQUYdNUXaCsnyKIXrFheNbpmuLJiT56+WK+csAHp/JKTs+7SGuB9CoBe5m3X4jvAqyNmGskrCKtuwtcdG4s2AWSrDbYE0FM5WdqW9UEor8kaPc5GxRtQIxv9A8ZXWhH4WhqRypEwmKbiGHJrZwX7zNthAg=</SignatureValue>
+  <KeyInfo>
+    <KeyValue xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <RSAKeyValue>
+        <Modulus>wjZ0Eg7qoU6xTuTa7QkfLJ1hHrfw1a5yligPgkmwqIZtrmk12qojnIayLwAthaiEk8APGR83m4q3T99aaZPYZUESbdttBkckdtv42DXb2F2i6WkZ4ecahP4Wl4vwrAKvOPS+kKXak/L+XHekPbjhNqarwLi6KbQNVjCtJvNXHVM=</Modulus>
+        <Exponent>AQAB</Exponent>
+      </RSAKeyValue>
+    </KeyValue>
+  </KeyInfo>
+  <Object Id="License">
+    <License xmlns="">
+      <LoadFactor>8DB265C35CB0687F-2012F8FDA3E8DF1F-3F429BBE8B611D4F-D274B2C21B31A9C3</LoadFactor>
+      <ID>033F52BEF99346BF8917C90208C0C8F0</ID>
+      <LicenseFactor>633896928000000000</LicenseFactor>
+      <Product>VM.xPort.DS2XL, VM.xPort.DS2XL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a83f0d1a0f55aa06</Product>
+      <Header />
+      <Support>vmazur@mvps.org</Support>
+      <Web>xport.mvps.org</Web>
+      <Vendor>Valeriy Mazur</Vendor>
+      <VendorEmail>vmazur@mvps.org</VendorEmail>
+      <Copyright>(C) 2004-2006 Valeriy Mazur. All rights reserved.</Copyright>
+      <Description />
+    </License>
+  </Object>
+</Signature>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<items >
+
+<item name="Item text1">
+	<description><![CDATA[Bom Natal <font size="36">e </font> <br> Feliz Ano Novo!]]></description>
+</item>
+<item name="Item text2">
+	<description><![CDATA[<i>Desejamos a todos <font color="#fff36d">os melhores votos</font><br>de Natal e Ano Novo repleto de paz e muito sucesso! <img width="318" height="54" src="assinatura.png"/> ]]></description>
+</item>
+<item name="Item text3">
+	<description><![CDATA[]]></description>
+</item>
+</items>

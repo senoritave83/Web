@@ -1,0 +1,59 @@
+'***********************************************************************
+'  Visual Basic ActiveX Script
+'************************************************************************
+
+	Dim strErro
+	Set rs = CreateObject("ADODB.Recordset")
+	Set cn = CreateObject("ADODB.Connection")
+	cn.Open "Provider=SQLOLEDB;Server=Tatooine;uid=sa;pwd=sql@#xm#@tat;database=itc_offline_novo;"
+	rs.CursorLocation = 3
+	rs.Open "SP_DTS_LS_ENVIAR_EMAIL", cn, 3,3
+	Do while Not rs.EOF
+		strErro = envia_email(rs("evm_Subject_chr"), rs("evm_To_chr"), rs("evm_Body_txt"), rs("evm_From_chr"), rs("evm_CC_chr"), rs("evm_BCC_chr"), rs("evm_Body_txt") & "")
+		if strErro = "" then 
+			cn.Execute "SP_DTS_UP_ENVIO_EMAIL " & rs("evm_EnvioEmail_int_PK")
+		else
+			cn.Execute "SP_DTS_UP_ENVIO_EMAIL " & rs("evm_EnvioEmail_int_PK") & ", '" & Replace(strErro, "'", "''") & "'"
+		end if
+		rs.MoveNext
+	Loop
+	rs.Close
+	cn.Execute "SP_DTS_UP_ENVIO_EMAIL_TENTATIVA"
+	cn.Close
+	Set rs = Nothing
+	Set cn = Nothing
+
+
+Function envia_email(xAssunto, xDestinatario, xMensagem, xRemetente, xCC, xBCC, xBody)
+
+	On Error Resume Next
+
+	Set objCDOSYSMail = CreateObject("CDO.Message")
+	Set objCDOSYSCon = CreateObject ("CDO.Configuration")
+	objCDOSYSCon.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "201.20.5.5"
+	objCDOSYSCon.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport")= 25
+	objCDOSYSCon.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+	objCDOSYSCon.Fields.Item("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1 'cdoBasic
+	objCDOSYSCon.Fields.Item("http://schemas.microsoft.com/cdo/configuration/sendusername") = "agradece@itc.etc.br"
+	objCDOSYSCon.Fields.Item("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "agra10"
+	objCDOSYSCon.Fields("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 120
+	objCDOSYSCon.Fields.update
+
+	Set objCDOSYSMail.Configuration = objCDOSYSCon
+	objCDOSYSMail.From = "agradece@itc.etc.br"
+	objCDOSYSMail.BCC = xDestinatario & ",pesquisa@itc.etc.br"
+	objCDOSYSMail.Subject = xAssunto & ""  
+	objCDOSYSMail.HtmlBody = xBody
+	objCDOSYSMail.Send
+
+ENVIO_OK:
+	On Error Goto 0
+	Exit Function
+
+ENVIO_NAOOK:
+	On Error Goto 0
+	envia_email = err.description
+	Exit Function
+
+        
+End Function

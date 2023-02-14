@@ -1,0 +1,125 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<%@ Register Src="../../controls/VerRoteiro.ascx" TagName="VerRoteiro" TagPrefix="uc2" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+
+<xm:DateSelectionPanel runat="server" CssClass='Roteiro' DayPanelCssClass="PanelDia" MonthPanelCssClass='PanelMes' YearPanelCssClass='PanelAno' WeekMonthPanelCssClass='PanelSemanaMes' WeekDayPanelCssClass="PanelDiaSemana" DayColumns='7' MonthColumns='3' WeekDayColumns='1' />
+<xm:Paginate runat='server' SkinID='TESTE2' ShowPages='True' ShowFirstLastButton='true' ShowCount='true' ShowPaginateText='true'  />
+<xm:Paginate runat='server' />
+<xm:Paginate runat='server' SkinID='TESTE3' ShowPages='false' ShowFirstLastButton='true' ShowCount='true' ShowPaginateText='false'  />
+<xm:Paginate runat='server' SkinID='TESTE1' ShowPages='true' ShowFirstLastButton='false' ShowCount='false' ShowPaginateText='true'  PageRange='3'  />
+
+
+<asp:ChangePassword runat="server" BackColor="#EFF3FB" 
+    BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" 
+    Font-Names="Verdana" Font-Size="0.8em" CancelButtonText='Cancelar' NewPasswordLabelText="Nova senha" ConfirmNewPasswordLabelText='Confirmar nova senha' PasswordLabelText='Senha atual' ChangePasswordFailureText='Não foi possível mudar a sua senha.' ChangePasswordTitleText='Altera&ccedil;&atilde;o de senha' ChangePasswordButtonText='Alterar senha' ConfirmPasswordCompareErrorMessage='A nova senha e a confirmação devem ser iguais' ConfirmPasswordRequiredErrorMessage='Por favor confirme a nova senha' ContinueButtonText='OK' SuccessTitleText='Altera&ccedil;&atildeo de senha' SuccessText='Senha alterada com sucesso!' Width='400px'>
+    <CancelButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" 
+        BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
+    <PasswordHintStyle Font-Italic="True" ForeColor="#507CD1" />
+    <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" 
+        BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" 
+        ForeColor="#284E98" />
+    <ChangePasswordButtonStyle BackColor="White" BorderColor="#507CD1" 
+        BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" 
+        ForeColor="#284E98" />
+    <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" 
+        ForeColor="White" />
+    <TextBoxStyle Font-Size="0.8em" />
+    <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+</asp:ChangePassword>
+
+<asp:Textbox runat='server' SkinID='Data' width='75px' />
+
+<asp:BulletedList runat='server' SkinID='lstErros' BulletStyle=Circle DisplayMode='Text' ForeColor='White' style="margin-left:10px;"  />
+
+<asp:Image runat="server" SkinID='ImageHeader' ImageUrl='~/imagens/degradee.jpg' width='100%' height='35px' visible='false' />
+
+<asp:Image runat="server" SkinID='ImageFooter' ImageUrl='~/imagens/degradee.jpg' width='100%' height='35px' visible='false' />
+
+<asp:Label Runat="server" SkinID='XMTitulo.Titulo' Font-name='Verdana' style='text-transform:uppercase;text-align:left;' />
+<asp:Label Runat="server" SkinID='XMTitulo.Descricao' Font-name='Verdana' font-size="8pt" style='text-align:left;' />
+
+<asp:ValidationSummary runat='server' ForeColor='White' font-bold='True' font-size='12pt' ShowMessageBox='true' />
+
+<asp:GridView Runat="server" CssClass='TextDefault' BorderStyle="none" width='100%'  CellPadding="4" GridLines="None">
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <HeaderStyle cssClass='GridHeader'  />
+                    <EditRowStyle BackColor="#EFF3FB" />
+                    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+
+<asp:GridView Runat="server" CssClass='TextDefault' BorderStyle="solid" SkinID='GridInterno' BorderWidth='1' style='Margin-top:5px;Margin-bottom:5px;' BorderColor="#2461BF"  BackColor="#2461BF" Width='100%' CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <FooterStyle cssClass='GridHeader' Font-Bold="True" ForeColor="White" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <HeaderStyle cssClass='GridHeader' />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <AlternatingRowStyle BackColor="White" />
+                    <EmptyDataRowStyle forecolor="White" font-bold='true' font-size='10pt' />
+</asp:GridView>
+
+<asp:Button runat='server' cssclass='Botao'  />
+
+
+<asp:Login runat="server"
+     BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4"
+    BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em"
+    FailureText="Não foi poss&iacute;vel efetuar o login. Por favor tente novamente mais tarde." 
+    LoginButtonText="OK" PasswordLabelText="Senha:" 
+    RememberMeText="Lembrar da pr&oacute;xima vez" TitleText="" 
+    UserNameLabelText="Login:"    ForeColor="#333333">
+    <TextBoxStyle Font-Size="0.8em" />
+    <LoginButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px"
+        Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
+    <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+    <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+</asp:Login>
+
+<asp:Menu runat="server" SkinID="Lateral"
+    CssClass='MenuLateral'
+    BackColor="#6699cc" DynamicHorizontalOffset="1" Font-Names="Verdana" Font-Size="10pt" ForeColor="Transparent"
+    StaticDisplayLevels="1" Width="100%"
+    StaticSubMenuIndent="10px" MaximumDynamicDisplayLevels="0" >
+    <StaticSelectedStyle BackColor="#137FC0" />
+    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" Height='30px' Font-Size="10pt" />
+    <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+    <DynamicMenuStyle BackColor="#B5C7DE" />
+    <DynamicSelectedStyle BackColor="#507CD1" />
+    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <StaticHoverStyle BackColor="#137FC0" ForeColor="White" CssClass='MenuLateralHover' />
+    <LevelSelectedStyles>
+    <asp:MenuItemStyle Font-Underline="False" Font-Bold="true" />
+    <asp:MenuItemStyle Font-Underline="False" ForeColor="White" />
+    </LevelSelectedStyles>
+    <LevelMenuItemStyles>
+    <asp:MenuItemStyle BackColor="#6699cc" Font-Underline="False" ForeColor="White" />
+    <asp:MenuItemStyle BackColor="#D1DDF1" Font-Underline="False" ForeColor="Black" />
+    </LevelMenuItemStyles>
+</asp:Menu>
+
+<asp:Menu runat="server" SkinID='Superior' BackColor="#137FC0"    
+    Font-Names="Verdana" Font-Size="0.8em" ForeColor="White" Height='21px' 
+    MaximumDynamicDisplayLevels="0" Orientation="Horizontal" 
+    StaticDisplayLevels="1" StaticSubMenuIndent="0px" Width="100%"    
+    Font-Bold="True"  >
+    <StaticMenuItemStyle Height='100%' Width='100%' ItemSpacing='1px' CssClass='ac' />
+    <StaticHoverStyle BackColor="#F1F6F9" ForeColor="#137FC0" />
+    <StaticSelectedStyle BackColor="#F1F6F9" ForeColor="#137FC0" />
+</asp:Menu>

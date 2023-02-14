@@ -1,0 +1,193 @@
+﻿<%@ Master Language="VB" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+    
+    Protected Function isSelected(ByVal url As String) As Boolean
+        Dim blnReturn As Boolean = False
+        Dim strCurrentURL As String = Me.Request.AppRelativeCurrentExecutionFilePath.ToLower()
+        If url.ToLower = strCurrentURL Then
+            blnReturn = True
+        Else
+            Dim root As SiteMapNode = SiteMap.RootNode
+            Dim allnodes As SiteMapNodeCollection = root.GetAllNodes
+
+            For Each n As SiteMapNode In allnodes
+                If n.Url.ToLower = url Then
+                    Dim childnodes As SiteMapNodeCollection = n.GetAllNodes()
+                    For Each s As SiteMapNode In childnodes
+                        If s.Url.ToLower = strCurrentURL Then
+                            Return True
+                        End If
+                    Next
+                End If
+            Next
+        End If
+        Return blnReturn
+    End Function
+
+    Protected Sub m_mnuSuperior_MenuItemDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles mnuSuperior.MenuItemDataBound
+        e.Item.Selected = isSelected(e.Item.NavigateUrl)
+                
+        If Not String.IsNullOrEmpty(e.Item.DataItem("imgTop")) Then
+            e.Item.Text = "<img border='0' src='" & ResolveClientUrl(e.Item.DataItem("imgTop")) & "' />"
+        End If
+                
+        If e.Item.Selected Then
+            dtsSiteMapLateral.StartingNodeUrl = e.Item.NavigateUrl
+        End If
+        If Not e.Item.DataItem("Enabled") Is Nothing Then
+            If e.Item.DataItem("Enabled") = False Then e.Item.Enabled = False
+        End If
+        lstMenu.DataBind()
+    End Sub
+
+    'Protected ReadOnly Property MenuLateral() As Menu
+    '    Get
+    '        If m_mnuLateral Is Nothing Then
+    '            m_mnuLateral = GetControl(IDMenuLateral)
+    '        End If
+    '        Return m_mnuLateral
+    '    End Get
+    'End Property
+
+    'Protected ReadOnly Property MenuSuperior() As Menu
+    '    Get
+    '        If m_mnuSuperior Is Nothing Then
+    '            m_mnuSuperior = GetControl(IDMenuSuperior)
+    '        End If
+    '        Return m_mnuSuperior
+    '    End Get
+    'End Property
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not Page.IsPostBack Then
+
+            'Binding Menus
+            If Not mnuSuperior Is Nothing Then
+                dtsSiteMapSuperior.ShowStartingNode = False
+                With mnuSuperior
+                    .Visible = True
+                    .DataSource = dtsSiteMapSuperior
+                    .DataBind()
+                End With
+            End If
+            lstMenu.DataSourceID = "dtsSiteMapLateral"
+            'If Not MenuLateral Is Nothing Then
+            '    If Not SideMenuCascading Then dtsSiteMapLateral.ShowStartingNode = SideMenuShowFirstNode
+            '    With MenuLateral
+            '        .Visible = SideMenuVisible
+            '        .DataSource = dtsSiteMapLateral
+            '        .DataBind()
+            '    End With
+            'End If
+        End If
+
+    End Sub
+
+    'Protected Sub m_mnuLateral_PreRender(ByVal sender As Object, ByVal e As System.EventArgs) Handles m_mnuLateral.PreRender
+    '    Try
+    '        For i As Integer = m_mnuLateral.Items.Count - 1 To 0 Step -1
+    '            Dim m As MenuItem = m_mnuLateral.Items(i)
+    '            If Not m.Enabled Then
+    '                m_mnuLateral.Items.Remove(m)
+    '            End If
+    '        Next
+    '    Catch
+    '    End Try
+    'End Sub
+
+    Protected Sub m_mnuSuperior_PreRender(ByVal sender As Object, ByVal e As System.EventArgs) Handles mnuSuperior.PreRender
+        Try
+            For i As Integer = mnuSuperior.Items.Count - 1 To 0 Step -1
+                Dim m As MenuItem = mnuSuperior.Items(i)
+                If Not m.Enabled Then
+                    mnuSuperior.Items.Remove(m)
+                End If
+            Next
+        Catch
+        End Try
+    End Sub
+    
+</script>
+
+<%@ Register Src="../../controls/XMTitulo.ascx" TagName="XMTitulo" TagPrefix="uc1" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<html>
+<head id="Head1" runat="server">
+    <title>XM Promotores - Johnson</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager runat="Server" ID="scriptManager">
+    <Scripts>
+        <asp:ScriptReference Path="~/Js/jquery-1.6.2.min.js" />
+        <asp:ScriptReference Path="~/Js/jquery-1.8.2.min.js" />
+        <asp:ScriptReference Path="~/Js/jquery-ui-1.8.16.custom.min.js" />
+        <asp:ScriptReference Path="~/Js/functions.js" />
+    </Scripts>
+    </ajaxToolkit:ToolkitScriptManager>
+        
+<asp:SiteMapDataSource ID="dtsSiteMapSuperior" runat="server" />
+<asp:SiteMapDataSource ID="dtsSiteMapLateral" runat="server" ShowStartingNode='false' />
+        
+	<!--[if IE 8]><div id="MainArea" class="IE"><![endif]-->
+	<!--[if !IE]>--><div id="MainArea" class="W3F"><!--<![endif]-->
+            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <div class='Main'>
+                            <div class='MainHeader'>
+                            	<div id="logo_promotores"></div>
+                            </div>                            
+                            <div id="Main-Menu">
+                           		<span id="next"></span> 
+                           		<span style="float:left; border-left:1px solid #F2F2F2; border-right:1px solid #F2F2F2;" ><img id="Img1" src="~/imagens/next_ico.png" runat="server" /></span>
+                                <asp:Menu ID="mnuSuperior" runat="server" SkinID='Superior' />
+                            </div>
+                            <div class='MainUserPanel' runat="server" id="divMainUserPainel">
+                                <asp:LoginView runat="server" SkinID="BarraLateral" ID='ljvLoginView'>
+                                    <LoggedInTemplate>
+                                        <div class='divUserPanel'>
+                                            <h5>logado como</h5> <asp:LoginName ID="LoginName1" runat="server"  />
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="sair" />
+                                        </div> 
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div> 
+                            <div class='MainLateral'>
+                                <asp:ListView runat='server' ID='lstMenu' DataSourceID='dtsSiteMapLateral'>
+                                    <LayoutTemplate>
+                                        <table runat="server" id="table1" runat="server">
+                                            <tr runat="server" id="itemPlaceholder">
+                                            </tr>
+                                        </table>
+                                    </LayoutTemplate>                                
+                                    <ItemTemplate>
+                                        <asp:HyperLink runat='server' NavigateUrl='<%#Eval("url") %>'><asp:Image runat='server' ImageUrl='<%#Container.DataItem.Item("img")%>' /></asp:HyperLink>
+                                    </ItemTemplate>
+                                </asp:ListView>
+                            </div>                           
+                            <div class='MainContent' >
+                            	<uc1:XMTitulo ID="XMTitulo1" runat="server"/>
+                                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                                </asp:contentplaceholder>
+                            </div>
+               			    <asp:Image runat='server' ImageUrl="~/imagens/minwidth.gif" width='650px' id='imgMinWidth' />
+                        </div>
+                    </td>
+                </tr> 
+                <tr height=20px>
+                    <td class="bg_footer">
+                        <div id='MainFooter'>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.
+                        	<img src="../../imagens/logo_xm_pq_branco.png"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

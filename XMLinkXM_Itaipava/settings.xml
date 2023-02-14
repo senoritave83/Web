@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<settings>
+    <Categoria>
+        <Codigo required="true" visible="true" />
+        <Categoria required="false" />
+      <DescontoMax required="true" visible="true" />
+    </Categoria>
+  <Pesquisas>
+    <JustificativaPesquisa required="false" visible ="false"></JustificativaPesquisa>
+  </Pesquisas>
+    <Mapa>
+      <Motorista visible="false"/>
+      <Veiculo visible="false"/>
+      <Alterar visible="false"/>
+      <Gravar visible="false"/>
+      <Confirmacao visible="false"/>
+      <Observacao visible="false"/>
+    </Mapa>
+  <Empresa>
+    <PermitePrecoLivre visible="false"></PermitePrecoLivre>
+    <PermiteBonificacao visible="false"></PermiteBonificacao>
+  </Empresa>
+</settings>

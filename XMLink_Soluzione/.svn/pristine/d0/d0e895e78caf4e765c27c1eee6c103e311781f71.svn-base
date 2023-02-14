@@ -1,0 +1,65 @@
+Imports System.Data.SqlClient
+Imports System.Xml
+
+Public Class DataClass
+    Private m_strConnectionString As String
+    Private Connection As SqlConnection
+
+    Public Sub New(ByVal vConnectionString)
+        m_strConnectionString = vConnectionString
+    End Sub
+
+    Protected Sub Close()
+        If Not Connection Is Nothing Then
+            Connection.Close()
+        End If
+    End Sub
+
+    Protected Sub Open()
+        If Connection Is Nothing Then
+            Connection = New SqlConnection(m_strConnectionString)
+        End If
+        If Connection.State <> ConnectionState.Open Then Connection.Open()
+    End Sub
+
+    Public Function GetDataSet(ByVal SQL As String) As DataSet
+        Open()
+        Dim myData As New DataSet()
+        Dim adapter As New SqlDataAdapter(SQL, Connection)
+        adapter.Fill(myData, "data")
+        adapter.Dispose()
+        Close()
+        Return myData
+    End Function
+
+    Public Function ExecuteNonQuery(ByVal SQL As String)
+        Open()
+        Dim myCommand As New SqlCommand()
+        myCommand.Connection = Connection
+        myCommand.CommandText = SQL
+        myCommand.CommandType = CommandType.Text
+        myCommand.ExecuteNonQuery()
+        Close()
+        myCommand.Dispose()
+    End Function
+
+    Public Function GetXML(ByVal SQL As String) As String
+        Dim strXML As String = "<?xml version=""1.0"" encoding=""iso-8859-1""?><xml>"
+        Open()
+        Dim myCommand As New SqlCommand()
+        myCommand.Connection = Connection
+        myCommand.CommandText = SQL
+        myCommand.CommandType = CommandType.Text
+
+        Dim objReader As XmlReader = myCommand.ExecuteXmlReader()
+        While objReader.Read()
+            strXML &= objReader.ReadOuterXml
+        End While
+        Close()
+        myCommand.Dispose()
+        Return strXML & "</xml>"
+    End Function
+
+
+
+End Class

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="ValidaAparelho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codCNPJ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codFleetID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oDataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaAparelhoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaAparelhoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oDataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codCNPJ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codSenha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaClienteResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaAparelhoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaAparelho" />
+  </wsdl:message>
+  <wsdl:message name="ValidaAparelhoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaAparelhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaCliente" />
+  </wsdl:message>
+  <wsdl:message name="ValidaClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaStatus" />
+  </wsdl:message>
+  <wsdl:message name="ValidaStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsClienteSoap">
+    <wsdl:operation name="ValidaAparelho">
+      <wsdl:input message="tns:ValidaAparelhoSoapIn" />
+      <wsdl:output message="tns:ValidaAparelhoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaCliente">
+      <wsdl:input message="tns:ValidaClienteSoapIn" />
+      <wsdl:output message="tns:ValidaClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaStatus">
+      <wsdl:input message="tns:ValidaStatusSoapIn" />
+      <wsdl:output message="tns:ValidaStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsClienteSoap" type="tns:wsClienteSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaAparelho">
+      <soap:operation soapAction="http://tempuri.org/ValidaAparelho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaCliente">
+      <soap:operation soapAction="http://tempuri.org/ValidaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaStatus">
+      <soap:operation soapAction="http://tempuri.org/ValidaStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCliente">
+    <wsdl:port name="wsClienteSoap" binding="tns:wsClienteSoap">
+      <soap:address location="http://ws.nextel.com.br/wscliente/wscliente.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

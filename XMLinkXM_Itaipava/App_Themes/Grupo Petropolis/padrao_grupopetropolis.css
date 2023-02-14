@@ -1,0 +1,909 @@
+﻿/*---------------------------------------------------------------------- Positionamento */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cr{clear:right;}
+.cl{clear:left;}
+
+.pd {
+	padding-left:20px;
+	padding-top:10px;
+	padding-bottom:5px;
+
+}
+
+
+.ac{text-align:left; }
+.ar{text-align:right; text-align:left\9; padding:0px\9; width:10%\9;}
+
+.teste{ 
+	
+}
+/*---------------------------------------------------------------------- MASTER PAGE */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family:Verdana,Arial,Helvetica;
+	font-size:8pt;
+}
+/*css ajsutes*/
+
+html, body {height: 100%;}
+
+#Main{
+	position:relative;
+	min-height:100%;
+	height:100%\9;
+	background-color:#F8F8F8;
+}
+
+#Topo{
+	height:79px;
+	background:url('../../imagens/imgs_gp/tarja_menu.png') repeat-x scroll left center;
+	border-bottom:2px #D12027 solid;
+	border-top:2px #C0C0C0 solid;
+}
+
+#Topo span{
+	width:263px;
+	height:71px;
+	display:inline-block;
+	padding-top:4px;
+}
+
+#Topo #logo{
+	background:url('../../imagens/imgs_gp/logo_gp.png') no-repeat scroll left 1px;
+}
+
+#Topo #Menu-superior{
+	position:absolute;
+}
+
+#Menu-lateral{
+	width:262px;
+	height:90%;
+	float:left;	
+	background-color:#E8E8E8;
+	border:1px #CCCCCC solid;
+}
+
+#Main-Content{
+	width:84%;
+	width:95%\9;	
+	position:relative;
+	display:inline-block;
+	padding: 10px 0px 10px 16px;
+}
+	
+#footer{
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:11px;
+	bottom:0px;
+	position:absolute;
+	background:url('../../imagens/logo_xm_pq.png') no-repeat scroll 1145px center #000000;
+	line-height:35px;
+	height:35px;	}	
+		
+#divLogin	{
+	padding-top:112px;  
+	font-size:15px; 
+	color:gray; 
+	width:84%;
+}
+
+#divLogin table	tr td table{
+	margin-left:41px;
+	margin-left:-30px\9;
+	text-align:center;
+	margin-top:80px;
+}
+
+#Menu-superior ul li{
+	display:inline-block;
+	width:107px;
+	height:70px;
+	text-align:center;
+	background:url('../../imagens/separador.png') no-repeat scroll right center;}
+	
+.container-default{
+	height:80%; 
+	width:80%; 
+	width:100%\9; 
+	margin-left:92px; 
+	margin-left:52px\9;
+}
+
+.breadcrumb{
+	display:block; background-color:#EAEAEA; padding:8px 0px 8px 277px;
+}	
+
+#conteudo{
+	padding-bottom:30px;
+}
+
+/*fim css ajsutes*/
+
+.ProgressBar{
+    border:solid 1px black;
+    width:100%;
+    height:19px;
+    position:relative;
+}
+
+.ProgressBar .texto{
+    position:absolute;
+    margin-top:2px;
+    z-index:2;
+    text-align:center;width:100%;
+}
+
+.ProgressBar .barras{
+    position:absolute;
+}
+
+.ProgressBar .barra1{
+    background-image:url(../../imagens/progresso.gif);background-repeat:repeat-x;height:16px;
+    background-color:Green;
+    float:left;
+    z-index:0;
+}
+
+.ProgressBar .barra2{
+    background-image:url(../../imagens/progresso.gif);background-repeat:repeat-x;height:16px;
+    background-color:Gray;
+    float:left;
+}
+
+.divisao_mnu_sup {
+	border-right:1px #A60B15 solid;
+}
+
+.divEmptyRow{
+	padding:10px;
+}
+
+.GridItem { width:100%;}
+
+#imgLinha{
+	background-color:#FFFFFF;
+	background-image:url(../../imagens/bluebarh.gif) ;
+	background-repeat:no-repeat;
+	height:1px;
+	width:100%;
+}
+
+.divUserPanel{
+	height:45px;
+	display:block;
+	padding:5px 5px 5px 8px;
+	color:#A60B15;
+	border-bottom:1px #D9652F solid;
+    background-color:#DC1F26;
+	}
+
+.divuserPanel a{
+	color:White;
+	text-align:right;
+}
+
+.campo_revenda{
+	height:30px;
+	padding:0px 8px 5px 8px;
+	color:#686868;
+	margin-bottom:10px;}
+	
+.campo_revenda a{
+	color:#686868;
+	text-decoration:none;
+}
+
+.campo_revenda a:hover{	
+	text-decoration:underline;
+}
+	
+.login {
+	padding:7px;
+	width:356px;
+	height:320px;
+	text-align:center;
+	vertical-align:middle;
+	background:url('../../imagens/imgs_gp/bg_login.png') no-repeat scroll center 0px;
+}
+
+.divhome{
+	background:url('../../imagens/bg_bemvindo.png') no-repeat scroll center 0px;
+}	
+
+.textbox{
+	margin-bottom:5px;
+	border:1px #CCCCCC solid;
+	line-height:25px;
+	padding:2px 3px 2px 3px;
+}
+
+#divMensagens{
+	background: -moz-linear-gradient(center bottom , #E2E2E2 68%, #CDCECF 107%) repeat scroll 0 0 #CDCECF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CDCECF), to(#E2E2E2)) repeat-X;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CDCECF, endColorstr=#E2E2E2)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CDCECF, endColorstr=#E2E2E2);
+	background-color:#E2E2E2;
+	border-radius:2px;
+	width:400px;
+	height:200px;
+	padding:5px 5px 5px 5px;
+	margin:10px 0px 0px 0px;
+}
+
+#divMensagens h4{
+	font-size:11px;
+	float:left;
+	padding-top:3px;	
+}
+
+#divMensagens #data{
+	font-size:10.5px;
+	float:right;
+	width:121px;
+	width:125px\9;
+	padding-top:3px;
+	}
+
+#fdo_msg {
+	background-color: #F4F4F4;
+	height:188px;
+	padding:2px 8px 8px 8px;
+	border:1px #FFFFFF solid;
+	overflow:scroll;
+
+}
+
+#msg {
+	text-align:left;
+	padding-bottom:7px;
+	border-bottom:1px #E8E8E8 solid;
+	width:383px;
+	}
+
+#msg p {
+	width:383px;
+}
+
+.espacamento{
+	text-align:left;
+	padding:0px\9;
+}
+
+#mnuLateral ul li{
+	border-top:1px #FFFFFF solid;
+	border-bottom:1px #CCCCCC solid;
+}
+
+#mnuLateral ul li a{
+	line-height:48px;
+	width:237px;
+	width:100%\9;
+}
+
+.menu_largura{
+	font-family:Verdana, Geneva, Tahoma, sans-serif\9;
+	padding-right:100px\9;
+}
+
+/*---------------------------------------------------------------------- TITULO */
+
+.AreaTitulo
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+.AreaSubTitulo
+{
+	color:White;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+/*---------------------------------------------------------------------- AREA COMUNS */
+.AreaBotoes
+{
+	background: -moz-linear-gradient(center bottom , #E2E2E2 68%, #E6E6E6 107%) repeat scroll 0 0 #CDCECF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#E2E2E2)) repeat-X;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E6E6, endColorstr=#E2E2E2)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E6E6, endColorstr=#E2E2E2);
+	background-color:#E2E2E2;
+	border:1px #CDCECF solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+}
+
+#divErros
+{
+	background-color:#CDCECF;
+	border:1px #CDCECF solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+}
+
+.AreaBotoes input
+{
+	width:auto;
+	padding:3px 5px;
+	float:left;	
+	margin-right:10px;
+	height:25px;
+	border:1px #999999 solid;
+	border-radius:2px;
+}
+
+.AreaAjuda
+{
+	background-color:#CDCECF;
+	border:1px #CDCECF solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#898989;
+	font-size:x-small;
+	text-align:left;
+}
+	
+
+/*---------------------------------------------------------------------- LISTA */
+
+
+.GridHeader th{
+	line-height:25px;
+	padding-left:10px;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #CDCECF;
+	text-align:left;
+}
+
+table tr td{
+	line-height:20px;
+	padding-left:10px;
+}
+
+table tr td a {
+	color:#0071BC;
+	text-decoration:none;}
+
+.GridHeader a
+{
+    color:#666666;
+}
+
+.Grid{
+    	BORDER-RIGHT: #CDCECF 1px solid; BORDER-LEFT: #CDCECF 1px solid; BORDER-BOTTOM: #CDCECF 1px solid
+}
+
+.divLista .tdField div table{
+	border:1px #CCCCCC solid;
+}
+
+.ListArea
+{
+	BORDER-RIGHT:#CDCECF 1px solid; BORDER-LEFT: #CDCECF 1px solid; BORDER-BOTTOM: #CDCECF 1px solid;
+	background-color:#FFFFFF;    
+}
+
+#divCadastro
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+.TextDefault
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	color:Black;
+
+}
+
+.TextDefaultBold{
+	text-decoration:none;
+	font-weight:bold;
+	color:#898989;
+}
+
+
+.Filtro 
+{
+	FONT-SIZE: 0.9em; COLOR:#898989; LINE-HEIGHT: 150%; FONT-FAMILY:Arial, Helvetica, sans-serif; 
+	margin-top:10px;
+	border:1px #CDCECF solid;
+	padding:15px 0px 10px 20px;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	height:83px\9; 
+	height:131px;
+	margin-bottom:10px;
+	background-color:#E6E6E6;
+	background: -moz-linear-gradient(center bottom , #E2E2E2 43%, #E6E6E6 74%) repeat scroll 0 0 #D1D1D1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#E2E2E2)) repeat-X;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E6E6, endColorstr=#E2E2E2)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E6E6, endColorstr=#E2E2E2);
+}
+
+.Filtro .FiltroTitulo
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; COLOR: white; LINE-HEIGHT: 150%; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #6699cc
+}
+
+.Filtro .FiltroBotao
+{
+    display: inline-block;
+	margin-left:10px;
+	text-align:left;
+	float:right\9;
+	width:auto\9;
+	vertical-align:baseline;
+	margin-bottom:5px;
+	margin-top:20px;
+	background-image: url(../../imagens/fdo_btn_png); 
+
+}
+
+.Filtro .FiltroBotao input
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:100px;
+	height:25px;
+	border:1px #CDCECF solid;
+	border-radius:2px;
+}
+
+.Filtro .FiltroItem
+{
+    color: #555555;
+    display: inline-block;
+    display: inline\9;
+    margin-bottom: 5px;
+    margin-right: 11px;
+    padding-left: 5px;
+    text-align: left;
+    width:auto;
+    width:119px\9;}
+
+
+.Filtro .FiltroItem input[type=text]{
+	border:1px #CCCCCC solid;
+	height:20px;
+}
+
+.Filtro .FiltroClearRight
+{
+	clear:right;
+}
+
+
+.Filtro .FiltroClearLeft
+{
+	clear:left;
+}
+
+
+.Filtro .FiltroItem label
+{
+    color:#898989;
+    padding-right:5px;
+    padding-right:0px\9;
+}
+
+
+.FiltroLetras
+{
+	width:30%;
+	display:inline-block;
+	display:inline\9;
+	text-align:left;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+.FiltroLetras a
+{
+	color:#898989;
+}
+
+.FiltroLetras .SelectedLetra
+{
+    color:Black;
+}
+
+/*---------------------------------------------------------------------- Geral */
+
+.AcaoArea
+{
+    
+}
+
+.AcaoArea .Secao
+{
+	background-color:White;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 0px 0px 0px 0px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	width:200px;
+	text-align:left;
+	float:left;
+	margin-left:5px;
+
+}
+
+
+.ErrorLbl
+{
+    font-size:9px;
+	color:red;
+}
+
+.DataTable
+{
+    width:100%;
+    border-collapse:collapse;
+    border:1px #CCCCCC solid;  
+}
+
+.DataTable tr
+{
+    border:none;
+}
+
+.DataTable tr td
+{
+    border-right:1px #9C9C9C solid;
+}
+
+.DataTable tr th
+{
+    border-right:1px #9C9C9C solid;
+}
+
+.AcaoArea .Secao .SecaoHeader
+{
+	background-color:#62738C;
+	color:White;
+	width:100%;
+	margin-top:0px;
+}
+
+.AcaoArea .Secao .Acoes
+{
+    padding:2px 2px 2px 2px;
+}
+
+.pNormal{margin:10px 0;}
+
+.mb10{margin-bottom:10px !important;}
+
+.mtb20{margin:20px 0 20px 0 !important;}
+
+.mt0{margin-top:0 !important;}
+
+.mt20{margin-top:20px !important;}
+
+.f10{font-size:10px !important;}
+.f11{font-size:11px !important;}
+.f12, .f12 *{font-size:12px !important;}
+
+
+.noBg{background:none !important;}
+
+
+.TituloArea
+{
+	font-size:15px;
+	font-weight:bold;
+	color:White;
+	font-family:Arial;
+	text-align:left;
+}
+
+.EditArea
+{
+	margin-top:10px;
+	font-family:Arial;
+	color:#898989;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+.trEditHeader
+{
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #6699cc;
+	margin-bottom:10px;
+}
+
+.trEditFooter
+{
+	margin-bottom:5px;
+}
+
+.EditArea #tblEditArea 
+{
+	width:100%;
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid;
+	border-collapse: collapse;
+}
+
+.EditArea .divEditArea 
+{
+	width:auto;
+	border:1px solid #CDCECF;
+	border-collapse: collapse;
+}
+
+
+.EditArea .divEditArea .trField
+{
+    white-space: nowrap;
+	padding:1px 1px 1px 1px;
+}
+
+.EditArea .divEditArea
+{
+	margin-bottom:20px;
+	height:160px;
+}
+
+.EditArea .divEditArea .trField .tdFieldHeader
+{
+	width:130px;
+	color:#898989;
+	font-weight:bold;
+	text-align:right;
+	padding:2px 2px 2px 10px;
+	
+}
+
+.EditArea .divEditArea .divHeader{
+	background-color:#CDCECF;
+	margin-bottom:10px;
+	padding:3px 5px;
+	color:#666666;
+}
+
+
+.EditArea .divEditArea .trField .tdField
+{
+	padding-left:10px;
+	color:Black;
+	padding:2px 2px 2px 2px;	
+}
+
+.EditArea #tblEditArea .trField
+{
+    white-space: nowrap;
+}
+
+#tblEditArea
+{
+	margin-bottom:20px;
+}
+
+#tblEditArea .trField .tdFieldHeader
+{
+	float:left;
+	/*width:130px;*/
+	color:3399cc;
+	font-weight:bold;
+	text-align:right;
+	padding:2px 2px 2px 2px;
+}
+
+#tblEditArea .trField .tdField
+{
+	padding-left:10px;
+	float:left;
+	color:Black;
+	padding:2px 2px 2px 2px;
+}
+
+.obs
+{
+    color:Green;
+    font-size:6pt;    
+    font-weight:normal;
+}
+
+.FieldCell input
+{
+	width:150px;
+
+}
+
+.menu .bot {
+}
+
+.space{
+	clear: both;
+	height: 35px;
+}
+
+.Botao
+{
+	margin-bottom: 4px; 
+	font-family:Arial, Helvetica, sans-serif;	
+	font-size:xx-small; 
+	font-weight:bold;
+	color:#666666;
+	text-transform:uppercase;
+	width:100px;
+	height:25px;
+	float:left;
+	margin-right:10px;
+	background-image:url('../../imagens/bg_botoes.png');
+	background-repeat:repeat-x;
+	}
+
+.btlogin{
+	background-color:#999999;
+	height:25px;	
+	width:100px;
+	border:none;
+	color:#FFFFFF;
+	margin-right:40px;
+}
+
+#tblFiltroPermissao .Letras a
+{
+    color:Black;
+}
+
+/******************** TELA DE MENU DE CADASTRO ***************************/
+#divMenuCadastro
+{
+    width:100%;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divMenuCadastro .ItemMenu
+{
+    width:49%;
+    float:left;
+}
+
+#divMenuCadastro .ItemMenu a
+{
+    font-family:Arial;
+    font-size:medium;
+    color:Black;
+    text-decoration:none;
+}
+
+#divMenuCadastro .ItemMenu a:link
+{
+    font-family:Arial;
+    font-size:medium;
+    color:#003366;
+    text-decoration:none;
+}
+
+#divMenuCadastro .ItemMenu a:hover{
+    font-family:Arial;
+    font-size:medium;
+    color:blue;
+    text-decoration:none;
+}
+
+
+#divMenuCadastro .ItemMenu img{
+    vertical-align:middle;
+    border: none;
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+#Main-Content{
+	width:83%;
+}
+
+.container-default{
+	width:90%;
+}
+
+#divLogin table	tr td table{
+	margin-left:41px;
+}
+
+#mnuLateral ul{
+	width:263px;
+}
+
+#mnuLateral ul li {
+	width:238px;
+	border:none;
+}
+
+#mnuLateral ul li a {
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZmNmY2ZjIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjN2E3YTdhIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjN2E3YTdhIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdhN2E3YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(252,252,252,0) 1%, rgba(122,122,122,0) 50%, rgba(122,122,122,0) 99%, rgba(122,122,122,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(1%,rgba(252,252,252,0)), color-stop(50%,rgba(122,122,122,0)), color-stop(99%,rgba(122,122,122,0)), color-stop(100%,rgba(122,122,122,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(252,252,252,0) 1%,rgba(122,122,122,0) 50%,rgba(122,122,122,0) 99%,rgba(122,122,122,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(252,252,252,0) 1%,rgba(122,122,122,0) 50%,rgba(122,122,122,0) 99%,rgba(122,122,122,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(252,252,252,0) 1%,rgba(122,122,122,0) 50%,rgba(122,122,122,0) 99%,rgba(122,122,122,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(252,252,252,0) 1%,rgba(122,122,122,0) 50%,rgba(122,122,122,0) 99%,rgba(122,122,122,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7a7a7a',GradientType=0 ); /* IE6-8 */
+	border:none;
+}
+
+.Filtro .FiltroBotao{
+	display:inline-block;
+}
+
+#divRoteiro
+{ height:130px; width:90%;}
+
+
+.Filtro .FiltroItem {
+	width:auto;
+	display:inline-block;
+}
+
+.Filtro .FiltroItem select{
+	display:block;
+	clear:right;
+}
+
+.Filtro .FiltroItem input[type=text]{
+	display:block;
+	clear:right;
+}
+
+#footer{	
+	position:relative;
+	}
+
+}

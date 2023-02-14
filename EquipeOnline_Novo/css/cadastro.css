@@ -1,0 +1,265 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background: url(../images/bg_interna_container.jpg) no-repeat top left;
+	background-color:#770021;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+}
+
+.Header2
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 14px;
+	color:#FFFFFF;
+}
+
+a.link {color: #FFFFFF;}
+
+a.linktable {color: #000000;}
+
+a.linktable:hover {color: #8c001b;}
+
+.texto
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#FFFFFF;
+}
+.texto_orange
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#f29400;
+	text-decoration:none;
+}
+a.texto_orange {color: #f29400;}
+
+a.texto_orange:hover {color: #FFFFFF; text-decoration:none;}
+
+.vermelhogd
+{
+	font-size: 12px;
+	color:#8c001b;
+}
+.texto_pb
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#000000;
+	text-decoration:none;
+}
+a.texto_pb {color: #000000;}
+
+a.texto_pb:hover {color: #000000; text-decoration:UNDERLINE;
+}
+.texto_red
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	text-decoration:none;
+}
+a.texto_red {color: #8c001b;}
+
+a.texto_red:hover {color: #8c001b; text-decoration:none;
+}
+
+.Configen table{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	text-decoration:none;
+}
+
+td.Configen a {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+td.Configen a:hover {color: #8c001b; text-decoration:underline;}
+
+.menu
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#000000;
+	text-decoration:none;
+}
+a.menu {color: #000000;}
+
+a.menu:hover {color: #000000; text-decoration:UNDERLINE;
+}
+
+
+.BtnFormulario
+{
+	padding: 1px 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #62031e;
+	cursor: hand;
+	cursor: pointer;
+	background:#f29400;
+	border:none;
+}
+
+
+
+#btnok
+{
+	width: 54px;
+	padding: 1px 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #62031e;
+	cursor: hand;
+	cursor: pointer;
+	background:#f29400;
+	border:none;
+}
+#btnApagar
+{
+	width: 150px;
+	padding: 1px 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #62031e;
+	cursor: hand;
+	cursor: pointer;
+	background:#f29400;
+	border:none;
+}
+.menuitem
+{
+	color:#FFFFFF;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+a.menuitem 
+{
+	color: #ffffff; 
+	text-decoration:none; 
+	height:17px; 
+	display:block;
+}
+a.menuitem:hover {color: #f29400;
+}
+td.menuitem 
+{
+	text-align:center;
+	width:130px;
+	padding:6px 0 0 0;
+	display:table;	
+}
+
+td.menusepara
+{
+	width: 1px;
+	text-align:center;
+}
+.menusepara
+{
+	color:#FFFFFF;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.menuhelp
+{
+	width: 56px;
+	height: 16px;
+	margin: 7px 0px 0px 0px;
+	background: url(../images/bot_ajuda.gif) no-repeat; 
+	display:block;
+	text-indent: -999999px;
+	border: 0px red solid;
+}
+a.menuhelp {color: #ffffff;}
+
+a.menuhelp:hover {color: #ffffff; text-decoration:underline; background:url(../images/bot_ajuda_over.gif) no-repeat;
+}
+.sair
+{
+	width: 48px;
+	height: 16px;
+	margin: 7px 0px 0px 0px;
+	background: url(../images/bot_sair.gif) no-repeat; 
+	display:block;
+	text-indent: -999999px;
+	border: 0px red solid;
+}
+a.sair {color: #ffffff;}
+
+a.sair:hover {color: #ffffff; text-decoration:underline; background:url(../images/bot_sair_over.gif) no-repeat;
+}
+
+.submenu
+{
+	position: absolute;
+	top:60px;
+	background:#f29400;
+	border: 1px solid #c55001;
+
+}
+.menu2
+{
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color:#8c001b;
+	text-decoration:none;
+}
+a.menu2 {color: #8c001b;}
+
+a.menu2:hover {color: #8c001b; text-decoration:underline;
+}
+
+.divmenu table
+{
+	margin-left:2px;
+	display:block;
+	width:120px;
+	_width:110px;
+}
+
+div#fundomodal
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background-color:#000;
+	opacity: 0.7;
+	filter: alpha(opacity: 70);
+	z-index:1;
+}
+
+
+#Table2
+{
+    text-align:left;
+}
+
+span.erro{
+	/*
+    position: absolute;
+	left: 0;
+	margin-left: -300px;
+	display: block;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+	top:-150px;*/
+	border:solid 0x red;
+	background-color:#9f0b35;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 10px;
+	text-transform:uppercase;
+}
+

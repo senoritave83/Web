@@ -1,0 +1,165 @@
+****************************************
+Data:16/44/2011 10:08:08
+Error importing file: 1_0000000119.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/42/2011 08:09:01
+Error importing file: 1_0000000119.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/42/2011 08:09:19
+Error importing file: 1_0000000119.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000119.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/42/2011 08:09:37
+Error importing file: 1_0000000109.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/42/2011 08:09:47
+Error importing file: 1_0000000109.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/46/2011 08:09:52
+Error importing file: 1_0000000109.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000109.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/48/2011 08:09:48
+Error importing file: 1_0000000052.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/49/2011 08:09:31
+Error importing file: 1_0000000052.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000052.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/52/2011 08:09:06
+Error importing file: 1_0000000111.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000111.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000111.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000111.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/09/2011 12:09:32
+Error importing file: 1_0000000051.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104
+****************************************
+Data:08/09/2011 12:09:43
+Error importing file: 1_0000000051.txt
+Message:Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'.
+Row: -1
+Data:
+Exception: System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'.
+Nome do arquivo: 'D:\Daiana\EOL NOVO\EOL HTML AJUDA\integracao\files\1_0000000051.txt'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   em System.IO.StreamReader..ctor(String path, Encoding encoding)
+   em XMSistemas.Data.Import.TextDataReader.Open(String vFileName, String vColumnsSizes) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\TextDataReader.vb:linha 190
+   em XMSistemas.Data.Import.XMDataImport.Processar(String vArquivo, Int32 vIDTipo, String vColumns, String vDescription, String vDestinationTable, String vDestinationColumns, String vProcedure, Stream st) na E:\Users\Felipe\Meus Documentos\Visual Studio 2008\Projects\XMDataImport\XMDataImport.vb:linha 104

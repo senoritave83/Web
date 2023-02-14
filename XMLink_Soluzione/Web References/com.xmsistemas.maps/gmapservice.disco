@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx?wsdl" docRef="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx" xmlns:q1="http://xmsistemas.com.br/services/xmgmapservice" binding="q1:GMapServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx" xmlns:q2="http://xmsistemas.com.br/services/xmgmapservice" binding="q2:GMapServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

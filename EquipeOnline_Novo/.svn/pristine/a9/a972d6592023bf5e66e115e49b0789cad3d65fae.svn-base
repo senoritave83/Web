@@ -1,0 +1,118 @@
+<%@ Master Language="VB" MasterPageFile="~/header.master" CodeFile="basica.master.vb" Inherits="basica" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHtmlHead" runat="server">
+	<script type="text/JavaScript">
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+    function openDialog(url, width, height) {
+        var xposition = 0;
+        var yposition = 0;
+        if ((parseInt(navigator.appVersion, 10) >= 4)) {
+            xposition = (screen.width - width) / 2;
+            yposition = (screen.height - height) / 2;
+        }
+        width = eval(width) - 10;
+        height = eval(height) - 55;
+
+        var args = "width=" + width + ","
+    + "height=" + height + ","
+    + "location=0,"
+    + "menubar=0,"
+    + "resizable=0,"
+    + "scrollbars=yes,"
+    + "status=0,"
+    + "titlebar=0,"
+    + "toolbar=0,"
+    + "hotkeys=0,"
+    + "directories=0,"
+    + "copyhistory=0,"
+    + "screenx=0,"  //NN Only 
+    + "screeny=0,"  //NN Only 
+    + "left=0,"     //IE Only 
+    + "top=0";      //IE Only 
+        window.open(url, 'WindowOpened', args);
+    }
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+    //-->
+</script>
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<script type="text/javascript" src="scripts/jquery-DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('body div, body span, .container, .container img, .container div, .container a, .container input, .container ul, .container li,  .container h2, .container h3, .container h4,.container h5, .container h6, .container label, .container span, .container form, .container textarea, .usuario, .menuCat li, .menuCat .sub');
+ 
+  //IE6, IE7 z-index issue
+  
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});        
+});
+</script>
+ 
+<![endif]-->
+ 
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<script type="text/javascript">
+//IE6, IE7 z-index issue
+ 
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p, li').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});
+});
+</script>
+ 
+<![endif]-->
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="cphBody" runat="server">
+	<div class="headCategory catEquipe">
+        <h3 id="logo_eol_gde" class="push19">Equipe Online</h3>
+    </div><!-- end headCategory-->
+    <div class="content">
+        <!--<span class="contentTop">&nbsp;</span>-->
+        <div class="contentMiddle" style="margin-top:10px;">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Visible='true' CssClass="breadcrumb" PathSeparator="/">
+            </asp:SiteMapPath>
+		    <div class="main mainDeslog">
+			    <img src="../images/pictures/banner_EOL.jpg" width="885" height="221" alt="Equipe Online" />
+                <br class="clear"/>
+                <div class="fLeft">
+                    <asp:ContentPlaceHolder ID="cphHelp" runat="server">
+                    </asp:ContentPlaceHolder>                    
+                </div>
+                <form id="form1" runat="server">                
+                    <asp:ContentPlaceHolder id="cphConteudo" runat="server">
+                    </asp:ContentPlaceHolder>                    
+                </form>
+                <br class="clear"/>
+            </div>  
+        </div>
+    </div><!-- end content-->
+</asp:Content>

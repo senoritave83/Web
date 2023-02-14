@@ -1,0 +1,902 @@
+﻿Imports System.Windows.Forms
+
+Partial Class Relatorios_Filtro
+    Inherits System.Web.UI.UserControl
+
+    Public Event Exibir(sender As Object, e As System.EventArgs)
+    Private vEmpresaUnica As Boolean
+
+    Public Shadows Property Page As XMWebPage
+        Get
+            Return MyBase.Page
+        End Get
+        Set(value As XMWebPage)
+            MyBase.Page = value
+        End Set
+    End Property
+
+    Protected Sub Page_init(sender As Object, e As System.EventArgs) Handles Me.Init
+
+        If Not Page.IsPostBack Then
+
+            Dim vIDEmpresa As Integer = Page.User.IDEmpresa
+
+            If Page.User.IDEmpresa = 0 Then
+
+                If Page.VerificaPermissao("Relatórios", "Visualizar todas as empresas") Then
+                    Dim cls As New Classes.clsEmpresa
+                    cboEmpresa.DataSource = cls.ListarAutorizadas()
+                    cboEmpresa.DataBind()
+                    If PermitirTodasEmpresas = False Then
+                        cboEmpresa.Items.Insert(0, New ListItem("SELECIONE UM REVENDA...", 0))
+                    Else
+                        cboEmpresa.Items.Insert(0, New ListItem("TODAS", 0))
+                    End If
+
+                    setComboValue(cboEmpresa, Page.User.IDEmpresa)
+                    divEmpresa.Visible = True
+                Else
+                    cboEmpresa.Items.Clear()
+                    cboEmpresa.Items.Add(New ListItem("Atual", Page.User.IDEmpresa))
+                    divEmpresa.Visible = False
+                End If
+
+                If VisualizarUnicaEmpresa Then
+                    cboEmpresa.Items.RemoveAt(0)
+                End If
+
+            Else
+
+                cboEmpresa.Items.Clear()
+                cboEmpresa.Items.Add(New ListItem("Atual", Page.User.IDEmpresa))
+                divEmpresa.Visible = False
+
+            End If
+
+
+            txtDataInicial.Text = Now.ToString("dd/MM/yyyy")
+            txtDataFinal.Text = Now.ToString("dd/MM/yyyy")
+            txtDias.Text = "30"
+
+            Dim sta As New Classes.clsStatus
+            cboStatus.DataSource = sta.Listar()
+            cboStatus.DataBind()
+            cboStatus.Items.Insert(0, New ListItem("TODOS", 0))
+            sta = Nothing
+
+            Dim vis As New Classes.clsVisita
+            cboStatusVisita.DataSource = vis.ListarStatusVisita()
+            cboStatusVisita.DataBind()
+            cboStatusVisita.Items.Insert(0, New ListItem("Justificado", -2))
+            cboStatusVisita.Items.Insert(0, New ListItem("Realizado", -1))
+            cboStatusVisita.Items.Insert(0, New ListItem("Pendente", -3))
+            cboStatusVisita.Items.Insert(0, New ListItem("TODOS", 0))
+            vis = Nothing
+
+            Dim cat As New Classes.clsCategoria
+            cboCategoriaProd.DataSource = cat.Listar()
+            cboCategoriaProd.DataBind()
+            cboCategoriaProd.Items.Insert(0, New ListItem("TODOS", 0))
+            cat = Nothing
+
+            Dim lin As New Classes.clsLinha
+            cboIdEmbalagem.DataSource = lin.Listar()
+            cboIdEmbalagem.DataBind()
+            cboIdEmbalagem.Items.Insert(0, New ListItem("TODOS", 0))
+            cat = Nothing
+
+            Dim cap As New Classes.clsCategoriaPesquisa
+            cboCatPesquisa.DataSource = cap.Listar()
+            cboCatPesquisa.DataBind()
+            cap = Nothing
+
+            CarregaGerenteVendas()
+            CarregaSupervisor(0)
+            CarregaVendedor(0)
+            CarregaProdutos(0)
+            CarregaPesquisas()
+
+            If txtDataInicial.Visible And txtDataFinal.Visible = False Then
+                lblData.Text = "Data"
+            Else
+                lblData.Text = "De"
+            End If
+
+        End If
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+
+        If Not Page.IsPostBack Then
+
+            '********** Retira o postback do cboSupervisor quando não há necessidade
+            If divGerenteVendas.Visible = False And _
+                divVendedor.Visible = False And _
+                divSupervisor.Visible = True Or _
+                divGerenteVendas.Visible = True And _
+                divVendedor.Visible = False And _
+                divSupervisor.Visible = True Then
+                cboSupervisor.AutoPostBack = False
+            End If
+
+            Dim intIdCatPesquisa As Integer = getComboValue(cboCatPesquisa)
+            CarregaProdutoPesquisa(intIdCatPesquisa)
+            CarregaMarcas(intIdCatPesquisa)
+            MontaURL()
+
+        End If
+
+        Dim DataInicial As Date = txtDataInicial.Text
+        Dim DataFinal As Date = txtDataFinal.Text
+        ViewState("IntervDatas") = DateDiff(DateInterval.Day, DataInicial, DataFinal)
+
+    End Sub
+
+    Public Sub CarregaProdutos(vIDCategoria As Integer)
+
+        Dim prod As New Classes.clsProduto
+
+        cboProduto.DataSource = prod.Listar(vIDCategoria)
+        cboProduto.DataBind()
+        cboProduto.Items.Insert(0, New ListItem("TODOS", 0))
+        prod = Nothing
+
+    End Sub
+
+    Public Sub CarregaGerenteVendas()
+
+
+        Dim ven As New Classes.clsVendedor
+        Dim vIDEmpresa As Integer
+
+        vIDEmpresa = cboEmpresa.SelectedValue
+        cboGerenteVendas.DataSource = ven.ListarGerenteVendas(vIDEmpresa)
+        cboGerenteVendas.DataBind()
+        cboGerenteVendas.Items.Insert(0, New ListItem("TODOS", 0))
+
+        ven = Nothing
+
+
+    End Sub
+
+    Public Sub CarregaSupervisor(ByVal vIdGerenteVendas As Integer)
+
+        Dim ven As New Classes.clsVendedor
+        Dim vIDEmpresa As Integer
+
+        vIDEmpresa = cboEmpresa.SelectedValue
+        cboSupervisor.DataSource = ven.ListarSupervisores(vIDEmpresa, vIdGerenteVendas)
+        cboSupervisor.DataBind()
+        cboSupervisor.Items.Insert(0, New ListItem("TODOS", 0))
+
+        ven = Nothing
+
+    End Sub
+
+    Public Sub CarregaVendedor(ByVal vIdSupervisor As Integer, Optional ByVal vTodos As Boolean = True)
+
+        Dim ven As New Classes.clsVendedor
+        Dim vIDEmpresa As Integer
+
+        vIDEmpresa = cboEmpresa.SelectedValue
+        cboVendedor.DataSource = ven.ListarVendedoresSup(vIdSupervisor, vIDEmpresa)
+        cboVendedor.DataBind()
+        If vTodos Then cboVendedor.Items.Insert(0, New ListItem("TODOS", 0))
+
+        ven = Nothing
+
+    End Sub
+
+    Public Sub CarregaProdutoPesquisa(vIDCategoriaPesquisa As Integer)
+
+        Dim ppe As New Classes.clsProdutoPesquisa
+        cboProdutoPesquisa.DataSource = ppe.Listar(vIDCategoriaPesquisa)
+        cboProdutoPesquisa.DataBind()
+        ppe = Nothing
+
+    End Sub
+
+    Public Sub CarregaMarcas(vIDCategoriaPesquisa As Integer)
+
+        Dim mar As New Classes.clsMarca
+        lstMarca.DataSource = mar.Listar(vIDCategoriaPesquisa)
+        lstMarca.DataBind()
+        lstMarca.Items.Insert(0, New ListItem("TODOS", 0))
+        lstMarca.SelectedIndex = 0
+        mar = Nothing
+
+    End Sub
+
+    Public Sub CarregaPesquisas()
+
+
+        Dim pesq As New Classes.clsPesquisa()
+        Dim vIDEmpresa As Integer
+
+        vIDEmpresa = cboEmpresa.SelectedValue
+        cboPesquisas.DataSource = pesq.ListarPesquisasEmpresa(vIDEmpresa)
+        cboPesquisas.DataBind()
+        cboPesquisas.Items.Insert(0, New ListItem(IIf(TextoTodasPesquisas <> "", TextoTodasPesquisas, "Selecione um pesquisa..."), 0))
+
+        pesq = Nothing
+
+
+    End Sub
+
+    Protected Sub cboGerenteVendas_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboGerenteVendas.SelectedIndexChanged
+
+        CarregaSupervisor(cboGerenteVendas.SelectedItem.Value)
+
+    End Sub
+
+    Protected Sub cboSupervisor_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboSupervisor.SelectedIndexChanged
+
+        CarregaVendedor(cboSupervisor.SelectedItem.Value)
+
+    End Sub
+
+    Public Property LabelData As String
+        Get
+            Return lblData.Text
+        End Get
+        Set(value As String)
+            lblData.Text = value
+        End Set
+    End Property
+
+#Region "Visibility"
+
+    Public Property ModoExibicaoGrafico As Boolean
+        Get
+            Return divModoExibicaoGrafico.Visible
+        End Get
+        Set(value As Boolean)
+            divModoExibicaoGrafico.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowDias As Boolean
+        Get
+            Return divDias.Visible
+        End Get
+        Set(value As Boolean)
+            divDias.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowDataInicial As Boolean
+        Get
+            Return divDataInicial.Visible
+        End Get
+        Set(value As Boolean)
+            divDataInicial.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowDataFinal As Boolean
+        Get
+            Return divDataFinal.Visible
+        End Get
+        Set(value As Boolean)
+            divDataFinal.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowPesquisas As Integer
+        Get
+            Return ViewState("ShowPesquisas")
+        End Get
+        Set(value As Integer)
+            ViewState("ShowPesquisas") = value
+            If ViewState("ShowPesquisas") = 2 Then
+                divPesquisas.Visible = True
+            Else
+                divPesquisas.Visible = False
+            End If
+        End Set
+    End Property
+
+    Public Property ShowEmpresas As Boolean
+        Get
+            Return divEmpresa.Visible
+        End Get
+        Set(value As Boolean)
+            If value Then
+                If Not Page.VerificaPermissao("Relatórios", "Visualizar todas as empresas") Then
+                    divEmpresa.Visible = False
+                Else
+                    divEmpresa.Visible = True
+                End If
+            Else
+                divEmpresa.Visible = False
+            End If
+        End Set
+    End Property
+
+    Public Property ShowSupervisor As Boolean
+        Get
+            Return divSupervisor.Visible
+        End Get
+        Set(value As Boolean)
+            divSupervisor.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowGerenteVendas As Boolean
+        Get
+            Return divGerenteVendas.Visible
+        End Get
+        Set(value As Boolean)
+            divGerenteVendas.Visible = value
+        End Set
+    End Property
+
+
+    Public Property ShowVendedor As Boolean
+        Get
+            Return divVendedor.Visible
+        End Get
+        Set(value As Boolean)
+            divVendedor.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowMapa As Boolean
+        Get
+            Return divMapa.Visible
+        End Get
+        Set(value As Boolean)
+            divMapa.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowStatus As Boolean
+        Get
+            Return divStatus.Visible
+        End Get
+        Set(value As Boolean)
+            divStatus.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowEmbalagem As Boolean
+        Get
+            Return divEmbalagem.Visible
+        End Get
+        Set(ByVal value As Boolean)
+            divEmbalagem.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowCodigoCliente As Boolean
+        Get
+            Return divIDCliente.Visible
+        End Get
+        Set(value As Boolean)
+            divIDCliente.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowNomeCliente As Boolean
+        Get
+            Return divNomeCliente.Visible
+        End Get
+        Set(value As Boolean)
+            divNomeCliente.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowStatusVisita As Boolean
+        Get
+            Return divStatusVisita.Visible
+        End Get
+        Set(value As Boolean)
+            divStatusVisita.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowlblMapa As Boolean
+        Get
+            Return lblmapa.Visible
+        End Get
+        Set(value As Boolean)
+            lblmapa.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowCategoriaProd As Boolean
+        Get
+            Return divCategoriaProd.Visible
+        End Get
+        Set(value As Boolean)
+            divCategoriaProd.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowProduto As Boolean
+        Get
+            Return divProduto.Visible
+        End Get
+        Set(value As Boolean)
+            divProduto.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowMarca As Boolean
+        Get
+            Return divMarca.Visible
+        End Get
+        Set(value As Boolean)
+            divMarca.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowCategoriaPesquisa As Boolean
+        Get
+            Return divCatPesquisa.Visible
+        End Get
+        Set(value As Boolean)
+            divCatPesquisa.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowProdutoPesquisa As Boolean
+        Get
+            Return divProdutoPesquisa.Visible
+        End Get
+        Set(value As Boolean)
+            divProdutoPesquisa.Visible = value
+        End Set
+    End Property
+
+    Public Property ShowFiltro As Boolean
+        Get
+            Return divFiltro.Visible
+        End Get
+        Set(value As Boolean)
+            divFiltro.Visible = value
+        End Set
+    End Property
+
+    Public Property StatusClass As String
+        Get
+            Return divStatus.Attributes.Item("Class")
+        End Get
+        Set(value As String)
+            divStatus.Attributes.Add("Class", value)
+        End Set
+    End Property
+
+    Public Property VendedorClass As String
+        Get
+            Return divVendedor.Attributes.Item("Class")
+        End Get
+        Set(value As String)
+            divVendedor.Attributes.Add("Class", value)
+        End Set
+    End Property
+
+    Public Property DataInicialClass As String
+        Get
+            Return divDataInicial.Attributes.Item("Class")
+        End Get
+        Set(value As String)
+            divDataInicial.Attributes.Add("Class", value)
+        End Set
+    End Property
+
+    Public Property VisualizarUnicaEmpresa As Boolean
+        Get
+            Return vEmpresaUnica
+        End Get
+        Set(ByVal value As Boolean)
+            vEmpresaUnica = value
+        End Set
+    End Property
+
+
+
+#End Region
+
+#Region "Properties"
+
+    Public Property FiltroSize As Unit
+        Get
+            Return txtFiltro.Width
+        End Get
+        Set(value As Unit)
+            txtFiltro.Width = value
+        End Set
+    End Property
+
+    Public Property PermitirTodasEmpresas As Boolean
+        Get
+            Return (Not compEmpresa.Enabled)
+        End Get
+        Set(value As Boolean)
+            compEmpresa.Enabled = (Not value)
+        End Set
+    End Property
+
+    Public Property PermitirTodasPesquisas As Boolean
+        Get
+            Return (Not compPesquisa.Enabled)
+        End Get
+        Set(value As Boolean)
+            compPesquisa.Enabled = (Not value)
+        End Set
+    End Property
+
+    Public Property TextoTodasPesquisas As String
+        Get
+            Return ViewState("TextoTodasPesquisas")
+        End Get
+        Set(value As String)
+            ViewState("TextoTodasPesquisas") = value
+        End Set
+    End Property
+
+#End Region
+
+
+#Region "Values"
+
+    Public Property TipoExibicao As Integer
+        Get
+
+            Dim intTipoExibicao As Integer = 0
+
+            Try
+                intTipoExibicao = rdlModoExibicaoGrafico.SelectedItem.Value
+            Catch ex As Exception
+                intTipoExibicao = 0
+            End Try
+
+            Return intTipoExibicao
+
+        End Get
+        Set(value As Integer)
+
+            rdlModoExibicaoGrafico.SelectedItem.Value = value
+
+        End Set
+    End Property
+
+    Public Property Dias As String
+        Get
+            Return txtDias.Text
+        End Get
+        Set(value As String)
+            txtDias.Text = value
+        End Set
+    End Property
+
+    Public Property IDVendedor As Integer
+        Get
+            If String.IsNullOrEmpty(cboVendedor.SelectedValue) Then
+                Return 0
+            End If
+            Return cboVendedor.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboVendedor.ClearSelection()
+            For Each lst As ListItem In cboVendedor.Items
+                If lst.Value = value Then
+                    lst.Selected = True
+                    Exit For
+                End If
+            Next
+        End Set
+    End Property
+
+    Public Property IDSupervisor As Integer
+        Get
+            If String.IsNullOrEmpty(cboSupervisor.SelectedValue) Then
+                Return 0
+            End If
+            Return cboSupervisor.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboSupervisor.ClearSelection()
+            For Each lst As ListItem In cboSupervisor.Items
+                If lst.Value = value Then
+                    lst.Selected = True
+                    Exit For
+                End If
+            Next
+            CarregaVendedor(value)
+        End Set
+    End Property
+
+    Public Property IDGerente As Integer
+        Get
+            If String.IsNullOrEmpty(cboGerenteVendas.SelectedValue) Then
+                Return 0
+            End If
+            Return cboGerenteVendas.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboGerenteVendas.ClearSelection()
+            For Each lst As ListItem In cboGerenteVendas.Items
+                If lst.Value = value Then
+                    lst.Selected = True
+                    Exit For
+                End If
+            Next
+            CarregaSupervisor(value)
+        End Set
+    End Property
+
+    Public Property IDEmpresa As Integer
+        Get
+            Dim vIDEmpresa As Integer = 0
+
+            If Not String.IsNullOrEmpty(cboEmpresa.SelectedValue) Then
+                vIDEmpresa = cboEmpresa.SelectedValue
+            End If
+            If vIDEmpresa <> Me.Page.User.IDEmpresa Then
+                If Not Page.VerificaPermissao("Relatórios", "Visualizar todas as empresas") Then
+                    vIDEmpresa = Page.User.IDEmpresa
+                End If
+            End If
+            Return vIDEmpresa
+        End Get
+        Set(value As Integer)
+            cboEmpresa.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property IDPesquisa As Integer
+        Get
+            Dim vIDPesquisa As Integer = 0
+            If Not String.IsNullOrEmpty(cboPesquisas.SelectedValue) Then
+                vIDPesquisa = cboPesquisas.SelectedValue
+            End If
+            Return vIDPesquisa
+        End Get
+        Set(value As Integer)
+            cboPesquisas.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property IDStatus As Integer
+        Get
+            If String.IsNullOrEmpty(cboStatus.SelectedValue) Then
+                Return 0
+            End If
+            Return cboStatus.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboStatus.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property Filtro As String
+        Get
+            Return txtFiltro.Text
+        End Get
+        Set(value As String)
+            txtFiltro.Text = value
+        End Set
+    End Property
+
+
+    Public Property DataInicial As String
+        Get
+            Return txtDataInicial.Text
+        End Get
+        Set(value As String)
+            txtDataInicial.Text = value
+        End Set
+    End Property
+
+
+    Public Property DataFinal As String
+        Get
+            Return txtDataFinal.Text
+        End Get
+        Set(value As String)
+            txtDataFinal.Text = value
+        End Set
+    End Property
+
+    Public Property CodigoCliente As Integer
+        Get
+            If String.IsNullOrEmpty(txtIDCliente.Text) Then
+                Return 0
+            End If
+            Return txtIDCliente.Text
+        End Get
+        Set(value As Integer)
+            txtIDCliente.Text = value
+        End Set
+    End Property
+
+    Public Property NomeCliente As String
+        Get
+            Return txtNomeCliente.Text
+        End Get
+        Set(value As String)
+            txtNomeCliente.Text = value
+        End Set
+    End Property
+
+    Public Property StatusVisita As String
+        Get
+            Return cboStatusVisita.SelectedValue
+        End Get
+        Set(value As String)
+            cboStatusVisita.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property Embalagem As String
+        Get
+            Return cboIdEmbalagem.SelectedValue
+        End Get
+        Set(ByVal value As String)
+            cboIdEmbalagem.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property MapaRoteiro As String
+        Get
+            Return chkMapa.Checked
+        End Get
+        Set(value As String)
+            chkMapa.Checked = value
+        End Set
+    End Property
+
+    Public Property IDCategoriaProd As Integer
+        Get
+            If String.IsNullOrEmpty(cboCategoriaProd.SelectedValue) Then
+                Return 0
+            End If
+            Return cboCategoriaProd.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboCategoriaProd.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property IDProduto As Integer
+        Get
+            If String.IsNullOrEmpty(cboProduto.SelectedValue) Then
+                Return 0
+            End If
+            Return cboProduto.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboProduto.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property IDProdutoPesq As Integer
+        Get
+            If String.IsNullOrEmpty(cboProdutoPesquisa.SelectedValue) Then
+                Return 0
+            End If
+            Return cboProdutoPesquisa.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboProdutoPesquisa.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property IDCategoriaPesq As Integer
+        Get
+            If String.IsNullOrEmpty(cboCatPesquisa.SelectedValue) Then
+                Return 0
+            End If
+            Return cboCatPesquisa.SelectedValue
+        End Get
+        Set(value As Integer)
+            cboCatPesquisa.SelectedValue = value
+        End Set
+    End Property
+
+    Public Property Marcas As String
+        Get
+            If String.IsNullOrEmpty(getComboValues(lstMarca)) Then
+                Return "0"
+            End If
+            Return getComboValues(lstMarca)
+        End Get
+        Set(value As String)
+            setCheckValue(lstMarca, value)
+        End Set
+    End Property
+
+#End Region
+
+    Private Sub MontaURL()
+
+        Dim strQueryString As String = Request.QueryString.ToString
+
+        Dim strIDProdutoPesquisa As String = cboProdutoPesquisa.SelectedValue, _
+            strProdutoPesquisa As String
+
+        If strIDProdutoPesquisa = "" Then
+            strIDProdutoPesquisa = "0"
+            strProdutoPesquisa = ""
+        Else
+            strProdutoPesquisa = cboProdutoPesquisa.SelectedItem.Text
+        End If
+
+
+        Dim vUrl As String = Request.Url.ToString & IIf(strQueryString = "", "?", "&") & "pr=2&" & _
+                          "di=" & txtDataInicial.Text & _
+                          "&df=" & txtDataFinal.Text & _
+                          "&em=" & getComboValue(cboEmpresa) & _
+                          "&dt=" & Now().ToString("ddMMyyyyhhmmss") & _
+                          "&ger=" & getComboValue(cboGerenteVendas) & _
+                          "&sup=" & getComboValue(cboSupervisor) & _
+                          "&vend=" & getComboValue(cboVendedor) & _
+                          "&nomevend=" & getComboText(cboVendedor) & _
+                          "&map=" & chkMapa.Checked & _
+                          "&sta=" & cboStatus.SelectedValue & _
+                          "&lin=" & getComboValue(cboIdEmbalagem) & _
+                          "&cli=" & txtNomeCliente.Text & _
+                          "&codcli=" & txtIDCliente.Text & _
+                          "&stavis=" & getComboValue(cboStatusVisita) & _
+                          "&dias=" & txtDias.Text & _
+                          "&catprod=" & getComboValue(cboCategoriaProd) & _
+                          "&prod=" & getComboValue(cboProduto) & _
+                          "&mar=" & getComboValues(lstMarca, False) & _
+                          "&catpesq=" & getComboValue(cboCatPesquisa) & _
+                          "&prodpesq=" & strIDProdutoPesquisa & _
+                          "&catpesqtx=" & getComboText(cboCatPesquisa) & _
+                          "&prodpesqtx=" & strProdutoPesquisa & _
+                          "&filtro=" & txtFiltro.Text & _
+                          "&idpesq=" & getComboValue(cboPesquisas)
+
+        hidPage.Value = vUrl
+
+    End Sub
+
+    Protected Sub btnExibir_ServerClick(sender As Object, e As System.EventArgs) Handles btnExibir.ServerClick
+
+        If txtDataInicial.Visible And txtDataFinal.Visible Then
+            If ViewState("IntervDatas") > 62 Then 'Verifica se o período escolhido é maior que 62 dias
+                lblAlertDate.Visible = True
+                Exit Sub
+            Else
+                lblAlertDate.Visible = False
+            End If
+        End If
+
+        RaiseEvent Exibir(Me, e)
+        MontaURL()
+
+    End Sub
+
+    Protected Sub cboCategoriaProd_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboCategoriaProd.SelectedIndexChanged
+
+        CarregaProdutos(CInt(cboCategoriaProd.SelectedValue))
+
+    End Sub
+
+    Protected Sub cboCatPesquisa_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboCatPesquisa.SelectedIndexChanged
+
+        CarregaProdutoPesquisa(cboCatPesquisa.SelectedValue)
+        CarregaMarcas(cboCatPesquisa.SelectedValue)
+
+    End Sub
+
+    Protected Sub cboEmpresa_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles cboEmpresa.SelectedIndexChanged
+
+        CarregaGerenteVendas()
+        CarregaSupervisor(0)
+        CarregaVendedor(0)
+        If ShowPesquisas = 1 Then
+            divPesquisas.Visible = True
+            CarregaPesquisas()
+        Else
+            cboPesquisas.Items.Clear()
+            divPesquisas.Visible = False
+        End If
+
+    End Sub
+End Class

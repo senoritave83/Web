@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/home/default.aspx" title="Home" description="Home" caption="Home" img="~/imagens/home.png">
+    <siteMapNode url="~/Pedidos/default.aspx" title="Principal"  description="" caption="Controle do sistema" img="~/imagens/cadastros.png">
+      <siteMapNode url="~/Pedidos/pedidos.aspx" title="Pedidos" description="Lista os pedidos no sistema" caption="Lista de Pedidos" img="~/imagens/down.png" Secao="Pedidos">
+        <siteMapNode url="~/Pedidos/pedido.aspx" title="Pedido" description="Visualiza os dados do pedido selecionado" parameters="idpedido" caption="Dados do Pedido" img="~/imagens/down.png" Secao="Pedidos" />
+      </siteMapNode>
+      <siteMapNode url="~/Pedidos/negociacoes.aspx" title="Negociações" description="Lista as negociações no sistema" caption="Lista de negociações" img="~/imagens/cadastros.png" Secao="Negociações">
+        <siteMapNode url="~/Pedidos/negociacao.aspx" title="Negociação" description="Visualiza os dados da negociação selecionada" parameters="idnegociacao" caption="Dados da negociação" img="~/imagens/cadastros.png" Secao="Negociações" />
+      </siteMapNode>
+	  <siteMapNode url="~/Pedidos/sars.aspx" title="SARS" description="Lista os Sars no sistema" caption="Lista de Sars" img="~/imagens/sars.gif" Secao="Pedidos">
+		<siteMapNode url="~/Pedidos/sar.aspx" title="SAR" description="Visualiza os dados do Sar selecionado" parameters="idpedido" caption="Dados do Sar" img="~/imagens/sars.gif" Secao="Pedidos" />
+	  </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/Cadastros/default.aspx" title="Cadastros"  description="" caption="Cadastros" img="~/imagens/cadastros.png" Secao="Cadastros">
+      <siteMapNode url="~/Cadastros/usuarios.aspx" title="Operadores / Administradores" description="Edite os dados dos Operadores/Administradores do sistema" caption="Lista de operadores e administradores" img="~/imagens/usuarios.png" Secao="Usuários">
+        <siteMapNode url="~/Cadastros/usuario.aspx" title="OPERADORES / ADMINISTRADORES" description="Editar os dados do usuário selecionado" parameters="" caption="Edição do Usuário" img="~/imagens/usuarios.png" Secao="Usuários" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/clientes.aspx" title="Clientes" description="Lista os clientes cadastrados no sistema" caption="Lista de Clientes" img="~/imagens/filiais.png" Secao="Cadastro de Clientes" >
+        <siteMapNode url="~/Cadastros/cliente.aspx" title="Cliente" description="Editar os dados do cliente selecionado" parameters="idcliente" caption="Edição do Cliente" img="~/imagens/filiais.png" Secao="Cadastro de Clientes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/vendedores.aspx" title="Vendedores" description="Lista os vendedores cadastrados no sistema" caption="Lista de Vendedores" img="~/imagens/vendedor.png" Secao="Cadastro de Vendedores">
+        <siteMapNode url="~/Cadastros/vendedor.aspx" title="Vendedor" description="Editar os dados do vendedor selecionado" parameters="idvendedor" caption="Edição do Vendedor" img="~/imagens/vendedor.png" Secao="Cadastro de Vendedores" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/grupos.aspx" title="Grupos de Venda" description="Lista os grupos cadastrados no sistema" caption="Lista de Grupos" img="~/imagens/Group.png" Secao="Grupos de Venda">
+        <siteMapNode url="~/Cadastros/grupo.aspx" title="Grupo de Venda" description="Editar os dados do grupo selecionado" parameters="idgrupo" caption="Edição do Grupo" img="~/imagens/Group.png" Secao="Grupos de Venda" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/parametros.aspx" title="Parametros de Venda" description="Defina e edite os parâmetros de venda" parameters="" caption="Parametros de Venda" img="~/imagens/feature_8.gif" Secao="Parametros de Venda" />
+      <siteMapNode url="~/Cadastros/condicoes.aspx" title="Condições" description="Cadastre e edite as condições de pagamentos" caption="Lista de Condições" img="~/imagens/money.png" Secao="Cadastro de Condições">
+        <siteMapNode url="~/Cadastros/condicao.aspx" title="Condição" description="Editar os dados da condição selecionado" parameters="idcondicao" caption="Edição da Condição" img="~/imagens/money.png" Secao="Cadastro de Condições" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/obspedidos.aspx" title="Observações" description="Cadastre e edite as observações que farão parte dos pedidos." caption="Lista de Observações" img="~/imagens/survey.png" Secao="Cadastro de Observações de Pedidos">
+        <siteMapNode url="~/Cadastros/obsPedido.aspx" title="Cadastro de Observações" description="Cadastre e edite os dados das Observações dos pedidos" parameters="idcondicao" caption="Edição da Condição" img="~/imagens/survey.png" Secao="Cadastro de Observações de Pedidos" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/produtos.aspx" title="Produtos" description="Lista os produtos cadastrados no sistema" caption="Lista de Produtos" img="~/imagens/produtos.png" Secao="Cadastro de Produtos">
+        <siteMapNode url="~/Cadastros/produto.aspx" title="Produto" description="Editar os dados do produto selecionado" parameters="idproduto" caption="Edição do Produto" img="~/imagens/produtos.png" Secao="Cadastro de Produtos" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/tipobrindes.aspx" title="Brindes" description="Lista os brindes cadastrados no sistema" caption="Lista de Brindes" img="~/imagens/produtos.png" Secao="Cadastro de Brinde">
+        <siteMapNode url="~/Cadastros/tipobrinde.aspx" title="Brinde" description="Editar os dados do brinde selecionado" parameters="idtipobrinde" caption="Edição do Brinde" img="~/imagens/produtos.png" Secao="Cadastro de Brinde" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/coordenadores.aspx" title="Coordenadores" description="Lista os coordenadores cadastrados no sistema" caption="Lista de Coordenadores" img="~/imagens/Users.png" Secao="Cadastro de Coordenador">
+        <siteMapNode url="~/Cadastros/coordenador.aspx" title="Coordenador" description="Editar os dados do coordenador selecionado" parameters="idcoordenador" caption="Edição do Coordenador" img="~/imagens/Users.png" Secao="Cadastro de Coordenador" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/justificativas.aspx" title="Justificativas" description="Lista as justificativas cadastradas no sistema" caption="Lista de Justificativas" img="~/imagens/cadastros.png" Secao="Cadastro de Justificativa">
+        <siteMapNode url="~/Cadastros/justificativa.aspx" title="Justificativa" description="Editar os dados da justificativa selecionada" parameters="idjustificativa" caption="Edição da Justificativa" img="~/imagens/cadastros.png" Secao="Cadastro de Justificativa" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/relatorios/default.aspx" title="Relatórios"  description="" caption="Relatórios" img="~/imagens/reports.png" Secao="Relatórios">
+      <siteMapNode url="~/relatorios/relatorios.aspx" title="Relatório de uso" description="Relatórios de uso" caption="Relatórios de uso" img="~/imagens/reports.png" Secao="Relatórios de uso" />
+    </siteMapNode>
+    <siteMapNode url="~/sistema/default.aspx" title="Configurações"  description="Nesta página você tem acesso a todos os cadastros e configurações do sistema" caption="Configurações do Sistema" img="~/imagens/config.png" Secao="Configurações do Sistema">
+      <siteMapNode url="~/sistema/permissoes.aspx" title="Permissões do Sistema" description="Permissões dos Usuários do Sistema" caption="Permissões do Sistema" img="~/imagens/permissao.png" Secao="Permissões do Sistema" >
+        <siteMapNode url="~/sistema/permissao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" img="~/imagens/permissao.png" Secao="Permissões do Sistema" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/horariofuncionamentos.aspx" title="Controle de Horário" description="Determine os horarios que os vendedores poderão efetuar pedidos no sistema" caption="Controle de Horário" img="~/imagens/controleacesso.png" Secao="Controle de Horário" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

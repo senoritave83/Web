@@ -1,0 +1,603 @@
+﻿/*---------------------------------------------------------------------- Positionamento */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cr{clear:right;}
+.cl{clear:left;}
+
+.ac{text-align:center;}
+.ar{text-align:right;}
+.w100 {width:100%;}
+.w50 {width:50%;}
+
+/*---------------------------------------------------------------------- MASTER PAGE */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family:Verdana,Arial,Helvetica;
+	font-size:8pt;
+}
+
+.ProgressBar
+{
+    border:solid 1px black;
+    width:100%;
+    height:18px;
+}
+
+.ProgressBar div
+{
+    background-image:url(../../imagens/progresso.gif);background-repeat:repeat-x;background-color:Green;height:16px;
+    z-index:1;
+    position:absolute;
+}
+
+#imgLinha
+{
+	background-color:#FFFFFF;
+	background-image:url(../../imagens/bluebarh.gif) ;
+	background-repeat:no-repeat;
+	height:1px;
+	width:100%;
+}
+.divUserPanel
+{
+	background-color:Black;
+	height:20px;
+	padding:5px 5px 5px 5px;
+	color:White;
+}
+
+.divuserPanel a
+{
+	color:White;
+	text-align:right;
+}
+
+.MainPage
+{
+	background-color:Gray;
+	height:100%;
+	width:100%;
+}
+
+/*
+#333333
+#507CD1
+#D1DDF1
+#EFF3FB
+#DEE8F5
+#2461BF
+#507CD1
+#2461BF
+*/
+
+
+.MainArea 
+{
+	background-color:White;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:100%;
+}
+
+.MainContent
+{
+	background-color:White;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	height:inherit;
+}
+
+.MainHeader
+{
+	BACKGROUND-POSITION: left top; 
+	background: #330099 url(../../imagens/gradient.gif) repeat-x;
+	background-color:#330099;
+	height:71px;
+}
+
+.MainHeader tr td
+{
+	height:15px;	
+}
+
+#MainFooter 
+{
+	height:20px;
+	background-color:Black;
+	color:White;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:3px;
+}
+
+#tdLateral
+{
+	background-color: #6699cc;
+}
+
+
+/*---------------------------------------------------------------------- TITULO */
+
+.AreaTitulo
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+.AreaSubTitulo
+{
+	color:White;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+/*---------------------------------------------------------------------- AREA COMUNS */
+.AreaBotoes
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+}
+
+#divErros
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+}
+
+.AreaBotoes input
+{
+	width:150px;
+	float:left;	
+	margin-right:10px;
+}
+
+.AreaAjuda
+{
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+}
+	
+
+/*---------------------------------------------------------------------- LISTA */
+
+.GridHeader
+{FONT-WEIGHT: bold; COLOR: white; LINE-HEIGHT: 150%; BACKGROUND-COLOR: #6699cc;}
+
+.GridHeader a
+{
+    color:White;
+}
+
+.Grid
+{
+    	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid
+}
+
+
+#divLista 
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+.ListArea
+{
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid
+    
+}
+
+#divCadastro
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+.TextDefault
+{
+	font-family:Verdana,Arial,Helvetica;
+	font-size:10pt;
+
+}
+
+.Filtro 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; COLOR: white; LINE-HEIGHT: 150%; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #6699cc;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	color:White;
+	font-weight:bold;	
+	clear:both;
+	height:30px;
+	margin-bottom:20px;
+}
+
+.Filtro .FiltroTitulo
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; COLOR: white; LINE-HEIGHT: 150%; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #6699cc
+}
+
+.Filtro .FiltroBotao
+{
+	float:right;
+	margin-left:10px;
+	text-align:left;
+	vertical-align:baseline;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+
+.Filtro .FiltroBotao input
+{
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+.Filtro .FiltroItem
+{
+	float:left;
+	width:150px;
+	text-align:left;
+	margin-bottom:5px;
+	
+}
+
+.Filtro .FiltroItem label
+{
+    color:White;
+}
+
+.FiltroLetras
+{
+	float:left;
+	width:320px;
+	text-align:left;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+.FiltroLetras a
+{
+	color:white;
+}
+
+.FiltroLetras .SelectedLetra
+{
+    color:Black;
+}
+
+/*---------------------------------------------------------------------- Geral */
+
+.AcaoArea
+{
+    
+}
+
+.AcaoArea .Secao
+{
+	background-color:White;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 0px 0px 0px 0px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	width:200px;
+	text-align:left;
+	float:left;
+	margin-left:5px;
+
+}
+
+.AcaoArea .Secao .SecaoHeader
+{
+	background-color:#6699cc;
+	color:White;
+	width:100%;
+	margin-top:0px;
+}
+
+.AcaoArea .Secao .Acoes
+{
+    padding:2px 2px 2px 2px;
+}
+
+.pNormal{margin:10px 0;}
+
+.mb10{margin-bottom:10px !important;}
+
+.mtb20{margin:20px 0 20px 0 !important;}
+
+.mt0{margin-top:0 !important;}
+
+.mt20{margin-top:20px !important;}
+
+.f10{font-size:10px !important;}
+.f11{font-size:11px !important;}
+.f12, .f12 *{font-size:12px !important;}
+
+
+.noBg{background:none !important;}
+
+
+.TituloArea
+{
+	font-size:15px;
+	font-weight:bold;
+	color:White;
+	font-family:Arial;
+	text-align:left;
+}
+
+.EditArea
+{
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+.trEditHeader
+{
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #6699cc;
+	margin-bottom:10px;
+}
+
+.trEditFooter
+{
+	margin-bottom:5px;
+}
+
+.EditArea #tblEditArea 
+{
+	width:100%;
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid;
+	border-collapse: collapse;
+}
+
+.EditArea .divEditArea 
+{
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid; border-top: ##ccddef 2px solid;
+	border-collapse: collapse;
+	width:100%;
+	margin-bottom:20px;
+}
+
+
+.EditArea .divEditArea .trField
+{
+    white-space: nowrap;
+	padding:1px 1px 1px 1px;
+	width:440px;
+	float:left;
+}
+
+
+.EditArea .divEditArea .trField .tdFieldHeader
+{
+	width:130px;
+	color:#3399cc;
+	font-weight:bold;
+	text-align:right;
+	padding:2px 2px 2px 2px;
+    white-space: nowrap;
+	
+}
+
+.EditArea .divEditArea .divHeader
+{
+background-color:#3399cc;
+margin-bottom:10px;
+}
+
+
+.EditArea .divEditArea .trField .tdField
+{
+	padding-left:10px;
+	color:Black;
+	padding:2px 2px 2px 2px;	
+	width:300px;
+}
+
+.EditArea .divEditArea .trField .tdField input
+{
+    width:100%; 
+}
+
+.EditArea #tblEditArea .trField
+{
+    white-space: nowrap;
+}
+
+#tblEditArea
+{
+	margin-bottom:20px;
+}
+
+#tblEditArea .trField .tdFieldHeader
+{
+	float:left;
+	/*width:130px;*/
+	color:#3399cc;
+	font-weight:bold;
+	text-align:right;
+	padding:2px 2px 2px 2px;
+}
+
+#tblEditArea .trField .tdField
+{
+	padding-left:10px;
+	float:left;
+	color:Black;
+	padding:2px 2px 2px 2px;
+}
+
+
+
+.obs
+{
+    color:Green;
+    font-size:6pt;    
+    font-weight:normal;
+}
+
+.FieldCell input
+{
+	width:150px;
+
+}
+
+.menu .bot {
+}
+
+.space{
+	clear: both;
+	height: 35px;
+}
+
+.Botao
+{
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-image: url(/plug3/imagens/fundo_campo.gif); 
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	}
+
+#tblFiltroPermissao .Letras a
+{
+    color:Black;
+}
+
+/******************** TELA DE MENU DE CADASTRO ***************************/
+#divMenuCadastro
+{
+    width:100%;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divMenuCadastro .ItemMenu
+{
+    width:49%;
+    float:left;
+}
+
+#divMenuCadastro .ItemMenu a
+{
+    font-family:Arial;
+    font-size:medium;
+    color:Black;
+    text-decoration:none;
+}
+
+#divMenuCadastro .ItemMenu a:link
+{
+    font-family:Arial;
+    font-size:medium;
+    color:#003366;
+    text-decoration:none;
+}
+
+#divMenuCadastro .ItemMenu a:hover{
+    font-family:Arial;
+    font-size:medium;
+    color:blue;
+    text-decoration:none;
+}
+
+
+#divMenuCadastro .ItemMenu img
+{
+    vertical-align:middle;
+    border: none;
+}

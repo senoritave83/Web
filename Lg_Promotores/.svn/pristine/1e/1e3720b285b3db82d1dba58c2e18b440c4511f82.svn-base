@@ -1,0 +1,781 @@
+﻿h2 {
+	color:#FFC000;
+	font-size:15px;
+	
+
+	
+}
+
+label{
+	font-weight:bold;
+	color:#808080;
+	
+}
+
+.fl {
+	DISPLAY: inline; FLOAT: left
+}
+.fr {
+	DISPLAY: inline; FLOAT: right
+}
+.cb {
+	CLEAR: both
+}
+.ac {
+	TEXT-ALIGN: center
+}
+.ar {
+	TEXT-ALIGN: right
+}
+* {
+    PADDING-BOTTOM: 0px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 0px; OUTLINE-WIDTH: medium; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana,Arial,Helvetica; FONT-SIZE: 8pt; PADDING-TOP: 0px
+}
+
+#dados_acesso{
+	padding-left:5px;
+	width:90%;
+	display:block;
+}
+
+#dados_acesso ul {
+	padding-left:5px;
+	list-style:none;
+}
+
+#dados_acesso ul li {
+	float:left;
+	margin-top:12px;
+	margin-right:30px;
+	
+}
+
+#dados_pessoais{
+	padding-left:10px;
+	width:100%;
+	margin-bottom:7px;
+	display:table;
+}
+
+#dados_pessoais ul{
+	padding-left:5px;
+	list-style:none;	
+	margin-top:5px;
+}
+
+#dados_pessoais ul li{
+	float:left;
+	margin-top:6px;
+	margin-right:30px;
+	
+}
+
+
+
+
+#imgLinha {
+	BACKGROUND-IMAGE: url(../../imagens/bluebarh.gif); BACKGROUND-COLOR: #ffffff; WIDTH: 100%; BACKGROUND-REPEAT: no-repeat; HEIGHT: 1px
+}
+.divUserPanel {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: black; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; HEIGHT: 31px; COLOR: white; PADDING-TOP: 5px; 
+}
+.divUserPanel A {
+	TEXT-ALIGN: right; COLOR: white
+}
+.MainPage {
+	BACKGROUND-COLOR: gray; WIDTH: 100%; HEIGHT: 100%
+}
+
+.MainMenu {
+	background-image:url('bg_mainheader.png');background-repeat:repeat-x; height:80px;
+}
+
+.MainHeaderLeft {
+	WIDTH: 20%; FLOAT: left; HEIGHT: 79px; 
+}
+.MainUserPanel {
+	WIDTH: 20%; FLOAT: left; CLEAR: both; height:42px;
+}
+.MainLateral {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 20%; FLOAT: left; HEIGHT: 775px; CLEAR: left
+}
+.MainArea {
+	BACKGROUND-COLOR: black; MARGIN: 10px; HEIGHT: 100%
+}
+.Main {
+	WIDTH: 100%; HEIGHT: 100%
+}
+.MainContent {
+	PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #FFFEEE; PADDING-LEFT: 10px; WIDTH: 78%; PADDING-RIGHT: 10px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.MainTeste2 {
+	WIDTH: 100%
+}
+.MainHeaderLeft {
+	TEXT-ALIGN: center; background-image:url('XM_Logo.png'); background-repeat:no-repeat; 
+}
+.MainHeader {
+	BACKGROUND-COLOR:#F5F5A0;
+}
+.MainHeader TR TD {
+	HEIGHT: 15px
+}
+#MainFooter {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: black; FONT-FAMILY: Arial; HEIGHT: 20px; COLOR: white; FONT-SIZE: xx-small; VERTICAL-ALIGN: middle; PADDING-TOP: 3px
+}
+#tdLateral {
+	BACKGROUND-COLOR: #f5f5a0
+}
+.AreaTitulo {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; HEIGHT: 10px; CLEAR: both; FONT-SIZE: medium; BORDER-TOP: #ffc000 thin solid; FONT-WEIGHT: bold; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.AreaSubTitulo {
+	TEXT-ALIGN: left; FONT-FAMILY: Arial; HEIGHT: 10px; COLOR: black; CLEAR: both; FONT-SIZE: medium; FONT-WEIGHT: bold
+}
+.AreaBotoes {
+ 	TEXT-ALIGN: left; PADDING-BOTTOM: 10px; MARGIN-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; HEIGHT: 20px; FONT-SIZE: x-small; PADDING-TOP: 10px
+}
+#divErros {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; HEIGHT: 20px; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.AreaBotoes INPUT {
+	WIDTH: auto; FLOAT: left; MARGIN-RIGHT: 10px; 
+}
+.AreaAjuda {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#divLista {
+	BORDER-BOTTOM: gray thin solid; TEXT-ALIGN: left; BORDER-LEFT: gray thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: gainsboro; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 97%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; HEIGHT: 400px; CLEAR: both; FONT-SIZE: xx-small; OVERFLOW: auto; BORDER-TOP: gray thin solid; BORDER-RIGHT: gray thin solid; PADDING-TOP: 10px
+}
+#divCadastro {
+	BORDER-BOTTOM: gray thin solid; TEXT-ALIGN: left; BORDER-LEFT: gray thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: gainsboro; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 97%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; HEIGHT: 400px; CLEAR: both; FONT-SIZE: xx-small; OVERFLOW: auto; BORDER-TOP: gray thin solid; BORDER-RIGHT: gray thin solid; PADDING-TOP: 10px
+}
+.TextDefault {
+	FONT-FAMILY: Verdana,Arial,Helvetica; FONT-SIZE: 10pt
+}
+.Filtro {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; HEIGHT: 30px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; FONT-WEIGHT: bold; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.Filtro .FiltroTitulo {
+	FONT-FAMILY: Arial; COLOR: black; FONT-WEIGHT: bold
+}
+.Filtro .FiltroBotao {
+	TEXT-ALIGN: left; MARGIN-BOTTOM: 5px; FLOAT: right; MARGIN-LEFT: 10px; VERTICAL-ALIGN: baseline
+}
+.Filtro .FiltroBotao INPUT {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; TEXT-TRANSFORM: uppercase; WIDTH: 150px; FONT-FAMILY: Verdana,Arial,Helvetica; FONT-SIZE: xx-small; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid
+}
+.Filtro .FiltroItem {
+	TEXT-ALIGN: left; PADDING-LEFT: 5px; WIDTH: 150px; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.FiltroLetras {
+	TEXT-ALIGN: left; MARGIN-TOP: 20px; WIDTH: 320px; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.FiltroLetras A {
+	COLOR: gray
+}
+.FiltroLetras .SelectedLetra {
+	COLOR: black
+}
+.pNormal {
+	MARGIN: 10px 0px
+}
+.mb10 {
+	MARGIN-BOTTOM: 10px !important
+}
+.mtb20 {
+	MARGIN: 20px 0px
+}
+.mt0 {
+	MARGIN-TOP: 0px !important
+}
+.mt20 {
+	MARGIN-TOP: 20px !important
+}
+.f10 {
+	FONT-SIZE: 10px !important
+}
+.f11 {
+	FONT-SIZE: 11px !important
+}
+.f12 {
+	FONT-SIZE: 12px !important
+}
+.f12 * {
+	FONT-SIZE: 12px !important
+}
+.noBg {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.TituloArea {
+	TEXT-ALIGN: left; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: 15px; FONT-WEIGHT: bold
+}
+.ReportArea {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; VERTICAL-ALIGN: top; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+
+.breadcrumb{
+	background-color:#FFFFFF; width:79%; padding:5px 0 5px 12px; background-color:#FFE401; text-align:left; float:right;
+	
+}
+.EditArea {
+	margin-top:7px;	TEXT-ALIGN: left; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small; background-color:#FFFEEE;
+}
+.EditArea .trEditHeader {
+	BACKGROUND-COLOR: #ffe401; MARGIN-BOTTOM: 10px; COLOR: white; FONT-WEIGHT: bold
+}
+.EditArea .trEditFooter {
+	MARGIN-BOTTOM: 5px
+}
+.EditArea TABLE {
+	BORDER-BOTTOM: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-RIGHT: #ccddef 1px solid
+}
+.EditArea .divHeader {
+	BACKGROUND-COLOR: #f5f5a0; MARGIN-BOTTOM: 10px
+}
+.EditArea #tblEditArea {
+	BORDER-BOTTOM: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 20px; BORDER-RIGHT: #ccddef 1px solid
+}
+.EditArea #tblEditArea TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+.EditArea #tblEditArea .trField {
+	PADDING-BOTTOM: 5px
+}
+.EditArea #tblEditArea .trField .tdFieldHeader {
+	TEXT-ALIGN: right; WIDTH: 120px; FLOAT: left; COLOR: gray; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.EditArea #tblEditArea .trField .tdFieldHeader2 {
+	TEXT-ALIGN: right; WIDTH: 220px; FLOAT: left; COLOR: gray; FONT-WEIGHT: bold
+}
+.EditArea #tblEditArea .trField .tdField {
+	PADDING-LEFT: 5px; FLOAT: left; COLOR: black
+}
+.EditArea #tblEditArea .trField .tdField INPUT {
+	WIDTH: 120px
+}
+.EditArea #tblEditArea2 {
+	BORDER-BOTTOM: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 20px; BORDER-RIGHT: #ccddef 1px solid
+}
+.EditArea #tblEditArea2 TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+.EditArea #tblEditArea2 .trField {
+	PADDING-BOTTOM: 5px
+}
+.EditArea #tblEditArea2 .trField .tdFieldHeader {
+	TEXT-ALIGN: right; WIDTH: 120px; FLOAT: left; COLOR: gray; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.EditArea #tblEditArea2 .trField .tdFieldHeader2 {
+	TEXT-ALIGN: right; WIDTH: 100px; FLOAT: left; COLOR: gray; FONT-WEIGHT: bold
+}
+.EditArea #tblEditArea2 .trField .tdField {
+	PADDING-LEFT: 5px; FLOAT: left; COLOR: black
+}
+.EditArea #tblEditArea2 .trField .tdField INPUT {
+	WIDTH: 120px
+}
+.FieldShopping {
+	WIDTH: 250px
+}
+
+.tdField {
+	width:170px;
+	padding:3px;
+	margin:8px 0 10px 0;
+
+}
+.EditArea .divEditArea {
+	BORDER-BOTTOM: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-COLLAPSE: collapse; BORDER-RIGHT: #ccddef 1px solid; PADDING-TOP: 0px
+}
+.EditArea .divEditArea .trField {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 2px; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 2px; PADDING-TOP: 0px
+}
+.EditArea .divEditArea {
+	MARGIN-BOTTOM: 20px
+}
+.EditArea .divEditArea .trField .tdFieldHeader {
+	TEXT-ALIGN: right; WIDTH: 130px; FLOAT: left; COLOR: gray; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.EditArea .divEditArea .divHeader {
+	BACKGROUND-COLOR: #ffe401; MARGIN-BOTTOM: 10px
+}
+.EditArea .divEditArea .trField .tdField {
+	PADDING-LEFT: 3px; COLOR: black
+}
+.EditArea .divEditArea .divBottom {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px
+}
+.tblReportFilterArea {
+	WIDTH: 100%; VERTICAL-ALIGN: top
+}
+.tblReportFilterArea #divLojas {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; WIDTH: 49%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; FLOAT: left; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.tblReportFilterArea #tblRegioes {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.tblReportFilterArea #divPromotores {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; WIDTH: 49%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; FLOAT: right; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.tblReportFilterArea #divProdutos {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; WIDTH: 49%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; FLOAT: right; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.tblReportFilterArea #divLojas TABLE {
+	
+}
+.tblReportFilterArea #divLojas TD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+.FieldCell INPUT {
+	WIDTH: 150px
+}
+.menu .bot {
+	
+}
+.space {
+	HEIGHT: 35px; CLEAR: both
+}
+.Botao {
+	BACKGROUND-IMAGE:url('bg_btoes.png'); background-repeat:repeat-x; TEXT-TRANSFORM: uppercase; MARGIN: -3px 0px;  FONT-FAMILY: Verdana,Arial,Helvetica; FLOAT: left; FONT-SIZE: xx-small; border-radius:3px; border:1px #C0C0C0 solid; padding-top:5px; padding-bottom:5px; padding-left:8px; padding-right:10px; font-weight:bold; 
+}
+.Roteiro {
+	PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffc000; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 200px; COLOR: black; CLEAR: both; FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+.Roteiro LABEL {
+	COLOR: gray
+}
+.LinkLimpar {
+	FLOAT: right; COLOR: #666666; VERTICAL-ALIGN: bottom; MARGIN-RIGHT: 5px
+}
+.Roteiro SPAN {
+	FLOAT: left; MARGIN-LEFT: 5px
+}
+.PanelDia {
+	BACKGROUND-COLOR: #f5f5a6; WIDTH: 32%; FLOAT: left; HEIGHT: 180px; COLOR: black; MARGIN-RIGHT: 2px
+}
+.PanelMes {
+	BACKGROUND-COLOR: #f5f5b6; WIDTH: 32%; FLOAT: left; HEIGHT: 180px; COLOR: black; MARGIN-RIGHT: 2px
+}
+.PanelDiaSemana {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 33%; FLOAT: left; HEIGHT: 180px; COLOR: black; MARGIN-RIGHT: 2px
+}
+.Teste {
+	BACKGROUND-COLOR: #333333
+}
+.VerRoteiro {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.VerRoteiro TABLE {
+	WIDTH: 95%; COLOR: black
+}
+.PaginateControl {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 10px; MARGIN-TOP: 10px; PADDING-LEFT: 20px; WIDTH: 95%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; PADDING-TOP: 10px
+}
+#divLojasRoteiro {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#divImportRoteiro {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#divLojasRoteiro TABLE {
+	
+}
+#divLojasRoteiro TD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+#divLojasRoteiro #tdProcurar {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 33%; VERTICAL-ALIGN: top; MARGIN-RIGHT: 2px
+}
+#tdProcurar INPUT {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; TEXT-TRANSFORM: uppercase; MARGIN-TOP: 4px; WIDTH: 150px; FONT-FAMILY: Verdana,Arial,Helvetica; MARGIN-BOTTOM: 4px; FLOAT: left; FONT-SIZE: xx-small; VERTICAL-ALIGN: middle; BORDER-TOP: #000000 1px solid; MARGIN-RIGHT: 10px; BORDER-RIGHT: #000000 1px solid
+}
+#divLojasRoteiro #tdProcuraLoja {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 33%; VERTICAL-ALIGN: top; MARGIN-RIGHT: 2px
+}
+#tdProcuraLoja INPUT {
+	TEXT-TRANSFORM: uppercase; MARGIN-TOP: 4px; FONT-FAMILY: Verdana,Arial,Helvetica; MARGIN-BOTTOM: 4px; FONT-SIZE: xx-small; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 10px
+}
+#divLojasRoteiro #tdListaLoja {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 32%; HEIGHT: 200px; VERTICAL-ALIGN: top; MARGIN-RIGHT: 2px
+}
+#tdListaLoja DIV {
+	HEIGHT: 300px; OVERFLOW: auto
+}
+.imgBtnAdd {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+#AdicionarProdutoPesquisa {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaProdutoPesquisa {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: left; HEIGHT: 290px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarProdutoPesquisa TABLE {
+	WIDTH: 100%; COLOR: black
+}
+#AdicionarProdutoPesquisa TD {
+	WIDTH: 33%
+}
+#AdicionarProdutoPesquisa SELECT {
+	WIDTH: 90%
+}
+#AdicionarProdutoPesquisa INPUT {
+	FLOAT: right
+}
+#AreaProdutoPesquisa H4 {
+	MARGIN-BOTTOM: 4px
+}
+#AreaProdutoPesquisa .ListaItens {
+	HEIGHT: 285px
+}
+#AreaProdutoPesquisa .ListaItens DIV {
+	HEIGHT: 285px; OVERFLOW: auto
+}
+#AreaRespostasPergunta {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: left; HEIGHT: 468px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarProdutoPergunta {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaProdutoPergunta {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: right; HEIGHT: 468px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarProdutoPergunta TABLE {
+	WIDTH: 100%; COLOR: black
+}
+#AdicionarProdutoPergunta TD {
+	WIDTH: 25%
+}
+#AdicionarProdutoPergunta SELECT {
+	WIDTH: 90%
+}
+#AdicionarProdutoPergunta INPUT {
+	FLOAT: right
+}
+#AreaProdutoPergunta H4 {
+	MARGIN-BOTTOM: 4px
+}
+#AreaProdutoPergunta .ListaItens {
+	HEIGHT: 335px
+}
+#AreaProdutoPergunta .ListaItens DIV {
+	HEIGHT: 335px; OVERFLOW: auto
+}
+#AdicionarProdutoPromotor {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaProdutoPromotor {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: right; HEIGHT: 268px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarProdutoPromotor TABLE {
+	WIDTH: 100%; COLOR: black
+}
+#AdicionarProdutoPromotor TD {
+	WIDTH: 33%
+}
+#AdicionarProdutoPromotor SELECT {
+	WIDTH: 90%
+}
+#AdicionarProdutoPromotor INPUT {
+	FLOAT: right
+}
+#AreaProdutoPromotor H4 {
+	MARGIN-BOTTOM: 4px
+}
+#AreaProdutoPromotor .ListaItens {
+	HEIGHT: 135px
+}
+#AreaProdutoPromotor .ListaItens DIV {
+	HEIGHT: 135px; OVERFLOW: auto
+}
+#AdicionarSegmentoPesquisa {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaSegmentoPesquisa {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: right; HEIGHT: 300px; COLOR: black; MARGIN-LEFT: 10px; CLEAR: both; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarSegmentoPesquisa TABLE {
+	WIDTH: 100%; COLOR: black
+}
+#AdicionarSegmentoPesquisa TD {
+	WIDTH: 33%
+}
+#AdicionarSegmentoPesquisa SELECT {
+	WIDTH: 100%
+}
+#AdicionarSegmentoPesquisa .txtCidade {
+	WIDTH: 100%
+}
+#AdicionarSegmentoPesquisa .BotaoAdicionar {
+	WIDTH: 150px; FLOAT: right
+}
+#AdicionarSegmentoPesquisa H4 {
+	MARGIN-BOTTOM: 4px
+}
+#AreaSegmentoPesquisa .ListaItens {
+	HEIGHT: 200px
+}
+#AreaSegmentoPesquisa .ListaItens DIV {
+	HEIGHT: 200px; OVERFLOW: auto
+}
+#RoteiroPeriodo {
+	BORDER-BOTTOM: #ffc000 thin solid; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#RoteiroPeriodo H4 {
+	COLOR: black
+}
+#RoteiroPeriodo TABLE {
+	BACKGROUND-COLOR: #ffc000
+}
+#RoteiroPeriodo TABLE TD {
+	TEXT-ALIGN: center
+}
+.Roteiro_Dia {
+	BACKGROUND-COLOR: #f5f5a0
+}
+.Roteiro_Loja {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #f4f480
+}
+.Roteiro_lojaAlt {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #f5f5a1
+}
+.Roteiro_LojaDiaAlt {
+	BACKGROUND-COLOR: #f5f5a0
+}
+.Roteiro_LojaDia {
+	BACKGROUND-COLOR: #f5f5a0
+}
+.Roteiro_DiaAlt {
+	BACKGROUND-COLOR: #f5f5a0; COLOR: black
+}
+.Roteiro_LojaHeader {
+	BACKGROUND-COLOR: #ffc000; COLOR: black; FONT-WEIGHT: bold
+}
+#AreaVisitaProdutos {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; HEIGHT: 300px; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AreaVisitaProdutos .Filtro {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaVisitaProdutos .PaginateControl A {
+	COLOR: black; FONT-WEIGHT: bold
+}
+#AdicionarLojaPergunta {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffc000; MARGIN-TOP: 10px; FONT-FAMILY: Arial; COLOR: black; CLEAR: both; FONT-SIZE: x-small
+}
+#AreaLojaPergunta {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; HEIGHT: 300px; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#AdicionarLojaPergunta TABLE {
+	WIDTH: 100%; COLOR: black
+}
+#AdicionarLojaPergunta SELECT {
+	WIDTH: 100%
+}
+#AdicionarLojaPergunta .txtCidade {
+	WIDTH: 100%
+}
+#AdicionarLojaPergunta .BotaoAdicionar {
+	WIDTH: 150px; FLOAT: right
+}
+#AdicionarLojaPergunta H4 {
+	MARGIN-BOTTOM: 4px
+}
+#AreaLojaPergunta .ListaItens {
+	HEIGHT: 200px
+}
+#AreaLojaPergunta .ListaItens DIV {
+	HEIGHT: 200px; OVERFLOW: auto
+}
+#tblEditAcao {
+	BACKGROUND-COLOR: #f5f5a0; WIDTH: 100%
+}
+.tblAbono {
+	WIDTH: 100%
+}
+.tblAbono LABEL {
+	WIDTH: 200px; MARGIN-LEFT: 10px
+}
+#tblEditAcao TD {
+	WIDTH: 33%
+}
+.ExportArea {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; COLOR: black; CLEAR: both; FONT-SIZE: x-small; VERTICAL-ALIGN: top; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.ExportArea #txtDataInicial {
+	WIDTH: 80px
+}
+.ExportArea #txtDataFinal {
+	WIDTH: 80px
+}
+.ExportArea .tblExportFilterArea SELECT {
+	WIDTH: 100%
+}
+.ExportArea .tblExportFilterArea TABLE {
+	WIDTH: 100%
+}
+.tblExportFilterArea {
+	WIDTH: 100%; VERTICAL-ALIGN: top
+}
+.tblExportFilterArea #divLojas {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 5px; WIDTH: 33%; PADDING-RIGHT: 5px; FONT-FAMILY: Arial; FLOAT: left; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 5px
+}
+.tblExportFilterArea #tblRegioes {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 100%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.tblExportFilterArea #divPromotores {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 5px; WIDTH: 33%; PADDING-RIGHT: 5px; FONT-FAMILY: Arial; FLOAT: right; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 5px
+}
+.tblExportFilterArea #divProdutos {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 5px; WIDTH: 33%; PADDING-RIGHT: 5px; FONT-FAMILY: Arial; FLOAT: right; COLOR: black; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 5px
+}
+.tblRelatorioSalvo {
+	WIDTH: 450px; VERTICAL-ALIGN: top
+}
+#StatusLoja DIV {
+	WIDTH: 30%; FLOAT: left
+}
+.tblExportFilterArea #divLojas TABLE {
+	
+}
+.tblExportFilterArea #divLojas TD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+#FormularioVisita {
+	BORDER-BOTTOM: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BACKGROUND-COLOR: #f5f5a0; MARGIN-BOTTOM: 10px; BORDER-TOP: #ccddef 1px solid; BORDER-RIGHT: #ccddef 1px solid
+}
+#DadosVisita {
+	WIDTH: 100%
+}
+#PerguntasVisitas {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: right; HEIGHT: 300px; COLOR: black; MARGIN-LEFT: 10px; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+#ProdutosVisita {
+	BORDER-BOTTOM: #ffc000 thin solid; TEXT-ALIGN: left; BORDER-LEFT: #ffc000 thin solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 10px; PADDING-LEFT: 10px; WIDTH: 48%; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; MARGIN-BOTTOM: 20px; FLOAT: left; HEIGHT: 300px; COLOR: black; MARGIN-LEFT: 10px; FONT-SIZE: x-small; BORDER-TOP: #ffc000 thin solid; BORDER-RIGHT: #ffc000 thin solid; PADDING-TOP: 10px
+}
+.AcaoArea {
+	
+}
+.AcaoArea .Secao {
+	BORDER-BOTTOM-COLOR: white; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: thin; BACKGROUND-COLOR: white; MARGIN-TOP: 10px; BORDER-TOP-COLOR: white; PADDING-LEFT: 0px; WIDTH: 200px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial; FLOAT: left; BORDER-TOP-WIDTH: thin; BORDER-BOTTOM-WIDTH: thin; COLOR: black; BORDER-RIGHT-COLOR: white; MARGIN-LEFT: 5px; FONT-SIZE: x-small; BORDER-LEFT-COLOR: white; BORDER-LEFT-WIDTH: thin; PADDING-TOP: 0px
+}
+.AcaoArea .Secao .SecaoHeader {
+	BACKGROUND-COLOR: #f5f5a0; MARGIN-TOP: 0px; WIDTH: 100%; COLOR: black
+}
+.AcaoArea .Secao .Acoes {
+	
+}
+#divFormularioProdutos TABLE THEAD TR {
+	HEIGHT: 20px
+}
+#divFormularioProdutos TABLE THEAD TR TH {
+	BACKGROUND-COLOR: #ffc000; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE THEAD TR .thProduto {
+	BACKGROUND-COLOR: #ffc000; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE THEAD TR .thStatus {
+	BACKGROUND-COLOR: #ffc000; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE THEAD TR .thFornecedor {
+	BACKGROUND-COLOR: #ffc000; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE THEAD TR .thSubCategoria {
+	BACKGROUND-COLOR: #ffc000; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trAlternate TD {
+	BACKGROUND-COLOR: white; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trAlternate .tdProduto {
+	BACKGROUND-COLOR: white; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trAlternate .tdStatus {
+	BACKGROUND-COLOR: white; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trAlternate .tdFornecedor {
+	BACKGROUND-COLOR: white; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trAlternate .tdSubCategoria {
+	BACKGROUND-COLOR: white; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trNormal TD {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trNormal .tdProduto {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trNormal .tdStatus {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trNormal .tdFornecedor {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TBODY .trNormal .tdSubCategoria {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: black
+}
+#divFormularioProdutos TABLE TFOOT TR TD {
+	BACKGROUND-COLOR: #f5f5a0; WHITE-SPACE: nowrap; COLOR: white
+}
+#divFormularioProdutos TABLE TBODY TR .td10 {
+	BACKGROUND-COLOR: #f5f5a0
+}
+#divFormularioProdutos TABLE TBODY TR .td11 {
+	BACKGROUND-COLOR: #f5f5a0
+}
+#divFormularioProdutos TABLE TBODY TR .td01 {
+	BACKGROUND-COLOR: white
+}
+#divFormularioProdutos TABLE TBODY TR .td00 {
+	BACKGROUND-COLOR: white
+}
+.ImageRotator {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: black; PADDING-LEFT: 1px; WIDTH: 102px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.ImageRotator .ImageRotatorTable {
+	Z-INDEX: 1; BORDER-BOTTOM: 0px; POSITION: relative; FILTER: alpha(opacity=50); BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 100px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial; HEIGHT: 15px; COLOR: white; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; TOP: 0px; -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5
+}
+.ImageRotator .ImageRotatorTable TR {
+	HEIGHT: 15px
+}
+.ImageRotator .ImageRototorImg {
+	WIDTH: 100px
+}
+.ImageRotator .tdSeparator {
+	WIDTH: 3px
+}
+.ImageRotator .tdButton {
+	BACKGROUND-COLOR: gray; WIDTH: 15px
+}
+.ImageRotator .tdCaption {
+	BACKGROUND-COLOR: gray
+}
+.ControlPergunta .ImageRotator {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: black; PADDING-LEFT: 1px; WIDTH: 502px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.ControlPergunta .ImageRotator .ImageRotatorTable {
+	Z-INDEX: 1; BORDER-BOTTOM: 0px; FILTER: alpha(opacity=50); BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 500px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial; HEIGHT: 15px; COLOR: white; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px; -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5
+}
+.ControlPergunta .ImageRotator .ImageRotatorTable TR {
+	HEIGHT: 15px
+}
+.ControlPergunta .ImageRotator .ImageRototorImg {
+	WIDTH: 500px
+}
+.ControlPergunta .ImageRotator .tdSeparator {
+	WIDTH: 3px
+}
+.ControlPergunta .ImageRotator .tdButton {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: black; PADDING-LEFT: 0px; WIDTH: 15px; PADDING-RIGHT: 0px; HEIGHT: 15px; PADDING-TOP: 0px
+}
+.ControlPergunta .ImageRotator .tdCaption {
+	BACKGROUND-COLOR: gray
+}
+.ImageUploader {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 150px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 8px; PADDING-TOP: 1px;float:left; margin-right:15px;
+}
+.ImageUploader .normal {
+	FILTER: alpha(opacity=100); WIDTH: 150px; opacity: 1
+}
+.ImageUploader .troca {
+	FILTER: alpha(opacity=30); WIDTH: 150px; opacity: 0.3
+}

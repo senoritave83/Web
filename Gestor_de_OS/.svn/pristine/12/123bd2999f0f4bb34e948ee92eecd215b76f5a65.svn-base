@@ -1,0 +1,156 @@
+<%@ Master Language="VB" CodeFile="login.master.vb" Inherits="hotsite_hotsite" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Gestor de O.S</title>
+<link href="../App_Themes/Default/ajuda.css" rel="stylesheet" type="text/css" />
+<link href="../App_Themes/Default/reset.css" rel="stylesheet" type="text/css" />
+<link href="../App_Themes/Default/colorbox.css" rel="stylesheet" type="text/css" />
+<link href="../App_Themes/Default/global.css" rel="stylesheet" type="text/css" />
+<link href="../App_Themes/Default/xm.css" rel="stylesheet" type="text/css" />
+ <link href="hotsite.css" rel="stylesheet" type="text/css" />
+ <link href="../App_Themes/Default/ie6.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+ 
+<script src="../Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="../Scripts/jquery.colorbox-min.js" type="text/javascript"></script>
+<script src="../Scripts/jquery.dd.js" type="text/javascript"></script>
+<script src="../Scripts/global.js" type="text/javascript"></script>
+<script src="../Scripts/functions.js" type="text/javascript"></script>
+<script type="text/JavaScript">
+<!--
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; } 
+        }
+    }
+
+    //-->
+    function openDialog(url, width, height) {
+        var xposition = 0;
+        var yposition = 0;
+        if ((parseInt(navigator.appVersion, 10) >= 4)) {
+            xposition = (screen.width - width) / 2;
+            yposition = (screen.height - height) / 2;
+        }
+        width = eval(width) - 10;
+        height = eval(height) - 55;
+
+        var args = "width=" + width + ","
+    + "height=" + height + ","
+    + "location=0,"
+    + "menubar=0,"
+    + "resizable=0,"
+    + "scrollbars=yes,"
+    + "status=0,"
+    + "titlebar=0,"
+    + "toolbar=0,"
+    + "hotkeys=0,"
+    + "directories=0,"
+    + "copyhistory=0,"
+    + "screenx=0,"  //NN Only 
+    + "screeny=0,"  //NN Only 
+    + "left=0,"     //IE Only 
+    + "top=0";           //IE Only 
+        window.open(url, 'WindowOpened', args);
+    }
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+//-->
+</script> 
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<script type="text/javascript" src="scripts/jquery-DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('body div, body span, .container, .container img, .container div, .container a, .container input, .container ul, .container li,  .container h2, .container h3, .container h4,.container h5, .container h6, .container label, .container span, .container form, .container textarea, .usuario, .menuCat li, .menuCat .sub');
+ 
+  //IE6, IE7 z-index issue
+  
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});        
+});
+</script>
+ 
+<![endif]-->
+ 
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<script type="text/javascript">
+//IE6, IE7 z-index issue
+ 
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p, li').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});
+});
+</script>
+ 
+<![endif]-->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>    		
+<div class="container">
+    <div class="header">     
+	</div><!-- end header -->
+    <div class="headCategory catEquipe">
+        &nbsp;<h3 class="push19">Equipe Online</h3>
+        <span class="cadastrar">
+          <span>Quero me cadastrar</span> 
+          <a href="../inicio/cadastro.aspx">
+           <img style="vertical-align:middle;" src="../images/buttons/btn_ok.png"/>
+          </a>  
+        </span>
+          <!--div id="menu">
+              <ul>
+              	  <li runat="server" id="liInicio" style="margin-left:0px;" class="on"><a href="../inicio/login.aspx">Login</a></li>	
+              	  <li runat="server" id="liConheca"><a href="../hotsite/Default.aspx">Conheça o Serviço</a></li>
+              	  <li runat="server" id="liEOL"><a href="../hotsite/equipe.aspx">EOL 2.0</a></li>	
+                  <li runat="server" id="liBeneficios" ><a href="../hotsite/beneficios.aspx">Benefícios</a></li>
+                  <li runat="server" id="liRequisitos" ><a href="../hotsite/requisitos.aspx">Requisitos</a></li>
+                  <li runat="server" id="liComoAdquirir" style="border:none" ><a href="../hotsite/adquirir.aspx">Como Adquir</a></li>
+              </ul>  
+        </div-->        
+  	    </div><!-- end headCategory-->
+        <div class="content">
+        <div class="contentLogin" style="margin-top:10px; background-color:transparent;">
+		<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+		</asp:ContentPlaceHolder> 
+      	</div>
+        </div>
+        <!-- end content-->
+			<div class="tagline">
+		    </div>
+        <div class="footer"> 
+            <p style="color:#097BB9;"><a target="_blank" href="http://www.xmsistemas.com.br">&copy; 2013 XM Sistemas Distribuídos Ltda. Todos os direitos reservados.</a></p>
+        </div><!-- end footer -->
+    </div><!-- end container -->
+  </body>
+</html>

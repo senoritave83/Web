@@ -1,0 +1,9 @@
+﻿body
+{
+	border-style: groove;
+	
+}
+teste
+{
+	border-style: solid;border-width: thin;
+}

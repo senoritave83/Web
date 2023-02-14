@@ -1,0 +1,127 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<%@ Register Src="../../controls/Roteiro.ascx" TagName="Roteiro" TagPrefix="uc2" %>
+<%@ Register Src="../../controls/VerRoteiro.ascx" TagName="VerRoteiro" TagPrefix="uc1" %>
+<%@ Register Src="../../controls/MenuOptions.ascx" TagName="MenuOptions" TagPrefix="uc4" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+<%@ Register assembly="XMReportControls" namespace="XMSistemas.Web.UI.WebControls.ReportControls" tagprefix="xmreports" %>
+
+
+<rsweb:ReportViewer runat="server" Font-Names="Verdana" Visible='false' ShowToolBar='True' 
+        Font-Size="8pt" Width="100%" Height='600px' BackColor="#F5F5C7">
+</rsweb:ReportViewer>
+
+<xmreports:XMReportFilters runat="server" CssClass='XMReportFilters Filtro'>
+    <ItemStyle CssClass='Report_Item' />
+    <ItemHeaderStyle BackColor="#DDDDDE" CssClass='Header' />
+    <ParametersPreferences>
+        <xmreports:ParameterPreference ParameterName='ESTADOS' ControlType='radiolist' RepeatColumns='9'>
+            <Style Width='66%' CssClass='Report_Item' />
+        </xmreports:ParameterPreference>
+                <xmreports:ParameterPreference ParameterName='DATAINICIAL' >
+            <Style CssClass='Datepicker' />
+        </xmreports:ParameterPreference>
+        <xmreports:ParameterPreference ParameterName='DATAFINAL' >
+            <Style 	CssClass='Datepicker' />
+        </xmreports:ParameterPreference>
+        <xmreports:ParameterPreference ParameterName='UF' ControlType='radiolist' RepeatColumns='4' />
+        <xmreports:ParameterPreference ParameterName='TIPOS' ControlType='radiolist' RepeatColumns='3' />
+        <xmreports:ParameterPreference ParameterName='REGIOES' ControlType='radiolist' RepeatColumns='3' />
+    </ParametersPreferences>
+    <ScheduleStyle>
+        <CalendarStyle CssClass='PanelDia' />
+        <DayPanelStyle CssClass='PanelDia' />
+        <MonthPanelStyle CssClass='PanelDia' />
+        <WeekDayPanelStyle CssClass='PanelDia' />
+    </ScheduleStyle>
+</xmreports:XMReportFilters>
+
+
+<uc4:MenuOptions runat="server" SideMenuCascading='false' SideMenuVisible='true' SideMenuShowFirstNode='true' TopMenuVisible='false' TopMenuShowFirstNode='false' />
+
+<asp:BulletedList runat='server' SkinID='lstErros' BulletStyle='Disc' DisplayMode='Text' ForeColor='#FF0000' font-weight='Bold' style="margin-left:10px;"  />
+<asp:ValidationSummary runat='server' SkinID='valSummary' ForeColor='#FF0000' font-weight='Bold'  />
+
+<asp:Image runat="server" SkinID='ImageHeader' ImageUrl='~/imagens/degradee.jpg' width='100%' height='35px' visible='false' />
+
+<asp:Image runat="server" SkinID='ImageFooter' ImageUrl='~/imagens/degradee.jpg' width='100%' height='35px' visible='false' />
+
+<asp:Label Runat="server" SkinID='XMTitulo.Titulo' Font-name='Verdana' style='text-transform:uppercase;text-align:left;' />
+<asp:Label Runat="server" SkinID='XMTitulo.Descricao' Font-name='Verdana' font-size="8pt" style='text-align:left;' />
+<asp:Image alt='XM Promotores' runat="server" SkinID='XMTitulo.Logo' />
+<asp:Image runat="server" SkinID='XMTitulo.PageLogo' />
+
+<asp:ValidationSummary runat='server' ForeColor='black' font-bold='True' font-size='12pt' ShowMessageBox='true' />
+
+<asp:GridView Runat="server" CssClass='TextDefault' BorderColor="#DDDDDD" BorderStyle="Solid" BorderWidth="1px" width='100%'  CellPadding="4" ForeColor="#333333" GridLines="None" >
+                    <FooterStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#CCCCCC" Font-Bold="True" ForeColor="Black" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <AlternatingRowStyle BackColor="White" />
+</asp:GridView>
+
+<asp:GridView Runat="server" SkinID='GridInterno' CssClass='TextDefault' BorderColor="#DDDDDD" BorderStyle="Solid" BorderWidth="1px" CellPadding="4" ForeColor="#333333" GridLines="None" Width="95%" >
+                    <FooterStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <RowStyle BackColor="#F0F0F0" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#CCCCCC" Font-Bold="True" ForeColor="Black" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <AlternatingRowStyle BackColor="White" />
+                    <EmptyDataRowStyle forecolor="Gray" font-bold='true' font-size='10pt' />
+</asp:GridView>
+
+<asp:Button runat='server' cssclass='Botao'  />
+
+<uc2:Roteiro runat="server" CssClass="Roteiro" DayPanelCssClass="PanelDia" MesPanelCssClass="PanelMes" WeekDayPanelCssClass="PanelDiaSemana" />
+
+<asp:Login runat="server"
+    BorderPadding="4"
+    Font-Names="Verdana" Font-Size="0.8em"
+    ForeColor="#333333">
+    <TextBoxStyle Font-Size="12px" />
+    <LoginButtonStyle  Font-Names="Verdana"  />
+    <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+    <TitleTextStyle Font-Bold="True" Font-Size="0.9em" ForeColor="#000000" />
+</asp:Login>
+
+<asp:Menu runat="server" SkinID='Lateral'
+    BackColor="transparent" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="Transparent"
+    StaticDisplayLevels="3" 
+    StaticSubMenuIndent="10px" MaximumDynamicDisplayLevels="0">
+    <StaticSelectedStyle BackColor="#C4C4C4" />
+    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <DynamicHoverStyle BackColor="#C4C4C4" ForeColor="Black" Font-Bold='True' />
+    <DynamicMenuStyle BackColor="#AABDD4" />
+    <DynamicSelectedStyle BackColor="#AABDD4" />
+    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <StaticHoverStyle BackColor="#C4C4C4" ForeColor="Black" Font-Bold="True" />
+    <LevelSelectedStyles>
+        <asp:MenuItemStyle Font-Underline="False" Width="253px"/>
+        <asp:MenuItemStyle Font-Underline="False"/>
+        <asp:MenuItemStyle Font-Underline="False" ForeColor="Black" />
+    </LevelSelectedStyles>
+    <LevelMenuItemStyles>
+        <asp:MenuItemStyle BackColor="#000000" BorderColor="Transparent" Font-Bold="True" CssClass="mnulink"
+            Font-Underline="False" ForeColor="White" Width="243px" />
+        <asp:MenuItemStyle BackColor="#AABDD4" Font-Underline="False" ForeColor="Black" Font-Bold="True"  />
+        <asp:MenuItemStyle BackColor="transparent" Font-Underline="False" ForeColor="Black" />
+    </LevelMenuItemStyles>
+</asp:Menu>

@@ -1,0 +1,123 @@
+<%@ Master Language="VB" MasterPageFile="~/header.master" CodeFile="Principal2.master.vb" Inherits="Principal2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHtmlHead" runat="server">
+
+	<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<script type="text/javascript" src="scripts/jquery-DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('body div, body span, .container, .container img, .container div, .container a, .container input, .container ul, .container li,  .container h2, .container h3, .container h4,.container h5, .container h6, .container label, .container span, .container form, .container textarea, .usuario, .menuCat li, .menuCat .sub');
+
+  //IE6, IE7 z-index issue
+  
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});        
+});
+</script>
+
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<script type="text/javascript">
+//IE6, IE7 z-index issue
+
+  $(function() {
+	var zIndexNumber = 1000;
+	$('p, li').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});
+});
+</script>
+
+<![endif]-->
+
+	<style type="text/css">
+.style1 {
+	text-align: right;
+	padding-right: 4px;
+}
+</style>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
+	<div class="headCategory catEquipe">
+        <h3>Equipe Online</h3>  
+        <div class="usuario" style="right: 4px; top: 5px">
+        <p style="width: 167px">    	
+            <a class="ajuda" runat='server' href="~/ajuda/default.aspx" id='lnkAjuda' style="right: 18px; top:17px">Ajuda</a>                         
+        </p>                
+        </div>
+              
+        <!-- aqui estava a divi usu&#65533;rio-->
+
+    </div> <!-- end headCategory-->
+
+    <div class="content">
+    <div class="contentTop">
+<ul class="menuCat">
+        	<li class="first"><a href="../home/default.aspx"><span><span>In&iacute;cio</span></span></a></li>
+            <li <%=verificaArea(1)%>><a <%=verificaArea(1)%> href="../home/default.aspx"><span><span>Ordens de servi&ccedil;o</span></span></a>
+            </li>
+            <li <%=verificaArea(2)%>><a <%=verificaArea(2)%> href="../home/calendario.aspx"><span><span>Avan&ccedil;ado</span></span></a>           	             
+            </li>
+            <li <%=verificaArea(3)%>><a <%=verificaArea(3)%> href="../relatorios/relstatus.aspx"><span><span>Relat&oacute;rios</span></span></a>	              
+            </li>
+            
+            <%= verificaAcesso()%>
+        </ul>
+    </div>
+        
+    <div class="contentMiddle">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" Visible='true' CssClass="breadcrumb" PathSeparator="/">
+        </asp:SiteMapPath>
+                                    
+	    <div class="mainFrame">                
+            <a class="ajudaTela" rel="colorbox" href="javascript:fncClickAjuda();" runat='server' id='lnkAjudaTela'>Ajuda na tela</a>
+                <form runat='server' id='Form2'>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        
+                    <script type='text/javascript'>
+                        <asp:Literal runat='server' ID='ltrScriptAjuda'>function fncClickAjuda() {return false;}</asp:Literal>
+                    </script>        
+
+                    <div class="iFrameAjuda">
+                    	<p>
+                        <asp:Literal runat='server' ID='ltrDescricao' ></asp:Literal>
+                        </p>
+                        <center>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>                           					        
+                        </center>                            
+                        
+                        <table width="101%" align="center" style="margin:0 auto">
+                            <tr>                                    
+                                <td style="text-align:justify;width:36%;padding-left:5px; padding-left:5px\9; padding-left:5px*">
+                                    <br />
+                                    <asp:ContentPlaceHolder runat='server' ID='Ajuda' >
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                                <td class="style1">
+                                    <br />
+                                    <asp:ContentPlaceHolder runat='server' ID='Botoes'>
+                                    </asp:ContentPlaceHolder>  
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                        
+                    <br class="clear"/>
+
+                </form>
+            </div>
+    </div>
+       
+    </div> <!-- end content-->
+
+</asp:Content>

@@ -1,0 +1,126 @@
+
+Imports Classes
+
+Namespace Pages.Cadastros
+
+    Partial Public Class Vendedor
+        Inherits XMWebPage
+        Dim cls As clsVendedor
+        Protected Const VW_IDVENDEDOR As String = "IDVendedor"
+
+        
+        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+            cls = New clsVendedor()
+            If Not Page.IsPostBack Then
+                subAddConfirm(btnApagar, "Deseja realmente apagar esta vendedor?")
+                ViewState(VW_IDVENDEDOR) = Cint("0" & Request("IDVendedor"))
+                cls.Load(ViewState(VW_IDVENDEDOR))
+
+                btnGravar.Enabled = IIf(cls.IsNew(), VerificaPermissao(Secao, ACAO_ADICIONAR), VerificaPermissao(Secao, ACAO_EDITAR))
+                btnNovo.Disabled = Not VerificaPermissao(Secao, ACAO_ADICIONAR)
+                btnApagar.Enabled = IIf(cls.IsNew(), False, VerificaPermissao(Secao, ACAO_APAGAR))
+
+                btnNovaSenha.Enabled = btnApagar.Enabled
+
+                Inflate()
+            Else
+                cls.Load(ViewState(VW_IDVENDEDOR))
+          End If
+        End Sub
+
+
+        Private Sub CarregaGrupos()
+            chkGrupos.Items.Clear()
+            Dim dr As System.Data.IDataReader = cls.ListarGrupos()
+            Dim li As ListItem
+            With dr
+                Do While .Read
+                    li = New ListItem(.GetString(dr.GetOrdinal("Grupo")), .GetInt32(dr.GetOrdinal("IDGrupo")))
+                    li.Selected = (.GetInt32(dr.GetOrdinal("Selected")) = 1)
+                    chkGrupos.Items.Add(li)
+                Loop
+            End With
+
+        End Sub
+
+
+        Protected Sub Inflate()
+            txtCodigo.Text = cls.Codigo
+            txtVendedor.Text = cls.Vendedor
+            txtTelefone.Text = cls.Telefone
+            txtLogin.Text = cls.Login
+            rdStatus.SelectedValue = cls.IdStatus
+            If cls.IDVendedor > 0 Then
+                txtSenha.Visible = False
+                btnNovaSenha.Visible = True
+            Else
+                txtSenha.Visible = True
+                btnNovaSenha.Visible = False
+            End If
+            txtID.Text = cls.ID
+            txtObservacao.Text = cls.Observacao
+            txtMaxDesconto.Text = cls.MaxDesconto
+            If cls.Criado = "" Then
+                lblCriado.Text = "Sem data de cria&ccedil;&atilde;o"
+            Else
+                lblCriado.Text = cls.Criado
+            End If
+            chkTodosClientes.Checked = cls.TodosClientes
+            CarregaGrupos()
+        End Sub
+
+        Protected Sub Deflate()
+			cls.Codigo = txtCodigo.Text
+			cls.Vendedor = txtVendedor.Text
+			cls.Telefone = txtTelefone.Text
+            cls.Login = txtLogin.Text
+            cls.IdStatus = rdStatus.SelectedItem.Value
+            If txtSenha.Visible And txtSenha.Text <> "" Then cls.Senha = txtSenha.Text
+			cls.Senha = txtSenha.Text
+			cls.ID = txtID.Text
+			cls.Observacao = txtObservacao.Text
+            cls.MaxDesconto = txtMaxDesconto.Text
+            cls.TodosClientes = chkTodosClientes.Checked
+
+            cls.Grupos.Clear()
+            Dim i As Integer
+            For i = 0 To chkGrupos.Items.Count - 1
+                If chkGrupos.Items(i).Selected Then cls.Grupos.Add(chkGrupos.Items(i).Value)
+            Next
+        End Sub
+
+        Protected Sub btnGravar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGravar.Click
+
+            If (cls.IsNew() And VerificaPermissao(Secao, ACAO_ADICIONAR) = False) Or (cls.IsNew() = False And VerificaPermissao(Secao, ACAO_EDITAR) = False) Then
+                Exit Sub
+            End If
+
+            Deflate()
+            If cls.isValid Then
+                cls.Update()
+                Inflate()
+                MostraGravado("~/Cadastros/Vendedor.aspx?idvendedor=" & cls.idvendedor)
+            End If
+            lstErros.DataSource = cls.BrokenRules
+            lstErros.DataBind()
+
+        End Sub
+
+        Private Sub btnApagar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnApagar.Click
+            If VerificaPermissao(Secao, ACAO_APAGAR) Then
+                cls.Delete()
+                Response.Redirect("Vendedores.aspx")
+            End If
+        End Sub
+
+		Protected Sub btnNovaSenha_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnNovaSenha.Click
+            txtSenha.Visible = True
+            btnNovaSenha.Visible = False           
+
+		End Sub		
+		
+	
+    End Class
+
+End Namespace
+

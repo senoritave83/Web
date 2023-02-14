@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<xml>
+	<OS>
+		<Cliente>Souza Cruz</Cliente>
+		<Endereco>Av. Condessa Elizabeth Rubiano, 1246</Endereco>
+		<Referencia>Marginal Tietê</Referencia>
+		<Radio>1177128803</Radio>
+		<Grupo>1177128801</Grupo>
+		<Data>2010-07-01 14:00</Data>
+		<TempoLimite>00000020</TempoLimite>
+		<Observacao>TESTE DE ENVIO</Observacao>
+		<IdOs></IdOs>
+		<IdRef>REF1</IdRef>
+	</OS>
+</xml>

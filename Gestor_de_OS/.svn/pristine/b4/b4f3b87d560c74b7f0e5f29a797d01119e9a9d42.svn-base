@@ -1,0 +1,54 @@
+﻿/* www.itelios.com - 2009 - ie6 */
+.menu li:hover p{
+	z-index:9999999 !important; 
+}
+.menu li:hover {
+	z-index:9999999 !important; 
+}
+.contentMiddle, .contentMiddleBig  {
+	margin-top:-2px;
+}
+.menuCat a span{
+	margin:0 0 0 7px;	
+}
+.usuario{
+	top:5px;	
+}
+.redBtn span, .main .redBtn span,
+.greyBtn span, .main .greyBtn span{
+	margin:0 0 0 7px;	
+}
+.listaDownloads {
+	margin:0 0 0 15px;
+}
+.dd{
+	margin:0 7px 0 0;
+}
+.dd .ddTitle span.arrow {
+    margin: 6px 3px 0 0;
+}
+.tabsContainer {
+	top:-16px;	
+}
+.mainSons .containerPerguntas li.open .listaSons a, .mainSons .containerPerguntas li .listaSons a {
+    display: block;
+    float: left;
+    overflow: visible;
+    width: auto;
+}
+.listaSons dd p {
+	float:left;
+	padding:35px 0 0 5px;
+	position:static;
+	bottom:auto;
+	left:auto;
+}
+.mainSons .degrade, .mainDownloads .degrade {
+	border-bottom: 1px solid #C2C2C2;
+}
+.destaque{
+	margin:0 15px 0 0;	
+}
+
+
+

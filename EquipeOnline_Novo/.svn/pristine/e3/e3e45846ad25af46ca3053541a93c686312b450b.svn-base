@@ -1,0 +1,24 @@
+<%@ Master Language="VB" MasterPageFile="~/header.master" AutoEventWireup="false" CodeFile="Imprimir.master.vb" Inherits="Imprimir" %>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphBody" runat="server">
+	<div class="headCategory catEquipe" style="margin-bottom:10px;">
+        <h3 class="push19">Equipe Online</h3>
+    </div><!-- end headCategory-->
+    <div class="content">
+        <div class="contentMiddle">
+		    <div class="main mainDeslog">
+                <div class="fLeft">
+                    <asp:ContentPlaceHolder ID="cphHelp" runat="server">
+                    </asp:ContentPlaceHolder>                    
+                </div>
+                <form id="form1" runat="server">                
+                    <asp:ContentPlaceHolder id="cphConteudo" runat="server">
+                    </asp:ContentPlaceHolder>                    
+                </form>
+                <br class="clear"/>
+            </div>  
+        </div>
+        <script>
+            window.print();
+        </script>
+    </div><!-- end content-->
+</asp:Content>

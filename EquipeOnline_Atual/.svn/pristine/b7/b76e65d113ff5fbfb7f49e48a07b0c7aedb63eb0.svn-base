@@ -1,0 +1,250 @@
+﻿
+body {text-align:left; height:auto; font-family:Arial, Helvetica, sans-serif; margin: 0* auto*;}
+#principal {
+    width: 700px;
+    margin: 0 auto;
+    margin-top:0px;
+    text-align: left;
+    background-color:#FFFFFF;
+}
+
+    #topo{
+		background:url('img/texto_topo.png')no-repeat scroll -2px;
+	    border-radius: 3px 3px 3px 3px;
+	    width:700px;
+	    height:56px;
+}
+
+.titulo_principal{
+	color:#E05206;
+	margin-left:20px;	
+	margin-top:10px;
+	font-size:21px;
+	font-weight:bold;
+	height: 40px;
+	padding:10px 0 0 56px;
+
+	
+}
+
+
+
+
+#titulo{
+	font-size:12px;
+	font-weight:bold;
+	font-size:16px;
+	text-transform:uppercase;
+	background-color:#ECEEE7;
+	border-radius:3px;
+    height:30px;
+    padding-top:9px;
+    padding-left:9px;
+    
+    
+}
+
+#titulo a{
+	color:#E05206;
+	text-decoration:none;
+    
+}
+
+
+   body {
+	}
+    body,td,th {
+	    color: #000;
+	    font-family: Arial, Helvetica, sans-serif;
+	    text-align: left;
+	    font-size:xx-small;
+    }
+    
+#conteudo_pagina {
+	padding:10px;
+	border:1px #D7D2CB solid;
+	border-radius: 0 3px 3px 3px;;
+	margin-top:42px;
+	background-color:#FFF;
+	height:485px;
+}
+
+#topicos {
+	font-size: 11px;
+	padding-left:3px;
+	color:766a62;
+	margin-top:20px;
+	padding-left:20px;
+	padding-bottom:10px;
+
+}
+
+   
+.Titulos_barradegrade {
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: 12px;
+	    color: #800000;
+    }
+    
+#menu {
+    height: 24px;
+    width:637px;
+	margin-left:5px;
+	margin-top:48px;
+    float:left;
+}
+
+
+#menu ul {
+    list-style: none;
+    bottom:-2px;
+    display:inline;
+
+}
+
+#menu li {
+	border-right:1px solid #D7D2CB;
+    float:left;
+    padding-top:3px;
+	padding-right:14px;
+    padding-bottom:6px;
+
+    
+}
+
+#menu ul li a {
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+    font-size:11px;
+    font-weight:bold;
+	padding:0 17px 0 13px;
+	background: url("../images/icons/seta_laranja.png") no-repeat scroll right 1px transparent;
+
+    
+	
+}
+
+#menu ul li a:hover {
+	color:#E05206;
+}
+
+#menu ul li.on{
+	color:#E05206;
+	
+
+}
+
+    
+    .titulo_propaganda {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		font-weight:bold;
+		color: #E05206;
+	}
+	
+	
+    .TextoCheck 
+    {
+	font-size: xx-small;
+	color: #666666;
+	background-image: none;
+}
+    .btn {
+	    background-color:#000000;
+	    border-radius:3px 3px 0 0;
+	    height: 37px; 
+	    width: 2px;
+	    padding-left:10px;
+    }
+	.btn a {
+	    text-align: center;
+	    text-decoration:none;
+	    font-weight:bold;
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: 12px;
+	    color: #FFFFFF;
+    }
+		.btn a:hover {
+		text-decoration:underline;
+    }
+    
+    
+    .Textos {
+	    font-size: 12px;
+	    text-align:justify;
+	    padding-left:3px;
+	    color:766a62;
+	    margin:20px;
+	    
+    }
+    
+    .Textos span{
+	    color:#E05206;
+		font-weight:bold;
+    }
+    
+    
+
+h1 {
+	color:#E05206;
+	margin-left:20px;	
+	margin-top:10px;
+	background:url('img/icone_gerenciamento.png') no-repeat scroll left center;
+	padding-left: 90px;
+	padding-top:10px;
+	font-size:21px;
+
+
+}
+
+
+#lista{
+	font-size: 11px;
+	padding-left:3px;
+	color:766a62;
+	margin-top:10px;
+	padding-left:20px;
+	padding-bottom:10px;
+	
+}
+
+#lista ul {
+	height:40px;
+	border-radius:4px;
+	padding-top:10px;
+	padding-left:10px;
+
+}
+
+#lista ul li{
+	float:left;
+	width:329px;
+	list-style:none;
+	text-align:justify;
+}
+
+#lista ul li span {
+	color:#E05206;
+	font-size:13px;
+	font-weight:bold;
+	text-align:center;
+}
+
+.bordas {
+	border-radius: 3px;
+	border:1px solid #D7D2CB;
+
+}
+    
+ 
+    
+   #footer {
+		background-image:url('img/logo_com_tagline.png');
+		background-repeat:no-repeat;
+		background-position:left;
+		border-top:1px #766A62 solid;
+		height:23px;
+		margin-top:10px;
+}
+

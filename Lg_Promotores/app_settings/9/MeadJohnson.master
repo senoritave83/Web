@@ -1,0 +1,87 @@
+<%@ Master Language="VB" %>
+<%@ Register Src="../../controls/XMTitulo.ascx" TagName="XMTitulo" TagPrefix="uc1" %>
+<%@ Register src="../../controls/MenuOptions.ascx" tagname="MenuOptions" tagprefix="uc3" %>
+
+<html>
+<head runat="server">
+    <title>XM Promotores - Yes Mobile 2</title>
+    <script src="../Js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../Js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id='MainArea'>
+            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr height='151'>
+                    <td width='195px' height='151'>&nbsp;
+                            <div class='MainHeaderLeft'>
+                                <asp:Image runat='server' ID='imgLogoTopLeft' SkinID='LogoTopLeft'/>
+                            </div> 
+		    </td>
+		    <td colspan='2'>
+                        <div class='Main'>
+			    <div class='MainBanner'>
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+					codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"  
+					width="780"  id="mymoviename" data="http://www.xmpromotores.com.br/meadjohnson/imagens/header.swf" style="height: 151px"> 
+					<param name="movie" value="http://www.xmpromotores.com.br/meadjohnson/imagens/header.swf" />  
+					<param name="quality" value="High" /> 
+					<param name="bgcolor" value="#ffffff" /> 
+					<embed src="http://www.xmpromotores.com.br/meadjohnson/imagens/header.swf" quality="High" bgcolor="#ffffff"
+						width="780" height="151" 
+						name="mymoviename" align="" type="application/x-shockwave-flash" 
+						pluginspage="http://www.macromedia.com/go/getflashplayer"> 
+					</embed> 
+				</object>
+			    </div>
+		     </td>
+		</tr>
+		<tr bgcolor='#F4B01D'>
+		     <td width='195px' height='50px'>
+                            <div class='MainUserPanel'>
+                                <asp:LoginView runat="server" SkinID="BarraLateral" ID='ljvLoginView'>
+                                    <LoggedInTemplate>
+                                        <div class='divUserPanel'>
+                                            <h5>logado como <asp:LoginName ID="LoginName1" runat="server"  /></h5>
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="sair" />
+                                        </div> 
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div> 
+		     </td>
+		     <td width='7px' bgcolor='#F4B01D'>&nbsp;</td>
+		     <td>
+                            <div class='MainHeader'>
+                                <uc3:MenuOptions ID="MenuOptions1" runat="server" IDMenuSuperior='mnuSuperior' IDMenuLateral='mnuLateral' SideMenuCascading='false' SideMenuVisible='true' SideMenuShowFirstNode='true' TopMenuVisible='true' TopMenuShowFirstNode='false'   />
+                                <div class='MainMenu'> 
+                                    <asp:Menu ID="mnuSuperior" runat="server" SkinID='Superior' />&nbsp;
+                                </div>
+                            </div>
+		     </td>
+		</tr>
+		<tr valign='top'>
+		     <td colspan='2' width='202px'>
+                            <div class='MainLateral'>
+                                <asp:Menu ID="mnuLateral" runat="server" SkinID='Lateral' /> 
+                            </div>
+		     </td>
+		     <td>
+                            <div class='MainContent' >
+                                <uc1:XMTitulo ID="XMTitulo1" runat="server"/>
+                                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                                </asp:contentplaceholder>
+                            </div>
+               			    <asp:Image runat='server' ImageUrl="~/imagens/minwidth.gif" width='650px' id='imgMinWidth' />
+                        </div>
+                    </td>
+                </tr> 
+                <tr height=20px>
+                    <td colspan='3'>
+                        <div id='MainFooter'>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

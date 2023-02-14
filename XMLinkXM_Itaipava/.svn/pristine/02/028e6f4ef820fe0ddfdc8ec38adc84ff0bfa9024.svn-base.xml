@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/home/default.aspx" title="Home" description="Home" caption="Home" img="~/imagens/logo_xm.png">
+    <siteMapNode url="~/pedidos/default.aspx" title="Principal" showtitle="false"  description="" caption="Controle do sistema" img="~/imagens/principal_ico.png" imgDR="~/imagens/principal_ico_visited.png" Secao="Controle do Sistema" >
+        <siteMapNode url="~/Pedidos/visitas.aspx" title="Visitas" description="Lista as visitas cadastradas no sistema" caption="Lista de Visitas" img="~/imagens/visitas.png" imgCZ="~/imagens/visitas_cz.png" Secao="Pedidos e Visitas">
+            <siteMapNode url="~/Pedidos/visita.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" img="~/imagens/notasfiscais.png" Secao="Pedidos e Visitas"/>
+        </siteMapNode>
+        <siteMapNode url="~/Pedidos/pedidos.aspx" title="Pedidos" description="Lista os pedidos no sistema" caption="Lista de Pedidos" img="~/imagens/pedidos.png" imgCZ="~/imagens/pedidos_cz.png" Secao="Pedidos e Visitas">
+        <siteMapNode url="~/Pedidos/pedido.aspx" title="Pedido" description="Visualiza os dados do pedido selecionado" parameters="idpedido" caption="Dados do Pedido" img="~/imagens/down.png" Secao="Pedidos e Visitas"/>
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/roteiros.aspx" title="Roteiros" description="Lista os roteiros cadastrados no sistema" caption="Lista de Roteiros" img="~/imagens/roteiro.png" imgCZ="~/imagens/roteiro_cz.png" Secao="Cadastro de Roteiro" />
+      <siteMapNode url="~/home/recados.aspx" title="Recados" description="Lista os recados enviados pelo sistema" caption="Lista de Recados" img="~/imagens/recados.png" imgCZ="~/imagens/recados_cz.png" Secao="Recados" />
+      <siteMapNode url="~/Pedidos/mapas.aspx" title="Mapas" description="Lista os mapas de entrega cadastrados no sistema" img="~/imagens/mapas_icon.png" imgCZ="~/imagens/mapas_icon_cz.png"  caption="Lista de Mapas de Entrega" Secao="Mapas de Entregas" />      
+      <siteMapNode url="~/Cadastros/empresa.aspx" title="Revenda" description="Configurar os dados da revenda selecionada" parameters="" caption="Configuração da Revenda" img="~/imagens/revenda.png" imgCZ="~/imagens/revenda_cz.png" Secao="Configuração da Revenda" />
+      <siteMapNode url="~/Cadastros/mensagemgerais.aspx" title="Mensagem Geral" description="Lista as mensagens cadastradas no sistema" caption="Lista de Mensagens" img="~/imagens/justificativas.png" imgCZ="~/imagens/justificativas_cz.png" Secao="Cadastro de Mensagens Gerais">
+        <siteMapNode url="~/Cadastros/mensagemgeral.aspx" title="Mensagem Geral" description="Editar os dados da mensagem selecionada" parameters="idmensagemgeral" caption="Edição da Mensagem" img="~/imagens/justificativas.png" imgCZ="~/imagens/justificativas_cz.png" Secao="Cadastro de Mensagens Gerais" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/Cadastros/default.aspx" title="Cadastros" showtitle="false"  description="" caption="Cadastros" img="~/imagens/cadastros_ico.png" imgDR="~/imagens/cadastros_ico_visited.png" Secao="Cadastros">
+      <siteMapNode url="~/Cadastros/categorias.aspx" title="Categorias" description="Lista as categorias no sistema" caption="Lista de categorias" img="~/imagens/categoria.png" imgCZ="~/imagens/categoria_cz.png" Secao="Cadastro de Categorias" >
+        <siteMapNode url="~/Cadastros/categoria.aspx" title="Categoria" description="Editar os dados da categoria" parameters="idcategoria" caption="Edição da categoria" img="~/imagens/categories.png" Secao="Cadastro de Categorias" />
+      </siteMapNode>
+        <siteMapNode url="~/Cadastros/bloqueios.aspx" title="Bloqueios" description="Lista os bloqueios cadastrados no sistema" caption="Lista de Bloqueios" img="~/imagens/bloqueio.png" imgCZ="~/imagens/bloqueio_cz.png" Secao="Cadastro de Bloqueios">
+            <siteMapNode url="~/Cadastros/bloqueio.aspx" title="Bloqueio" description="Editar os dados do bloqueio selecionado" parameters="idbloqueio" caption="Edição do Bloqueio" img="~/imagens/permissao.png" Secao="Cadastro de Bloqueios" />
+        </siteMapNode>
+        <siteMapNode url="~/Cadastros/pastas.aspx" title="Pastas" description="Lista as pastas cadastradas no sistema" caption="Lista de Pastas" img="~/imagens/pastas.png" imgCZ="~/imagens/pastas_cz.png" Secao="Cadastro de Pastas">
+            <siteMapNode url="~/Cadastros/pasta.aspx" title="Pasta" description="Editar os dados da pasta selecionada" parameters="idpasta" caption="Edição da Pasta" img="~/imagens/pastas.png" Secao="Cadastro de Pastas" />
+        </siteMapNode>
+        <siteMapNode url="~/Cadastros/investimentos.aspx" title="Investimentos" description="Lista os investimentos cadastrados no sistema" caption="Lista de Investimentos" img="~/imagens/investimentos.png" imgCZ="~/imagens/investimentos_cz.png" Secao="Cadastro de Investimentos">
+            <siteMapNode url="~/Cadastros/investimento.aspx" title="Investimento" description="Editar os dados do investimento selecionado" parameters="idinvestimento" caption="Edição do Investimento" img="~/imagens/investimentos.png"  Secao="Cadastro de Investimentos"/>
+        </siteMapNode>
+        <siteMapNode url="~/Cadastros/condicoes.aspx" title="Condições" description="Lista as condições de pagamento cadastradas no sistema" caption="Lista de Condições" img="~/imagens/condicoes.png" imgCZ="~/imagens/condicoes_cz.png" Secao="Cadastro de Condições">
+        <siteMapNode url="~/Cadastros/condicao.aspx" title="Condição" description="Editar os dados da condição selecionado" parameters="idcondicao" caption="Edição da Condição" img="~/imagens/money.png" Secao="Cadastro de Condições" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/produtos.aspx" title="Produtos" description="Lista os produtos cadastrados no sistema" caption="Lista de Produtos" img="~/imagens/produtos.png" imgCZ="~/imagens/produtos_cz.png" Secao="Cadastro de Produtos">
+        <siteMapNode url="~/Cadastros/produto.aspx" title="Produto" description="Editar os dados do produto selecionado" parameters="idproduto" caption="Edição do Produto" img="~/imagens/produtos.png" Secao="Cadastro de Produtos" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/vendedores.aspx" title="Vendedores" description="Lista os vendedores cadastrados no sistema" caption="Lista de Vendedores" img="~/imagens/vendedor.png"  imgCZ="~/imagens/vendedor_cz.png" Secao="Cadastro de Vendedores">
+        <siteMapNode url="~/Cadastros/vendedor.aspx" title="Vendedor" description="Editar os dados do vendedor selecionado" parameters="idvendedor" caption="Edição do Vendedor" img="~/imagens/vendedor.png" Secao="Cadastro de Vendedores"/>
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/tipovendedores.aspx" title="Tipos de Vendedores" description="Lista os tipos de vendedores cadastrados no sistema" caption="Lista de Tipos de Vendedores" img="~/imagens/vendedores.png" imgCZ="~/imagens/vendedores_cz.png" Secao="Cadastro de Tipos de Vendedor">
+        <siteMapNode url="~/Cadastros/tipovendedor.aspx" title="Tipo do Vendedor" description="Editar os dados do tipo do vendedor selecionado" parameters="idtipovendedor" caption="Edição do Tipo do Vendedor" img="~/imagens/tipo_de_vendedores.png" Secao="Cadastro de Tipo do Vendedor" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/clientes.aspx" title="Clientes" description="Lista os clientes cadastrados no sistema" caption="Lista de Clientes" img="~/imagens/cliente.png" imgCZ="~/imagens/cliente_cz.png" Secao="Cadastro de Clientes">
+        <siteMapNode url="~/Cadastros/cliente.aspx" title="Cliente" description="Editar os dados do cliente selecionado" parameters="idcliente" caption="Edição do Cliente" img="~/imagens/cliente.png" imgCZ="~/imagens/cliente_cz.png" Secao="Cadastro de Clientes" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/justificativas.aspx" title="Justificativas" description="Lista as justificativas cadastradas no sistema" caption="Lista de Justificativas" img="~/imagens/justificativas.png" imgCZ="~/imagens/justificativas_cz.png" Secao="Cadastro de Justificativas">
+        <siteMapNode url="~/Cadastros/justificativa.aspx" title="Justificativa" description="Editar os dados da justificativa selecionada" parameters="idjustificativa" caption="Edição da Justificativa" img="~/imagens/survey.png" Secao="Cadastro de Justificativas" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/tabelas.aspx" title="Tabelas" description="Lista as tabelas cadastradas no sistema" caption="Lista de Tabelas" img="~/imagens/tabelas.png" imgCZ="~/imagens/tabelas_cz.png" Secao="Cadastro de Tabela">
+        <siteMapNode url="~/Cadastros/tabela.aspx" title="Tabela" description="Editar os dados da tabela selecionada" parameters="idtabela" caption="Edição da Tabela" img="~/imagens/desconto.png" Secao="Cadastro de Tabela" />
+      </siteMapNode>
+        <siteMapNode url="~/Cadastros/grupos.aspx" title="Grupos de Venda" description="Lista os grupos cadastrados no sistema" caption="Lista de Grupos" img="~/imagens/grupos_de_venda.png" imgCZ="~/imagens/grupos_de_venda_cz.png" Secao="Cadastro de Grupo">
+            <siteMapNode url="~/Cadastros/grupo.aspx" title="Grupo de Venda" description="Editar os dados do grupo selecionado" parameters="idgrupo" caption="Edição do Grupo" img="~/imagens/Group.png" Secao="Cadastro de Grupo" />
+        </siteMapNode>
+      <siteMapNode url="~/Cadastros/regionais.aspx" title="Regionais" description="Lista as regionais cadastradas no sistema" caption="Lista de Regionais" img="~/imagens/regional.png" imgcz="~/imagens/regional_cz.png" Secao="Cadastro de Regionais">
+        <siteMapNode url="~/Cadastros/regional.aspx" title="Regional" description="Editar os dados da regional selecionada" parameters="idregional" caption="Edição da Regional" img="~/imagens/regional.png"  Secao="Cadastro de Regionais"/>
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/motoristas.aspx" title="Motoristas" description="Lista os motoristas cadastrados no sistema" caption="Lista de Motoristas" img="~/imagens/motorista_icon.png" imgCZ="~/imagens/motorista_icon_cz.png" secao="Cadastro de Motorista" Secao="Cadastro de Motorista">
+        <siteMapNode url="~/Cadastros/motorista.aspx" title="Motorista" description="Editar os dados do motorista selecionado" parameters="idmotorista" caption="Edição de Motorista" img="~/imagens/motorista.png" secao="Cadastro de Motorista"  Secao="Cadastro de Motorista" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/veiculos.aspx" title="Veiculos" description="Lista os veiculos cadastrados no sistema" caption="Lista de Veiculos" img="~/imagens/veiculos_icon.png" imgCZ="~/imagens/veiculos_icon_cz.png" secao="Cadastro de Veiculo" Secao="Cadastro de Veiculo">
+        <siteMapNode url="~/Cadastros/veiculo.aspx" title="Veiculo" description="Editar os dados do veiculo selecionado" parameters="placa" caption="Edição do Veiculo" img="~/imagens/veiculo.png" secao="Cadastro de Veiculo"  Secao="Cadastro de Veiculo" />
+      </siteMapNode>      
+      <siteMapNode url="~/Cadastros/Configuracoes.aspx" title="Configurações" description="Configurações de funcionamento do sistema" caption="Configurações" img="~/imagens/config.png" imgCZ="~/imagens/config_cz.png" Secao="Configurações"></siteMapNode>
+      <siteMapNode url="~/Cadastros/catalogoprodutos.aspx" title="Catálogo de Produtos" description="Lista o catálogo de produtos cadastrado no sistema" caption="Lista do Catálogo de Produtos" img="~/imagens/catalogo.png" imgCZ="~/imagens/catalogo_cz.png" Secao="Cadastro do Catálogo de Produtos">
+        <siteMapNode url="~/Cadastros/catalogoproduto.aspx" title="Catálogo do Produto" description="Editar os dados do catálogo do produto selecionado" caption="Edição do Catálogo de Produto" img="~/imagens/cat_edit.png" imgCZ="~/imagens/cat_edit_cz.png" Secao="Cadastro do Catálogo de Produtos" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/relatorios/default.aspx" title="Relatórios de Vendas" showtitle="false"  description="" caption="Relatórios de Vendas" img="~/imagens/relatorio_vendas_ico.png" imgDR="~/imagens/relatorio_vendas_ico_visited.png" Secao="Relatórios de Vendas">
+      <siteMapNode url="~/relatorios/historico_roteiro_det.aspx" title="Histórico do Roteiro" description="Relatório de Histórico do Roteiro" caption="Histórico do Roteiro" img="~/imagens/rel_roteiro.png" imgCZ="~/imagens/rel_roteiro_cz.png" Secao="Relatório de Vendas - Relatório de Histórico do Roteiro" />
+      <siteMapNode url="~/relatorios/relatorio_roteiro_det.aspx" title="Roteiro do Vendedor" description="Relatório Roteiro do Vendedor" caption="Roteiro do Vendedor" img="~/imagens/rot_vendedor.png" imgCZ="~/imagens/rot_vendedor_cz.png" Secao="Relatório de Vendas - Relatório Roteiro do Vendedor" />
+      <siteMapNode url="~/relatorios/rota.aspx" title="Relatório de Rotas - Pedidos" description="Relatório de Rotas - Pedidos" caption="Relatório de Rotas - Pedidos" img="~/imagens/rot_pedidos.png" imgCZ="~/imagens/rot_pedidos_cz.png" Secao="Relatório de Rotas - Pedidos" />
+      <siteMapNode url="~/relatorios/pedidos_det.aspx" title="Listagem de Pedidos" description="Relatório de Listagem de Pedidos" caption="Listagem de Pedidos" img="~/imagens/list_pedidos.png" imgCZ="~/imagens/list_pedidos_cz.png" Secao="Relatório de Vendas - Relatório de Listagem de Pedidos" />
+      <siteMapNode url="~/relatorios/status_det.aspx" title="Pedidos por Status" description="Relatório de Pedidos por Status" caption="Pedidos por Status" img="~/imagens/rel_status.png" imgCZ="~/imagens/rel_status_cz.png" Secao="Relatório de Vendas - Pedidos por Status" />
+      <siteMapNode url="~/relatorios/status_det_graf.aspx" title="Pedidos por Status - Gráfico" description="Relatório de Pedidos por Status - Gráfico" caption="Pedidos por Status - Gráfico" img="~/imagens/rel_status.png" imgCZ="~/imagens/rel_status_cz.png" Secao="Relatório de Vendas - Pedidos por Status - Gráfico" />
+      <siteMapNode url="~/relatorios/performance_det.aspx" title="Performance do Vendedor" description="Relatório de Performance do Vendedor" caption="Performance do Vendedor" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Performance do Vendedor" />
+      <siteMapNode url="~/relatorios/performancerevendaregiao_det.aspx" title="Performance por Revenda" description="Relatório de Performance por Revenda" caption="Performance por Revenda" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Performance por Revenda">
+        <siteMapNode url="~/relatorios/performancerevenda_det.aspx" title="Performance por Revenda" description="Relatório de Performance por Revenda" caption="Performance por Revenda" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Performance por Revenda" />
+      </siteMapNode>
+      <siteMapNode url="~/relatorios/volumevendasembalagem.aspx" title="Volume de Vendas por Embalagem" description="Relatório de Volume de Vendas por Embalagem" caption="Volume de Vendas por Embalagem" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Volume de Vendas por Embalagem">
+      </siteMapNode>
+      <siteMapNode url="~/relatorios/consolidadorevenda.aspx" title="Consolidado por Revenda" description="Relatório Consolidado por Revenda" caption="Consolidado por Revenda" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Consolidado por Revenda">
+        <siteMapNode url="~/relatorios/consolidadorevenda_det.aspx" title="Consolidado por Revenda" description="Relatório Consolidado por Revenda" caption="Consolidado por Revenda" img="~/imagens/rel_perf_vend.png" imgCZ="~/imagens/rel_perf_vend_cz.png" Secao="Relatório de Vendas - Consolidado por Revenda" />
+      </siteMapNode>
+      <siteMapNode url="~/relatorios/positivacao_det.aspx" title="Relatório de Positivação" description="Relatório de Positivação" caption="Positivação" img="~/imagens/rel_positivacao.png" imgCZ="~/imagens/rel_positivacao_cz.png" Secao="Relatório de Uso - Relatório de Vendas - Relatório de Positivação" />
+      <siteMapNode url="~/relatorios/consolidado_det.aspx" title="Volume de Vendas" description="Relatório de Volume de Vendas" caption="Volume de Vendas" img="~/imagens/vol_vendas.png"  imgCZ="~/imagens/vol_vendas_cz.png" Secao="Relatório de Vendas - Relatório de Volume de Vendas" />
+      <siteMapNode url="~/relatorios/historico_visitas_det.aspx" title="Histórico de Visitas" description="Relatório de Histórico de Visitas ao Cliente" caption="Histórico de Visitas ao Cliente" img="~/imagens/rel_visitas.png" imgCZ="~/imagens/rel_visitas_cz.png" Secao="Relatório de Vendas - Relatório de Histórico de Visitas ao Cliente" />
+      <siteMapNode url="~/relatorios/acomppositivacao_det.aspx" title="Eficiência de Visitas" description="Relatório de Eficiência de Visitas" caption="Eficiência de Visitas" img="~/imagens/rel_eficiencia.png" imgCZ="~/imagens/rel_eficiencia_cz.png" Secao="Relatório de Vendas - Relatório de Eficiência de Visitas" />
+      <siteMapNode url="~/relatorios/justificado_det.aspx" title="Relatório de Justificativas" description="Relatório de Justificativas" caption="Relatório de Justificativas" img="~/imagens/rel_justificativas.png" imgCZ="~/imagens/rel_justificativas_cz.png" Secao="Relatório de Vendas - Relatório de Justificativas" />
+    </siteMapNode>
+    <siteMapNode url="~/relatorios/default2.aspx" title="Relatório Logística" showtitle="false"  description="" caption="Relatório Logística" img="~/imagens/relatorio_logist_ico.png" imgDR="~/imagens/relatorio_logist_ico_visited.png" Secao="Relatório Logística">
+      <siteMapNode url="~/relatorios/relatorioslog.aspx" title="Relatório de Logística" description="Relatório de Logística" caption="Relatório de Logística" img="~/imagens/rel_logistica.png"  imgCZ="~/imagens/rel_logistica_cz.png" Secao="Relatório de Logística" />
+      <siteMapNode url="~/relatorios/rotalog.aspx" title="Relatório de Rotas - Logística" description="Relatório de Rotas - Logística" caption="Relatório de Rotas - Logística"  img="~/imagens/rel_rot_log.png"  imgCZ="~/imagens/rel_rot_log_cz.png" Secao="Relatório de Rotas - Logística" />
+    </siteMapNode>
+    <siteMapNode url="~/Pesquisas/default.aspx" title="Pesquisas" showtitle="false" description="" caption="Pesquisas" img="~/imagens/pesquisa.png" imgDR="~/imagens/pesquisa_visited.png" secao="Cadastro de Pesquisa" Secao="Cadastro de Pesquisa">
+      <siteMapNode url="~/Pesquisas/visitapesquisas.aspx" title="Pesquisas efetuadas" description="Lista as pesquisas efetuadas" caption="Lista de Pesquisas" img="~/imagens/pesquisa_1.png" imgCZ="~/imagens/pesquisa_1_cz.png" secao="Cadastro de Pesquisa" Secao="Pesquisa efetuadas">
+        <siteMapNode url="~/Pesquisas/visitapesquisa.aspx" title="Pesquisa efetuada" description="Visualiza os dados da pesquisa efetuada" caption="visualizaÃ§Ã£o da Pesquisa" img="~/imagens/pesquisa_1.png" imgCZ="~/imagens/pesquisa_1_cz.png" secao="Cadastro de Pesquisa" Secao="Pesquisa efetuadas"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/pesquisas.aspx" title="Pesquisas" description="Lista as pesquisas cadastradas no sistema" caption="Lista de Pesquisas" img="~/imagens/pesq_cadastradas.png" imgCZ="~/imagens/pesq_cadastradas_cz.png" secao="Cadastro de Pesquisa" Secao="Cadastro de Pesquisa">
+      <siteMapNode url="~/Pesquisas/pesquisa.aspx" title="Pesquisa" description="Editar os dados da pesquisa selecionada" parameters="idpesquisa" caption="Edição da Pesquisa" img="~/imagens/pesquisas.png" secao="Cadastro de Pesquisa"  Secao="Cadastro de Pesquisa" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/Enquetes.aspx" title="Enquetes" description="Lista as Enquetes cadastradas no sistema" caption="Lista de Enquetes" img="~/imagens/pesq_cadastradas.png" imgCZ="~/imagens/pesq_cadastradas_cz.png" secao="Cadastro de Enquetes" Secao="Cadastro de Enquetes">
+        <siteMapNode url="~/Pesquisas/Enquete.aspx" title="Enquete" description="Editar os dados da Enquete selecionada" parameters="idEnquete" caption="Edição da Enquetes" img="~/imagens/pesquisas.png" secao="Cadastro de Enquete"  Secao="Cadastro de Enquete" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/embalagens.aspx" title="Embalagens" description="Lista as embalagens cadastrados no sistema" caption="Lista de Embalagens" img="~/imagens/embalagens_icon.png" imgCZ="~/imagens/embalagens_icon_cz.png" secao="Cadastro de Embalagem" Secao="Cadastro de Embalagem">
+        <siteMapNode url="~/Pesquisas/embalagem.aspx" title="Embalagem" description="Editar os dados do embalagem selecionado" parameters="idembalagem" caption="Edição do Embalagem" img="~/imagens/embalagens.png" secao="Cadastro de Embalagem"  Secao="Cadastro de Embalagem" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/produtopesquisas.aspx" title="Produtos da Pesquisa" description="Lista os Produtos da Pesquisa cadastrados no sistema" caption="Lista os Produtos da Pesquisa" img="~/imagens/embalagens_icon.png" imgCZ="~/imagens/embalagens_icon_cz.png" secao="Cadastro de Produtos da Pesquisa" Secao="Cadastro de Produtos da Pesquisa">
+        <siteMapNode url="~/Pesquisas/produtospesquisa.aspx" title="Produtos da Pesquisa" description="Edita o produto selecionado" parameters="idprodutopesquisa" caption="Edição do Produto da Pesquisa" img="~/imagens/embalagens.png" secao="Cadastro de Produtos da Pesquisa"  Secao="Cadastro de Produtos da Pesquisa" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/marcas.aspx" title="Marcas" description="Lista as marcas cadastradas no sistema" caption="Lista de Marcas" img="~/imagens/marcas.png" imgCZ="~/imagens/marcas_cz.png" secao="Cadastro de Marca" Secao="Cadastro de Marca">
+        <siteMapNode url="~/Pesquisas/marca.aspx" title="Marca" description="Editar os dados da marca selecionada" parameters="idmarca" caption="Edição da Marca" img="~/imagens/marcas.png" secao="Cadastro de Marca"  Secao="Cadastro de Marca" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/justificativapesquisas.aspx" title="Justificativa Pesquisas" description="Lista as justificativas de pesquisas cadastradas no sistema" caption="Lista de Justificativas Pesquisas" img="~/imagens/just_pesq.png" imgCZ="~/imagens/just_pesq_cz.png" secao="Cadastro de Justificativa Pesquisa" Secao="Cadastro de Justificativa Pesquisa">
+        <siteMapNode url="~/Pesquisas/justificativapesquisa.aspx" title="Justificativa Pesquisa" description="Editar os dados da justificativa de pesquisa selecionada" parameters="idjustificativa" caption="Edição da Justificativa Pesquisa" img="~/imagens/justificativas.png" secao="Cadastro de Justificativa Pesquisa"  Secao="Cadastro de Justificativa Pesquisa" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/RelatorioPesquisas.aspx" title="Relatório de Pesquisas" description="Relatório das pesquisas cadastradas no sistema" caption="Relatório de Pesquisas" img="~/imagens/rel_pesquisa.png" imgCZ="~/imagens/rel_pesquisa_cz.png" secao="Relatorio Pesquisas" Secao="Relatorio Pesquisas">
+        <siteMapNode url="~/Pesquisas/PerformancePesquisa.aspx" title="Performance da Pesquisa" description="Performance da pesquisa selecionada" caption="Performance Pesquisa" img="~/imagens/relpesquisas.png" secao="Performance Pesquisa" Secao="Performance Pesquisa" />
+        <siteMapNode url="~/Pesquisas/PerformanceRevenda.aspx" title="Performance da Revenda" description="Performance da revenda selecionada" caption="Performance Revenda" img="~/imagens/relpesquisas.png" secao="Performance Revenda" Secao="Performance Revenda" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/RelatorioPesquisasDiarias.aspx" title="Pesquisas Diárias" description="Pesquisas diárias no sistema" caption="Pesquisas Diárias" img="~/imagens/rel_diario.png" imgCZ="~/imagens/rel_diario_cz.png" secao="Relatorio Pesquisas Diárias" Secao="Relatorio Pesquisas Diárias">
+        <siteMapNode url="~/Pesquisas/relatoriopesquisasdiarias_vendedor.aspx" title="Pesquisa do Vendedor" description="Pesquisa do Vendedor" caption="Pesquisa do Vendedor" img="~/imagens/relpesquisas.png" secao="Relatorio Pesquisas Diárias" Secao="Relatorio Pesquisas Diárias">
+          <siteMapNode url="~/Pesquisas/relatoriopesquisasdiarias_visita.aspx" title="Detalhes da Pesquisa" description="Detalhes da Pesquisa" caption="Detalhes da Pesquisa" img="~/imagens/relpesquisas.png" secao="Relatorio Pesquisas Diárias" Secao="Relatorio Pesquisas Diárias" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/PrevisaoPesquisas.aspx" title="Previsão de Pesquisas" description="Previsão de Pesquisas" caption="Previsão de Pesquisas" img="~/imagens/previsao_pesq.png" imgCZ="~/imagens/previsao_pesq_cz.png"  secao="Relatorio de Previsão de Pesquisas" Secao="Relatorio de Previsão de Pesquisas">
+      <siteMapNode url="~/Pesquisas/PrevisaoPesquisasDetalhe.aspx" title="Previsão de Pesquisas - Dados da Pesquisa" description="Previsão de Pesquisas" caption="Previsão de Pesquisas" img="~/imagens/relpesquisas.png" secao="Relatorio de Previsão de Pesquisas" Secao="Relatorio de Previsão de Pesquisas" />
+      </siteMapNode>
+      <siteMapNode url="~/Pesquisas/Evolucao_volPre.aspx" title="Evolução - Volume x Preços" description="Evolução - Volume x Preços" caption="Evolução - Volume x Preços" img="~/imagens/evolucao_ico.png" imgCZ="~/imagens/evolucao_cz_ico.png" secao="Relatorio Evolução - Volume x Preços" Secao="Relatorio Evolução - Volume x Preços" />
+      <siteMapNode url="~/Pesquisas/EvolucaoPesquisas.aspx" title="Evolução de Pesquisas" description="Evolução de Pesquisas" caption="Evolução de Pesquisas" img="~/imagens/evolucao_ico.png" imgCZ="~/imagens/evolucao_cz_ico.png" secao="Relatorio Evolução de Pesquisas" Secao="Relatorio Evolução de Pesquisas" />
+      <siteMapNode url="~/Pesquisas/relatorioacompanhamentopesquisas.aspx" title="Acompanhamento de Pesquisas" description="Acompanhamento de Pesquisas" caption="Acompanhamento de Pesquisas" img="~/imagens/acomp_pesquisas_ico.png" imgCZ="~/imagens/acomp_pesquisas_cz_ico.png"  secao="Relatorio de Acompanhamento de Pesquisas" Secao="Relatorio de Acompanhamento de Pesquisas" />
+      <siteMapNode url="~/Pesquisas/RelatorioPrecoShare.aspx" title="Relatório Preço e Share" description="Relatório de Pesquisas Preço e Share" caption="Relatório Preço e Share" img="~/imagens/rel_pesquisa.png" imgCZ="~/imagens/rel_pesquisa_cz.png" secao="Relatório Preço e Share" Secao="Relatório Preço e Share" />
+    </siteMapNode>
+    <siteMapNode url="~/enquetes/default.aspx" title="Enquetes" showtitle="false" description="" caption="Enquetes" img="~/imagens/enquete_ico.png" imgDR="~/imagens/enquete_ico_visited.png" secao="Enquetes" Secao="Enquetes">
+      <siteMapNode url="~/enquetes/faroldesvendedor.aspx" title="Farol de Desempenho - Vendedores" description="" caption="Farol de Desempenho - Vendedores" img="~/imagens/farol_vendendor.png" imgCZ="~/imagens/farol_vendedor_cz.png" secao="Enquetes - Farol de Desempenho dos Vendedores" Secao="Enquetes - Farol de Desempenho dos Vendedores">
+        <siteMapNode url="~/enquetes/faroldesvendedordet.aspx" title="Farol de Desempenho - Vendedores" description="" caption="Farol de Desempenho - Vendedores" img="~/imagens/farol_vendedor.png" imgCZ="~/imagens/farol_vendedor_cz.png" secao="Enquetes - Farol de Desempenho dos Vendedores" Secao="Enquetes - Farol de Desempenho dos Vendedores"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/enquetes/faroldesequipe.aspx" title="Farol de Desempenho - Equipe" description="" caption="Farol de Desempenho - Equipe" img="~/imagens/farol_equipe.png" imgCZ="~/imagens/farol_equipe_cz.png" secao="Enquetes - Farol de Desempenho Equipe" Secao="Enquetes - Farol de Desempenho Equipe"></siteMapNode>
+      <siteMapNode url="~/enquetes/segmentacaopdv.aspx" title="Relatório de Segmentação de PDV's" description="" caption="Relatório de Segmentação de PDV's" img="~/imagens/farol_equipe.png" imgCZ="~/imagens/farol_equipe_cz.png" secao="Enquetes - Relatório de Segmentação de PDV's" Secao="Enquetes - Relatório de Segmentação de PDV's"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/sistema/default.aspx" title="Sistema" showtitle="false"  description="" caption="Informações do sistema" img="~/imagens/sistema_ico.png" imgDR="~/imagens/sistema_ico_visited.png" Secao="Sistema">
+      <siteMapNode url="~/Cadastros/usuarios.aspx" title="Usuários" description="Lista os usuários cadastrados no sistema" caption="Lista de Usuários" img="~/imagens/usuarios.png" imgCZ="~/imagens/usuarios_cz.png" Secao="Cadastro de Usuários">
+        <siteMapNode url="~/Cadastros/usuario.aspx" title="Usuário" description="Editar os dados do usuário selecionado" parameters="" caption="Edição do Usuário" img="~/imagens/users.png" Secao="Cadastro de Usuários" />
+      </siteMapNode>       
+      <siteMapNode url="~/sistema/permissoes.aspx" title="Permissões do Sistema" description="Permissões dos Usuários do Sistema" caption="Permissões do Sistema" img="~/imagens/permissoes_usu.png" imgCZ="~/imagens/permissoes_usu_cz.png" Secao="Controle de Permissoes">
+          <siteMapNode url="~/sistema/permissao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" img="~/imagens/permissao.png" Secao="Controle de Permissoes">
+                <siteMapNode url="~/sistema/permissaoAcao.aspx" title="Cadastro de ações" description="Cadastramento das ações do Sistema" parameters="IDPermissao" caption="Ações do Sistema" img="~/imagens/permissao.png" Secao="Controle de Permissoes" />
+          </siteMapNode>
+      </siteMapNode>
+        <siteMapNode url="~/sistema/Integracao.aspx" title="Histórico de Integração" description="Visualiza o histório de integração do sistema" caption="Histórico de Integração" img="~/imagens/hist_integracao.png" imgCZ="~/imagens/hist_integracao_cz.png" Secao="Integracao">
+            <siteMapNode url="~/sistema/Integracaodet.aspx" title="Detalhes da Integração" description="Lista os detalhes da integração selecionada" parameters="" caption="Detalhes da Integração" img="~/imagens/config.png" Secao="Integracao" />
+        </siteMapNode>
+        <siteMapNode url="~/sistema/LogAcessosUsuario.aspx" title="LOGs de Acessos ao XMLink" description="Visualiza os LOGS de Acessos dos Usuários ao XMLink" caption="LOGs de Acessos ao XMLink" img="~/imagens/log_user.png" imgCZ="~/imagens/log_user_cz.png" Secao="LOGs de Acessos ao XMLink" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
+

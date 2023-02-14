@@ -1,0 +1,1691 @@
+
+/*---------------------------------------------------------------------- Positionamento */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+
+.ac{text-align:center;}
+.ar{text-align:right;}
+/*---------------------------------------------------------------------- MASTER PAGE */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family:Verdana,Arial,Helvetica;
+	font-size:8pt;
+}
+
+#imgLinha
+{
+	background-color:#FFFFFF;
+	background-image:url(../../imagens/bluebarh.gif) ;
+	background-repeat:no-repeat;
+	height:1px;
+	width:100%;
+}
+.divUserPanel
+{
+	background-color:Black;
+	height:20px;
+	padding:5px 5px 5px 5px;
+	color:white;
+}
+
+.divuserPanel a
+{
+	color:White;
+	text-align:right;
+}
+
+.MainPage
+{
+	background-color:Gray;
+	height:100%;
+	width:100%;
+}
+
+/*
+#333333
+#FFE401
+#D1DDF1
+#EFF3FB
+#DEE8F5
+#2461BF
+#FFE401
+#2461BF
+*/
+
+.MainHeaderLeft {width:20%;float:left;height:80px;}
+.MainUserPanel {width:20%;float:left;clear:both;}
+.MainLateral {width:20%;float:left;clear:left;height:100%;background-color: #F5F5A0}
+
+.MainArea
+{
+	background-color:Black;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:100%;
+}
+
+.Main
+{
+    width:100%;
+    height:100%;    
+}
+
+.MainContent
+{
+	background-color:White;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	height:inherit;
+	width:100%;
+	overflow:hidden;
+}
+
+.MainTeste2
+{
+	width:100%;
+}
+
+
+.MainHeaderLeft
+{
+	background-color:#000000;
+	text-align:center;
+}
+
+.MainHeader
+{
+	BACKGROUND-POSITION: left top; 
+	background: #FFFFFF url(../../imagens/gradientyellow.gif) repeat-x;
+	background-color:#FFFFFF;
+}
+
+.MainHeader tr td
+{
+	height:15px;	
+}
+
+#MainFooter 
+{
+	height:20px;
+	background-color:Black;
+	color:white;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:3px;
+}
+
+#tdLateral
+{
+	background-color: #F5F5A0;
+}
+
+
+/*---------------------------------------------------------------------- TITULO */
+
+.AreaTitulo
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+.AreaSubTitulo
+{
+	color:Black;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+/*---------------------------------------------------------------------- AREA COMUNS */
+.AreaBotoes
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+}
+
+#divErros
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+	color:Black;
+}
+
+
+.AreaBotoes input
+{
+	width:150px;
+	float:left;	
+	margin-right:10px;
+}
+
+.AreaAjuda
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+	
+
+/*---------------------------------------------------------------------- LISTA */
+
+#divLista 
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+
+#divCadastro
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+.TextDefault
+{
+	font-family:Verdana,Arial,Helvetica;
+	font-size:10pt;
+
+}
+
+.Filtro 
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	color:Black;
+	font-weight:bold;	
+	clear:both;
+	height:30px;
+	margin-bottom:20px;
+}
+
+
+/*
+<asp:DetailsView ID="DetailsView1" runat="server" CellPadding="4"
+                    ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
+                    <FooterStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <FieldHeaderStyle BackColor="#DEE8F5" Font-Bold="True" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <HeaderStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <AlternatingRowStyle BackColor="White" />
+                </asp:DetailsView>
+*/
+
+.Filtro .FiltroTitulo
+{
+	font-weight:bold;
+	font-family:Arial;
+	color:Black;
+}
+
+.Filtro .FiltroBotao
+{
+	float:right;
+	margin-left:10px;
+	text-align:left;
+	vertical-align:baseline;
+	margin-bottom:5px;
+}
+
+.Filtro .FiltroBotao input
+{
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+.Filtro .FiltroItem
+{
+	float:left;
+	width:150px;
+	text-align:left;
+	margin-bottom:5px;
+	padding-left:5px;
+	
+}
+.FiltroLetras
+{
+	float:left;
+	width:320px;
+	text-align:left;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+.FiltroLetras a
+{
+	color:Gray;
+}
+
+.FiltroLetras .SelectedLetra
+{
+    color:Black;
+}
+/*---------------------------------------------------------------------- Geral */
+
+.pNormal{margin:10px 0;}
+
+.mb10{margin-bottom:10px !important;}
+
+.mtb20{margin:20px 0 20px 0 !important;}
+
+.mt0{margin-top:0 !important;}
+
+.mt20{margin-top:20px !important;}
+
+.f10{font-size:10px !important;}
+.f11{font-size:11px !important;}
+.f12, .f12 *{font-size:12px !important;}
+
+
+.noBg{background:none !important;}
+
+
+.TituloArea
+{
+	font-size:15px;
+	font-weight:bold;
+	color:Black;
+	font-family:Arial;
+	text-align:left;
+}
+
+.ReportArea
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	width:100%;
+	margin-bottom:20px;
+	padding-bottom:20px;
+	vertical-align:top;
+}
+
+/******************************* AREA DE EDIÇÃO **************************/
+
+.EditArea
+{
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+.EditArea .trEditHeader
+{
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #FFE401;
+	margin-bottom:10px;
+}
+
+.EditArea .trEditFooter
+{
+	margin-bottom:5px;
+}
+
+.EditArea table 
+{
+	width:100%;
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid;
+	border-collapse: collapse;
+}
+
+.EditArea .divHeader
+{
+background-color:#F5F5A0;
+margin-bottom:10px;
+}
+
+.EditArea #tblEditArea
+{
+	margin-bottom:20px;
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid; border-top: ##ccddef 2px solid;
+	border-collapse: collapse;
+}
+
+.EditArea #tblEditArea td
+{
+    	padding:2px 2px 2px 2px;
+}
+
+.EditArea #tblEditArea .trField
+{
+    padding-bottom:5px;
+}
+
+.EditArea #tblEditArea .trField .tdFieldHeader
+{
+	float:left;
+	width:120px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+	padding-top:3px;
+}
+
+.EditArea #tblEditArea .trField .tdFieldHeader2
+{
+	float:left;
+	width:220px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+}
+
+.EditArea #tblEditArea .trField .tdField
+{
+	padding-left:5px;
+	float:left;
+	color:Black;
+}
+
+.EditArea #tblEditArea .trField .tdField input
+{
+	width:120px;
+}
+
+
+.FieldShopping
+{
+width:250px;
+}
+
+
+.EditArea .divEditArea 
+{
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid; border-top: ##ccddef 2px solid;
+	border-collapse: collapse;
+	padding:0px 0px 0px 0px;
+}
+
+
+.EditArea .divEditArea .trField
+{
+    white-space: nowrap;
+    margin-top:2px;
+    margin-bottom:2px;
+	padding:0px 2px 0px 0px;
+}
+
+.EditArea .divEditArea
+{
+	margin-bottom:20px;
+}
+
+.EditArea .divEditArea .trField .tdFieldHeader
+{
+	width:130px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+	padding-top:3px;
+    float:left;
+}
+
+.EditArea .divEditArea .divHeader
+{
+    background-color:#FFE401;
+    margin-bottom:10px;
+}
+
+
+.EditArea .divEditArea .trField .tdField
+{
+	padding-left:3px;
+	color:Black;
+}
+
+..EditArea .divEditArea .divBottom
+{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+
+/******************************* RELATORIOS **************************/
+
+
+
+
+
+/*
+
+.tblReportFilterArea .trField .tdFieldHeader
+{
+	float:left;
+	color:Black;
+	font-weight:bold;
+	text-align:left;
+}
+
+.tblReportFilterArea .trField .tdField
+{
+	padding-left:10px;
+	float:left;
+	color:Black;
+}
+
+*/
+
+.tblReportFilterArea
+{
+	width:100%;
+	vertical-align:top;
+}
+
+
+.tblReportFilterArea #divLojas
+{
+	background-color:#F5F5A0;
+	width:49%;
+	float:left;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.tblReportFilterArea #tblRegioes
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:100%;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.tblReportFilterArea #divPromotores
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:49%;
+	float:right;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+
+.tblReportFilterArea #divProdutos
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:49%;
+	float:right;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+
+.tblReportFilterArea #divLojas table
+{
+	/*background-color:Black;*/
+}
+
+.tblReportFilterArea #divLojas td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+.FieldCell input
+{
+	width:150px;
+
+}
+
+.menu .bot {
+}
+
+.space{
+	clear: both;
+	height: 35px;
+}
+
+.Botao
+{
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-image: url(/plug3/imagens/fundo_campo.gif); 
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	}
+
+
+/*
+#2461BF
+#333333
+#D1DDF1
+#EFF3FB
+#DEE8F5
+#FFE401
+
+*/
+
+.Roteiro
+{
+	background-color:#FFC000;
+	padding:10px 10px 10px 10px;
+	height:200px;
+	color:Black;
+	font-weight:bold;
+	clear:both;
+}
+
+.Roteiro label
+{
+	color:Gray;
+}
+
+
+.LinkLimpar
+{
+	float:right;
+	color:#666666;
+	vertical-align:bottom;
+	margin-right:5px;
+}
+
+.Roteiro span
+{
+	float:left;
+	margin-left:5px;
+}
+
+.PanelDia
+{
+	background-color:#F5F5A6;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+.PanelMes
+{
+	background-color:#F5F5B6;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+.PanelDiaSemana
+{
+	background-color:#F5F5A0;
+	height:180px;
+	width:33%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+
+.Teste
+{
+	background-color:#333333;
+}
+
+
+
+.VerRoteiro
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.VerRoteiro table
+{
+	color:Black;
+	width:95%;
+}
+
+
+.PaginateControl
+{
+	background-color:#White;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	width:95%;
+}
+
+#divLojasRoteiro 
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divImportRoteiro 
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divLojasRoteiro table
+{
+	/*background-color:Black;*/
+}
+
+#divLojasRoteiro td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+
+
+#divLojasRoteiro #tdProcurar
+{
+	background-color:#F5F5A0;
+	width:33%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#tdProcurar input
+{
+	float:left;
+	vertical-align:middle;
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	margin-right:10px;
+	
+}
+
+#divLojasRoteiro #tdListaLoja
+{
+	background-color:#F5F5A0;
+	width:32%;
+	margin-right:2px;
+	vertical-align:top;
+	height:200px;
+}
+
+#tdListaLoja div
+{
+	height:300px;
+	overflow:auto;
+}
+
+.imgBtnAdd
+{
+	border:0;
+}
+
+
+/***************** BOX PESQUISA LISTA PRODUTOS *********************/
+#AdicionarProdutoPesquisa
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPesquisa
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:290px;
+}
+
+#AdicionarProdutoPesquisa table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPesquisa td
+{
+	width:33%;
+}
+#AdicionarProdutoPesquisa select
+{
+	width:90%;
+}
+#AdicionarProdutoPesquisa input
+{
+	float:right;
+}
+#AreaProdutoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPesquisa .ListaItens
+{
+	height:285px;
+}
+
+#AreaProdutoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:285px;
+}
+
+/***************** BOX PERGUNTA LISTA PRODUTOS *********************/
+
+#AreaRespostasPergunta
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:468px;
+}
+
+
+#AdicionarProdutoPergunta
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPergunta
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:468px;
+}
+
+#AdicionarProdutoPergunta table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPergunta td
+{
+	width:25%;
+}
+#AdicionarProdutoPergunta select
+{
+	width:90%;
+}
+#AdicionarProdutoPergunta input
+{
+	float:right;
+}
+#AreaProdutoPergunta h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPergunta .ListaItens
+{
+	height:335px;
+}
+
+#AreaProdutoPergunta .ListaItens div
+{
+	overflow:auto;
+	height:335px;
+}
+
+/***************** BOX PROMOTOR LISTA PRODUTOS *********************/
+
+
+#AdicionarProdutoPromotor
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPromotor
+{
+	width:100%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:268px;
+}
+
+#AdicionarProdutoPromotor table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPromotor td
+{
+	width:33%;
+}
+#AdicionarProdutoPromotor select
+{
+	width:90%;
+}
+#AdicionarProdutoPromotor input
+{
+	float:right;
+}
+#AreaProdutoPromotor h4
+{
+	margin-bottom:4px;
+}
+
+#AreaProdutoPromotor .ListaItens
+{
+	height:135px;
+}
+
+#AreaProdutoPromotor .ListaItens div
+{
+	overflow:auto;
+	height:135px;
+}
+
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#AdicionarSegmentoPesquisa
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaSegmentoPesquisa
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	margin-left:10px;	
+	height:300px;	
+}
+
+#AdicionarSegmentoPesquisa table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarSegmentoPesquisa td
+{
+	width:33%;
+}
+#AdicionarSegmentoPesquisa select
+{
+	width:100%;
+}
+#AdicionarSegmentoPesquisa .txtCidade
+{
+	width:100%;
+}
+#AdicionarSegmentoPesquisa .BotaoAdicionar
+{
+	float:right;
+	width:150px;
+}
+#AdicionarSegmentoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+#AreaSegmentoPesquisa .ListaItens
+{
+	height:200px;
+}
+
+#AreaSegmentoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#RoteiroPeriodo
+{
+	width:100%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+}
+
+#RoteiroPeriodo h4
+{
+    color:Black;
+}
+
+#RoteiroPeriodo table
+{
+    background-color:#FFC000;
+}
+
+#RoteiroPeriodo table td
+{
+    text-align:center;
+}
+
+.Roteiro_Dia
+{
+    background-color:#F5F5A0;
+    /*writing-mode: tb-rl; filter: flipH() flipV();*/
+}
+
+.Roteiro_Loja
+{
+	background-color: #F4F480;
+	text-align:left;
+}
+
+.Roteiro_lojaAlt
+{
+    background-color:#F5F5A1;
+    text-align:left;
+}
+
+.Roteiro_LojaDiaAlt
+{
+    background-color:#F5F5A0;
+    
+}
+
+.Roteiro_LojaDia
+{
+    background-color:#F5F5A0;
+}
+
+.Roteiro_DiaAlt
+{
+    background-color:#F5F5A0;
+    /*writing-mode: tb-rl; filter: flipH() flipV();*/
+    /*border: solid 1px black;*/
+    color:Black;
+}
+
+.Roteiro_LojaHeader
+{
+    background-color:#FFC000;
+    color:Black;
+    font-weight:bold;
+}
+/***************** BOX VISITA PRODUTOS *********************/
+
+#AreaVisitaProdutos
+{
+	width:100%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	height:300px;	
+}
+
+#AreaVisitaProdutos .Filtro
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaVisitaProdutos .PaginateControl a
+{
+    font-weight:bold;
+    color:Black;
+}
+
+/***************** BOX PERGUNTA LOJAS *********************/
+#AdicionarLojaPergunta
+{
+	background-color:#FFC000;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaLojaPergunta
+{
+	width:100%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	height:300px;	
+}
+
+#AdicionarLojaPergunta table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarLojaPergunta select
+{
+	width:100%;
+}
+#AdicionarLojaPergunta .txtCidade
+{
+	width:100%;
+}
+#AdicionarLojaPergunta .BotaoAdicionar
+{
+	float:right;
+	width:150px;
+}
+#AdicionarLojaPergunta h4
+{
+	margin-bottom:4px;
+}
+
+#AreaLojaPergunta .ListaItens
+{
+	height:200px;
+}
+
+#AreaLojaPergunta .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+
+
+#tblEditAcao
+{
+    width:100%;
+    background-color:#F5F5A0;
+}
+
+.tblAbono
+{
+	width:100%;
+}
+
+.tblAbono label
+{
+    margin-left:10px;
+	width:200px;
+}
+
+
+#tblEditAcao td
+{
+    width:33%;
+}
+
+/********************************** EXPORTACAO *****************************/
+
+
+
+.ExportArea
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	width:100%;
+	margin-bottom:20px;
+	padding-bottom:20px;
+	vertical-align:top;
+}
+
+.ExportArea #txtDataInicial
+{
+    width:80px;
+}
+
+.ExportArea #txtDataFinal
+{
+    width:80px;
+}
+
+
+.ExportArea .tblExportFilterArea select
+{
+    width:100%;
+}
+
+.ExportArea .tblExportFilterArea table
+{
+    width:100%;
+}
+
+.tblExportFilterArea
+{
+	width:100%;
+	vertical-align:top;
+}
+
+
+.tblExportFilterArea #divLojas
+{
+	background-color:#F5F5A0;
+	width:33%;
+	float:left;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.tblExportFilterArea #tblRegioes
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:100%;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.tblExportFilterArea #divPromotores
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:33%;
+	float:right;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+
+.tblExportFilterArea #divProdutos
+{
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	width:33%;
+	float:right;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+.tblRelatorioSalvo
+{
+	width:450;
+	vertical-align:top;
+}
+#StatusLoja div
+{
+    width:30%;
+    float:left;
+}
+
+.tblExportFilterArea #divLojas table
+{
+	/*background-color:Black;*/
+}
+
+.tblExportFilterArea #divLojas td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+
+
+/********************************** FORMULÁRIO VISITA *****************************/
+
+#FormularioVisita
+{
+	background-color:#F5F5A0;
+	border-color:#ccddef;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:10px;
+}
+
+
+#DadosVisita
+{
+    width:100%;
+}
+
+#PerguntasVisitas
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	float:right;
+	margin-left:10px;	
+	height:300px;	
+}
+
+#ProdutosVisita
+{
+	width:48%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	float:left;
+	margin-left:10px;	
+	height:300px;	
+}
+
+
+
+.AcaoArea
+{
+    
+}
+
+.AcaoArea .Secao
+{
+	background-color:White;
+	border-color:White;
+	border-style:#FFE401;
+	border-width:thin;
+	margin-top:10px;
+	padding: 0px 0px 0px 0px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	width:200px;
+	text-align:left;
+	float:left;
+	margin-left:5px;
+
+}
+
+.AcaoArea .Secao .SecaoHeader
+{
+	background-color:#F5F5A0;
+	color:Black;
+	width:100%;
+	margin-top:0px;
+}
+
+.AcaoArea .Secao .Acoes
+{
+}
+
+
+
+/**************************** FORMULARIO DE PRODUTOS **************************/
+
+
+#divFormularioProdutos table thead tr {height:20px;}
+#divFormularioProdutos table thead tr th {background-color:#FFC000;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thProduto {background-color:#FFC000;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thStatus {background-color:#FFC000;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thFornecedor {background-color:#FFC000;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thSubCategoria {background-color:#FFC000;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tbody .trAlternate td {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdProduto {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdStatus {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdFornecedor {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdSubCategoria {background-color:white;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tbody .trNormal td {background-color:#F5F5A0;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdProduto {background-color:#F5F5A0;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdStatus {background-color:#F5F5A0;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdFornecedor {background-color:#F5F5A0;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdSubCategoria {background-color:#F5F5A0;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tfoot tr td {background-color:#F5F5A0;white-space:nowrap;color:white;}
+
+#divFormularioProdutos table tbody tr .td10 {background-color:#F5F5A0;}
+#divFormularioProdutos table tbody tr .td11 {background-color:#F5F5A0;}
+#divFormularioProdutos table tbody tr .td01 {background-color:white;}
+#divFormularioProdutos table tbody tr .td00 {background-color:white;}
+
+/************************************* IMAGE ROTATOR **************************************************/
+
+.ImageRotator {background-color:Black;text-align:center;padding:1px 1px 1px 1px;width:102px;}
+.ImageRotator .ImageRotatorTable {height:15px;border: none 0px; padding:0px 0px 0px 0px;width:100px;top:0px;position:relative;font-family:Arial;color:White;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; z-index:1;}
+.ImageRotator .ImageRotatorTable tr {height:15px;}
+.ImageRotator .ImageRototorImg {width:100px;}
+.ImageRotator .tdSeparator {width:3px;}
+.ImageRotator .tdButton {background-color:Gray;width:15px;}
+.ImageRotator .tdCaption {background-color:Gray;}
+    
+.ControlPergunta .ImageRotator {background-color:Black;text-align:center;padding:1px 1px 1px 1px;width:502px;}
+.ControlPergunta .ImageRotator .ImageRotatorTable {height:15px;border: none 0px; padding:0px 0px 0px 0px;width:500px;font-family:Arial;color:White;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; z-index:1;}
+.ControlPergunta .ImageRotator .ImageRotatorTable tr {height:15px;}
+.ControlPergunta .ImageRotator .ImageRototorImg {width:500px;}
+.ControlPergunta .ImageRotator .tdSeparator {width:3px;}
+.ControlPergunta .ImageRotator .tdButton {background-color:black;width:15px;height:15px;padding:0px 0px 0px 0px;}
+.ControlPergunta .ImageRotator .tdCaption {background-color:Gray;}
+   
+/******************************************* IMAGE UPLOADER ****************************************************/
+
+.ImageUploader {margin-left:8px;margin-bottom:10px;background-color:black;width:150px;padding:1px 1px 1px 1px;}
+
+.ImageUploader .normal {opacity:1;filter:alpha(opacity=100);width:150px;}
+.ImageUploader .troca {opacity:0.3;filter:alpha(opacity=30);width:150px;}
+
+
+/******************************************** XM REPORT FILTERS **********************************************/
+
+.XMReportFilters
+{
+	width:100%;
+	border-color:#FFC000;
+	background-color:#F5F5A0;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.XMReportFilters .Report_Item
+{
+	width:33%;
+	float:left;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.XMReportFilters .Report_Item select
+{
+	width:100%;
+}
+
+
+#AreaPerguntaPesquisa
+{
+	width:100%;
+	background-color:#F5F5A0;
+	border-color:#FFC000;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:268px;
+}

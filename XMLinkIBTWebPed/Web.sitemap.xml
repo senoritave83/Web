@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/home/default.aspx" title="Home" description="Home" caption="Home" roles="*" img="~/imagens/cadastros.png">
+    <siteMapNode url="~/pedidos/default.aspx" title="Atendimentos"  description="" caption="Atendimentos em execução" roles="Administrador" img="~/imagens/cadastros.png">
+        <siteMapNode url="~/pedidos/cliente.aspx" title="Cliente"  parameters="idcliente" description="" caption="Atendimentos em execução" roles="Administrador" img="~/imagens/cadastros.png">
+            <siteMapNode url="~/pedidos/novopedido.aspx" title="Novo Pedido"  description="" caption="Atendimentos em execução" roles="Administrador" img="~/imagens/cadastros.png" />
+            <siteMapNode url="~/pedidos/produtos.aspx" title="Novo Pedido"  description="" caption="Incluir os produtos no pedido" roles="Administrador" img="~/imagens/cadastros.png" />
+            <siteMapNode url="~/pedidos/pedido.aspx" title="Novo Pedido"  description="" caption="Inserir os dados gerais do pedido" roles="Administrador" img="~/imagens/cadastros.png" />
+            <siteMapNode url="~/pedidos/resumo.aspx" title="Novo Pedido"  description="" caption="Resumo final do pedido" roles="Administrador" img="~/imagens/cadastros.png" />
+            <siteMapNode url="~/pedidos/gravado.aspx" title="Confirmado"  description="" caption="Confirmação do pedido" roles="Administrador" img="~/imagens/cadastros.png" />
+            <siteMapNode url="~/pedidos/cancelado.aspx" title="Pedido cancelado"  description="" caption="Confirmação do cancelamento do pedido" roles="Administrador" img="~/imagens/cadastros.png" />
+        </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

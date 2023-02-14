@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<settings>
+    <Categoria>
+        <Codigo required="true" visible="true" />
+        <Categoria required="true" />
+      <DescontoMax required="true" visible="true" />
+    </Categoria>
+</settings>

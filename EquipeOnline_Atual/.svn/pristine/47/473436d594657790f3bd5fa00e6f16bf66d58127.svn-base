@@ -1,0 +1,18 @@
+﻿/* www.itelios.com - 2010 - ie6 */
+.menu li:hover p{
+	z-index:9999999 !important; 
+}
+.menu li:hover {
+	z-index:9999999 !important; 
+}
+.menuCat li ul li a, .menuCat li.over ul li a{
+	margin:0 1px 0 0;
+}
+.mainSons .resultadoBusca .tabs ul {
+    top: -37px;
+}
+
+.cboxIE #cboxContent{ padding-top:5px!important;}
+
+.cboxIE #cboxSlideshow, .cboxIE #cboxPrevious, .cboxIE #cboxNext, .cboxIE #cboxClose { top:-20px; }
+

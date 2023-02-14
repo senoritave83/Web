@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/home/default.aspx" title="Home" description="" caption="" img="~/imagens/invisivel.gif">
+    <siteMapNode url="~/cadastros/default.aspx" title="Cadastros" imgTop="../imagens/icones/cadastros_ico.png"  description="" caption="Cadastros do sistema"  Secao="Cadastros">
+      <siteMapNode url="~/cadastros/clientes.aspx" title="Revendas" description="Lista as Revendas cadastradas no sistema" caption="Lista de Revendas" img="~/imagens/icones/revenda.png"  Secao="Cadastro de Revenda">
+        <siteMapNode url="~/cadastros/cliente.aspx" title="Revenda" description="Editar os dados da revenda selecionada" img="~/imagens/icones/revenda.png" parameters="IDCliente" caption="Edição da Revenda"  Secao="Cadastro de Revenda"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/lojas.aspx" title="Lojas" description="Lista as lojas cadastradas no sistema" caption="Lista de Lojas" img="~/imagens/icones/loja_icone.png" Secao="Cadastro de Loja">
+        <siteMapNode url="~/cadastros/loja.aspx" title="Loja" description="Editar os dados da loja selecionada" img="~/imagens/icones/loja_icone.png" parameters="IdLoja" caption="Edição da Loja" Secao="Cadastro de Loja" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/tipolojas.aspx" title="Tipos de lojas" description="Lista de tipos de lojas cadastradas" img="~/imagens/icones/loja_tipo.png" caption="Lista de tipos de lojas" Secao="Cadastro de Tipo de Loja">
+        <siteMapNode url="~/cadastros/tipoloja.aspx" title="Tipo de loja" description="Editar o tipo de loja" img="~/imagens/icones/loja_tipo.png" parameters="IDTipoLoja" caption="Edição de tipo de loja" Secao="Cadastro de Tipo de Loja" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/tipotarefas.aspx" title="Tipos de tarefas" description="Lista de tipos de tarefas cadastradas" caption="Lista de tipos de tarefas" img="~/imagens/icones/tipo_tarefas_icone.png" Secao="Cadastro de Tipo de tarefa">
+        <siteMapNode url="~/cadastros/tipotarefa.aspx" title="Tipo de tarefa" description="Editar o tipo de tarefa" parameters="IDTipotarefa" caption="Edição de tipo de tarefa" img="~/imagens/icones/tipo_tarefas_icone.png" Secao="Cadastro de Tipo de tarefa" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/shoppings.aspx" title="Shoppings" description="Lista os shoppings cadastrados no sistema" img="~/imagens/icones/mall_icone.png" caption="Lista de Shoppings" Secao="Cadastro de Shopping">
+        <siteMapNode url="~/cadastros/shopping.aspx" title="Shopping" description="Editar os dados do shopping selecionado" img="~/imagens/icones/mall_icone.png" parameters="IDShopping" caption="Edição do Shopping" Secao="Cadastro de Shopping" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/fornecedores.aspx" title="Marcas" description="Exibe a lista de marcas cadastradas no sistema" img="~/imagens/icones/marcas_icone.png" caption="Lista de marcas" Secao="Cadastro de Marcas" >
+        <siteMapNode url="~/cadastros/fornecedor.aspx" title="Marca" description="Edição de uma marca de produto" img="~/imagens/icones/marcas_icone.png" parameters="IDFornecedor" caption="Edição de marcas" Secao="Cadastro de Marcas"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/categorias.aspx" title="Segmentos" description="Exibe a lista de segmentos cadastrados no sistema" caption="Lista de segmentos" img="~/imagens/icones/segmento_icone.png" Secao="Cadastro de Segmentos" >
+        <siteMapNode url="~/cadastros/categoria.aspx" title="Segmento" description="Edição de um segmento de produto" img="~/imagens/icones/segmento_icone.png" parameters="IDCategoria" caption="Edição de segmento" Secao="Cadastro de Segmentos"/>
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/subcategorias.aspx" title="Categorias" description="Lista das categorias cadastradas no sistema" caption="Lista de categorias" img="~/imagens/icones/categoria_icone.png" Secao="Cadastro de Categoria">
+        <siteMapNode url="~/cadastros/subcategoria.aspx" title="Categoria" description="Editar uma categoria de produto" img="~/imagens/icones/categoria_icone.png" parameters="IDSubcategoria" caption="Edição de categoria" Secao="Cadastro de Categoria" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/produtos.aspx" title="Produtos" description="Lista os produtos cadastrados no sistema" caption="Lista de produtos" img="~/imagens/icones/produtos.png" Secao="Cadastro de Produto">
+        <siteMapNode url="~/cadastros/produto.aspx" title="Produto" description="Editar um produto" img="~/imagens/icones/produtos.png" parameters="IDProduto" caption="Edição de produto" Secao="Cadastro de Produto" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/pesquisas.aspx" title="Pesquisas" description="Lista de pesquisas cadastradas no sistema" img="~/imagens/icones/lista_pesquisa.png"  caption="Lista de pesquisas" Secao="Cadastro de Pesquisa">
+        <siteMapNode url="~/cadastros/pesquisa.aspx" title="Pesquisa" description="Edição da regras da pesquisa" img="~/imagens/icones/lista_pesquisa.png" caption="Edição da Pesquisa"  Secao="Cadastro de Pesquisa" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/perguntas.aspx" title="Perguntas" description="Exibe a lista de perguntas cadastradas no sistema" img="~/imagens/icones/perguntas.png" caption="Lista de perguntas" Secao="Cadastro de Pergunta">
+        <siteMapNode url="~/cadastros/pergunta.aspx" title="Pergunta" description="Editar a pergunta, suas respostas e a associação aos produtos" img="~/imagens/icones/perguntas.png" parameters="IDPergunta" caption="Edição de pergunta" Secao="Cadastro de Pergunta"/>
+      </siteMapNode>
+      <siteMapNode url="~/roteiros/default.aspx" title="Roteiros" description="Lista os usuários e seus roteiros" img="~/imagens/icones/roteiro_icone.png" caption="Lista de Roteiros" Secao="Cadastro de Roteiro">
+        <siteMapNode url="~/roteiros/promotor_roteiro.aspx" title="Roteiros" description="Lista de roteiros associados ao usuário"  img="~/imagens/icones/roteiro_icone.png" parameters="tp" caption="Lista de roteiros" Secao="Cadastro de Roteiro">
+          <siteMapNode url="~/roteiros/roteiro.aspx" title="Roteiro" description="Edição de um roteiro associado a um usuário" parameters="IDPromotor,IDRoteiro" caption="Edição de roteiro" img="~/imagens/icones/roteiro_icone.png" Secao="Cadastro de Roteiro" />
+          <siteMapNode url="~/Cadastros/roteiros/roteiro_periodo.aspx" title="Roteiros" description="Lista de roteiros por periodo" parameters="IDPromotor" caption="Roteiro por periodo" Secao="Cadastro de Roteiro" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/motivofolgas.aspx" title="Motivos de Ausência" description="Lista os Motivos das Ausências Cadastradas no Sistema" img="~/imagens/icones/justificativas_icone.png" caption="Lista de Motivos de Ausência" Secao="Motivo de Ausência">
+        <siteMapNode url="~/Cadastros/motivofolga.aspx" title="Motivos de Ausência" description="Editar o Motivo da Ausência" img="~/imagens/icones/justificativas_icone.png" parameters="" caption="Edição de Motivo da Ausência" Secao="Motivo de Ausência" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/motivousoformularios.aspx" title="Motivo de Uso do Formulario On-Line" description="Lista os motivos de uso cadastrados no sistema" img="~/imagens/icones/motivos_icone.png" caption="Lista de Motivos de Uso do Formulário On-Line" secao="Cadastro de MotivoUsoFormulario" Secao="Cadastro de MotivoUsoFormulario">
+        <siteMapNode url="~/Cadastros/motivousoformulario.aspx" title="Motivo de Uso do Formulario On-Line" description="Edita o motivo de uso selecionado" img="~/imagens/icones/motivos_icone.png" parameters="" caption="Edição do Motivo de Uso do Formulário On-Line" secao="Cadastro de MotivoUsoFormulario"  Secao="Cadastro de MotivoUsoFormulario" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/regioes.aspx" title="Regiões" description="Lista de regiões cadastradas no sistema" caption="Lista de regiões" img="~/imagens/icones/regioes_icone.png"  Secao="Cadastro de Região">
+        <siteMapNode url="~/cadastros/regiao.aspx" title="Região" description="Editar a região selecionada"  img="~/imagens/icones/regioes_icone.png" parameters="IDRegiao" caption="Edição de região" Secao="Cadastro de Região" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/tipojustificativas.aspx" title="Tipos de Justificativa" description="Lista os tipos de justificativa cadastrados no sistema" img="~/imagens/icones/tipos_justificativas.png" caption="Lista de tipos de justificativa" Secao="Cadastro de Justificativa">
+        <siteMapNode url="~/cadastros/tipojustificativa.aspx" title="Tipos de Justificativa" description="Editar os tipos de justificativa" img="~/imagens/icones/tipos_justificativas.png" parameters="IdTipoJustificativa" caption="Edição tipos de justificativa" Secao="Cadastro de Justificativa" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/justificativarupturas.aspx" title="Justificativas de Ruptura" description="Lista as justificativas de ruptura cadastradas no sistema" caption="Lista de Justificativas de Ruptura" img="~/imagens/icones/ruptura_icone.png" Secao="Cadastro de Justificativa de Ruptura">
+        <siteMapNode url="~/Cadastros/justificativaruptura.aspx" title="Justificativa de Ruptura" description="Editar a justificativa de ruptura selecionada" img="~/imagens/icones/ruptura_icone.png" parameters="IdJustificativaRuptura" caption="Edição da Justificativa de Ruptura" Secao="Cadastro de Justificativa de Ruptura" />
+      </siteMapNode>
+      <siteMapNode url="~/cadastros/mensagemdias.aspx" title="Mensagens" description="Lista de mensagens cadastradas no sistema" img="~/imagens/icones/mensagem_icon.png" caption="Lista de mensagens" Secao="Cadastro de Mensagem">
+        <siteMapNode url="~/cadastros/mensagemdia.aspx" title="Mensagem" description="Editar a mensagem e suas datas de exibição" img="~/imagens/icones/mensagem_icon.png" parameters="IDMensagemDia" caption="Edição de mensagem" Secao="Cadastro de Mensagem" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/tiposevento.aspx" title="Tipos de Eventos" description="Lista os tipos de eventos cadastrados no Sistema" img="~/imagens/icones/eventos_icone.png" caption="Lista de Tipos de Eventos" Secao="Tipos de Eventos">
+        <siteMapNode url="~/Cadastros/tipoevento.aspx" title="Tipo de Evento" description="Editar o Tipo de Evento" img="~/imagens/icones/eventos_icone.png" parameters="" caption="Edição do Tipo de Evento" Secao="Tipos de Eventos" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/sistema/default.aspx" title="Sistema" imgTop="../imagens/icones/config_icone.png"  description="" caption="Informações do sistema" Secao="Sistema">
+	  <siteMapNode url="~/sistema/cargos.aspx" title="Cargos" description="Lista os cargos cadastrados no sistema" caption="Lista de Cargos" img="~/imagens/icones/cargos_icon.png" Secao="Cadastro de Cargos">
+			<siteMapNode url="~/sistema/cargo.aspx" title="Cargo" description="Editar os dados do cargo selecionado" parameters="idcargo" caption="Edição do Cargo" img="~/imagens/icones/cargos_icon.png" Secao="Cadastro de Cargos" />
+	  </siteMapNode>
+      <siteMapNode url="~/sistema/usuarios.aspx" title="Usuários do Sistema" description="Visualização dos Usuários do Sistema" img="~/imagens/icones/usuarios_icone.png" caption="Usuários do Sistema" Secao="Usuários do Sistema">
+        <siteMapNode url="~/sistema/usuario.aspx" title="Usuários do Sistema" description="Visualização dos Usuários do Sistema" img="~/imagens/icones/usuarios_icone.png"  parameters="IDUsuario" caption="Usuários do Sistema" Secao="Usuários do Sistema">
+          <siteMapNode url="~/sistema/UsuarioAltSenha.aspx" title="Usuários do Sistema / Alterar Senha" description="Alteração de Senha do usuário" parameters="IDUsuario" caption="Alteração de Senha do usuário"  Secao="Usuários do Sistema" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/config.aspx" title="Configurações do Sistema" img="~/imagens/icones/sistema_ico.png" description="Editar as configurações do sistema" caption="Configurações do Sistema" Secao="Configurações do Sistema" ></siteMapNode>
+      <siteMapNode url="~/Sistema/LOGS.aspx" title="LOG de Usuários" description="Visualizar os dados de acesso dos usuários" img="~/imagens/icones/acesso_user.png" caption="Log de Usuários" Secao="Log dos Usuários" ></siteMapNode>
+      <siteMapNode url="~/sistema/permissoes.aspx" title="Permissões do Sistema" description="Permissões dos Usuários do Sistema" img="~/imagens/icones/permissoes_usu.png" caption="Permissões do Sistema" Secao="Permissões do Sistema" >
+        <siteMapNode url="~/sistema/permissao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" img="~/imagens/icones/permissoes_usu.png" Secao="Permissões do Sistema">
+          <siteMapNode url="~/sistema/permissaoacao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" img="~/imagens/icones/permissoes_usu.png" Secao="Permissões do Sistema" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/formulario/formulario.aspx" title="Formulário"  description="" imgTop="~/imagens/icones/form_ico.png" caption="Formulário de inserção via WEB"  Secao="Formulário via WEB">
+      <siteMapNode url="~/formulario/default.aspx" title="Usuários"  description="" img="~/imagens/icones/promo_exibe_icone.png" caption="Exibe os usuários"  Secao="Formulário via WEB">
+        <siteMapNode url="~/formulario/roteiro.aspx" title="Roteiro"  description="" caption="Selecionar o Roteiro"  Secao="Formulário via WEB">
+          <siteMapNode url="~/formulario/visita.aspx" title="Visita"  description="" caption="tela da visita"  Secao="Formulário via WEB" parameters="IDVisita,IDProduto">
+            <siteMapNode url="~/formulario/produto.aspx" title="Produto"  description="" caption="tela do produto"  Secao="Formulário via WEB" />
+            <siteMapNode url="~/formulario/perguntaloja.aspx" title="Pergunta da loja"  description="" caption="tela da pergunta"  Secao="Formulário via WEB" />
+            <siteMapNode url="~/formulario/finalizar.aspx" title="Finalizar"  description="" caption="tela do produto"  Secao="Formulário via WEB" />
+            <siteMapNode url="~/formulario/justificar.aspx" title="Justificativa"  description="" caption="tela do produto"  Secao="Formulário via WEB" />
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/reports/default.aspx" title="Relatórios"  description="" caption="Relatórios do sistema" imgTop="~/imagens/icones/rel_ico.png"  Secao="Relatórios">
+      <siteMapNode visible="false" url="~/reports/exportar.aspx" title="Exportar dados" description="Exportação dos dados das visitas e coletas realizadas" img="~/imagens/icones/exportar_icone.png" caption="Exportar Dados" Secao="Exportação de Dados">
+        <siteMapNode url="~/reports/rptShowReport.aspx" title="Exportar dados" description="Relatórios" caption="Relatórios" Secao="Exportação de Dados"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Visita/visitas.aspx" title="Visitas" description="Lista as visitas cadastradas no sistema" img="~/imagens/icones/visitas_icone.png" caption="Lista de Visitas" Secao="Visualização de Visita">
+        <siteMapNode url="~/Visita/visita.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" Secao="Visualização de Visita" img="~/imagens/icones/visitas_icone.png">
+          <siteMapNode url="~/Visita/visitaproduto.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" Secao="Visualização de Visita" img="~/imagens/icones/visitas_icone.png" >
+              <siteMapNode url="~/Visita/VisitaProdutoResposta.aspx" title="Visita" description="Editar os dados da visita selecionada" parameters="idvisita" caption="Edição da Visita" Secao="Visualização de Visita" img="~/imagens/icones/visitas_icone.png" />
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/sistema/fotos.aspx" title="Fotos" description="Fotos de Visitas" caption="Fotos" img="~/imagens/icones/Fotos_produtos.png" Secao="Fotos" >
+        <siteMapNode url="~/sistema/foto_popup.aspx" title="Foto" description="Foto da Visita" caption="Foto" img="~/imagens/icones/Fotos_produtos.png" Secao="Fotos" />
+      </siteMapNode>
+      <siteMapNode url="~/reports/reportlist.aspx" title="Serviço de Relatórios" description="Lista os relatórios disponíveis no serviço de relatório" img="~/imagens/icones/relatorio_icone.png" caption="Serviço de Relatórios" Secao="Serviço de Relatórios">
+        <siteMapNode url="~/reports/relatorio.aspx" title="Serviço de Relatórios" description="Visualiza o relatório selecionado" img="~/imagens/icones/relatorio_icone.png" caption="Serviço de Relatórios" Secao="Serviço de Relatórios" />
+      </siteMapNode>
+      <siteMapNode url="~/reports/schedule.aspx" title="Relatórios Agendados"  description="Lista os relatórios agendados no serviço de relatório" img="~/imagens/icones/rel_agendado.png" caption="Relatórios Agendados" Secao="Serviço de Relatórios" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

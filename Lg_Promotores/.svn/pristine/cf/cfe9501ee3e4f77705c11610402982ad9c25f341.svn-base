@@ -1,0 +1,43 @@
+﻿<%@ Master Language="VB" CodeFile="Report.master.vb" Inherits="reports_Report" %>
+<html>
+<head id="Head1" runat="server">
+    <title>XM Promotores</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id='MainArea'>
+            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td colspan='3' class='MainHeader'>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td width="100%" class='MainContent'>
+                        <table width="100%" cellpadding="1" cellspacing="1" border=0>
+	                        <tr valign="middle">
+		                        <td align="left" id="logoExtra" runat="Server"><asp:Image id="Img1" alt='' runat="server" ImageUrl='~/imagens/logo_default.png' SkinID='ReportImage' /></td>
+		                        <td width="100%" id="pageDescription" runat="Server">
+			                        <asp:Label Runat="server" ID='lblTitulo' SkinID='XMTitulo.Titulo'></asp:Label><br/>
+			                        <img runat='server' src='~/imagens/pt.gif' id='imgLinha' alt='' /><br/>
+			                        <asp:Label Runat="server" ID='lblDescricao' SkinID='XMTitulo.Descricao'></asp:Label>
+		                        </td>
+		                        <td align="right"><img id="Img2" alt='' runat="server" src='~/imagens/xmpromotores.jpg' /></td>
+	                        </tr>
+                        </table>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr height="20px">
+                    <td colspan="3">
+                        <div id='MainFooter'>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

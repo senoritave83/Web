@@ -1,0 +1,225 @@
+Imports Microsoft.VisualBasic
+Imports System.Configuration.ConfigurationManager
+Imports System.Web
+
+Public Class XMWebPage
+    Inherits Page
+
+    Protected m_strUsaFotos As String = Nothing
+
+    Protected Const ACAO_ADICIONAR As String = "Adicionar"
+    Protected Const ACAO_EDITAR As String = "Editar"
+    Protected Const ACAO_APAGAR As String = "Apagar"
+
+    Public Function Logout() As Boolean
+        FormsAuthentication.SignOut()
+    End Function
+
+    Public Function GetPath() As String
+        Dim strPath As String = AppSettings("File_Directory")
+        If strPath = "" Then
+            strPath = Server.MapPath("~/files/")
+        End If
+        Return strPath
+    End Function
+
+    Public ReadOnly Property UsaFotos() As Boolean
+        Get
+            If m_strUsaFotos Is Nothing Then
+                m_strUsaFotos = If(AppSettings("UsaFotos"), "").ToLower
+            End If
+            Return (m_strUsaFotos = "true")
+        End Get
+    End Property
+
+
+    Public Function VerificaPermissao(ByVal vSecao As String, ByVal vAcao As String) As Boolean
+
+        If vSecao = "" Then
+            Return True
+        End If
+
+        Dim permissao As New Classes.clsPermissao
+        Return permissao.VerificaPermissao(vSecao, vAcao)
+    End Function
+
+    Public ReadOnly Property SecaoAtual() As String
+        Get
+            Try
+                If SiteMap.CurrentNode Is Nothing Then
+                    Return ""
+                End If
+                Return SiteMap.CurrentNode.Item("secao") & ""
+            Catch
+                Return "Indefinida"
+            End Try
+        End Get
+    End Property
+
+    Public Sub GravaFiltro(ByVal ParamArray vControls() As Control)
+        Dim cookie As New HttpCookie("FILTRO")
+        cookie.Values.Add("URL", Request.Path)
+        cookie.Values.Add("SortExpression", ViewState("SortExpression"))
+        cookie.Values.Add("SortDirection", ViewState("SortDirection"))
+        cookie.Values("Filtro") = ViewState("Filtro")
+        For Each ctr As Control In vControls
+            If ctr.GetType Is GetType(TextBox) Then
+                cookie.Values.Add(ctr.ID, CType(ctr, TextBox).Text)
+            ElseIf ctr.GetType Is GetType(DropDownList) Then
+                cookie.Values.Add(ctr.ID, CType(ctr, DropDownList).SelectedValue)
+            ElseIf TypeOf ctr Is IFiltroControl Then
+                cookie.Values.Add(ctr.ID, CType(ctr, IFiltroControl).Value)
+            End If
+        Next
+
+        Response.Cookies.Add(cookie)
+    End Sub
+
+    Public Function RecuperaFiltro(ByVal ParamArray vControls() As Control) As Boolean
+
+        Dim cookie As HttpCookie = Request.Cookies.Item("FILTRO")
+        If Not cookie Is Nothing Then
+            If cookie.Values("URL").ToLower() = Request.Path.ToLower() Then
+                If cookie.Values("SortExpression") <> "" Then ViewState("SortExpression") = cookie.Values("SortExpression")
+                If cookie.Values("SortDirection") <> "" Then ViewState("SortDirection") = cookie.Values("SortDirection")
+                If cookie.Values("Filtro") <> "" Then ViewState("Filtro") = cookie.Values("Filtro")
+                For Each ctr As Control In vControls
+                    If ctr.GetType Is GetType(TextBox) Then
+                        CType(ctr, TextBox).Text = cookie.Values(ctr.ID)
+                    ElseIf ctr.GetType Is GetType(DropDownList) Then
+                        setComboValue(CType(ctr, DropDownList), cookie.Values(ctr.ID))
+                    ElseIf TypeOf ctr Is IFiltroControl Then
+                        CType(ctr, IFiltroControl).Value = cookie.Values(ctr.ID)
+                    End If
+                Next
+                Return True
+            End If
+        End If
+        Return False
+    End Function
+
+
+    Public Overloads ReadOnly Property User() As XMPrincipal
+        Get
+            Try
+                Return CType(HttpContext.Current.User, XMPrincipal)
+            Catch e As Exception
+                Return Nothing
+            End Try
+        End Get
+    End Property
+
+    Public Sub MostraGravado(ByVal vVolta As String)
+        Response.Redirect(vVolta, True)
+    End Sub
+
+    Protected Sub subAddConfirm(ByVal vButton As Button, ByVal vMessage As String)
+        vButton.Attributes.Add("onclick", "return Confirmar(""" & vMessage & """);")
+        ClientScript.RegisterClientScriptBlock(Me.GetType, "Confirmation", "function Confirmar(Message)" & vbCrLf & "{if (confirm(Message) == true){" & vbCrLf & "return true;" & vbCrLf & "} else {" & vbCrLf & "return false;" & vbCrLf & "}}", True)
+    End Sub
+    Public Sub ShowMsg(ByVal vCaption As String)
+        Response.Write("<script>alert('" & vCaption & "');</script>")
+    End Sub
+
+End Class
+
+Public Module globalFunctions
+
+    Public Sub setComboValue(ByVal vCombo As DropDownList, ByVal Value As String)
+        Dim it As ListItem
+        it = vCombo.Items.FindByValue(Value)
+        vCombo.ClearSelection()
+        If Not it Is Nothing Then
+            it.Selected = True
+        End If
+    End Sub
+
+
+    Public Sub setComboValue(ByVal vCombo As RadioButtonList, ByVal Value As String)
+        Dim it As ListItem
+        it = vCombo.Items.FindByValue(Value)
+        vCombo.ClearSelection()
+        If Not it Is Nothing Then
+            it.Selected = True
+        End If
+    End Sub
+
+    Public Function getComboValues(ByVal vCombo As Object) As String
+
+        Dim it As ListItem, strReturn As String = ""
+
+        For Each it In vCombo.Items
+            If it.Selected Then
+                If strReturn <> "" Then strReturn &= ","
+                strReturn &= it.Value
+            End If
+        Next
+        Return strReturn
+
+    End Function
+
+    Public Function getComboValue(ByVal vCombo As Object) As Integer
+
+        Dim it As ListItem, intReturn As Integer = 0
+
+        For Each it In vCombo.Items
+            If it.Selected Then
+                intReturn = it.Value
+                Exit For
+            End If
+        Next
+
+        Return intReturn
+
+    End Function
+
+    Public Function checkDate(ByVal p_Date As String, Optional ByVal p_SQLFormat As Boolean = False, Optional ByVal p_ReturnNull As Boolean = False) As String
+        If Not IsDate(p_Date) Then
+            Return IIf(p_ReturnNull, "NULL", "")
+        End If
+        If p_SQLFormat Then
+            Return "'" & Right("0000" & Year(p_Date), 4) & "-" & Right("00" & Month(p_Date), 2) & "-" & Right("00" & Day(p_Date), 2) & "'"
+        Else
+            Return Right("00" & Day(p_Date), 2) & "/" & Right("00" & Month(p_Date), 2) & "/" & Right("0000" & Year(p_Date), 4)
+        End If
+    End Function
+
+    Public Sub setCheckValue(ByVal vCombo As Object, ByVal p_Value As String)
+        Dim it As ListItem
+        it = vCombo.Items.FindByValue(p_Value)
+        vCombo.ClearSelection()
+        If Not it Is Nothing Then
+            it.Selected = True
+        End If
+    End Sub
+    Public Function retornaCelula(ByVal p_Num As Integer) As String
+
+        Const P_BASE As Integer = 26
+        p_Num = p_Num - 1
+        Dim p_Ret As String, objCel As Object = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".Split(",")
+
+        Dim p_tmpResultado As Integer = p_Num \ P_BASE, p_NumResto As Integer = p_Num Mod P_BASE
+        p_Ret = objCel(p_NumResto)
+        While p_tmpResultado > 0
+            p_tmpResultado = p_tmpResultado - 1
+            p_NumResto = (p_tmpResultado) Mod P_BASE
+            p_tmpResultado = p_tmpResultado \ P_BASE
+            p_Ret = objCel(p_NumResto) & p_Ret
+        End While
+        Return p_Ret
+
+    End Function
+
+    Public Function excelExportFormatCells(ByVal p_Value As String) As String
+
+        Dim p_NewValue As String = ""
+        If IsNumeric(p_Value) Then
+            p_Value = FormatNumber(p_Value, 2).ToString
+            p_NewValue = p_Value.Replace(".", "").Replace(",", ".")
+        End If
+        Return p_NewValue
+
+    End Function
+
+End Module
+

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<configuration>
+	<connectionStrings>
+		<add name="cnStr" connectionString="Server=sqlserver;uid=sa;pwd=sql@#xm#@tat;database=XMLink_Promax;" providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+	<location path="app_themes">
+		<system.web>
+			<authorization>
+				<allow users="*"></allow>
+			</authorization>
+		</system.web>
+	</location>
+	<location path="imagens">
+		<system.web>
+			<authorization>
+				<allow users="*"></allow>
+			</authorization>
+		</system.web>
+	</location>
+	<appSettings>
+		<add key="Application" value="XM Sistemas"/>
+		<add key="Title" value=".:XM Sistemas:."/>
+		<add key="key" value="pmx"/>
+		<add key="SQLPrefix" value="SP_PMX_XML_WEB3_"/>
+	</appSettings>
+	<system.web>
+		<siteMap defaultProvider="XmlSiteMapProvider" enabled="true">
+			<providers>
+				<add name="XmlSiteMapProvider" type="System.Web.XmlSiteMapProvider" siteMapFile="Web.Sitemap" securityTrimmingEnabled="true" description="Default site map provider"/>
+			</providers>
+		</siteMap>
+		<membership defaultProvider="XMMemberShipProvider" userIsOnlineTimeWindow="15">
+			<providers>
+				<add name="XMMemberShipProvider" type="XMSistemas.Web.Provider.XMMemberShipProvider" connectionStringName="cnStr" applicationName="GMills30" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" passwordAttemptWindow="10"/>
+			</providers>
+		</membership>
+		<roleManager enabled="true" defaultProvider="XMRoleProvider">
+			<providers>
+				<add connectionStringName="cnStr" name="XMRoleProvider" type="XMSistemas.Web.Provider.XMRoleProvider"/>
+			</providers>
+		</roleManager>
+		<profile enabled="true" defaultProvider="XMProfileProvider">
+			<providers>
+				<add name="XMProfileProvider" type="XMSistemas.Web.Provider.XMProfileProvider" connectionStringName="cnStr"/>
+			</providers>
+			<properties>
+				<group name="Settings">
+					<add name="PAGESIZE" type="Int32" defaultValue="20"/>
+					<add name="LastName" type="string"/>
+				</group>
+			</properties>
+		</profile>
+		<webParts>
+			<personalization defaultProvider="XMPersonalizationProvider">
+				<providers>
+					<add name="XMPersonalizationProvider" type="XMSistemas.Web.Provider.XMPersonalizationProvider" connectionStringName="cnStr"/>
+				</providers>
+			</personalization>
+		</webParts>
+		<pages theme="Default" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+		</pages>
+		<authentication mode="Forms">
+			<forms name="XMLink_Promax" loginUrl="~/home/login.aspx"/>
+		</authentication>
+		<authorization>
+			<deny users="?"/>
+		</authorization>
+		<!--
+          Set compilation debug="true" to insert debugging
+          symbols into the compiled page. Because this
+          affects performance, set this value to true only
+          during development.
+    -->
+		<compilation debug="true" targetFramework="4.0">
+			<assemblies>
+				<add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add assembly="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/></assemblies>
+			<expressionBuilders>
+				<add expressionPrefix="Settings" type="SettingsExpression"/>
+			</expressionBuilders>
+		</compilation>
+		<globalization fileEncoding="ISO-8859-1" requestEncoding="ISO-8859-1" responseEncoding="ISO-8859-1" culture="pt-BR" uiCulture="pt-BR"/>
+	</system.web>
+</configuration>

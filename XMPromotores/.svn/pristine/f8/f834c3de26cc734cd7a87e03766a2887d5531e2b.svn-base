@@ -1,0 +1,276 @@
+﻿<%@ Page Language="VB" MasterPageFile="~/XMPromotores.master" AutoEventWireup="false"
+    CodeFile="visita.aspx.vb" Inherits="formulario_visita" Title="XM Promotores - Yes Mobile" %>
+
+<%@ Register Src="../controls/pergunta.ascx" TagName="pergunta" TagPrefix="uc1" %>
+<%@ Register Src="../controls/respostas.ascx" TagName="respostas" TagPrefix="uc2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class='EditArea'>
+        <table id='tblEditArea' border="0">
+            <tr>
+                <td colspan='2'>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class='trField'>
+                <td class='tdFieldHeader'>
+                    Promotor:
+                </td>
+                <td class='tdField'>
+                    <asp:Label runat='server' ID='lblPromotor' />
+                </td>
+            </tr>
+            <tr class='trField'>
+                <td class='tdFieldHeader'>
+                    Loja:
+                </td>
+                <td class='tdField'>
+                    <asp:Label runat='server' ID='lblLoja' />
+                </td>
+            </tr>
+            <tr class='trField'>
+                <td class='tdFieldHeader'>
+                    Data:
+                </td>
+                <td class='tdField'>
+                    <asp:Label runat='server' ID='lblData' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id='PesquisasVisita'>
+        <h2>
+            Pesquisas</h2>
+        <asp:GridView runat='server' ID='grdPesquisas' AutoGenerateColumns='false'>
+            <HeaderStyle HorizontalAlign='Left' />
+            <Columns>
+                <asp:BoundField HeaderText='Pesquisa' DataField='Pesquisa' />
+                <asp:BoundField HeaderText='Realizadas' DataField='Realizadas' />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <a href='addpesquisa.aspx?idvisita=<%# cls.IDVisita %>&tipoentidade=11&idpesquisa=<%# Eval("IDPesquisa")%>'
+                            target='_blank'>Editar</a>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
+    <br class="cb" />
+    <div id='ProdutosVisita'>
+        <h2>
+            Pesquisa de Produtos</h2>
+        <asp:UpdatePanel runat='server' ID='updProdutos'>
+            <ContentTemplate>
+                <asp:LinkButton runat='server' ID='lnkVoltarCat' Text='Segmento' />
+                <asp:LinkButton runat='server' ID='lnkVoltarSubCat' Text='Categoria' />
+                <asp:LinkButton runat='server' ID='lnkVoltarFornecedor' Text='Marca' />
+                <asp:Label runat='server' ID='lblAtual'></asp:Label>
+                <br />
+                <br />
+                <asp:GridView runat='server' ID='grdCategorias' DataKeyNames='IDCategoria' AutoGenerateColumns='False'>
+                    <HeaderStyle HorizontalAlign='Left' />
+                    <Columns>
+                        <asp:ButtonField ButtonType='Link' DataTextField='Categoria' CommandName='Abrir'
+                            HeaderText='Segmento' />
+                        <asp:TemplateField HeaderText='Realizado'>
+                            <ItemTemplate>
+                                <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                <asp:Panel runat='server' ID='pnlCategorias'>
+                    Segmento:
+                    <asp:Label runat='server' ID='lblCategoria' />
+                    <asp:GridView runat='server' ID='grdSubCategorias' DataKeyNames='IDSubCategoria'
+                        AutoGenerateColumns='False'>
+                        <HeaderStyle HorizontalAlign='Left' />
+                        <Columns>
+                            <asp:ButtonField ButtonType='Link' DataTextField='SubCategoria' CommandName='Abrir'
+                                HeaderText='Categoria' />
+                            <asp:TemplateField HeaderText='Realizado'>
+                                <ItemTemplate>
+                                    <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:Panel runat='server' ID='pnlSubCategorias'>
+                        Categoria:
+                        <asp:Label runat='server' ID='lblSubCategoria' />
+                        <asp:GridView runat='server' ID='grdFornecedores' DataKeyNames='IDFornecedor' AutoGenerateColumns='False'>
+                            <HeaderStyle HorizontalAlign='Left' />
+                            <Columns>
+                                <asp:ButtonField ButtonType='Link' DataTextField='Fornecedor' CommandName='Abrir'
+                                    HeaderText='Marca' />
+                                <asp:TemplateField HeaderText='Realizado'>
+                                    <ItemTemplate>
+                                        <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                        <asp:Panel runat='server' ID='pnlFornecedores'>
+                            Marca:
+                            <asp:Label runat='server' ID='lblFornecedor' />
+                            <div style='overflow: auto; height: 300px;'>
+                                <asp:GridView runat='server' ID='grdProdutos' DataKeyNames='IDProduto' AutoGenerateColumns='False'>
+                                    <HeaderStyle HorizontalAlign='Left' />
+                                    <Columns>
+                                        <asp:BoundField DataField='Descricao' HeaderText='Produto' />
+                                        <asp:BoundField DataField='Status' HeaderText='Realizado' />
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </asp:Panel>
+                    </asp:Panel>
+                </asp:Panel>
+                <input type='button' runat='server' id='btnEditar' value='Editar Produtos' class='botao'
+                    onclick='fncAbrirEdicao(0,0,0)' />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <script type='text/javascript'>
+            function fncAbrirEdicaoCat(vIDCategoria, vIDSubCategoria, vIDFornecedor) {
+                var wh = window.open('categorias.aspx?cat=' + vIDCategoria + '&sct=' + vIDSubCategoria + '&for=' + vIDFornecedor + '&idvisita=<%=VIEWSTATE("IDVISITA")%>', 'edicao', 'resizable=yes, scrollbars=yes, width=800, height=600');
+                wh.focus();
+            }
+            function refreshCat(vIDCat, vIDSub, vIDFor) {
+                location.href = 'visita.aspx?idvisita=<%=ViewState("IDVISITA") %>&cat=' + vIDCat + '&for=' + vIDFor;
+            }
+        </script>
+    </div>
+    <br class="cb" />
+    <div id='SegmentoVisita'>
+        <h2>
+            Pesquisa de Segmentos</h2>
+        <asp:UpdatePanel runat='server' ID='updSegmentos'>
+            <ContentTemplate>
+                <asp:LinkButton runat='server' ID='LinkButton1' Text='Segmento' />
+                <asp:Label runat='server' ID='Label1'></asp:Label>
+                <br />
+                <br />
+                <asp:GridView runat='server' ID='grdSegmentos' DataKeyNames='IDCategoria' AutoGenerateColumns='False'>
+                    <HeaderStyle HorizontalAlign='Left' />
+                    <Columns>
+                        <asp:ButtonField ButtonType='Link' DataTextField='Categoria' CommandName='Abrir'
+                            HeaderText='Segmento' />
+                        <asp:TemplateField HeaderText='Realizado'>
+                            <ItemTemplate>
+                                <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                <input type='button' runat='server' id='Button1' value='Editar Segmentos' class='botao'
+                    onclick='fncAbrirEdicaoSeg(0,0,0)' />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <script type='text/javascript'>
+            function fncAbrirEdicaoCat(vIDCategoria, vIDSubCategoria, vIDFornecedor) {
+                var wh = window.open('categorias.aspx?cat=' + vIDCategoria + '&sct=' + vIDSubCategoria + '&for=' + vIDFornecedor + '&idvisita=<%=VIEWSTATE("IDVISITA")%>', 'edicao', 'resizable=yes, scrollbars=yes, width=800, height=600');
+                wh.focus();
+            }
+            function refreshCat(vIDCat, vIDSub, vIDFor) {
+                location.href = 'visita.aspx?idvisita=<%=ViewState("IDVISITA") %>&cat=' + vIDCat + '&for=' + vIDFor;
+            }
+        </script>
+    </div>
+    <br class="cb" />
+    <div id='CategoriaVisita'>
+         <h2>Pesquisa de Categorias</h2>
+             <asp:UpdatePanel runat='server' ID='updCategorias'>
+            <ContentTemplate>
+             <asp:LinkButton runat='server' ID='LinkButton2' Text='Categoria' />
+                <asp:Label runat='server' ID='Label2'></asp:Label>
+             <asp:GridView runat='server' ID='grdSubCategorias_sub' DataKeyNames='IDSubCategoria'
+                        AutoGenerateColumns='False'>
+                        <HeaderStyle HorizontalAlign='Left' />
+                        <Columns>
+                            <asp:ButtonField ButtonType='Link' DataTextField='SubCategoria' CommandName='Abrir'
+                                HeaderText='SubCategoria' />
+                            <asp:TemplateField HeaderText='Realizado'>
+                                <ItemTemplate>
+                                    <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                               <asp:GridView runat='server' ID='GridView4' DataKeyNames='IDSubCategoria'
+            AutoGenerateColumns='False'>
+            <HeaderStyle HorizontalAlign='Left' />
+            <Columns>
+                <asp:ButtonField ButtonType='Link' DataTextField='Categoria' CommandName='Abrir'
+                    HeaderText='Segmento' />
+                <asp:TemplateField HeaderText='Realizado'>
+                    <ItemTemplate>
+                        <%#IIf((Eval("Total") = Eval("Respondidos")), "OK", Eval("Total") & "/" & Eval("Respondidos"))%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+                <input type='button' runat='server' id='Button2' value='Editar Categorias' class='botao'
+                    onclick='fncAbrirEdicaoCat(0,0,0)' />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <script type='text/javascript'>
+            function fncAbrirEdicaoCat(vIDCategoria, vIDSubCategoria, vIDFornecedor) {
+                var wh = window.open('categorias.aspx?cat=' + vIDCategoria + '&sct=' + vIDSubCategoria + '&for=' + vIDFornecedor + '&idvisita=<%=VIEWSTATE("IDVISITA")%>', 'edicao', 'resizable=yes, scrollbars=yes, width=800, height=600');
+                wh.focus();
+            }
+            function refreshCat(vIDCat, vIDSub, vIDFor) {
+                location.href = 'visita.aspx?idvisita=<%=ViewState("IDVISITA") %>&cat=' + vIDCat + '&for=' + vIDFor;
+            }
+        </script>
+    </div>
+    <br class="cb" />
+    <div id='PerguntasVisitas'>
+        <h2>
+            Perguntas da Loja</h2>
+        <asp:Panel runat='server' ID='pnlPerguntasLoja'>
+            <asp:Label runat='server' ID='lblPerguntasLoja' />
+            <asp:GridView runat='server' ID='grdPerguntasLoja' DataKeyNames='Pergunta' AutoGenerateColumns='true'>
+                <HeaderStyle HorizontalAlign='Left' />
+                 <Columns>
+                   <asp:BoundField DataField='Pergunta' HeaderText='Pergunta' />
+                   <asp:BoundField DataField='Resposta' HeaderText='Resposta' />
+                 </Columns>
+            </asp:GridView>
+        </asp:Panel>
+                     <input type='button' runat='server' id='Button3' value='Editar Produtos' class='botao'
+                                    onclick='fncAbrirEdicao(0,0,0)' />
+                                <asp:Button runat='server' ID='btnFinalizar' Text='Finalizar Visita' OnClientClick="return confirm('Deseja realmente finalizar a visita ?');" />
+                      
+            <script type='text/javascript'>
+                function fncAbrirEdicao(vIDCategoria, vIDSubCategoria, vIDFornecedor) {
+                    var wh = window.open('produtos.aspx?cat=' + vIDCategoria + '&sct=' + vIDSubCategoria + '&for=' + vIDFornecedor + '&idvisita=<%=VIEWSTATE("IDVISITA")%>', 'edicao', 'resizable=yes, scrollbars=yes, width=800, height=600');
+                    wh.focus();
+                }
+                function refresh(vIDCat, vIDSub, vIDFor) {
+                    location.href = 'visita.aspx?idvisita=<%=ViewState("IDVISITA") %>&cat=' + vIDCat + '&for=' + vIDFor;
+                }
+            </script>
+          </div>
+    <br class='cb' />
+    <div id='VisitaRodape'>
+        <asp:UpdatePanel runat='server' ID='updConfirmarFinalizacaoVisita'>
+            <ContentTemplate>
+                <table runat='server' id='tblMotivoUsoForm' visible='false'>
+                    <tr>
+                        <td>
+                            Motivo da utilização do formulário on-line
+                        </td>
+                        <td>
+                            <asp:DropDownList DataTextField="MotivoUsoForm" DataValueField="IdMotivoUsoForm"
+                                runat='server' ID='drpMotivoUsoForm'>
+                            </asp:DropDownList>
+                            <asp:CompareValidator runat="server" ID="valMotivo" ControlToValidate="drpMotivoUsoForm"
+                                ValueToCompare="0" ErrorMessage="Selecione uma opção" Operator="GreaterThan"></asp:CompareValidator>
+                        </td>
+                        <td>
+                            <asp:Button runat='server' ID='btnConfirmarFinalizacao' Text='Confirmar' />
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+</asp:Content>

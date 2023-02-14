@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDF749CE-CC61-4C4A-8568-D58CDF5FED37}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>xmlinkwm</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>xmlinkwm</RootNamespace>
+    <StartupObject />
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation />
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>xmlinkwm.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>xmlinkwm.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="System.Web.UI.WebControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajuda.aspx.vb">
+      <DependentUpon>ajuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cadastrada.aspx.vb">
+      <DependentUpon>cadastrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.vb">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastros.aspx.vb">
+      <DependentUpon>cadastros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="campanhas.aspx.vb">
+      <DependentUpon>campanhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoriadet.aspx.vb">
+      <DependentUpon>categoriadet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categorias.aspx.vb">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientes.aspx.vb">
+      <DependentUpon>clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientesdet.aspx.vb">
+      <DependentUpon>clientesdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="condicaodet.aspx.vb">
+      <DependentUpon>condicaodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Condicoes.aspx.vb">
+      <DependentUpon>Condicoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuracoes.aspx.vb">
+      <DependentUpon>configuracoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="copiaroteiro.aspx.vb">
+      <DependentUpon>copiaroteiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="esqueci.aspx.vb">
+      <DependentUpon>esqueci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exportacao.aspx.vb">
+      <DependentUpon>exportacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exportacaodet.aspx.vb">
+      <DependentUpon>exportacaodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="formapagamento.aspx.vb">
+      <DependentUpon>formapagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="formapagamentodet.aspx.vb">
+      <DependentUpon>formapagamentodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Foto.aspx.vb">
+      <DependentUpon>Foto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FotosThumb.aspx.vb">
+      <DependentUpon>FotosThumb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gravado.aspx.vb">
+      <DependentUpon>gravado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="grupos.aspx.vb">
+      <DependentUpon>grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gruposdet.aspx.vb">
+      <DependentUpon>gruposdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="historico.aspx.vb">
+      <DependentUpon>historico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Horario.aspx.vb">
+      <DependentUpon>Horario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="importacao.aspx.vb">
+      <DependentUpon>importacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\BarraBotoes.ascx.vb">
+      <DependentUpon>BarraBotoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\ComboBox.ascx.vb">
+      <DependentUpon>ComboBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\inc_menu.ascx.vb">
+      <DependentUpon>inc_menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\titulo.ascx.vb">
+      <DependentUpon>titulo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lib\Acesso.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Ajuda.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Campanhas.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Categoria.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Clientes.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\condicao.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\CopiaRoteiros.vb" />
+    <Compile Include="lib\DataClass.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\empresa.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\FormaPagamento.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Grupos.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\importacao.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Motivo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Pedido.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\permissoes.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Produtos.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Recados.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\relatorio.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Roteiros.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Settings.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Status.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Tipo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Usuario.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\UsuarioBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\UsuarioLogged.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Vendedor.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\Visita.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\XMWeb.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista.aspx.vb">
+      <DependentUpon>lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaVisita.aspx.vb">
+      <DependentUpon>ListaVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="motivodet.aspx.vb">
+      <DependentUpon>motivodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="motivos.aspx.vb">
+      <DependentUpon>motivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MudaSenha.aspx.vb">
+      <DependentUpon>MudaSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pedido.aspx.vb">
+      <DependentUpon>pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pedidoalterar.aspx.vb">
+      <DependentUpon>pedidoalterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permissaodet.aspx.vb">
+      <DependentUpon>permissaodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permissoes.aspx.vb">
+      <DependentUpon>permissoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principal.aspx.vb">
+      <DependentUpon>principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produtodet.aspx.vb">
+      <DependentUpon>produtodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produtos.aspx.vb">
+      <DependentUpon>produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recados.aspx.vb">
+      <DependentUpon>recados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="relatorios.aspx.vb">
+      <DependentUpon>relatorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resumo.aspx.vb">
+      <DependentUpon>resumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="roteiro.aspx.vb">
+      <DependentUpon>roteiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="roteirocli.aspx.vb">
+      <DependentUpon>roteirocli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuariodet.aspx.vb">
+      <DependentUpon>usuariodet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuarios.aspx.vb">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedordet.aspx.vb">
+      <DependentUpon>vendedordet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedores.aspx.vb">
+      <DependentUpon>vendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visita.aspx.vb">
+      <DependentUpon>visita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visitas.aspx.vb">
+      <DependentUpon>visitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wapconfig.aspx.vb">
+      <DependentUpon>wapconfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\com.xmsistemas.maps\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Content Include="ajuda.aspx" />
+    <Content Include="cadastrada.aspx" />
+    <Content Include="Cadastro.aspx" />
+    <Content Include="cadastros.aspx" />
+    <Content Include="campanhas.aspx" />
+    <Content Include="categoriadet.aspx" />
+    <Content Include="Categorias.aspx" />
+    <Content Include="clientes.aspx" />
+    <Content Include="clientesdet.aspx" />
+    <Content Include="condicaodet.aspx" />
+    <Content Include="Condicoes.aspx" />
+    <Content Include="configuracoes.aspx" />
+    <Content Include="copiaroteiro.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="esqueci.aspx" />
+    <Content Include="exportacao.aspx" />
+    <Content Include="exportacaodet.aspx" />
+    <Content Include="formapagamento.aspx" />
+    <Content Include="formapagamentodet.aspx" />
+    <Content Include="Foto.aspx" />
+    <Content Include="FotosThumb.aspx" />
+    <Content Include="functions.js" />
+    <Content Include="Global.asax" />
+    <Content Include="gravado.aspx" />
+    <Content Include="grupos.aspx" />
+    <Content Include="gruposdet.aspx" />
+    <Content Include="historico.aspx" />
+    <Content Include="Horario.aspx" />
+    <Content Include="imagens\backgr_main1.gif" />
+    <Content Include="imagens\categorias.jpg" />
+    <Content Include="imagens\cliente.jpg" />
+    <Content Include="imagens\clock.gif" />
+    <Content Include="imagens\condicao.gif" />
+    <Content Include="imagens\config.gif" />
+    <Content Include="imagens\dot.gif" />
+    <Content Include="imagens\down.gif" />
+    <Content Include="imagens\drop.gif" />
+    <Content Include="imagens\exclam2.gif" />
+    <Content Include="imagens\Excluir.gif" />
+    <Content Include="imagens\exportar.gif" />
+    <Content Include="imagens\fundo_baixo.jpg" />
+    <Content Include="imagens\fundo_baixo2.jpg" />
+    <Content Include="imagens\fundo_baixo3.jpg" />
+    <Content Include="imagens\fundo_baixo5.jpg" />
+    <Content Include="imagens\fundo_menu.jpg" />
+    <Content Include="imagens\fundo_menu_tit.jpg" />
+    <Content Include="imagens\go.gif" />
+    <Content Include="imagens\Gobe1.png" />
+    <Content Include="imagens\Group6060.jpg" />
+    <Content Include="imagens\help.gif" />
+    <Content Include="imagens\help4.gif" />
+    <Content Include="imagens\historico.gif" />
+    <Content Include="imagens\importar.gif" />
+    <Content Include="imagens\ir.gif" />
+    <Content Include="imagens\listaos.gif" />
+    <Content Include="imagens\LogoXM.jpg" />
+    <Content Include="imagens\menu_interna.gif" />
+    <Content Include="imagens\minus.gif" />
+    <Content Include="imagens\money.gif" />
+    <Content Include="imagens\money2.gif" />
+    <Content Include="imagens\obs_flag.gif" />
+    <Content Include="imagens\Operator4848.png" />
+    <Content Include="imagens\pedidos.gif" />
+    <Content Include="imagens\plus.gif" />
+    <Content Include="imagens\pt.gif" />
+    <Content Include="imagens\reports.gif" />
+    <Content Include="imagens\responsavel6060.jpg" />
+    <Content Include="imagens\security.gif" />
+    <Content Include="imagens\settings.jpg" />
+    <Content Include="imagens\spacer_tit.gif" />
+    <Content Include="imagens\spacer_tit1.jpg" />
+    <Content Include="imagens\up.gif" />
+    <Content Include="imagens\xm.gif" />
+    <Content Include="imagens\XMLink.jpg" />
+    <Content Include="importacao.aspx" />
+    <Content Include="inc\BarraBotoes.ascx" />
+    <Content Include="inc\ComboBox.ascx" />
+    <Content Include="inc\inc_Header.ascx" />
+    <Content Include="inc\inc_menu.ascx" />
+    <Content Include="inc\inc_rodape.ascx" />
+    <Content Include="inc\inc_top.ascx" />
+    <Content Include="inc\titulo.ascx" />
+    <Content Include="lista.aspx" />
+    <Content Include="ListaVisita.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="mnu\menu-XM_01-1.jpg" />
+    <Content Include="mnu\menu-XM_02-2.gif" />
+    <Content Include="mnu\menu-XM_02-2.jpg" />
+    <Content Include="mnu\menu-XM_03-3.gif" />
+    <Content Include="mnu\menu-XM_03-3.jpg" />
+    <Content Include="mnu\menu-XM_04-4.jpg" />
+    <Content Include="mnu\menu-XM_05-5.gif" />
+    <Content Include="mnu\menu-XM_05-5.jpg" />
+    <Content Include="mnu\menu-XM_06-6.gif" />
+    <Content Include="mnu\menu-XM_06-6.jpg" />
+    <Content Include="mnu\menu-XM_07-7.gif" />
+    <Content Include="mnu\menu-XM_08-8.gif" />
+    <Content Include="motivodet.aspx" />
+    <Content Include="motivos.aspx" />
+    <Content Include="MudaSenha.aspx" />
+    <Content Include="pedido.aspx" />
+    <Content Include="pedidoalterar.aspx" />
+    <Content Include="permissaodet.aspx" />
+    <Content Include="permissoes.aspx" />
+    <Content Include="principal.aspx" />
+    <Content Include="produtodet.aspx" />
+    <Content Include="produtos.aspx" />
+    <Content Include="recados.aspx" />
+    <Content Include="relatorios.aspx" />
+    <Content Include="relatorio\atendimento.aspx" />
+    <Content Include="relatorio\campanhas.aspx" />
+    <Content Include="relatorio\produtos.aspx" />
+    <Content Include="relatorio\roteiro.aspx" />
+    <Content Include="relatorio\status.aspx" />
+    <Content Include="relatorio\vendedor.aspx" />
+    <Content Include="relatorio\visitas.aspx" />
+    <Content Include="resumo.aspx" />
+    <Content Include="roteiro.aspx" />
+    <Content Include="roteirocli.aspx" />
+    <Content Include="Styles.css" />
+    <Content Include="topo\topo_01.jpg" />
+    <Content Include="topo\topo_02.jpg" />
+    <Content Include="usuariodet.aspx" />
+    <Content Include="usuarios.aspx" />
+    <Content Include="vendedordet.aspx" />
+    <Content Include="vendedores.aspx" />
+    <Content Include="visita.aspx" />
+    <Content Include="visitas.aspx" />
+    <Content Include="wapconfig.aspx" />
+    <Content Include="Web.config" />
+    <EmbeddedResource Include="ajuda.aspx.resx">
+      <DependentUpon>ajuda.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrada.aspx.resx">
+      <DependentUpon>cadastrada.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro.aspx.resx">
+      <DependentUpon>Cadastro.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastros.aspx.resx">
+      <DependentUpon>cadastros.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="campanhas.aspx.resx">
+      <DependentUpon>campanhas.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="categoriadet.aspx.resx">
+      <DependentUpon>categoriadet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorias.aspx.resx">
+      <DependentUpon>Categorias.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.aspx.resx">
+      <DependentUpon>clientes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientesdet.aspx.resx">
+      <DependentUpon>clientesdet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="condicaodet.aspx.resx">
+      <DependentUpon>condicaodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Condicoes.aspx.resx">
+      <DependentUpon>Condicoes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracoes.aspx.resx">
+      <DependentUpon>configuracoes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="copiaroteiro.aspx.resx">
+      <DependentUpon>copiaroteiro.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.aspx.resx">
+      <DependentUpon>Default.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="esqueci.aspx.resx">
+      <DependentUpon>esqueci.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportacao.aspx.resx">
+      <DependentUpon>exportacao.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportacaodet.aspx.resx">
+      <DependentUpon>exportacaodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formapagamento.aspx.resx">
+      <DependentUpon>formapagamento.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formapagamentodet.aspx.resx">
+      <DependentUpon>formapagamentodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foto.aspx.resx">
+      <DependentUpon>Foto.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FotosThumb.aspx.resx">
+      <DependentUpon>FotosThumb.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gravado.aspx.resx">
+      <DependentUpon>gravado.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="grupos.aspx.resx">
+      <DependentUpon>grupos.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gruposdet.aspx.resx">
+      <DependentUpon>gruposdet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historico.aspx.resx">
+      <DependentUpon>historico.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario.aspx.resx">
+      <DependentUpon>Horario.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="importacao.aspx.resx">
+      <DependentUpon>importacao.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\BarraBotoes.ascx.resx">
+      <DependentUpon>BarraBotoes.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\ComboBox.ascx.resx">
+      <DependentUpon>ComboBox.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\inc_menu.ascx.resx">
+      <DependentUpon>inc_menu.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inc\titulo.ascx.resx">
+      <DependentUpon>titulo.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lista.aspx.resx">
+      <DependentUpon>lista.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaVisita.aspx.resx">
+      <DependentUpon>ListaVisita.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logout.aspx.resx">
+      <DependentUpon>logout.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="motivodet.aspx.resx">
+      <DependentUpon>motivodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="motivos.aspx.resx">
+      <DependentUpon>motivos.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudaSenha.aspx.resx">
+      <DependentUpon>MudaSenha.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedido.aspx.resx">
+      <DependentUpon>pedido.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedidoalterar.aspx.resx">
+      <DependentUpon>pedidoalterar.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="permissaodet.aspx.resx">
+      <DependentUpon>permissaodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="permissoes.aspx.resx">
+      <DependentUpon>permissoes.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.aspx.resx">
+      <DependentUpon>principal.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produtodet.aspx.resx">
+      <DependentUpon>produtodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produtos.aspx.resx">
+      <DependentUpon>produtos.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recados.aspx.resx">
+      <DependentUpon>recados.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatorios.aspx.resx">
+      <DependentUpon>relatorios.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resumo.aspx.resx">
+      <DependentUpon>resumo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roteiro.aspx.resx">
+      <DependentUpon>roteiro.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roteirocli.aspx.resx">
+      <DependentUpon>roteirocli.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuariodet.aspx.resx">
+      <DependentUpon>usuariodet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios.aspx.resx">
+      <DependentUpon>usuarios.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedordet.aspx.resx">
+      <DependentUpon>vendedordet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedores.aspx.resx">
+      <DependentUpon>vendedores.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visita.aspx.resx">
+      <DependentUpon>visita.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visitas.aspx.resx">
+      <DependentUpon>visitas.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wapconfig.aspx.resx">
+      <DependentUpon>wapconfig.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Web References\com.xmsistemas.maps\gmapservice.disco" />
+    <None Include="Web References\com.xmsistemas.maps\gmapservice.wsdl" />
+    <None Include="Web References\com.xmsistemas.maps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="xmlinkwm.vsdisco" />
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx">
+      <RelPath>Web References\com.xmsistemas.maps\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50546</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

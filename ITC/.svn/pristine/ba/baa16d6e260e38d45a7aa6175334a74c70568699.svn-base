@@ -1,0 +1,704 @@
+Imports System.Data.SqlClient
+
+Public Class RelatorioEmpresa
+
+    Inherits XMWebPage
+
+    Protected WithEvents CodigoHTML As System.Web.UI.WebControls.Literal
+    Protected WithEvents btnTeste As System.Web.UI.WebControls.ImageButton
+    Private pesq As New clsPesquisas
+    Private strItens As String = ""
+    Private MaxPage As Integer
+
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If Not Page.IsPostBack Then
+
+            Viewstate("Pagina") = CInt(0 & Page.Request("P"))
+            ViewState("Obras") = Page.Request("O")
+            Viewstate("Tipo") = CInt(0 & Page.Request("T"))
+            Viewstate("Ordenacao") = CInt(0 & Page.Request("Q"))
+            Viewstate("Auth") = CStr(Page.Request("Auth") & "")
+
+            If DeCryptography(Viewstate("Auth").ToString()) = "CARTAAGRADECIMENTO" Then
+                ViewState("Obras") = DeCryptography(ViewState("Obras"))
+                Viewstate("Ordenacao") = "1"
+            End If
+
+            If Viewstate("Pagina") <= 0 Then
+                Viewstate("Pagina") = 1
+            End If
+            If ViewState("Tipo") = 2 Then
+                Dim obj As Object = Split(ViewState("Obras"), ",")
+                strItens = obj(ViewState("Pagina") - 1)
+                MaxPage = UBound(obj) + 1
+            Else
+                strItens = ViewState("Obras")
+            End If
+
+            Pesquisar()
+
+        End If
+    End Sub
+
+    Private Function Pesquisar()
+
+        Dim sb As New System.Text.StringBuilder
+
+        Dim sbMaps As New System.Text.StringBuilder
+        Dim sbMapsIf As New System.Text.StringBuilder
+
+        sbMaps.Append("<script type='text/javascript'>" & vbCrLf)
+
+        sbMaps.Append("     var mapIndex = 0;" & vbCrLf)
+        sbMaps.Append("     var geocoder;" & vbCrLf)
+        sbMaps.Append("     geocoder = new GClientGeocoder();" & vbCrLf)
+
+        sbMaps.Append("     var icon = new GIcon();" & vbCrLf)
+        sbMaps.Append("     icon.image = ""http://labs.google.com/ridefinder/images/mm_20_red.png"";" & vbCrLf)
+        sbMaps.Append("     icon.shadow = ""http://labs.google.com/ridefinder/images/mm_20_shadow.png"";" & vbCrLf)
+        sbMaps.Append("     icon.iconSize = new GSize(12, 20);" & vbCrLf)
+        sbMaps.Append("     icon.shadowSize = new GSize(22, 20);" & vbCrLf)
+        sbMaps.Append("     icon.iconAnchor = new GPoint(6, 20);" & vbCrLf)
+        sbMaps.Append("     icon.infoWindowAnchor = new GPoint(5, 1);" & vbCrLf)
+
+        sbMaps.Append("     function addAddressToMap(response, map) " & vbCrLf)
+        sbMaps.Append("         {" & vbCrLf)
+        sbMaps.Append("             if (response && response.Status.code == 200) " & vbCrLf)
+        sbMaps.Append("                 {" & vbCrLf)
+        sbMaps.Append("                     place = response.Placemark[0];" & vbCrLf)
+        sbMaps.Append("                     point = new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]);" & vbCrLf)
+        sbMaps.Append("                     marker = new GMarker(point, icon);" & vbCrLf)
+        sbMaps.Append("                     map.addOverlay(marker);" & vbCrLf)
+        sbMaps.Append("                     map.setCenter(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]), 14);" & vbCrLf)
+        sbMaps.Append("                     map.addControl(new GMapTypeControl());" & vbCrLf)
+        sbMaps.Append("                     map.setMapType(G_HYBRID_MAP);" & vbCrLf)
+        sbMaps.Append("                 }" & vbCrLf)
+        sbMaps.Append("             callNextMap()" & vbCrLf)
+        sbMaps.Append("         }" & vbCrLf)
+
+        If Viewstate("Tipo") = 2 Then
+            sb.Append("				<div align=center>")
+            If Viewstate("Pagina") > 1 Then
+                sb.Append("		        <a href='RelatorioObras.aspx?T=" & Viewstate("Tipo") & "&O=" & ViewState("Obras") & "&P=" & Viewstate("Pagina") - 1 & "'><b>Anterior</b>&nbsp;&nbsp;</a>")
+            Else
+                sb.Append("				<b>Anterior</b>&nbsp;&nbsp;")
+            End If
+            If Viewstate("Pagina") < MaxPage Then
+                sb.Append("			    <a href='RelatorioObras.aspx?T=" & Viewstate("Tipo") & "&O=" & ViewState("Obras") & "&P=" & Viewstate("Pagina") + 1 & "'><b>Próxima</b>&nbsp;&nbsp;</a>")
+            Else
+                sb.Append("				<b>Próxima</b>&nbsp;&nbsp;")
+            End If
+            sb.Append("				</div>")
+        End If
+
+        'Dim usu As New clsUsuario
+        Dim ds As DataSet = pesq.RelatorioObras(strItens, ViewState("Ordenacao"), Usuario.IdEmpresa)
+        Dim i As Integer = 0, divCount As Integer = 0
+
+        If ds.Tables.Count > 0 Then
+
+
+            'INÍCIO HEADERdiv_relatorioobras
+
+            'sb.Append(" <div id='Tudo'> " & vbCrLf)
+            'FIM HEADER
+            For i = 0 To ds.Tables(0).Rows.Count - 1
+
+                Dim strEmpresas() As String
+                Dim strIdEmpresas() As String
+
+                sb.Append("<div class='div_relatorioobras' id='pHide" & i & "' ")
+
+                sb.Append("style='border:none;")
+                'If i > 0 Then
+                '    sb.Append("page-break-after: always;")
+                'End If
+                sb.Append("' ")
+
+                sb.Append("name='pHide'>" & vbCrLf) 'quebra de página
+
+                divCount += 1
+
+                sb.Append("     <div style='border:none;align:center;height:50px;width:679px;padding-left: 30px'> " & vbCrLf)
+                sb.Append("         <img alt='' src='img/topo_relatorio_obra.jpg' border='0' width:'679px'")
+                sb.Append("        <p></br><div style='padding-top: 10px; padding-right: 0px; padding-bottom:0px; padding-left: 25px;'><center><strong>Emissão: " & Right("00" & Day(Now), 2) & "/" & Right("00" & Month(Now), 2) & "/" & Year(Now) & "  " & Right("00" & Hour(Now), 2) & ":" & Right("00" & Minute(Now), 2) & "</strong></p></center></div> " & vbCrLf)
+                sb.Append("     </div> " & vbCrLf)
+
+                'DEFINIÇÃO DE SEGMENTOS
+                Dim segmentoStr As String
+                segmentoStr = ""
+
+                If ds.Tables(0).Rows(i).Item("IdSegmento") = 1 Then
+                    segmentoStr = "Industrial"
+                ElseIf ds.Tables(0).Rows(i).Item("IdSegmento") = 2 Then
+                    segmentoStr = "Comercial"
+                ElseIf ds.Tables(0).Rows(i).Item("IdSegmento") = 3 Then
+                    segmentoStr = "Residencial"
+                Else
+                    segmentoStr = "Indefinido"
+                End If
+
+                'INÍCIO CABEÇALHO
+                sb.Append(" <div style='padding-top: 10px; padding-right: 0px; padding-bottom:0px; padding-left: 30px;'> " & vbCrLf)
+                sb.Append("<h4 style='width:250px'><strong>Código ITC:</strong> " & ds.Tables(0).Rows(i).Item("CODIGOANTIGO") & "</h4> " & vbCrLf)
+                sb.Append("<h4 style='width:420px'><strong>Data da última atualização:</strong> " & ds.Tables(0).Rows(i).Item("PUBLICACAO") & " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;" & vbCrLf)
+                If ds.Tables(0).Rows(i).Item("NRDAREVISAO") <= 1 Then
+                    sb.Append("<strong>Nova</strong> </h4>" & vbCrLf)
+                Else
+                    sb.Append("<strong>Revisão: </strong>" & ds.Tables(0).Rows(i).Item("NRDAREVISAO") & "  </h4>" & vbCrLf)
+                End If
+
+                sb.Append("     <br class='clear' /> " & vbCrLf)
+                sb.Append(" </div> " & vbCrLf)
+
+                '   sb.Append("" & vbCrLf)
+                'FIM CABEÇALHO
+
+                'INÍCIO DE DIV DA OBRA
+                sb.Append("	<div class='relatorio_tit' style='width:679px'><div class='FloatLeft'><span class='FonteComercial'> Dados da Obra </span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div><div class='FonteStatusSIG'>" & ds.Tables(0).Rows(i).Item("STATUSSIG") & "</div>")
+                sb.Append("<div style='width: 300px; margin-right: 0px; margin-bottom: 0px; margin-left: 200px;'><input class='bt_relatorio_result' type='button' value='Desativar' onclick='fncXMHide(""pHide" & i & """)' onmousemove='this.style.cursor=""hand"";' border=0 id='btnHide" & i & "'>")
+                'sb.Append("<div><input class='bt_relatorio_result' type='button' value='Desativar' onclick='fncXMHide(""pHide" & i & """)' onmousemove='this.style.cursor=""hand"";' border=0 id='btnHide" & i & "'>")
+                sb.Append("<input type='button' value='Novo SIG' onclick=""window.open('followupobradetmini.aspx?idobra=" & CryptographyEncoded(ds.Tables(0).Rows(i).Item("CODIGO")) & "', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=775, HEIGHT=355');"" >&nbsp;</div>")
+                sb.Append("</div>" & vbCrLf)
+
+                'INÍCIO DE DADOS DA OBRA
+                sb.Append("	    <div class='relatorio' style='margin:0 0 0px 33px; background:#E1E1E1; width:679px'>" & vbCrLf)
+
+                sb.Append("<div class='DadosObra'>")
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Nome da Obra: </strong> " & ds.Tables(0).Rows(i).Item("PROJETO") & "</cite><br /> " & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Endereço:</strong> " & ds.Tables(0).Rows(i).Item("ENDERECO") & "</cite><br />" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Bairro:</strong> " & ds.Tables(0).Rows(i).Item("COMPLEMENTO") & " </cite><br /> " & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Cidade:</strong> " & ds.Tables(0).Rows(i).Item("CIDADE") & " <span style='margin:0 5px 0 0'> </span> <strong>Estado:</strong>" & ds.Tables(0).Rows(i).Item("ESTADO") & " <span style='margin:0 5px 0 0'> </span> <strong>CEP:</strong> " & ds.Tables(0).Rows(i).Item("CEP") & " </cite><br /> " & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Segmento de atuação: </strong> <label class='Fonte" & IIf(ds.Tables(0).Rows(i).Item("IdSegmento") = 1, "Industrial", IIf(ds.Tables(0).Rows(i).Item("IdSegmento") = 2, "Comercial", "Residencial")) & "'>" & segmentoStr & "</label><img src='imagens/" & segmentoStr & ".jpg' class='FloatRight' style='margin:-23px 0 0 0;' /></cite>" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Subtipo:</strong> " & ds.Tables(0).Rows(i).Item("DESCRICAOTIPO") & "</cite>" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Inicio da obra:</strong> " & ds.Tables(0).Rows(i).Item("INICIO") & "<span style='margin:0 5px 0 0'> </span> <strong>Termino da obra:</strong>" & ds.Tables(0).Rows(i).Item("TERMINO") & "</cite>" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Inicio/Termino:</strong> " & ds.Tables(0).Rows(i).Item("INICIOTERMINO") & "<span style='margin:0 5px 0 0'> </span> <strong>Fase:</strong>" & ds.Tables(0).Rows(i).Item("IDFASE") & "</cite>" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Estágio atual:</strong> " & ds.Tables(0).Rows(i).Item("DESCRICAOESTAGIO") & "</cite>" & vbCrLf)
+                'sb.Append(" <cite class='meio' style='padding:1px 1px 1px 1px;margin:0 0 2px 0'><strong>Detalhes:</strong> " & ds.Tables(0).Rows(i).Item("obr_EstagioDetalhes_chr") & "</cite>" & vbCrLf)
+                sb.Append(" <cite class='meio' style='margin:0 0 2px 0'><strong>Área total construida(m&#178):</strong> " & FormatNumber(ds.Tables(0).Rows(i).Item("AREACONSTRUIDA"), 2) & "</cite><br />" & vbCrLf)
+
+                'IF DE VALOR DO INVESTIMENTO
+                sb.Append(" <cite class='meio' style='margin:0 0 1px 0'><strong>Valor do investimento (U$1000):</strong>" & vbCrLf)
+                If IsNumeric(ds.Tables(0).Rows(i).Item("VALOR")) Then
+                    sb.Append(FormatNumber(ds.Tables(0).Rows(i).Item("VALOR"), 2))
+                End If
+                sb.Append(" </cite><br />" & vbCrLf)
+                sb.Append("</div>")
+
+                'If segmentoStr = "Residencial" Then
+                '    sb.Append("<br />" & vbCrLf)
+                '    sb.Append("<br />" & vbCrLf)
+                '    'Else
+                '    '   sb.Append(" <cite class='meio'><strong>Matéria Prima:</strong> " & ds.Tables(0).Rows(i).Item("MATERIAPRIMA") & "</cite>" & vbCrLf)
+                '    '   sb.Append(" <cite class='meio'><strong>Capacidade de Produção:</strong> " & ds.Tables(0).Rows(i).Item("CAPACIDADEDEPRODUCAO") & "</cite>" & vbCrLf)
+                'End If
+
+                sb.Append("<div class='Mapa' style='border:1px solid black;' id='map_" & i & "'>")
+
+                sb.Append("</div>")
+
+                Dim strEndereco As String = ""
+                strEndereco = ds.Tables(0).Rows(i).Item("ENDERECO") & ","
+                'If ds.Tables(0).Rows(i).Item("COMPLEMENTO") <> "" Then strEndereco &= ds.Tables(0).Rows(i).Item("COMPLEMENTO") & ","
+                strEndereco &= ds.Tables(0).Rows(i).Item("CIDADE") & ","
+                strEndereco &= ds.Tables(0).Rows(i).Item("ESTADO")
+
+
+                sbMaps.Append("         var map_" & i & " = new GMap2(document.getElementById('map_" & i & "'));" & vbCrLf)
+
+                If i = 0 Then
+                    sbMapsIf.Append("           function callNextMap() {" & vbCrLf)
+                Else
+                    sbMapsIf.Append("               else ")
+                End If
+                sbMapsIf.Append("if(mapIndex==" & i & ")" & vbCrLf)
+                sbMapsIf.Append("               {" & vbCrLf)
+                sbMapsIf.Append("                   geocoder.getLocations('" & Replace(strEndereco, "'", "") & "', CallbackMap_" & i & ");" & vbCrLf)
+                sbMapsIf.Append("               }" & vbCrLf)
+
+                sbMaps.Append("             function CallbackMap_" & i & "(response) ")
+                sbMaps.Append("{")
+                sbMaps.Append("addAddressToMap(response, map_" & i & ");")
+                sbMaps.Append("}" & vbCrLf & vbCrLf)
+
+                'DEFINIÇÃO DE COTAÇÃO DO DÓLAR
+                If IsNumeric(ds.Tables(0).Rows(i).Item("obr_IdTipoCotacao_int")) Then
+                    sb.Append("<div class='DadosObraDetalhes'>")
+                    sb.Append(" <citedetalhes class='meio' style='margin:0 0 2px 0'> " & IIf(ds.Tables(0).Rows(i).Item("obr_IdTipoCotacao_int") = 1, "Cotação do dólar a R$", IIf(ds.Tables(0).Rows(i).Item("obr_IdTipoCotacao_int") = 2, "O valor do investimento foi estimado pela ITC com dólar cotado a R$", "A área construída e o valor do investimento foram estimados pela ITC com dólar cotado a R$")) & vbCrLf & ds.Tables(0).Rows(i).Item("obr_ValorDolar_chr") & "</citedetalhes> " & vbCrLf)
+                    sb.Append("</div>")
+                End If
+
+
+                sb.Append("<div class='DadosObraDetalhes'>")
+
+                sb.Append(" <citedetalhes><strong>Detalhes:</strong> " & ds.Tables(0).Rows(i).Item("DESCRICAO") & "</citedetalhes>" & vbCrLf)
+
+                sb.Append("</div>")
+
+                'End If
+
+
+                'FIM DE DADOS DA OBRA
+
+                If segmentoStr = "Residencial" Then
+
+                    'INÍCIO DE INFORMAÇÕES DOS RESIDENCIAIS
+
+                    If IsDBNull(ds.Tables(0).Rows(i).Item("obr_DescResidEdificio_chr")) = False Then
+                        If ds.Tables(0).Rows(i).Item("obr_DescResidEdificio_chr").ToString() <> "" Then
+                            sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Edifício(s) Residenciais:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidEdificio_chr") & "</cite>" & vbCrLf)
+                        End If
+                    End If
+                    If IsDBNull(ds.Tables(0).Rows(i).Item("obr_DescResidResidenciais_chr")) = False Then
+                        If ds.Tables(0).Rows(i).Item("obr_DescResidResidenciais_chr").ToString() <> "" Then
+                            sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Casa(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidResidenciais_chr") & "</cite>" & vbCrLf)
+                        End If
+                    End If
+                    If IsDBNull(ds.Tables(0).Rows(i).Item("obr_DescResidCondominios_chr")) = False Then
+                        If ds.Tables(0).Rows(i).Item("obr_DescResidCondominios_chr").ToString() <> "" Then
+                            sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Condomínio(s) de casa(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidCondominios_chr") & "</cite>" & vbCrLf)
+                        End If
+                    End If
+
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Nº de pavimentos:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidPavimentos_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Apart. Por andar:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidApartamentos_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Dormitório(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidDormitorios_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Suíte(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidSuite_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Banheiro(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidBanheiro_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Lavabo(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidLavabo_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Sala(s) de jantar / estar:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidSala_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:328px;border-bottom:none;'><strong>Área(s) de Serv. / Terraço(s) / Varanda(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidATV_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:165px;border-bottom:none;'><strong>Copa / Cozinha:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidCopa_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:328px;border-bottom:none;'><strong>Dependência(s) de empregada(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidDepEmpreg_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<cite class='DadosObraInfoAdic' style='width:320px;border-bottom:none;'><strong>Outros:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescResidOutros_chr") & "</cite>" & vbCrLf)
+                    sb.Append("<br class='clear' />" & vbCrLf)
+                    sb.Append("<br class='clear' />" & vbCrLf)
+                    'FIM DE INFORMAÇÕES DOS RESIDENCIAIS
+
+                    ''INÍCIO DE INFORMAÇÕES SOBRE ÁREAS DE LAZER
+
+                    If IsNumeric(ds.Tables(0).Rows(i).Item("obr_AreaLazer_int")) Or IsDBNull(ds.Tables(0).Rows(i).Item("obr_OutrosAreaLazer_chr")) = False Then
+
+                        sb.Append("<div class='area_de_lazer' style='overflow:hidden'>" & vbCrLf)
+
+                        sb.Append(" <div class='area_de_lazer_bloco'>" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 1) > 0, "check.jpg", "unchecked.jpg") & " />Salão de Festas <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 2) > 0, "check.jpg", "unchecked.jpg") & " />Salão de Jogos <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 4) > 0, "check.jpg", "unchecked.jpg") & " />Piscina <br />" & vbCrLf)
+                        sb.Append(" </div>" & vbCrLf)
+
+                        sb.Append(" <div class='area_de_lazer_bloco'>" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 16) > 0, "check.jpg", "unchecked.jpg") & " />Churrasqueira <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 32) > 0, "check.jpg", "unchecked.jpg") & " />Quadra <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 64) > 0, "check.jpg", "unchecked.jpg") & " />Fitness <br />" & vbCrLf)
+                        sb.Append(" </div>" & vbCrLf)
+
+                        sb.Append(" <div class='area_de_lazer_bloco'>" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 256) > 0, "check.jpg", "unchecked.jpg") & " />Playground <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 512) > 0, "check.jpg", "unchecked.jpg") & " />Spa <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 1024) > 0, "check.jpg", "unchecked.jpg") & " />Brinquedoteca <br /> " & vbCrLf)
+                        sb.Append(" </div>" & vbCrLf)
+
+                        sb.Append(" <div class='area_de_lazer_bloco' style='width:80px;'>" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 8) > 0, "check.jpg", "unchecked.jpg") & " />Sauna <br />" & vbCrLf)
+                        sb.Append("     <img border='0' alt='0' src=imagens/" & IIf((ds.Tables(0).Rows(i).Item("obr_AreaLazer_int") And 128) > 0, "check.jpg", "unchecked.jpg") & " />Gourmet <br />" & vbCrLf)
+                        sb.Append(" </div>" & vbCrLf)
+
+                        If (IsDBNull(ds.Tables(0).Rows(i).Item("obr_OutrosAreaLazer_chr")) = False) Then
+                            sb.Append("<cite class='DadosObraInfoAdic' style='border-bottom:none;width:100%'><strong>Outros:</strong> " & ds.Tables(0).Rows(i).Item("obr_OutrosAreaLazer_chr") & "</cite>" & vbCrLf)
+                        End If
+
+                        sb.Append("  </div>" & vbCrLf)
+
+                    Else
+
+                        sb.Append("<div class='area_de_lazer' style='padding:5px; width:310px; height:80px; overflow:hidden'>" & vbCrLf)
+
+                        sb.Append("<br /><br /><br /><cite style='margin:0 0 2px 0;border-bottom:none;'><strong>Não há registro de áreas de lazer</strong></cite>" & vbCrLf)
+
+                        sb.Append("  </div>" & vbCrLf)
+
+                    End If
+
+                    sb.Append("<div class='foto'>")
+                    sb.Append(" <br class='clear' />" & vbCrLf)
+                    If IsDBNull(ds.Tables(0).Rows(i).Item("obr_Foto_chr")) Then
+                        sb.Append("     <img src='imagens/condominio-05.jpg' style='float:right' width='220' height='140' />" & vbCrLf)
+                    ElseIf (ds.Tables(0).Rows(i).Item("obr_Foto_chr")) = "" Then
+                        sb.Append("     <img src='imagens/condominio-05.jpg' style='float:right' width='220' height='140' />" & vbCrLf)
+                    Else
+                        sb.Append("     <img src='imagens/relatorios_obras/" & ds.Tables(0).Rows(i).Item("obr_Foto_chr") & "' style='float:right' width='220' height='140' />" & vbCrLf)
+                    End If
+                    sb.Append("</div>")
+
+                    sb.Append("<br />" & vbCrLf)
+
+                    'FIM DE INFORMAÇÕES SOBRE ÁREAS DE LAZER
+
+                    sb.Append("<div class='BoxInfoAdic' style='float:left; width:415px; overflow:hidden'>")
+
+                    'INÍCIO DE INFORMAÇÕES ADICIONAIS
+
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Total de unidades:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicTotalUnicades_chr") & "</cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:180px;border-bottom:none;'><strong>Área Útil(m²):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAreaUtil_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Vaga(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicVagas_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>A. Terreno(m²):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAreaTerreno_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Elevadore(s):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicElevador_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:200px;border-bottom:none;'><strong>Cobertura(s)(m²):</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicCobert_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Ar Condicionado:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicArCondic_chr") & " </cite> " & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:180px;border-bottom:none;'><strong>Aquecimento:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAquecimento_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Fundações:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicFundacoes_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:170px;border-bottom:none;'><strong>Estrutura:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicEstrutura_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:190px;border-bottom:none;'><strong>Acabamento:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAcabamento_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='width:170px;border-bottom:none;'><strong>Fachada:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicFachada_chr") & " </cite>" & vbCrLf)
+
+                    sb.Append("</div>")
+
+                Else
+
+                    sb.Append("<div class='foto'>")
+                    sb.Append(" <br class='clear' />" & vbCrLf)
+
+                    If IsDBNull(ds.Tables(0).Rows(i).Item("obr_Foto_chr")) Then
+                        sb.Append("     <img src='imagens/condominio-05.jpg' style='float:right' width='220' height='140' />" & vbCrLf)
+                    ElseIf (ds.Tables(0).Rows(i).Item("obr_Foto_chr")) = "" Then
+                        sb.Append("     <img src='imagens/condominio-05.jpg' style='float:right' width='220' height='140' />" & vbCrLf)
+                    Else
+                        sb.Append("     <img src='imagens/relatorios_obras/" & ds.Tables(0).Rows(i).Item("obr_Foto_chr") & "' style='float:right' width='220' height='140' />" & vbCrLf)
+                    End If
+
+                    'If IsDBNull(ds.Tables(0).Rows(i).Item("obr_Foto_chr")) Then
+                    '   sb.Append("     <img src='imagens/condominio-05.jpg' style='float:right' width='250' height='160' />" & vbCrLf)
+                    'Else
+                    '   sb.Append("     <img src='" & ds.Tables(0).Rows(i).Item("obr_Foto_chr") & "' style='float:right' width='250' height='160' />" & vbCrLf)
+                    'End If
+                    sb.Append("</div>")
+
+                    sb.Append("<div class='BoxInfoAdic'>")
+
+                    sb.Append("<cite style='border-bottom:none;'>Informações Adicionais:</cite>" & vbCrLf)
+                    sb.Append("<br class='clear' />" & vbCrLf)
+
+                    'INÍCIO DE INFORMAÇÕES ADICIONAIS
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Ar Condicionado:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicArCondic_chr") & " </cite> " & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Aquecimento:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAquecimento_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Fundações:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicFundacoes_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Estrutura:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicEstrutura_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Acabamento:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicAcabamento_chr") & " </cite>" & vbCrLf)
+                    sb.Append(" <cite class='DadosObraInfoAdic' style='margin:0 0 2px 0;border-bottom:none;'><strong>Fachada:</strong> " & ds.Tables(0).Rows(i).Item("obr_DescInfoAdicFachada_chr") & " </cite>" & vbCrLf)
+
+                    sb.Append("</div>")
+
+                    'FIM DE INFORMAÇÕES ADICIONAIS
+
+                End If
+
+                sb.Append("</div>" & vbCrLf)
+                'FIM DE DIV DA OBRA
+
+
+                'INÍCIO DE CONTATOS DA OBRA
+                Dim ds2 As DataSet = pesq.RelatorioContatosObras(ds.Tables(0).Rows(i).Item("CODIGO"))
+                Dim j As Integer
+
+                If ds2.Tables.Count > 0 Then
+
+                    If ds2.Tables(0).Rows.Count > 0 Then
+
+                        'HEADER DE CONTATOS DA OBRA
+                        sb.Append("<div class='relatorio' style='margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 33px; background:#E1E1E1;width:679px;'>" & vbCrLf)
+
+                        'DIV CONTATOS OBRA
+
+                        sb.Append("<br class='clear' />" & vbCrLf)
+                        sb.Append("<br><br><br>" & vbCrLf)
+                        sb.Append("<div><strong class='FonteComercial'>CONTATOS DA OBRA</strong></div>" & vbCrLf)
+
+                        For j = 0 To ds2.Tables(0).Rows.Count - 1
+
+                            'sb.Append("     <div style='margin:0 0 0 0;padding:5px 0 0 0'>" & vbCrLf)
+
+                            sb.Append("<table cellpadding='0' border='0'>" & vbCrLf)
+                            sb.Append("<tr><td align=left nowrap width='60%'><font class='f8Rel' ><b> " & ds2.Tables(0).Rows(j).Item("DESCRICAOCARGO") & "</b>: " & ds2.Tables(0).Rows(j).Item("NOMECONTATO") & "</td>")
+                            sb.Append("<td align=left nowrap><b>Empresa</b>:  " & ds2.Tables(0).Rows(j).Item("FANTASIA") & "</td></tr>")
+
+                            sb.Append("								<tr><td width='50%' align=left nowrap><font class='f8Rel' >")
+                            If ds2.Tables(0).Rows(j).Item("TIPOTELEFONE1") > 0 Then
+                                If (ds2.Tables(0).Rows(j).Item("DDD") & "").Trim() <> "" And (ds2.Tables(0).Rows(j).Item("TELEFONE") & "").Trim() <> "" Then
+                                    Select Case ds2.Tables(0).Rows(j).Item("TIPOTELEFONE1")
+                                        Case 1
+                                            sb.Append("<b>Telefone:</b>")
+                                        Case 2
+                                            sb.Append("<b>Celular:</b>")
+                                        Case 3
+                                            sb.Append("<b>Fax:</b>")
+                                        Case 4
+                                            sb.Append("<b>PABX:</b>")
+                                        Case 5
+                                            sb.Append("<b>Obra:</b>")
+                                    End Select
+                                    sb.Append("(" & ds2.Tables(0).Rows(j).Item("DDD").Trim() & ") " & ds2.Tables(0).Rows(j).Item("TELEFONE").Trim() & "&nbsp;&nbsp;&nbsp;")
+                                Else
+                                    sb.Append("&nbsp;")
+                                End If
+                            Else
+                                sb.Append("&nbsp;")
+                            End If
+
+                            If ds2.Tables(0).Rows(j).Item("TIPOTELEFONE2") > 0 Then
+                                If (ds2.Tables(0).Rows(j).Item("DDDFAX") & "").Trim() <> "" And (ds2.Tables(0).Rows(j).Item("FAX") & "").Trim() <> "" Then
+                                    Select Case ds2.Tables(0).Rows(j).Item("TIPOTELEFONE2")
+                                        Case 1
+                                            sb.Append("<b>Telefone:</b>")
+                                        Case 2
+                                            sb.Append("<b>Celular:</b>")
+                                        Case 3
+                                            sb.Append("<b>Fax:</b>")
+                                        Case 4
+                                            sb.Append("<b>PABX:</b>")
+                                        Case 5
+                                            sb.Append("<b>Obra:</b>")
+                                    End Select
+                                    sb.Append("(" & ds2.Tables(0).Rows(j).Item("DDDFAX").Trim() & ") " & ds2.Tables(0).Rows(j).Item("FAX").Trim() & "&nbsp;&nbsp;&nbsp;")
+                                Else
+                                    sb.Append("&nbsp;")
+                                End If
+                            Else
+                                sb.Append("&nbsp;")
+                            End If
+                            If (ds2.Tables(0).Rows(j).Item("DDD2") & "").Trim() <> "" And (ds2.Tables(0).Rows(j).Item("TELEFONE2") & "").Trim() <> "" Then
+                                sb.Append("(" & ds2.Tables(0).Rows(j).Item("DDD2").Trim() & ") " & ds2.Tables(0).Rows(j).Item("TELEFONE2").Trim())
+                            End If
+
+                            sb.Append("</td><td>")
+
+                            sb.Append("<b>E-mail:</b><a class=f8Rel href='mailto:" & ds2.Tables(0).Rows(j).Item("EMAIL") & Chr(13) & "'><font class='f8Rel' > " & ds2.Tables(0).Rows(j).Item("EMAIL") & "</a>" & Chr(13))
+
+                            sb.Append("</td></tr></table>")
+
+                            'sb.Append("</div>" & vbCrLf)
+                            '
+                            If j = 3 Then Exit For 'apenas 4 empresas participantes
+
+                        Next
+
+                        sb.Append(" </div>" & vbCrLf)
+
+                    End If
+
+                End If
+
+        'FIM DE CONTATOS DA OBRA
+
+        'INÍCIO DE EMPRESAS PARTICIPANTES
+        Dim ds3 As DataSet = pesq.RelatorioEmpresasObras(ds.Tables(0).Rows(i).Item("CODIGO"))
+        ReDim strEmpresas(0)
+        ReDim strIdEmpresas(0)
+        Dim l As Integer
+        Dim p_Index As Integer = 0
+        If ds3.Tables.Count > 0 Then
+
+            For l = 0 To ds3.Tables(0).Rows.Count - 1
+
+                If l = 0 Or ViewState("Tipo") = 3 Then
+
+                    If l = 0 Then
+                        'HEADER DE EMPRESAS PARTICIPANTES
+                        sb.Append("<div class='relatorio' style='margin-left: 33px; background:#E1E1E1;width:679px;'><strong class='FonteComercial'>Empresas Participantes</strong></div>" & vbCrLf)
+
+                        'DIV EMPRESAS PARTICIPANTES
+                        sb.Append("<div class='relatorio' id='relatorioEmpresas' style='margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 33px; background:#E1E1E1;width:679px;'>" & vbCrLf)
+                    End If
+
+                End If
+
+                'INÍCIO DE DADOS DAS EMPRESAS PARTICIPANTES
+
+                If l = 0 Or ViewState("Tipo") = 3 Then
+
+                    'sb.Append("			    <li>" & vbCrLf)
+                    sb.Append("				<table  style='border:none'>" & vbCrLf)
+                    sb.Append("					<tr>" & vbCrLf)
+                    sb.Append("						<td align='center'>" & vbCrLf)
+
+                    sb.Append("							<table>" & vbCrLf)
+                    sb.Append("								<tr><td width='100%' align=left nowrap colspan=2><font class='f8Rel' ><b> " & ds3.Tables(0).Rows(l).Item("DESCRICAOMODALIDADE") & " - " & ds3.Tables(0).Rows(l).Item("RAZAOSOCIAL") & "</b></font></td></tr>" & vbCrLf)
+                    sb.Append("								<tr><td width='50%' align=left nowrap><font class='f8Rel' ><b>Nome Fantasia:</b> " & ds3.Tables(0).Rows(l).Item("FANTASIA") & "</font></td><td width=50% align=left nowrap><font class='f8Rel' ><b>ATIVIDADE:</b> " & ds3.Tables(0).Rows(l).Item("DESCRICAOATIVIDADE") & "</font></td></tr>" & vbCrLf)
+                    sb.Append("								<tr><td width='50%' align=left nowrap><font class='f8Rel' ><b>Endereço:</b> " & ds3.Tables(0).Rows(l).Item("ENDERECO") & "</font></td><td width=50% align=left nowrap><font class='f8Rel' ><b>Site:</b><a href='" & ds3.Tables(0).Rows(l).Item("SITE") & "' target='" & ds3.Tables(0).Rows(l).Item("SITE") & "'><font class='f8Rel' >" & ds3.Tables(0).Rows(l).Item("SITE") & "</font></a></td></tr>" & vbCrLf)
+                            sb.Append("								<tr><td width='50%' align=left nowrap><font class='f8Rel' ><b>Cidade:</b> " & ds3.Tables(0).Rows(l).Item("Cidade") & " <b>Estado:</b> " & ds3.Tables(0).Rows(l).Item("Estado") & " <b>Cep:</b> " & ds3.Tables(0).Rows(l).Item("CEP") & "</font></td><td width=50% align=left nowrap><font class='f8Rel' ><b>E-mail:</b></font><a class=f8Rel href='mailto:" & ds3.Tables(0).Rows(l).Item("EMAIL") & "'><font class='f8Rel' > " & ds3.Tables(0).Rows(l).Item("EMAIL") & "</font></a></td></tr>" & vbCrLf)
+                    sb.Append("								<tr><td width='50%' align=left nowrap><font class='f8Rel' ><b>Endereço Skype:</b> " & ds3.Tables(0).Rows(l).Item("SKYPE") & "</font></td><td width='50%' align=left nowrap><font class='f8Rel' ><b>E-mail Secundário:</b></font><a class='f8Rel' href='mailto:" & ds3.Tables(0).Rows(l).Item("EMAIL2") & "'><font class='f8Rel' > " & ds3.Tables(0).Rows(l).Item("EMAIL2") & "</font></a></td></tr>" & vbCrLf)
+                    sb.Append("							</table>" & vbCrLf)
+
+                Else
+
+                    p_Index += 1
+                    ReDim Preserve strEmpresas(p_Index)
+                    ReDim Preserve strIdEmpresas(p_Index)
+                    strEmpresas(p_Index) = ds3.Tables(0).Rows(l).Item("DESCRICAOMODALIDADE") & " - " & ds3.Tables(0).Rows(l).Item("FANTASIA")
+                    strIdEmpresas(p_Index) = "idobra=" & ds3.Tables(0).Rows(l).Item("IDOBRA") & "&idempresa=" & ds3.Tables(0).Rows(l).Item("IDEMPRESA") & "&idmodalidade=" & ds3.Tables(0).Rows(l).Item("IDMODALIDADE")
+                    'If l = 1 Then
+                    '    sb.Append("							<table width=100%>" & vbCrLf)
+                    '    sb.Append("								<tr>")
+                    'End If
+
+                    'sb.Append("								<td align=left nowrap><font class='f8Rel' ><b> " & ds3.Tables(0).Rows(l).Item("DESCRICAOMODALIDADE") & " - " & ds3.Tables(0).Rows(l).Item("FANTASIA") & "</b></font></td>" & vbCrLf)
+                    'If l Mod 2 = 0 And l > 1 Then
+                    '    sb.Append("								</tr>")
+                    'End If
+
+                End If
+
+                'FIM DE DADOS DAS EMPRESAS PARTICIPANTES
+
+                If l = 0 Or ViewState("Tipo") = 3 Then
+
+                    'INÍCIO DE CONTATOS EM EMPRESAS PARTICIPANTES
+                    Dim ds4 As DataSet = pesq.RelatorioContatosEmpresas(ds3.Tables(0).Rows(l).Item("IDEMPRESA"))
+                    Dim m As Integer
+                    If ds4.Tables.Count > 0 Then
+
+                        If ds4.Tables(0).Rows.Count > 0 Then
+                            sb.Append("				<table  border='0'>" & vbCrLf)
+                            For m = 0 To ds4.Tables(0).Rows.Count - 1
+
+                                sb.Append("					<tr><td width=50% align=left nowrap><font class='f8Rel' ><b>" & ds4.Tables(0).Rows(m).Item("DESCRICAOCARGO") & ":</b> " & ds4.Tables(0).Rows(m).Item("NOMECONTATO") & "</font></td><td width=10% align=left nowrap><font class='f8Rel' >")
+
+                                If (ds4.Tables(0).Rows(m).Item("DDD") & "").Trim() <> "" And (ds4.Tables(0).Rows(m).Item("TELEFONE") & "").Trim() <> "" Then
+                                    sb.Append("                 <b>Telefone:</b> (" & ds4.Tables(0).Rows(m).Item("DDD").Trim() & ") " & ds4.Tables(0).Rows(m).Item("TELEFONE").Trim())
+                                Else
+                                    sb.Append("                 &nbsp;")
+                                End If
+                                sb.Append("                     </font></td><td width=100% align=left nowrap><font class='f8Rel' >")
+                                If (ds4.Tables(0).Rows(m).Item("DDDFAX") & "").Trim() <> "" And (ds4.Tables(0).Rows(m).Item("FAX") & "").Trim() <> "" Then
+                                    sb.Append("                             <b>Fax:</b> (" & ds4.Tables(0).Rows(m).Item("DDDFAX").Trim() & ") " & ds4.Tables(0).Rows(m).Item("FAX").Trim() & "</font></td></tr>" & vbCrLf)
+                                Else
+                                    sb.Append("                             &nbsp;")
+                                End If
+
+                                If m = 2 Then Exit For 'apenas 3 contatos por empresa participante
+
+                            Next
+                            sb.Append("				</table>" & vbCrLf)
+                        End If
+
+                    End If
+
+                    sb.Append("						    </td>" & vbCrLf)
+                    sb.Append("					    </tr>" & vbCrLf)
+                    sb.Append("				    </table>" & vbCrLf)
+                    If ViewState("Tipo") <> 3 Then
+                        sb.Append("                 <img src='imagens/LinhaRelatorioObras.jpg' height='7' />")
+                    End If
+
+                End If
+
+                If ViewState("Tipo") = 3 Then
+                    sb.Append("                 <img src='imagens/LinhaRelatorioObras.jpg' height='7' />") 'Linha entre as empresas participantes.
+                Else
+                    If l = 6 Then Exit For 'apenas 6 empresas participantes
+                End If
+
+            Next
+
+            Dim jEmp As Integer = 0
+            sb.Append("							<table width=100%>" & vbCrLf)
+
+            For jEmp = 1 To UBound(strEmpresas)
+
+
+                If jEmp Mod 2 <> 0 Then
+                    sb.Append("								<tr>")
+                End If
+
+
+                sb.Append("								<td width=50% align=left nowrap><a href=""javascript:openPopUp('relatorioempresasparticipantes.aspx?auth=" & ViewState("Auth") & "&" & strIdEmpresas(jEmp) & "', 'RELOBRAS_EMP', '')"" class='f8Rel' alt='' border='0'>" & strEmpresas(jEmp) & "</a></td>" & vbCrLf)
+
+                If jEmp Mod 2 = 0 Then
+                    sb.Append("								</tr>")
+                End If
+
+            Next
+
+            If jEmp Mod 2 = 0 Then
+                sb.Append("								<td width=50% align=left nowrap>&nbsp;</td>" & vbCrLf)
+                sb.Append("								</tr>")
+            End If
+
+            sb.Append("							</table>" & vbCrLf)
+
+            'If l >= 1 Then sb.Append("							</table>" & vbCrLf)
+
+            'If ds3.Tables(0).Rows.Count > 0 Then
+            '    'sb.Append("         </ul>" & vbCrLf)
+            '    sb.Append("	    </div> " & vbCrLf)
+
+            'End If
+
+            sb.Append(" </div> " & vbCrLf) 'FIM DA DIV EMPRESAS PARTICIPANTES
+
+        End If
+        'FIM DE CONTATOS EM EMPRESAS PARTICIPANTES
+
+        'DIV RODAPÉ
+        sb.Append(" <div class='RodapeRelatorio' style='width:679px' padding-right: 0px; padding-left: 20px; margin-top: -1px; margin-right: 0px; margin-bottom: 20px; margin-left:33px;>")
+        sb.Append("     <p style='padding-top:-10px;text-align: center;'>www.itc.etc.br     -      E-mail: itc@itc.etc.br<br>")
+        sb.Append("     Rua Conselheiro Brotero, 589 - Sobreloja 2 - São Paulo - SP - CEP 01154-001 - Fone/Fax: (11)3527-7500</p>")
+        sb.Append(" </div> ")
+        'FIM DA DIV RODAPÉ
+
+        sb.Append("</div>" & vbCrLf) 'quebra de página
+
+            Next
+
+        End If
+
+        If Viewstate("Tipo") = 2 Then
+            sb.Append("				<div align=center>")
+            If Viewstate("Pagina") > 1 Then
+                sb.Append("		        <a href='RelatorioObras.aspx?T=" & Viewstate("Tipo") & "&O=" & ViewState("Obras") & "&P=" & Viewstate("Pagina") - 1 & "'><b>Anterior</b>&nbsp;&nbsp;</a>")
+            Else
+                sb.Append("				<b>Anterior</b>&nbsp;&nbsp;")
+            End If
+            If Viewstate("Pagina") < MaxPage Then
+                sb.Append("			    <a href='RelatorioObras.aspx?T=" & Viewstate("Tipo") & "&O=" & ViewState("Obras") & "&P=" & Viewstate("Pagina") + 1 & "'><b>Próxima</b>&nbsp;&nbsp;</a>")
+            Else
+                sb.Append("				<b>Próxima</b>&nbsp;&nbsp;")
+            End If
+            sb.Append("				</div>")
+        End If
+
+        sbMapsIf.Append("mapIndex += 1;" & vbCrLf & "}" & vbCrLf) 'fechando função callNextMap
+
+        sbMaps.Append(sbMapsIf.ToString())
+
+        sbMaps.Append("setDivCount(" & divCount & ")" & vbCrLf)
+        sbMaps.Append("fncLoadPageBreak()" & vbCrLf)
+        sbMaps.Append("callNextMap()" & vbCrLf)
+
+        sbMaps.Append("</script>")
+        sb.Append(sbMaps.ToString)
+
+        CodigoHTML.Text = sb.ToString
+
+        sbMapsIf = Nothing
+        sbMaps = Nothing
+
+    End Function
+
+End Class

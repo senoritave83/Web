@@ -1,0 +1,106 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XMVirtualFile
+</name>
+</assembly>
+<members>
+<member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.#ctor">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.SaveFileCompleted">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.FileExistsCompleted">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.CheckFileCompleted">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.DeleteCompleted">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.GetDirectAccessUrlCompleted">
+	<remarks/>
+</member><member name="E:XMSistemas.XMVirtualFile.XMFileServer.FileServer.OpenFileCompleted">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.SaveFile(System.String,System.Byte[])">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.SaveFileAsync(System.String,System.Byte[])">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.SaveFileAsync(System.String,System.Byte[],System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.FileExists(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.FileExistsAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.FileExistsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.CheckFile(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.CheckFileAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.CheckFileAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.Delete(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.DeleteAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.DeleteAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.GetDirectAccessUrl(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.GetDirectAccessUrlAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.GetDirectAccessUrlAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.OpenFile(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.OpenFileAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.OpenFileAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.XMVirtualFile.XMFileServer.FileServer.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.FileServer">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.SaveFileCompletedEventHandler">
+	<remarks/>
+</member><member name="P:XMSistemas.XMVirtualFile.XMFileServer.SaveFileCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.SaveFileCompletedEventArgs">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.FileExistsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:XMSistemas.XMVirtualFile.XMFileServer.FileExistsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.FileExistsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.CheckFileCompletedEventHandler">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.DeleteCompletedEventHandler">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.GetDirectAccessUrlCompletedEventHandler">
+	<remarks/>
+</member><member name="P:XMSistemas.XMVirtualFile.XMFileServer.GetDirectAccessUrlCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.GetDirectAccessUrlCompletedEventArgs">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.OpenFileCompletedEventHandler">
+	<remarks/>
+</member><member name="P:XMSistemas.XMVirtualFile.XMFileServer.OpenFileCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:XMSistemas.XMVirtualFile.XMFileServer.OpenFileCompletedEventArgs">
+	<remarks/>
+</member><member name="P:XMSistemas.XMVirtualFile.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:XMSistemas.XMVirtualFile.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:XMSistemas.XMVirtualFile.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

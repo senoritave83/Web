@@ -1,0 +1,292 @@
+/* INICIO - http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded 
+ZERANDO TODOS OS ATRIBUTOS */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,h7,blockquote,pre,a,abbr,acronym,address,big,cite,citedetalhes,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    outline: 0px;
+    font-weight:inherit;font-style:inherit;font-size:x-small;
+    font-family:inherit;vertical-align:baseline
+}
+
+:focus{outline:0px}
+ol,ul{list-style:none}
+caption,th,td{text-align:left;font-weight:normal}
+blockquote:before,blockquote:after,q:before,q:after{content:""}
+blockquote,q{quotes:"" ""}
+form{display:inline}
+legend{display:none}
+/*FIM*/
+
+/*SITE*/
+
+body{margin:0;padding:0;font-family:Arial,Verdana,Helvetica,sans-serif;font-size:11px;color:#464646}
+
+#Tudo{width:750px;position:relative;left:50%;margin-left:-375px;border:none;}
+
+.FloatLeft{float:left}
+.FloatRight{float:right}
+br.clear{clear:both;font-size:0;height:0;line-height:0;display:block}
+/*FIM SITE*/
+
+/*TOPO*/
+#Topo,#TopoRelatorio,#TopoResumo,#TopoRelatorioObra,#TopoRelatorioEmpresa,#TopoRelatorioAssociado{border-bottom:solid 1px #E1E1E1;margin:5px 0 10px 0}
+#Topo h1{height:163px;text-indent:-5000px;background:url(../img/topo.jpg) no-repeat top center}
+#Topo p{margin:5px 20px 5px 5px}
+
+/*
+#Topo ul{margin:5px 0;z-index:300}
+#Topo ul li{height:20px;background:url(../img/marcador_menu.gif) no-repeat top left #FFF;padding:0 0 0 35px;border-bottom:solid 1px #B7B7B6;display:block;float:left;width:90px;z-index:300}
+#Topo ul li a{font-size:12px;color:#555;line-height:25px;_line-height:20px;z-index:300}
+
+#Topo ul ul,#Topo ul ul ul,#Topo ul ul ul ul{display:none;margin:-4px 0 0 -35px;_position:absolute;_top:198px;_left:285px;z-index:300}
+#Topo ul li:hover ul ul,#Topo ul li:hover ul ul ul,#Topo ul li.iehover ul ul,#Topo ul li.iehover ul ul ul{display:none}
+#Topo ul li:hover ul,#Topo ul ul li:hover ul,#Topo ul ul ul li:hover ul,#Topo ul li.iehover ul,#Topo ul ul li.iehover ul,#Topo ul ul ul li.iehover ul{display:block;z-index:300}
+*/
+
+
+ul.menubar { margin: 0px; padding: 0px;   font-size: 100%;  } 
+ul.menubar .menuvertical {  margin: 0px; padding: 0px; list-style: none; float:left; padding:0 0 0 35px;border-bottom:solid 1px #B7B7B6; width:90px; background:url(../img/marcador_menu.gif) no-repeat top left #FFF; } 
+ul.menubar ul.menu { display: none; position: absolute; margin: 0px; } 
+ul.menubar a {padding:3px 0; display:block; text-decoration: none; color:#000; font-size:12px } 
+
+ul.menu, ul.menu ul { margin: 0; padding: 0; width:170px } 
+ul.menu li { position: relative; list-style: none;  }  
+ul.menu li a { display: block; text-decoration: none; background:url(../img/marcador_menu.gif) no-repeat top left #FFF; border-bottom:solid 1px #B7B7B6; padding:3px 0 3px 35px; width:100%; } 
+
+/* Fix IE. Hide from IE Mac \*/ 
+* html ul.menu li { float: left; height: 1%; } 
+* html ul.menu li a { height: 1%; } 
+/* End */ 
+
+ul.menu ul { position: absolute; display: none; left: 149px; /* Set 1px less than menu width */ top: 0px; } 
+ul.menu li.submenu ul { display: none; } /* Hide sub-menus initially */ 
+
+#TopoRelatorio{background:url(../img/topo_relatorios.jpg) no-repeat top center;height:120px}
+#TopoResumo{background:url(../img/topo_resumo.jpg) no-repeat top center;height:120px}
+#TopoRelatorioObra{background:url(../img/topo_sig_obras.jpg) no-repeat top center;height:120px}
+#TopoRelatorioEmpresa{background:url(../img/topo_sig_empresa.jpg) no-repeat top center;height:120px}
+#TopoRelatorioAssociado{background:url(../img/topo_sig_associado.jpg) no-repeat top center;height:120px}
+#TopoRelatorio p,#TopoResumo p,#TopoRelatorioObra p,#TopoRelatorioEmpresa p, #TopoRelatorioAssociado p{padding:105px 0 0 40px}
+/*FIM TOPO*/
+
+/*RODAPE*/
+#Rodape{background:#E1E1E1;margin:30px 0 0 0}
+#Rodape p{background:#E1E1E1;padding:3px 10px}
+
+#RodapeRelatorio{clear:both;margin:20px 30px}
+#RodapeRelatorio p{color:#EC6400;padding:10px 20px}
+#RodapeRelatorioITC{width:690px;}
+
+.RodapeRelatorio{clear:both;margin:0px 0px 20px 33px;width:678px}
+.RodapeRelatorio p{color:#EC6400;padding:10px 20px;}
+.RodapeRelatorioITC{ width:690px;}
+
+/*FIM RODAPE*/
+
+/*INTERNAS*/
+a{text-decoration:none}
+.BemVindo{font-size:18px;color:#EC6400;text-align:center;margin:15px}
+h3,.TableResultPesquisa tr.Tit,.novo_follow{font-size:14px;color:#EC6400;background:#EBEAE8;line-height:22px;font-weight:bold;padding:0 0 0 5px}
+.novo_follow{background:none;float:right}
+.novo_follow:hover{text-decoration:underline}
+
+
+.Caixa-Home{width:240px;_width:238px;border:solid 1px #EBEAE8;float:left;margin:8px 4px;min-height:300px;_height:300px;z-index:-300}
+.Caixa-Home ul,.Lista{margin:5px}
+.Caixa-Home ul li,.Lista li{border-bottom:solid 1px #E1E1E1}
+.Caixa-Home ul li img,.Lista li img{margin:0 0 -8px 0}
+.Caixa-Home ul li p,.Lista li p{margin:-8px 0 0 25px}
+.Caixa-Home ul li cite{float:right;display:block;font-style:normal}
+.Caixa-Home a,.Lista a{color:#464646}
+.Caixa-Home a:hover,.Lista a:hover{text-decoration:underline} 
+
+
+fieldset,#Relariorio-Box{background:#EBEAE8;padding:10px;margin:5px 0}
+fieldset label,#Relatorio-Form label,#Relariorio-Box label,.Labelmini,.ate,.cep{color:#363636;width:130px;text-align:right;padding:5px 8px 0 0;font-weight:bold;display:block;float:left}
+.Labelmini{width:90px}
+.ate,#Relatorio-Form label.ate{width:20px}
+.cep{width:60px}
+
+.inputG,.inputM,.inputP,.selectG,.selectP,.textG,.inputG2,.selectG2,.inputG3,.textP{height:18px;border:solid 1px #A1A1A1;margin:3px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px}
+.selectG,.selectP,.selectG2{height:22px}
+.inputG{width:230px}
+.inputG2,.selectG2{width:340px}
+.inputG3{width:270px}
+.inputM,.selectG{width:165px}
+.inputP,.selectP{width:100px}
+.textG{height:80px;width:658px}
+.textP{height:80px;width:350px}
+.select_pesquisa{border:solid 1px #A1A1A1;margin:10px 15px;font-family:Arial,Helvetica,sans-serif;font-size:12px;width:300px}
+.bt_pesquisa{cursor:pointer;margin:120px 0 0 0}
+.enter{margin:6px 0 -6px 0}
+
+#Paginacao{width:300px;*width:305px;position:relative;left:50%;margin-left:-150px}
+#Paginacao img{margin:0 3px}
+#Paginacao ul{float:left;margin:0 7px}
+#Paginacao ul li{display:inline;margin:0 4px}
+#Paginacao ul li a{color:#959595}
+#Paginacao ul li a:hover,#Paginacao ul li a.current{color:#EC6400;text-decoration:underline}
+
+
+#Relatorio-Form{float:left;margin:25px 40px 0 20px;padding:0 40px 0 0}
+#Relatorio-Form input{float:left}
+
+
+.TableRelatorio{margin:0px 0px 0px 50px}
+.TableRelatorio td{text-align:center;padding:20px 0 10px 0;}
+.TableRelatorio td.follow{text-align:left; border-bottom:solid 2px #959595;}
+.TableRelatorio tr.Tit{background:#707070;height:25px;line-height:25px;font-size:14px;color:#FFF}
+.TableRelatorio tr.Tit td{font-weight:bold;padding:0}
+
+.TableResultPesquisa tr.Tit td{font-weight:bold;padding:0;font-size:13px}
+
+h4{background:#EC6400;color:#FFF;font-size:14px;height:25px;float:left;line-height:25px;display:block;width:325px;padding:0 0 0 15px}
+.resumo,.relatorio{margin:0 0 6px 33px;padding:8px;width:678px}
+.resumo cite,.relatorio cite{border-bottom:solid 1px #CCC;display:block;float:left;width:289px;padding:0 0 0 10px}
+.resumo citedetalhes,.relatorio citedetalhes{border-bottom:solid 1px #CCC;display:block;float:left;width:658px;padding:0 0 0 5px}
+.resumo cite.peq{width:60px;padding:0}
+.relatorio a{color:#464646}
+.relatorio a:hover{text-decoration:underline}
+
+.relatorio cite{width:315px}
+.relatorio cite.subtit{width:648px;border:none;background:#EEE;color:#464646;font-size:12px;line-height:27px}
+.relatorio cite.meio{margin:0 0 10px 0}
+.relatorio_tit{width:669px;background:#E1E1E1;color:#464646;line-height:30px;padding:8px;margin-left:33;margin-right:35;margin-bottom:0px;margin-top:-px;}
+
+
+.FotoObra{position:absolute;right:45px}
+
+.Pesquisa-metade,.Pesquisa-metade02{width:369px;_width:367px;float:left;margin:0 3px}
+.Pesquisa-metade02{width:359px}
+
+
+.checkbox-pesquisa li{display:block;float:left;width:200px;padding:0 0 0 25px}
+
+.botoes-pesquisa p{float:left;display:block;width:200px;text-align:left;margin:0 0 0 35px;color:#000;font-weight:bold}
+.botoes-pesquisa input{margin:0 5px}
+
+#Lista-Follow{width:100%}
+#Lista-Follow td{padding:2px 5px}
+#Lista-Follow th{background:#999;padding:2px 5px;font-weight:bold;color:#FFF}
+.bt_follow{color:#000; font-weight:bold; background:url(../img/follow_marcador.gif) no-repeat left; padding:0 15px;}
+.bt_follow:hover{text-decoration:underline}
+
+.bt_follow_novo{color:#EC6400; font-size:12px; font-weight:bold; background:url(../img/follow_marcador.gif) no-repeat left; padding:0 15px;}
+.bt_follow_novo:hover{text-decoration:underline}
+
+.bt_relatorio_result{color:#EC6400; width:120px; font-size:12px; font-weight:bold; background:url(../img/follow_marcador.gif) no-repeat left; padding:0 15px;}
+.div_relatorioobras{width:750px;position:relative;left:50%;margin-left:-375px;border:1px solid black;}
+
+.Industrial{background-color: #D2F2FD;}
+.Comercial{background-color: #D8E369;}
+.Residencial{background-color: #FFDC64;}
+
+.FonteStatusSIG{color:#EC6400; font-size:13px; font-weight:bold; float:left}
+.FonteStatusSIG2{color:#EC6400; font-size:13px; font-weight:bold}
+
+.FonteIndustrial
+{
+	/*color: white;*/
+	text-transform:uppercase;
+	font-weight:400;
+	color: #0066CC;
+    font-weight:bolder;
+}
+.FonteComercial
+{
+	text-transform:uppercase;
+	font-weight:400;
+	color: #669933;
+	font-weight:bolder;
+}
+.FonteResidencial
+{
+	text-transform:uppercase;
+	font-weight:400;
+	color:#FF9933;
+	font-weight:bolder;
+}
+.DadosObra
+{
+	float:left;
+	width:330px;
+	padding:0px 0px 0px 10px;
+	margin:1px 1px 1px 1px;
+	border:none;
+}
+.DadosObra .meio
+{
+	margin:0px 0px 0px 0px;
+	padding-left:1px;
+	border:none;
+	width:325px;
+}
+.DadosObraDetalhes
+{
+	float:left;
+	width:658px;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-bottom:1px;
+	margin-left:5px;
+	border:none;
+	
+}
+.DadosObraInfoAdic
+{
+	margin:0 0 2px 0;
+	border:none;
+}
+.BoxInfoAdic
+{
+	float:left;
+	width:370px;
+	border:none;
+}
+.area_de_lazer
+{
+	background:#FFF;
+	float:left;
+	border:solid 1px #CCC;
+	padding:5px; 
+	width:400px; 
+	height:80px;
+	overflow:hidden
+
+}
+.area_de_lazer_bloco
+{
+	border:none;
+	width:100px; 
+	float:left;
+}
+.Foto
+{
+	border:none;
+	padding-top:0px;
+	float:right;
+	width:250px;
+}
+.Mapa
+{
+	float:right;
+	width:320px;	
+	height:180px;
+	
+}
+.FonteIndisponivel
+{
+ font-family:Arial;
+ font-size:medium;
+ font-weight:bold;
+ color:Black;
+}
+.FontIndisponivel_subtit
+
+{
+ font-family:Verdana;
+ font-size:x-small;
+ font-weight:bold;
+ }
+.GridIndisponivel{width:669px;background:#E1E1E1;line-height:30px;padding:19px;margin-left:400;margin-right:100;margin-bottom:0px;margin-top:85px;align:center;}
+/*FIM INTERNAS*/

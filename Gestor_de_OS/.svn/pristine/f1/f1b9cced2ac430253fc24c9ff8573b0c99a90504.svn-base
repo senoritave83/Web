@@ -1,0 +1,186 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="listaos.aspx.vb" Inherits="home_listaos" ValidateRequest='false' %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <meta http-equiv="refresh" content="5;URL=listaos.aspx?<%=me.GetQuery()%>"/>
+	<meta name="vs_defaultClientScript" content="JavaScript">
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<head runat="server">
+		<title>Equipe Online</title>
+		<script type='text/javascript'>
+
+		    var select = false;
+
+//			function refresh() {document.Form1.submit();}
+//			setTimeout('refresh();', 60000);			
+
+            function fncSelAll() {
+
+                select = !select;
+                var i = 0;
+                for (var i = 0; i < document.Form1.elements.length; i++) {
+                    var e = document.Form1.elements[i];
+                    if (e.type == 'checkbox' && e.id=='chkOS') {
+                        e.checked = select;
+                    }
+                }
+            }
+
+            function verificaSelecao() {
+
+                var i = 0;
+                var p_return = false;
+                for (var i = 0; i < document.Form1.elements.length; i++) {
+                    var e = document.Form1.elements[i];
+                    if (e.type == 'checkbox' && e.id == 'chkOS') {
+                        if (e.checked == true)
+                            p_return = true;
+                    }
+                }
+                
+                if(p_return==true)
+                    {
+                        p_return = confirm('Deseja realmente apagar as O.S selecionadas ?');
+                    }
+                else
+                    {
+                        alert('É necessário selecionar uma O.S. antes de clicar em\n"Apagar O.S selecionada"');
+                    }
+                return p_return;
+            }
+
+		</script>
+	</head>
+	<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" scroll="no" style=" width:98%*">
+	<form id="Form1" method="post" runat="server">
+    
+    <div style="height:310px;overflow:auto;">
+        <table id="dtgGrid" width="100%" border="0" cellpadding="0" cellspacing="0">
+            <asp:repeater runat='server' ID='rptHistorico' EnableViewState='<%$ Settings: visible, rptHistorico,"true" %>'>
+                <HeaderTemplate>
+                    <thead > 
+                        <tr class='Header1'> 
+                            <td colspan='8'>
+                                <strong>Lista de O.S.</strong>
+                            </td>
+                        </tr> 
+                        <tr> 
+                            <td class='Linha1' colspan='8'><img src="../images/transpa.gif" height="1" /></td>
+                        </tr>                
+                        <tr class="Header2"> 
+                        	<td style="width:23px;height:20px;"><input style='visibility:<%=IIF(IsAdmin(), "visible", "hidden")%>' type="checkbox" id="chkMarcarTodas" name="Marcar todas" alt="Marcar todas" onclick="javascript:fncSelAll();" align="right"></td>
+                            <td style="width:50px;height:20px; padding-right:5px; background-color:<%#IIf(ViewState("Sort") = "Numero","#ECEEE7","")%>;" >
+                                <a href='#' onclick="fncOrdenacao('Numero')"> 
+                                <asp:Literal runat="server" Text='<%$Settings: Caption, ListaDeOs.OS, "Numero" %>'> </asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Numero", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Numero", "1") %>'/>
+                            </td>
+                            <td style="height:20px; background-color:<%#IIf(ViewState("Sort") = "Cliente","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Cliente')">
+                                <asp:Literal runat="server" Text='<%$Settings: Caption, ListaDeOs.Cliente, "Cliente" %>'> </asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Cliente", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Cliente", "1") %>'/>
+                            </td>
+                            <td style="width:75px;height:20px; background-color:<%#IIf(ViewState("Sort") = "Enviada","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Enviada')">
+                                 <asp:Literal runat="server" Text='<%$Settings:Caption, ListaDeOs.Enviada, "Enviada" %>'></asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Enviada", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Enviada", "1") %>'/>
+                            </td>
+                            <td style="width:115px;height:20px; background-color:<%#IIf(ViewState("Sort") = "Responsavel","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Responsavel')">
+                                 <asp:Literal runat="server" Text='<%$Settings: Caption, ListaDeOs.Responsavel, "Responsavel" %>'></asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Responsavel", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Responsavel", "1") %>'/>
+                            </td>
+                            <td style="width:100px;height:20px; background-color:<%#IIf(ViewState("Sort") = "Status","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Status')">
+                                <asp:Literal runat="server" Text='<%$Settings:Caption, ListaDeOs.Status, "Status" %>'></asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Status", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Status", "1") %>'/>
+                            </td>
+                            <td style="width:115px;height:20px; background-color:<%#IIf(ViewState("Sort") = "Data","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Data')">
+                                 <asp:Literal runat="server" Text='<%$Settings:Caption, ListaDeOs.Data, "Data" %>'></asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Data", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Data", "1") %>'/>
+                            </td>
+                            <td style="width:80px;height:20px; background-color:<%#IIf(ViewState("Sort") = "Prioridade","#ECEEE7","")%>">
+                                <a href='#' onclick="fncOrdenacao('Prioridade')">
+                                  <asp:Literal runat="server" Text='<%$Settings: Caption, ListaDeOs.Prioridade, "Prioridade" %>'></asp:Literal></a>
+                                <img alt="Ordem Decrescente" src="../images/seta_baixo.gif" runat="server" visible='<%#HeaderRepeater("Prioridade", "0") %>'/>
+                                <img alt="Ordem Crescente" src="../images/seta_cima.gif" runat="server" visible='<%#HeaderRepeater("Prioridade", "1") %>'/>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                </HeaderTemplate>
+                <ItemTemplate>
+                        <tr class='griditem'> 
+                        	<td style="width:23px;height:20px; padding-left:10px;"><input style='visibility:<%=IIF(IsAdmin(), "visible", "hidden")%>' type="checkbox" align="right" name="chkOS" id="chkOS" value="<%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_int_PK")%>" /></td>
+                            <td style="width:50px;"><a href='ordemservico.aspx?idos=<%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_int_PK")%>' target="_top"><%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_chr")%></a></td>
+                            <td><%#Databinder.Eval(Container.DataItem,"cli_Cliente_chr")%></td>
+                            <td style="width:50px;"><%# Format(Databinder.Eval(Container.DataItem,"ors_Inclusao_dtm"),"dd/MM/yyyy")%></td>
+                            <td style="width:130px;"><%# Databinder.Eval(Container.DataItem,"rsp_Responsavel_chr")%></td>
+                            <td style="width:100px;" valign="Top">
+                                <table width=100%>
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" border=0 cellspacing="0" height="16" width="16" style="width:16px;height:16px;">
+                                                <tr>
+                                                    <td height="16" width="16" style='width:16px;height:16px;background-color:<%# DataBinder.Eval(Container.DataItem, "Color")%>'><img src='../images/bullet.gif' height=16 width=16 ></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width=100% class='cinza1'><%# DataBinder.Eval(Container.DataItem, "ors_Status_chr")%></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width:125px;"><%# Format(Databinder.Eval(Container.DataItem,"ors_Status_dtm"),"dd/MM/yyyy HH:mm")%></td>
+                            <td style="width:70px;"><%# DataBinder.Eval(Container.DataItem, "Prioridade")%></td>
+                        </tr> 
+                </ItemTemplate>
+                <AlternatingItemTemplate>
+                        <tr class='griditem'> 
+                        	<td style="width:23px;height:20px; padding-left:10px;"><input style='visibility:<%=IIF(IsAdmin(), "visible", "hidden")%>' type="checkbox" align="right" name="chkOS" id="chkOS" value="<%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_int_PK")%>" /></td>
+                            <td style="width:50px;"><a href='ordemservico.aspx?idos=<%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_int_PK")%>' target="_top"><%# Databinder.Eval(Container.DataItem,"ors_OrdemServico_chr")%></a></td>
+                            <td><%#Databinder.Eval(Container.DataItem,"cli_Cliente_chr")%></td>
+                            <td style="width:50px;"><%# Format(Databinder.Eval(Container.DataItem,"ors_Inclusao_dtm"),"dd/MM/yyyy")%></td>
+                            <td style="width:130px;"><%# Databinder.Eval(Container.DataItem,"rsp_Responsavel_chr")%></td>
+                            <td style="width:100px;" valign="Top">
+                                <table width=100%>
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" border=0 cellspacing="0" height="16" width="16" style="width:16px;height:16px;">
+                                                <tr>
+                                                    <td height="16" width="16" style='width:16px;height:16px;background-color:<%# DataBinder.Eval(Container.DataItem, "Color")%>'><img src='../images/bullet.gif' height=16 width=16 ></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width=100% class='cinza1'><%# DataBinder.Eval(Container.DataItem, "ors_Status_chr")%></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width:125px;"><%# Format(Databinder.Eval(Container.DataItem,"ors_Status_dtm"),"dd/MM/yyyy HH:mm")%></td>
+                            <td style="width:50px;"><%# DataBinder.Eval(Container.DataItem, "Prioridade")%></td>
+                        </tr> 
+                </AlternatingItemTemplate>
+                <FooterTemplate>
+                        <tr class="bgcinza1"> 
+                            <td colspan="8">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </FooterTemplate>
+            </asp:Repeater>
+        </table> 
+    </div>
+    <div>
+    <span class="apagar_os"><asp:LinkButton ID="hlkApagar" OnClientClick="return verificaSelecao();" CommandName="ApagarOS" runat="server" Text="Apagar O.S selecionada"></asp:LinkButton> </span>
+    	<div style="width:70%; float:right; padding-bottom:10px*;">
+			<xm:Paginate ID="Paginate1" runat="server" />
+    	</div>
+    </div>
+		</form>
+	</body>
+</HTML>

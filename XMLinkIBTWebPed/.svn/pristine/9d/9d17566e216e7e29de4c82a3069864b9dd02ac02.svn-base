@@ -1,0 +1,655 @@
+
+
+
+.Roteiro
+{
+	background-color:#6699cc;
+	padding:10px 10px 10px 10px;
+	height:200px;
+	color:Black;
+	font-weight:bold;
+	clear:both;
+}
+
+.Roteiro label
+{
+	color:Gray;
+}
+
+
+.LinkLimpar
+{
+	float:right;
+	color:#666666;
+	vertical-align:bottom;
+	margin-right:5px;
+}
+
+.Roteiro span
+{
+	float:left;
+	margin-left:5px;
+}
+
+
+.box
+{
+/*
+	border-color:Black;
+	border: solid 1px black;
+	float:left;
+	margin-right:2px;
+	padding: 5px 5px 5px 5px;
+	color:Black;
+*/
+	background-color:#6699cc;
+	border-color:#336699;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+	color:White;	
+}
+
+.box a
+{
+    color:White;
+}
+
+.box label
+{
+    color:White;
+}
+.box td
+{
+    color:White;
+}
+
+.box h4
+{
+    color:White;
+    font-weight:bold;
+}
+
+
+.PanelDia
+{
+	background-color:#D1DDF1;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+.PanelMes
+{
+	background-color:#EFF3FB;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+.PanelDiaSemana
+{
+	background-color:#DEE8F5;
+	height:180px;
+	width:33%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+}
+
+.LabelMensagem
+{
+    color:Red;
+    font-weight:bold;
+}
+
+.Teste
+{
+	background-color:#333333;
+}
+
+
+
+.VerRoteiro
+{
+	background-color:#6699cc;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+}
+
+.VerRoteiro table
+{
+	color:White;
+	width:95%;
+}
+
+
+.PaginateControl
+{
+	background-color:#White;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	width:95%;
+}
+
+#divLojasRoteiro 
+{
+	background-color:#6699cc;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divLojasRoteiro table
+{
+	/*background-color:White;*/
+}
+
+#divLojasRoteiro td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+
+#divLojasRoteiro #tdProcurar
+{
+	background-color:#DEE8F5;
+	width:33%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#tdProcurar input
+{
+	float:left;
+	vertical-align:middle;
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	margin-right:10px;
+	
+}
+
+#divLojasRoteiro #tdListaLoja
+{
+	background-color:#DEE8F5;
+	width:32%;
+	margin-right:2px;
+	vertical-align:top;
+	height:200px;
+}
+
+#tdListaLoja div
+{
+	height:300px;
+	overflow:auto;
+}
+
+.imgBtnAdd
+{
+	border:0;
+}
+
+/***************** TELA DE HORARIO DE FUNCIONAMENTO ****************/
+
+#tblAddHorario td
+{
+    color:White;
+    font-weight:bold;
+}
+
+
+/***************** BOX PESQUISA LISTA PRODUTOS *********************/
+#AdicionarProdutoPesquisa
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPesquisa
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:290px;
+}
+
+#AdicionarProdutoPesquisa table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPesquisa td
+{
+	width:33%;
+}
+#AdicionarProdutoPesquisa select
+{
+	width:90%;
+}
+#AdicionarProdutoPesquisa input
+{
+	float:right;
+}
+#AreaProdutoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPesquisa .ListaItens
+{
+	height:285px;
+}
+
+#AreaProdutoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:285px;
+}
+
+/***************** BOX PERGUNTA LISTA PRODUTOS *********************/
+
+#AreaRespostasPergunta
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:468px;
+}
+
+
+#AdicionarProdutoPergunta
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPergunta
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:468px;
+}
+
+#AdicionarProdutoPergunta table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPergunta td
+{
+	width:25%;
+}
+#AdicionarProdutoPergunta select
+{
+	width:90%;
+}
+#AdicionarProdutoPergunta input
+{
+	float:right;
+}
+#AreaProdutoPergunta h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPergunta .ListaItens
+{
+	height:335px;
+}
+
+#AreaProdutoPergunta .ListaItens div
+{
+	overflow:auto;
+	height:335px;
+}
+
+/***************** BOX PROMOTOR LISTA PRODUTOS *********************/
+
+
+#AdicionarProdutoPromotor
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPromotor
+{
+	width:100%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:268px;
+}
+
+#AdicionarProdutoPromotor table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPromotor td
+{
+	width:33%;
+}
+#AdicionarProdutoPromotor select
+{
+	width:90%;
+}
+#AdicionarProdutoPromotor input
+{
+	float:right;
+}
+#AreaProdutoPromotor h4
+{
+	margin-bottom:4px;
+}
+
+#AreaProdutoPromotor .ListaItens
+{
+	height:135px;
+}
+
+#AreaProdutoPromotor .ListaItens div
+{
+	overflow:auto;
+	height:135px;
+}
+
+
+/***************** BOX ADVPRICE LISTA PRODUTOS *********************/
+
+#ADVPriceAreaProdutos
+{
+	width:48%;
+	background-color:#6699cc; /*DEE8F5;*/
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	float:left;
+	margin-bottom:20px;
+	height:400px;	
+}
+
+#ADVPriceAreaClientes
+{
+	width:48%;
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	float:right;
+	margin-bottom:20px;
+	height:400px;	
+}
+
+#ADVPriceAreaClientes .botaoFiltrar
+{
+    width:50px;
+}
+
+#ADVPriceAreaClientes .ListaItens
+{
+	overflow:auto;
+	height:285px;
+}
+
+#ADVPriceAreaProdutos .ListaFiltro
+{
+    height:60px;
+}
+
+#ADVPriceAreaClientes .ListaFiltro
+{
+    height:60px;
+}
+
+
+#ADVPriceAreaProdutos .ListaFiltro input
+{
+    float:left;
+}
+
+#ADVPriceAreaProdutos .ListaFiltro select
+{
+    float:left;
+}
+
+
+#ADVPriceAreaProdutos .ListaItens
+{
+	overflow:auto;
+	height:325px;
+	background-color:#DEE8F5;
+}
+
+
+#ADVPriceAreaClientes .ListaItens
+{
+	overflow:auto;
+	height:325px;
+	background-color:#DEE8F5;
+}
+
+#ADVPriceAreaClientes h4
+{
+    float:left ;
+}
+
+/***************** BOX CLIENTE VENDEDOR *********************/
+#AdicionarVendedor
+{
+	background-color:#6699cc;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	height:40px;
+}
+
+
+#AdicionarVendedor h4
+{
+	margin-bottom:4px;
+}
+
+#AdicionarVendedor select
+{
+	float:left;
+}
+
+#AdicionarVendedor input
+{
+	float:left;
+}
+
+
+#ListaVendedores .ListaItens
+{
+	height:200px;
+}
+
+#ListaVendedores .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#RoteiroPeriodo
+{
+	width:100%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+}
+
+#RoteiroPeriodo h4
+{
+    color:White;
+}
+
+#RoteiroPeriodo table
+{
+    background-color:white;
+}
+
+#RoteiroPeriodo table td
+{
+    text-align:center;
+}
+
+
+.Roteiro_Dia
+{
+    background-color:white;
+    writing-mode: tb-rl; filter: flipH() flipV();
+}
+
+.Roteiro_Loja
+{
+    background-color:#DEE8F5;
+}
+
+.1Roteiro_lojaAlt
+{
+    /*background-color:#BED4DE;*/
+}
+
+.Roteiro_LojaDiaAlt
+{
+    background-color:#759EB3;
+    /*border: solid 1px black;*/
+    
+}
+
+#divTotal
+{
+    width:100%;
+    text-align:right;
+}
+
+.Roteiro_LojaDia
+{
+    background-color:#ACC1D1 /*97CBE6; 6D93A6; MUDAR*/ 
+    /*border: solid 1px black;*/
+}
+
+.Roteiro_DiaAlt
+{
+    background-color:#759EB3;
+    writing-mode: tb-rl; filter: flipH() flipV();
+    /*border: solid 1px black;*/
+    color:White;
+}
+
+.Roteiro_LojaHeader
+{
+    background-color:#759EB3;
+    color:White;
+    font-weight:bold;
+}

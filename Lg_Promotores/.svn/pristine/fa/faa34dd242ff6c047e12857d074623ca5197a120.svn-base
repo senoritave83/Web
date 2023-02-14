@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+<settings theme="itaipava" title="XMPromotores" reportspath="/xmpromotores/MeadJohnson" >
+  <ConfiguracoesGerais>
+    <PesquisaAmostragem visible="false"></PesquisaAmostragem>
+    <PerguntaCondicional visible="false"></PerguntaCondicional>
+    <ComponenteLocalizacao modo="BuscaAutomatica"></ComponenteLocalizacao>
+    <!--<ComponenteLocalizacao modo="Padrao"></ComponenteLocalizacao>-->
+  </ConfiguracoesGerais>
+  <ReportViewer visible="false">
+    <Relatorios>
+      <Relatorio Nome="Relatório Gráfico Preço Médio" NomeTela="Preço Médio de Produtos"></Relatorio>
+    </Relatorios>
+  </ReportViewer>
+  <Produto caption="Produto">
+      <Mensagens>
+        <Mensagem3 texto="No produto"></Mensagem3>
+        <Mensagem4 texto="Não há produtos com o filtro selecionado!"></Mensagem4>
+        <Mensagem5 texto="Atenção ! Alterando o produto para NÃO PESQUISADO ou NÃO ENCONTRADO as respostas das perguntas abaixo serão eliminadas."></Mensagem5>
+        <Mensagem6 texto="Atenção ! Alterando o produto para NÃO PESQUISADO ou NÃO ENCONTRADO as respostas das perguntas abaixo serão eliminadas.\n Deseja continuar ?"></Mensagem6>
+        <Mensagem7 texto="Produtos a serem pesquisados"></Mensagem7>
+        <Mensagem8 texto="Produtos pesquisados"></Mensagem8>
+        <Mensagem9 texto="Status do Produto"></Mensagem9>
+        <Mensagem10 texto="Não há produtos pesquisados nesta visita!"></Mensagem10>
+        <Mensagem11 texto="Produtos Concorrentes"></Mensagem11>
+      </Mensagens>
+      <PrecoMaximo required="false" visible="true" />
+      <PrecoMinimo required="false" />
+      <PrecoSugerido required="false" visible="true" />
+      <StatusPesquisa required="true" visible="true" />
+      <StatusComercio visible="true" />
+      <Frequencia visible="true" />
+      <Conversor visible="true" />
+      <Resolucao visible="true" />
+      <TamanhoTela visible="true" />
+      <CategoriaCombinada visible="true" />
+    </Produto>	
+    <Roteiro>
+	      <AdicionarPeriodo visible="false" />
+	      <AdicionarPadrao visible="true" />
+        <SemanaMes visible="true" />
+    </Roteiro>
+    <Cliente>
+      <Exportar visible="true" />
+      <EmptyRow caption="Não há clientes com o filtro selecionado!" />
+      <Fantasia caption="Nome Fantasia" />
+    </Cliente>
+    <Categoria>
+      <Exportar visible="true"/>
+    </Categoria>
+    <Classificacao>
+      <Exportar visible="true"/>
+    </Classificacao>
+     <SubCategoria>
+      <Exportar visible="true"/>
+    </SubCategoria>
+    <Pergunta>
+      <Exportar visible="true"/>
+      <MinMax visible="true"/>
+    </Pergunta>
+    <Pesquisa>
+      <Exportar visible="true"/>
+      <SegmentoLoja campoloja="CodigoLoja" />
+    </Pesquisa>
+    <Coordenadores>
+      <Exportar visible="true"/>
+      <BotaoGravar visible="true" />
+      <BotaoApagar visible="false" />
+      <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'" />
+      <BotaoNovo visible="true"  />
+      <FiltroCoordenador caption="Supervisor" />
+      <FiltroLider caption="Líder" />
+    </Coordenadores>
+    <Operadora>
+      <Exportar visible="true" />
+    </Operadora>
+    <TipoJustificativa>
+      <Exportar visible="true" />
+      <AplicarRuptura visible="true"/>
+    </TipoJustificativa>
+    <Regiao caption="Região">
+      <Mensagens>
+        <Mensagem5 texto="Região é um campo obrigatório"></Mensagem5>
+      </Mensagens>
+      <Exportar visible="true" />
+    </Regiao>
+    <Shopping>
+      <Exportar visible="true" />
+    </Shopping>
+    <TipoLoja>
+      <Exportar visible="true" />
+    </TipoLoja>
+    <Fornecedor caption="Marca" selecione="Selecione a marca...">
+      <Mensagens>
+        <Mensagem4 texto="Não há marcas com o filtro selecionado!"></Mensagem4>
+        <Mensagem5 texto="Marca é um campo obrigatório"></Mensagem5>
+      </Mensagens>
+      <Exportar visible="true" />
+    </Fornecedor>
+    <Lider>
+      <Exportar visible="true" />
+      <Foto visible="false" />
+      <BotaoGravar visible="true" />
+      <BotaoApagar visible="false" />
+      <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'" />
+      <BotaoNovo visible="true"  />
+      <FiltroCoordenador caption="Coordenador" />
+      <FiltroLider caption="Líder" />
+    </Lider>
+    <Mensagem>
+      <Exportar visible="true" />
+    </Mensagem>
+    <Promotor>
+      <Senha required="true" visible="true" />
+      <CPF validate="false" />
+      <Exportar visible="true"/>
+      <Foto visible="true" />
+      <Fax caption="Celular YesMobile" />
+      <BotaoGravar visible="false" />
+      <BotaoApagar visible="false" />
+      <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'"/>
+      <BotaoNovo visible="true" />
+      <FiltroCoordenador caption="Coordenador" />
+      <FiltroLider caption="Líder" />
+    </Promotor>
+    <Loja>
+      <Codigo codigoautomatico="true"  iscnpj="false" visible="true" required="false"  />
+      <CNPJ validate="false" ValidaCNPJ="true" IsCNPJ="false" visible="true" required="false" />
+      <Filial visible="true" required="false" />
+      <ClassificacaoLoja visible="true" required="false" />
+      <Tamanho visible="true" required="false" />
+      <TamanhoEletronicos visible="true" required="false" />
+      <ClassificacaoConsumo visible="true" required="false" />
+      <Operadora visible="true" required="false" />
+      <Segmento visible="true" required="false" />
+      <RazaoSocial visible="true" required="false" />
+      <GerenteConta visible="true" required="false" />
+      <Exportar visible="true" />
+      <Foto visible="false" />
+      <TipoLoja caption="Tipo de Loja"></TipoLoja>
+      <TipoCliente visible="true"></TipoCliente>
+      <IE required="false" />
+    </Loja>
+    <IsCNPJ loja.codigo="true">
+    </IsCNPJ>
+    <Visita excluir="false" Excluir="false">
+      <Localizacao visible="true" />
+      <Loja alterar="true" />
+      <Exportar visible="true" />
+    </Visita>
+  <Relatorios>
+    <DescricaoBandeira nomebandeira="Revenda"></DescricaoBandeira>
+  </Relatorios>
+  <ExportarDados>
+    <Exportacao qtdemaximadias="0"></Exportacao>
+  </ExportarDados>
+  <Usuario>
+    <Permissoes travarpermissoesusuario="|5|7|9|"></Permissoes>
+    <Exportar visible="true" />
+  </Usuario>
+</settings>

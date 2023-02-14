@@ -1,0 +1,3538 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Web"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{F0B2C6E3-0F06-44CD-BB85-451AFC39DF67}"
+        SccProjectName = "SAK"
+        SccLocalPath = "SAK"
+        SccAuxPath = "SAK"
+        SccProvider = "SAK"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "ITC"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "ITC"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Web.Services.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Configuration" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Web" />
+                <Import Namespace = "System.Web.UI" />
+                <Import Namespace = "System.Web.UI.HtmlControls" />
+                <Import Namespace = "System.Web.UI.WebControls" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AnaliseMensal.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AnaliseMensal.aspx.vb"
+                    DependentUpon = "AnaliseMensal.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AnaliseMensal.aspx.resx"
+                    DependentUpon = "AnaliseMensal.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AnaliseMensalDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AnaliseMensalDet.aspx.vb"
+                    DependentUpon = "AnaliseMensalDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AnaliseMensalDet.aspx.resx"
+                    DependentUpon = "AnaliseMensalDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ApresentacaoEmpresa.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ApresentacaoEmpresa.aspx.resx"
+                    DependentUpon = "ApresentacaoEmpresa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Associados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Associados.aspx.vb"
+                    DependentUpon = "Associados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Associados.aspx.resx"
+                    DependentUpon = "Associados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssociadosDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssociadosDet.aspx.vb"
+                    DependentUpon = "AssociadosDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssociadosDet.aspx.resx"
+                    DependentUpon = "AssociadosDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssociadosTiposRegioes.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssociadosTiposRegioes.aspx.vb"
+                    DependentUpon = "AssociadosTiposRegioes.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssociadosTiposRegioes.aspx.resx"
+                    DependentUpon = "AssociadosTiposRegioes.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Associar.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Associar.aspx.resx"
+                    DependentUpon = "Associar.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CadastreSuaEmpresa.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CadastreSuaEmpresa.aspx.resx"
+                    DependentUpon = "CadastreSuaEmpresa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CadastreSuaObra.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CadastreSuaObra.aspx.resx"
+                    DependentUpon = "CadastreSuaObra.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Cidades.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "comuns.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ContatoAssociados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ContatoAssociados.aspx.vb"
+                    DependentUpon = "ContatoAssociados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContatoAssociados.aspx.resx"
+                    DependentUpon = "ContatoAssociados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ContatosEmpresas.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ContatosEmpresas.aspx.vb"
+                    DependentUpon = "ContatosEmpresas.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContatosEmpresas.aspx.resx"
+                    DependentUpon = "ContatosEmpresas.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ContatosObras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ContatosObras.aspx.vb"
+                    DependentUpon = "ContatosObras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContatosObras.aspx.resx"
+                    DependentUpon = "ContatosObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleAssociados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleAssociados.aspx.vb"
+                    DependentUpon = "ControleAssociados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleAssociados.aspx.resx"
+                    DependentUpon = "ControleAssociados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleAssociadosAcesso.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleAssociadosAcesso.aspx.vb"
+                    DependentUpon = "ControleAssociadosAcesso.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleAssociadosAcesso.aspx.resx"
+                    DependentUpon = "ControleAssociadosAcesso.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleAssociadosDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleAssociadosDet.aspx.vb"
+                    DependentUpon = "ControleAssociadosDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleAssociadosDet.aspx.resx"
+                    DependentUpon = "ControleAssociadosDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleUsuarios.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleUsuarios.aspx.vb"
+                    DependentUpon = "ControleUsuarios.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleUsuarios.aspx.resx"
+                    DependentUpon = "ControleUsuarios.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleUsuariosDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleUsuariosDet.aspx.vb"
+                    DependentUpon = "ControleUsuariosDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleUsuariosDet.aspx.resx"
+                    DependentUpon = "ControleUsuariosDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleVendEmp.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleVendEmp.aspx.vb"
+                    DependentUpon = "ControleVendEmp.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleVendEmp.aspx.resx"
+                    DependentUpon = "ControleVendEmp.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleVendEmpDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleVendEmpDet.aspx.vb"
+                    DependentUpon = "ControleVendEmpDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleVendEmpDet.aspx.resx"
+                    DependentUpon = "ControleVendEmpDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleVendObr.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleVendObr.aspx.vb"
+                    DependentUpon = "ControleVendObr.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleVendObr.aspx.resx"
+                    DependentUpon = "ControleVendObr.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ControleVendObrDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ControleVendObrDet.aspx.vb"
+                    DependentUpon = "ControleVendObrDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ControleVendObrDet.aspx.resx"
+                    DependentUpon = "ControleVendObrDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CUB.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CUB.aspx.resx"
+                    DependentUpon = "CUB.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CUBCad.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CUBCad.aspx.vb"
+                    DependentUpon = "CUBCad.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CUBCad.aspx.resx"
+                    DependentUpon = "CUBCad.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CUBCadDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CUBCadDet.aspx.vb"
+                    DependentUpon = "CUBCadDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CUBCadDet.aspx.resx"
+                    DependentUpon = "CUBCadDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "CUBDet.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CUBDet.aspx.resx"
+                    DependentUpon = "CUBDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "default2.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "default2.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "default2.aspx.vb"
+                    DependentUpon = "default2.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "default2.aspx.resx"
+                    DependentUpon = "default2.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "default_manut.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "default2.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Demonstracao1.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Demonstracao1.aspx.resx"
+                    DependentUpon = "Demonstracao1.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Demonstracao2.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Demonstracao2.aspx.resx"
+                    DependentUpon = "Demonstracao2.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Dicas.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Dicas.aspx.vb"
+                    DependentUpon = "Dicas.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Dicas.aspx.resx"
+                    DependentUpon = "Dicas.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DicasDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DicasDet.aspx.vb"
+                    DependentUpon = "DicasDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DicasDet.aspx.resx"
+                    DependentUpon = "DicasDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EmDesenvolvimento.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EmDesenvolvimento.aspx.resx"
+                    DependentUpon = "EmDesenvolvimento.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EmpresaObras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EmpresaObras.aspx.vb"
+                    DependentUpon = "EmpresaObras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EmpresaObras.aspx.resx"
+                    DependentUpon = "EmpresaObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Empresas.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Empresas.aspx.vb"
+                    DependentUpon = "Empresas.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Empresas.aspx.resx"
+                    DependentUpon = "Empresas.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EmpresasDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EmpresasDet.aspx.vb"
+                    DependentUpon = "EmpresasDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EmpresasDet.aspx.resx"
+                    DependentUpon = "EmpresasDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EmpresasVersao.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EmpresasVersao.aspx.resx"
+                    DependentUpon = "EmpresasVersao.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ErrorPage.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ErrorPage.aspx.vb"
+                    DependentUpon = "ErrorPage.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ErrorPage.aspx.resx"
+                    DependentUpon = "ErrorPage.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Eventos.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Eventos.aspx.resx"
+                    DependentUpon = "Eventos.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EventosCad.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EventosCad.aspx.vb"
+                    DependentUpon = "EventosCad.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EventosCad.aspx.resx"
+                    DependentUpon = "EventosCad.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "EventosCadDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "EventosCadDet.aspx.vb"
+                    DependentUpon = "EventosCadDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EventosCadDet.aspx.resx"
+                    DependentUpon = "EventosCadDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpAssoc.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpAssoc.aspx.vb"
+                    DependentUpon = "FollowUpAssoc.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpAssoc.aspx.resx"
+                    DependentUpon = "FollowUpAssoc.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpAssocDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpAssocDet.aspx.vb"
+                    DependentUpon = "FollowUpAssocDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpAssocDet.aspx.resx"
+                    DependentUpon = "FollowUpAssocDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpAssocDetMini.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpAssocDetMini.aspx.vb"
+                    DependentUpon = "FollowUpAssocDetMini.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpAssocDetMini.aspx.resx"
+                    DependentUpon = "FollowUpAssocDetMini.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpAssocList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpAssocList.aspx.vb"
+                    DependentUpon = "FollowUpAssocList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpAssocList.aspx.resx"
+                    DependentUpon = "FollowUpAssocList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowupEmpDetMini.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowupEmpDetMini.aspx.vb"
+                    DependentUpon = "FollowupEmpDetMini.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowupEmpDetMini.aspx.resx"
+                    DependentUpon = "FollowupEmpDetMini.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpEmpresa.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpEmpresa.aspx.vb"
+                    DependentUpon = "FollowUpEmpresa.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpEmpresa.aspx.resx"
+                    DependentUpon = "FollowUpEmpresa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaDet.aspx.vb"
+                    DependentUpon = "FollowUpEmpresaDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaDet.aspx.resx"
+                    DependentUpon = "FollowUpEmpresaDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaList.aspx.vb"
+                    DependentUpon = "FollowUpEmpresaList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpEmpresaList.aspx.resx"
+                    DependentUpon = "FollowUpEmpresaList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpObra.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpObra.aspx.vb"
+                    DependentUpon = "FollowUpObra.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpObra.aspx.resx"
+                    DependentUpon = "FollowUpObra.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpObraDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpObraDet.aspx.vb"
+                    DependentUpon = "FollowUpObraDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpObraDet.aspx.resx"
+                    DependentUpon = "FollowUpObraDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowupObraDetMini.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowupObraDetMini.aspx.vb"
+                    DependentUpon = "FollowupObraDetMini.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowupObraDetMini.aspx.resx"
+                    DependentUpon = "FollowupObraDetMini.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FollowUpObraList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FollowUpObraList.aspx.vb"
+                    DependentUpon = "FollowUpObraList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FollowUpObraList.aspx.resx"
+                    DependentUpon = "FollowUpObraList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "functions.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "functions1.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Global.asax"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Global.asax.vb"
+                    DependentUpon = "Global.asax"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Global.asax.resx"
+                    DependentUpon = "Global.asax.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "gravado.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "gravado.aspx.vb"
+                    DependentUpon = "gravado.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "gravado.aspx.resx"
+                    DependentUpon = "gravado.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Grupo.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Grupo.aspx.vb"
+                    DependentUpon = "Grupo.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Grupo.aspx.resx"
+                    DependentUpon = "Grupo.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "GrupoDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "GrupoDet.aspx.vb"
+                    DependentUpon = "GrupoDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GrupoDet.aspx.resx"
+                    DependentUpon = "GrupoDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "GuiaFornecedores.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GuiaFornecedores.aspx.resx"
+                    DependentUpon = "GuiaFornecedores.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "GuiaFornecedoresDet.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GuiaFornecedoresDet.aspx.resx"
+                    DependentUpon = "GuiaFornecedoresDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "GuiaFornecedoresTeste.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GuiaFornecedoresTeste.aspx.resx"
+                    DependentUpon = "GuiaFornecedoresTeste.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Home.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Home.aspx.vb"
+                    DependentUpon = "Home.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Home.aspx.resx"
+                    DependentUpon = "Home.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Imagem.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Imagem.aspx.resx"
+                    DependentUpon = "Imagem.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "IndicesITC.aspx.resx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "IndicesITC.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "IndicesITCCad.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "IndicesITCCad.aspx.vb"
+                    DependentUpon = "IndicesITCCad.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "IndicesITCCad.aspx.resx"
+                    DependentUpon = "IndicesITCCad.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Intro.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ITC.vsdisco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "ITC_Styles.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ITC_Styles1.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "JobEmail.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "JobEmail.aspx.resx"
+                    DependentUpon = "JobEmail.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "jsDate.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Login.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Login.aspx.vb"
+                    DependentUpon = "Login.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Login.aspx.resx"
+                    DependentUpon = "Login.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "loginITC2.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Logout.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Logout.aspx.vb"
+                    DependentUpon = "Logout.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Logout.aspx.resx"
+                    DependentUpon = "Logout.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "logusuarios.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "logusuarios.aspx.vb"
+                    DependentUpon = "logusuarios.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "logusuarios.aspx.resx"
+                    DependentUpon = "logusuarios.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "MudaSenha.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MudaSenha.aspx.vb"
+                    DependentUpon = "MudaSenha.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MudaSenha.aspx.resx"
+                    DependentUpon = "MudaSenha.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Noticias.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Noticias.aspx.resx"
+                    DependentUpon = "Noticias.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NoticiasCad.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "NoticiasCad.aspx.vb"
+                    DependentUpon = "NoticiasCad.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NoticiasCad.aspx.resx"
+                    DependentUpon = "NoticiasCad.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NoticiasCadDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "NoticiasCadDet.aspx.vb"
+                    DependentUpon = "NoticiasCadDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NoticiasCadDet.aspx.resx"
+                    DependentUpon = "NoticiasCadDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "NoticiasDet.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NoticiasDet.aspx.resx"
+                    DependentUpon = "NoticiasDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Obras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Obras.aspx.vb"
+                    DependentUpon = "Obras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Obras.aspx.resx"
+                    DependentUpon = "Obras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ObrasBrasil.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ObrasBrasil.aspx.resx"
+                    DependentUpon = "ObrasBrasil.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ObrasDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ObrasDet.aspx.vb"
+                    DependentUpon = "ObrasDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ObrasDet.aspx.resx"
+                    DependentUpon = "ObrasDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaAssociados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaAssociados.aspx.vb"
+                    DependentUpon = "PesquisaAssociados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaAssociados.aspx.resx"
+                    DependentUpon = "PesquisaAssociados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaEmpresas.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaEmpresas.aspx.vb"
+                    DependentUpon = "PesquisaEmpresas.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaEmpresas.aspx.resx"
+                    DependentUpon = "PesquisaEmpresas.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaObraD.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaObraD.aspx.vb"
+                    DependentUpon = "PesquisaObraD.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaObraD.aspx.resx"
+                    DependentUpon = "PesquisaObraD.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaObras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaObras.aspx.vb"
+                    DependentUpon = "PesquisaObras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaObras.aspx.resx"
+                    DependentUpon = "PesquisaObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaObrasDemo.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaObrasDemo.aspx.vb"
+                    DependentUpon = "PesquisaObrasDemo.aspx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaObrasDemo.resx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaTabelaAtividadesEmpresa.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaTabelaAtividadesEmpresa.aspx.vb"
+                    DependentUpon = "PesquisaTabelaAtividadesEmpresa.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaTabelaAtividadesEmpresa.aspx.resx"
+                    DependentUpon = "PesquisaTabelaAtividadesEmpresa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisaTabelasFases.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisaTabelasFases.aspx.vb"
+                    DependentUpon = "PesquisaTabelasFases.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisaTabelasFases.aspx.resx"
+                    DependentUpon = "PesquisaTabelasFases.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "PesquisatTabelaTipoObras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PesquisatTabelaTipoObras.aspx.vb"
+                    DependentUpon = "PesquisatTabelaTipoObras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PesquisatTabelaTipoObras.aspx.resx"
+                    DependentUpon = "PesquisatTabelaTipoObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Populate_Data.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Populate_Data.aspx.vb"
+                    DependentUpon = "Populate_Data.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Populate_Data.aspx.resx"
+                    DependentUpon = "Populate_Data.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ProcurarEmpresa.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ProcurarEmpresa.aspx.resx"
+                    DependentUpon = "ProcurarEmpresa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ProcurarEmpresaContato.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ProcurarEmpresaContato.aspx.resx"
+                    DependentUpon = "ProcurarEmpresaContato.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Produtos.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Produtos.aspx.vb"
+                    DependentUpon = "Produtos.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Produtos.aspx.resx"
+                    DependentUpon = "Produtos.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ProdutosAssociados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ProdutosAssociados.aspx.vb"
+                    DependentUpon = "ProdutosAssociados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ProdutosAssociados.aspx.resx"
+                    DependentUpon = "ProdutosAssociados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ProdutosDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ProdutosDet.aspx.vb"
+                    DependentUpon = "ProdutosDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ProdutosDet.aspx.resx"
+                    DependentUpon = "ProdutosDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioAssociados.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioAssociados.aspx.vb"
+                    DependentUpon = "RelatorioAssociados.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioAssociados.aspx.resx"
+                    DependentUpon = "RelatorioAssociados.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioAssociadosResumo.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioAssociadosResumo.aspx.vb"
+                    DependentUpon = "RelatorioAssociadosResumo.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioAssociadosResumo.aspx.resx"
+                    DependentUpon = "RelatorioAssociadosResumo.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioEmpExportar.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioEmpExportar.aspx.vb"
+                    DependentUpon = "RelatorioEmpExportar.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioEmpExportar.aspx.resx"
+                    DependentUpon = "RelatorioEmpExportar.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioEmpresas.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioEmpresas.aspx.vb"
+                    DependentUpon = "RelatorioEmpresas.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioEmpresas.aspx.resx"
+                    DependentUpon = "RelatorioEmpresas.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioEmpresasParticipantes.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioEmpresasParticipantes.aspx.vb"
+                    DependentUpon = "RelatorioEmpresasParticipantes.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioEmpresasParticipantes.aspx.resx"
+                    DependentUpon = "RelatorioEmpresasParticipantes.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioFollowUp.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioFollowUp.aspx.resx"
+                    DependentUpon = "RelatorioFollowUp.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioObraExportar.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioObraExportar.aspx.vb"
+                    DependentUpon = "RelatorioObraExportar.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioObraExportar.aspx.resx"
+                    DependentUpon = "RelatorioObraExportar.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioObras.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioObras.aspx.vb"
+                    DependentUpon = "RelatorioObras.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioObras.aspx.resx"
+                    DependentUpon = "RelatorioObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioObrasD.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioObrasD.aspx.vb"
+                    DependentUpon = "RelatorioObrasD.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioObrasD.aspx.resx"
+                    DependentUpon = "RelatorioObrasD.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumo.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumo.aspx.vb"
+                    DependentUpon = "RelatorioObrasResumo.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumo.aspx.resx"
+                    DependentUpon = "RelatorioObrasResumo.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumoD.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumoD.aspx.vb"
+                    DependentUpon = "RelatorioObrasResumoD.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelatorioObrasResumoD.aspx.resx"
+                    DependentUpon = "RelatorioObrasResumoD.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFAss.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFAss.aspx.vb"
+                    DependentUpon = "RelFAss.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFAss.aspx.resx"
+                    DependentUpon = "RelFAss.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFAssDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFAssDet.aspx.vb"
+                    DependentUpon = "RelFAssDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFAssDet.aspx.resx"
+                    DependentUpon = "RelFAssDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFEmp.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFEmp.aspx.vb"
+                    DependentUpon = "RelFEmp.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFEmp.aspx.resx"
+                    DependentUpon = "RelFEmp.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFEmpDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFEmpDet.aspx.vb"
+                    DependentUpon = "RelFEmpDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFEmpDet.aspx.resx"
+                    DependentUpon = "RelFEmpDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFObr.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFObr.aspx.vb"
+                    DependentUpon = "RelFObr.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFObr.aspx.resx"
+                    DependentUpon = "RelFObr.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RelFObrDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RelFObrDet.aspx.vb"
+                    DependentUpon = "RelFObrDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RelFObrDet.aspx.resx"
+                    DependentUpon = "RelFObrDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SaibaMais.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SaibaMais.aspx.vb"
+                    DependentUpon = "SaibaMais.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SaibaMais.aspx.resx"
+                    DependentUpon = "SaibaMais.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SaibaMaisDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SaibaMaisDet.aspx.vb"
+                    DependentUpon = "SaibaMaisDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SaibaMaisDet.aspx.resx"
+                    DependentUpon = "SaibaMaisDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SalvaPesquisa.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SalvaPesquisa.aspx.resx"
+                    DependentUpon = "SalvaPesquisa.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SalvaPesquisaEmp.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SalvaPesquisaEmp.aspx.resx"
+                    DependentUpon = "SalvaPesquisaEmp.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SelecionaImagem.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SelecionaImagem.aspx.resx"
+                    DependentUpon = "SelecionaImagem.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Styles.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SubSenha.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SubSenha.aspx.resx"
+                    DependentUpon = "SubSenha.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "TiposdeObras.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TiposdeObras.aspx.resx"
+                    DependentUpon = "TiposdeObras.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "topo.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsuarioPermissao.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UsuarioPermissao.aspx.resx"
+                    DependentUpon = "UsuarioPermissao.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Usuarios.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Usuarios.aspx.resx"
+                    DependentUpon = "Usuarios.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "UsuariosDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsuariosDet.aspx.vb"
+                    DependentUpon = "UsuariosDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UsuariosDet.aspx.resx"
+                    DependentUpon = "UsuariosDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "UsuariosSistema.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsuariosSistema.aspx.vb"
+                    DependentUpon = "UsuariosSistema.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UsuariosSistema.aspx.resx"
+                    DependentUpon = "UsuariosSistema.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "UsuariosSistemaDet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UsuariosSistemaDet.aspx.vb"
+                    DependentUpon = "UsuariosSistemaDet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UsuariosSistemaDet.aspx.resx"
+                    DependentUpon = "UsuariosSistemaDet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "WebForm2.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "WebForm2.aspx.resx"
+                    DependentUpon = "WebForm2.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "xm_post.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "XMChartGenerator.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "XMChartGenerator.aspx.resx"
+                    DependentUpon = "XMChartGenerator.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "xmlAutenticacaoUsuarios2.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "XMLConfig.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "XMWeb.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "bin\ICSharpCode.SharpZipLib.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\ITC.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\ITC.pdb"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\XMSISTEMAS.PDF.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\XMSISTEMAS.PDF.pdb"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\XMSISTEMAS.PDF.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "css\global.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "css\layout.css"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "Demo\" />
+                <File
+                    RelPath = "ExtrasItc\testedica.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\arrow-left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\arrow-right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\arrow-right2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\banner_cotacao_online.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\banner1.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\bannermbigucci.swf"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\barra.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BarraTituloITC.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\bolalaranja.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\bolaverde.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_demo1.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_demo2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_demo3.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_demo4.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_1.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_3.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_4.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_direita.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_direita2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_esquerda.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\borda_login_esquerda2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoAdicionarEmpresa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoApagar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoAtualizarPermissoes.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoBarra.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoBarra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoBarra2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoBuscar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoConsultarFollowUp.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoDadosAssinatura.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\botaoDesativar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoDireita.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\botaoeditar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoEditarProdutos.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoEnviar.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoEsquerda.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoExcluirPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoExportarPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoGravar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoGravar.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoHome.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoLimparPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoNovaPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoNovoContato.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Botaonovofollowup.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoNovoUsuario.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoOK.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoPaginaAnterior.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoPermissoesUsuario.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoPesquisar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoPrimeiraPagina.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoProximaPagina.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoRedefinirSenha.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoRenovarSenha.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoSalvarAssinatura.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoSalvarPermissoes.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoSalvarPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoUltimaPagina.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoVisualizarPesquisa.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\botaoVisualizarRelatorio.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoVisualizarResumo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\BotaoVoltar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\canto.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\canto_bn2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\cantomenusd.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\cantomenuse.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CasasBahia.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Checked.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CimentoCaue.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CLOSE.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CSN.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CSN_Peq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CSN2.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Cursos.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Cursos_Eventos.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Cursos_Eventos2.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\CursosEventos.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\d.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Demonstracao.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Demonstracao2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Eliane.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Excluir.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\FotoBloco1.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\FotoBloco1Peq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\fotocap.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\fototorrerepar.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\fototorrerepar_peq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Grafico.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\i_flash2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ImagemCadastros.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ImagemManutencaoDados.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ImagemPesquisas.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ImagemRelatorios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ImagemSair.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\INVISIVEL.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\itc_fundo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\itc_fundo2.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\itc_fundo3.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ITC1.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Lafarge.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\linha_cinza.GIF"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\linha_preta.GIF"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\linha_vermelha.GIF"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\link.html"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_aabic.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_janiking.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_matias.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Logo_MBigucci.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Logo_MBigucci_Peq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_mundial.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_net.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_otis.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_planeta.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logo_vtonline.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logoedit.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logoinst.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\logoitc.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITC.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITC1.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITC2.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITCNet.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITCNet2.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoItcNet3.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITCNET3D.png"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\LogoITCRelatorio.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\pdc2003_banner.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\PiazzaDellaFortezza.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\PiazzaDellaFortezzaPeq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\pixel_transparente.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Policom01.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Policom01_peq.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Policom02.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ponta_tabela.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Ponte.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\pontverti.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\postIT3.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\procurar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Procurar_Novo.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\SeloGypsumPRO.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\sem_imagem.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Sereia06.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\seta_azul.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\seta_azul_direita.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\setadireita.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\setadireita.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Setas.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\ShoppBoaVista.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\sombra_barra.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\SombraBotao.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Imagens\TituloAEmpresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloAssociar.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastreEmpresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastreObra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroAssociados.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroEmpresas.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroGrupos.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroIndices.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroObras.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroProdutos.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCadastroUsuarios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloComercial.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloContatosEmpresas.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloContatosObras.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloControleAssociados.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloControleUsuarios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloCUB.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloDemonstracao.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloDemonstracao.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloDica.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\titulodicasemana.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloEmpresasParticipantes.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloEventos.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloFollowUP.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloFollowUPAssociados.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloFollowUpEmpresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloFollowUpObra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloGuiaFornecedores.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloLogUsuarios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloMapaResumo.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloNoticias.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloPermissoesUsuario.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloPesquisaAssociados.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloPesquisaEmpresas.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloPesquisaObras.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloPesquisaTabelas.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloProdutosAssociado.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatorioAssociados.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatoriodeEmpresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatoriodeObra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatorioEmpresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatorioFollowUp.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloRelatorioObra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloSalvandoPesquisa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\TituloTiposObras.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\torrerepar.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\UnSelect.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Imagens\WorldTradeCenter.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\bt_adicionar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\bt_remover.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\Cópia de topo_relatorio_obra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\follow_marcador.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\follow_voltar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_calendario.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_edit.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_mais.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_frist.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_last.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_next.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_next_ten.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_prev.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_page_prev_ten.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_status_atencao.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_status_erro.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_status_ok.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_Voltar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ico_x1.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icoExcluir.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\logonewitc.png"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\marcador_menu.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "img\topo.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_associado_old.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_empresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_empresa_old.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_old.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_relatorio_obra.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_relatorio_obra_old.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_relatorios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_resumo.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_resumo_old.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_sig_associado.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_sig_empresa.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\topo_sig_obras.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\analisemensal\analise_mensal.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\analisemensal\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "img\analisemensal\winxp.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\FotosObras\condominio-05.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\FotosObras\TESTE.JPG"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\FotosObras\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "img\icos_calendario\close.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\close_over.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\down.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\down_over.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\down_time.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\down_time_over.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\left_over.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\right_over.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\icos_calendario\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "img\ilustacoes\casas_condominios.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ilustacoes\comercial.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ilustacoes\industrial.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ilustacoes\residencial.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\ilustacoes\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "img\saibamais\casinha.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "img\saibamais\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Inc\BarraBotoes.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BarraBotoes.ascx.vb"
+                    DependentUpon = "BarraBotoes.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BarraBotoes.ascx.resx"
+                    DependentUpon = "BarraBotoes.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BarraBotoes.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BarraLateral.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BarraLateral.ascx.vb"
+                    DependentUpon = "BarraLateral.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BarraLateral.ascx.resx"
+                    DependentUpon = "BarraLateral.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\barralateral2.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BarraNavegacao.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BarraNavegacao.ascx.vb"
+                    DependentUpon = "BarraNavegacao.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BarraNavegacao.ascx.resx"
+                    DependentUpon = "BarraNavegacao.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Bloco1.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Bloco1.ascx.vb"
+                    DependentUpon = "Bloco1.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Bloco1.ascx.resx"
+                    DependentUpon = "Bloco1.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Bloco2.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Bloco2.ascx.vb"
+                    DependentUpon = "Bloco2.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Bloco2.ascx.resx"
+                    DependentUpon = "Bloco2.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Bloco3.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Bloco3.ascx.vb"
+                    DependentUpon = "Bloco3.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Bloco3.ascx.resx"
+                    DependentUpon = "Bloco3.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Bloco4.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Bloco4.ascx.vb"
+                    DependentUpon = "Bloco4.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Bloco4.ascx.resx"
+                    DependentUpon = "Bloco4.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BlocoImagens.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BlocoImagens.ascx.vb"
+                    DependentUpon = "BlocoImagens.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BlocoImagens.ascx.resx"
+                    DependentUpon = "BlocoImagens.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticias.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticias.ascx.vb"
+                    DependentUpon = "BlocoNoticias.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticias.ascx.resx"
+                    DependentUpon = "BlocoNoticias.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticiasComImagem.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticiasComImagem.ascx.vb"
+                    DependentUpon = "BlocoNoticiasComImagem.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BlocoNoticiasComImagem.ascx.resx"
+                    DependentUpon = "BlocoNoticiasComImagem.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BlocoObras.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BlocoObras.ascx.vb"
+                    DependentUpon = "BlocoObras.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\BlocoObras.ascx.resx"
+                    DependentUpon = "BlocoObras.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Botao.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Botao.ascx.vb"
+                    DependentUpon = "Botao.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Botao.ascx.resx"
+                    DependentUpon = "Botao.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\BotaoApagar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BotaoGravar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BotaoIncluir.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BotaoOK.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\BotaoVoltar.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\ComboBox.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\ComboBox.ascx.vb"
+                    DependentUpon = "ComboBox.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\ComboBox.ascx.resx"
+                    DependentUpon = "ComboBox.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\comuns.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Dicas.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Dicas.ascx.vb"
+                    DependentUpon = "Dicas.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Dicas.ascx.resx"
+                    DependentUpon = "Dicas.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\flutuante.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Header.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Header.aspx.vb"
+                    DependentUpon = "Header.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Header.aspx.resx"
+                    DependentUpon = "Header.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\HeaderDemo.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Login.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\login1.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Login.ascx.vb"
+                    DependentUpon = "login1.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Login.ascx.resx"
+                    DependentUpon = "Login.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Menu.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Menu.ascx.vb"
+                    DependentUpon = "Menu.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Menu.ascx.resx"
+                    DependentUpon = "Menu.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\menu.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Menu.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Rodape.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Rodape.ascx.vb"
+                    DependentUpon = "Rodape.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Rodape.ascx.resx"
+                    DependentUpon = "Rodape.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Top.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Top.ascx.vb"
+                    DependentUpon = "Top.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Top.ascx.resx"
+                    DependentUpon = "Top.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Top2.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\Top2.ascx.vb"
+                    DependentUpon = "Top2.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\Top2.ascx.resx"
+                    DependentUpon = "Top2.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\TopDemo.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\TopDemo.ascx.vb"
+                    DependentUpon = "TopDemo.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\TopDemo.ascx.resx"
+                    DependentUpon = "TopDemo.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\user.xml.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\user.xml.aspx.vb"
+                    DependentUpon = "user.xml.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\user.xml.aspx.resx"
+                    DependentUpon = "user.xml.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\UserData.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Inc\UserData.ascx.vb"
+                    DependentUpon = "UserData.ascx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Inc\UserData.ascx.resx"
+                    DependentUpon = "UserData.ascx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Inc\Usuarios.aspx.vb"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\AnaliseMensal.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Associados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Atividades.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Cargos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Chart.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ContatoAssociados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ContatoEmpresas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ContatoObras.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ControleAcessos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ControleVenObraEmp.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\CUB.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Dicas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Empresas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\EmpresasObras.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Estados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Estagios.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Eventos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Fases.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\FollowUp.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\FormaPagamento.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Grupos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Indices.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Modalidades.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Noticias.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Obras.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Pesquisadores.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Pesquisas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Posicao.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Produtos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\ProdutosAssociado.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Ramos_Atividades.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Regioes.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\SaibaMais.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Status.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Tipos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Usuarios.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ITCLibrary\Vendedores.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "scripts\calendarioPopup.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\config.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\funcoes.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\funcoes.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\popula_dados.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\Populate_Data.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\request.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\swfobject.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "scripts\Upload.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UpdateOffLine\offline_servlet.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UpdateOffLine\offline_servlet.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UpdateOffLine\offline_servlet.aspx.vb"
+                    DependentUpon = "offline_servlet.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UpdateOffLine\offline_servlet.aspx.resx"
+                    DependentUpon = "offline_servlet.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+        <StartupServices>
+            <Service ID = "{CF845C55-C321-4742-B673-E6212D061ED9}" />
+        </StartupServices>
+    </VisualBasic>
+</VisualStudioProject>
+

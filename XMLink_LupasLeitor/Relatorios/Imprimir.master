@@ -1,0 +1,31 @@
+﻿<%@ Master Language="VB" CodeFile="Imprimir.master.vb" Inherits="Relatorios_Imprimir" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder id="cphTitle" runat="server"/>
+</head>
+<body>
+<script type='text/javascript'>
+    //window.print();
+</script>
+<form id="form1" runat="server">
+    <asp:Label ID="lblError" runat="server" Text="" style="font-size:18px; color:Red; font-style:italic;" />
+    <div >
+        <table width="100%" >
+            <tr>
+                <td width='20%' align='center'><img src='../imagens/LogoXM.jpg' border='0' /></td>
+                <td class='MainHeader' align='right'>
+                    <img src="../imagens/Logo_small.png" border='0' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div >
+        <asp:ContentPlaceHolder id="cphRelatorio" runat="server"/>
+    </div>
+    <div style="width:100%;" id='MainFooter'>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body,td {font-family: Verdana;}
+.nohover:hover { text-decoration: none;}
+.table {font-family: Verdana; }
+.equacao {font-family: Verdana; font-size: 10pt; margin-top: 15px; margin-bottom: 30px; text-indent: 25pt}
+.exemplo_txt {font-family: Verdana; font-size: 10pt; margin-top: 0mm; margin-bottom: 3mm; margin-left: 13mm}
+.exemplo {font-family: Verdana; font-size: 10pt; color: #FF9900; margin-bottom: 0mm; margin-top: 2mm}
+.destaque {font-family: Verdana; font-size: 10pt; margin-top:  5mm; margin-bottom:  5mm; font-weight: bold; }
+.topico {font-family: Arial; font-size: 13pt; color: #FF9900; font-weight: bold; text-transform: uppercase}
+.subtopico {font-family: Arial; font-size: 13pt; margin-top: 5mm; margin-bottom:  1mm; color: #000099; font-weight: bold}
+.item {font-family: Arial; font-size: 11pt; margin-top:  4mm; margin-bottom:  1mm; color: #000099; font-weight: bold}
+.item2 {font-family: Arial; font-size: 10pt; margin-top:  3mm; margin-bottom:  1mm; color: #000099; font-weight: bold}
+.item3 {font-family: Arial; font-size: 9pt; margin-top:  2mm; color: #000099; font-weight: bold; margin-bottom: 0px}
+.texto {font-family: Verdana; margin-top:  0mm; margin-bottom:  4mm; text-align: justify; line-height: 13pt}
+.observacao {font-family: Verdana; font-size: 10pt; margin-top:  1mm; margin-bottom:  0mm; color: #000099}
+.observacao_txt {font-family: Verdana; font-size: 10pt; margin-top:  0mm; margin-bottom:  5mm; margin-left: 18mm; line-height: 10pt}
+.poesia {font-family: Verdana; font-size: 10pt; margin-top: 15px; margin-bottom: 30px; line-height: 12pt; margin-left: 60px}
+.copyright {font-family: Verdana; font-size:  7pt; margin-top:  0mm; margin-bottom: 3mm}
+.legenda {font-family: Verdana; font-size:  8pt; color: #999999}
+.f16 {font-size: 16pt;}
+.f13 {font-size: 13pt;}
+.f12 {font-size: 18px; font-family: Arial}
+.f11 {font-size: 11pt;}
+.f10 {font-size: 10pt;}
+.f9 {font-size: 10px; FONT-FAMILY: Verdana, Tahoma, Arial;}
+.f8 {font-size: 10px; FONT-FAMILY: Verdana, Tahoma, Arial;}
+.f8Rel {font-size:8pt; FONT-FAMILY: Verdana, Tahoma, Arial}
+.f7 {font-size: 10px;}
+a { color: black; text-decoration: none}
+a:hover {text-decoration: underline}
+input, select, textarea {FONT-FAMILY: Verdana, Tahoma, Arial;}
+input:hover{COLOR: #FF0000;}
+p { font-family: Verdana; font-size: 10pt;}
+li { font-size: 10pt;}
+.h { cursor: hand; }
+.b { font-weight: bold; }
+.j { text-align: justify;}
+.hm1 { font-size: 10px; font-weight: bold; background-color: #FF9B00; padding-left: 3px; }
+.hm2 { font-size: 10px; font-weight: bold; background-color: #FFE8CF; padding-left: 3px; }
+.w { color: white;}
+.r { color: red;}
+.borda_cel {	background-color: C5D2E1; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.borda_cabecalho {	background-color: 91A9C4; padding-top: 3px; padding-right: 3px;	padding-bottom: 3px; padding-left: 3px;	border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;	border-left-width: 1px	}
+.BarralateralOver{  background: #809EB7; color: white; font-size: 8pt; }
+.BarralateralOut{background: #white; color: #809EB7 ; font-size: 8pt;}
+.comfoco { color: red; font-size: 8pt;}
+.semfoco { color: black; font-size: 8pt;}
+.titulo_menu {FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #edf0f2; FONT-FAMILY: Tahoma;}
+.QUEBRADEPAGINA {PAGE-BREAK-AFTER: always;}
+.menu1 {FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Tahoma}
+.menu2 {FONT-WEIGHT: bold; FONT-SIZE: 8pt; CURSOR: hand; COLOR: #ffffff; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #316194}
+.pontilhado{FONT-SIZE: 10px; VERTICAL-ALIGN:super; WIDTH: 130; BORDER-BOTTOM: #003c6e 1px dotted}
+.pontilhadohor{FONT-SIZE: 10px; VERTICAL-ALIGN:super; WIDTH: 5; HEIGHT: 130; BORDER-BOTTOM: #003c6e 1px dotted}
+.hometitulo {FONT-WEIGHT: bold; FONT-SIZE: 110%; MARGIN: 0px; COLOR: #003c6e; FONT-FAMILY: verdana,arial,helvetica}
+.homesubtitulo {FONT-WEIGHT: bold; FONT-SIZE: 70%; MARGIN: 0px; COLOR: #003c6e; FONT-FAMILY: verdana,arial,helvetica}
+
+.linkgeral {FONT-SIZE: 10px; MARGIN: 0px; COLOR: #003c6e; FONT-FAMILY: verdana,arial,helvetica}
+.lista{background-color: White; border-bottom:1px solid #4c77b6; }
+.lista:hover{background-color: #000000;}
+.Freezing {
+	Z-INDEX: 10; POSITION: relative; ; TOP: expression(this.offsetParent.scrollTop)
+}
+.FreezingCol {
+	Z-INDEX: 1; ; LEFT: expression(document.getElementById("freezingDiv").scrollLeft); POSITION: relative
+}

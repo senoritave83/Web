@@ -1,0 +1,259 @@
+﻿Imports Classes
+Imports System.Data
+
+Partial Class pedidos_produtos
+    Inherits XMWebPage
+    Protected ped As clsPedido
+    Protected m_decTotal As Decimal
+    Protected blnBloqueado As Boolean
+
+    Protected Property DescontoMax() As Single
+        Get
+            Return ViewState("DescontoMax")
+        End Get
+        Set(ByVal value As Single)
+            ViewState("DescontoMax") = value
+        End Set
+    End Property
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        ped = New clsPedido
+        If Not Page.IsPostBack Then
+
+            ViewState("IDPEDIDO") = Request("idpedido")
+            Dim strPedido As String = ViewState("IDPEDIDO") & ""
+            If strPedido <> "" Then
+
+                ped.Load(ViewState("IDPEDIDO"))
+
+                lblCliente.Text = ped.Cliente
+
+                Dim cli As New clsCliente
+                cli.Load(ped.IDCliente)
+                lblCNPJ.Text = cli.CNPJ
+                lblCodigoCliente.Text = cli.Codigo
+                DescontoMax = cli.DescontoMax
+                cli = Nothing
+
+            Else
+
+                Response.Redirect("default.aspx", True)
+            End If
+
+            subAddConfirm(btnCancelarEdicao, "Deseja realmente cancelar este pedido?")
+
+            BindProdutos()
+
+            btnCancelarEdicao.Visible = ped.StatusPedido = 0
+
+            Dim clsCat As New clsCategoria
+            drpCategoria.DataSource = clsCat.Listar()
+            drpCategoria.DataBind()
+            drpCategoria.Items.Insert(0, New ListItem("Selecione uma categoria...", "0"))
+            clsCat = Nothing
+
+        Else
+            ped.Load(ViewState("IDPEDIDO"))
+        End If
+    End Sub
+
+
+    Protected Sub grdProdutos_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles grdProdutos.RowCommand
+        If e.CommandName = "Excluir" Then
+            ped.RetirarProduto(CStr(grdProdutos.DataKeys(e.CommandArgument).Value.ToString))
+            BindProdutos()
+            BindProdutosAdd(drpCategoria.SelectedValue, ViewState("IDPEDIDO"))
+
+        ElseIf e.CommandName = "Editar" Then
+            drpCategoria.ClearSelection()
+            BindProdutosAdd("-1", ViewState("IDPEDIDO"), e.CommandArgument)
+        End If
+
+    End Sub
+
+
+    Protected Sub BindProdutosAdd(ByVal vIDCategoria As String, ByVal vIDPedido As String, Optional ByVal vCodigoProd As String = "")
+        Dim prd As New clsProduto
+        Dim dts As DataSet
+
+        If vIDCategoria <> 0 Then
+            dts = prd.ListaProdutoCategoria(vIDCategoria, vIDPedido, vCodigoProd)
+            If dts.Tables(0).Rows.Count > 0 Then  'Se a categoria selecionada p/ filtrar os produtos não obter resultados (produtos) evita o erro de setar o lbl com dts vazio.
+                lblCategoria.Text = "Produtos da Categoria: " + dts.Tables(0).Rows(0).Item(5).ToUpper
+            End If
+            grdAddProdutos.DataSource = dts
+            grdAddProdutos.DataBind()
+        Else
+            grdAddProdutos.DataSource = Nothing  'Garante a funcionalidade do divMovItens.Visible logo abaixo.
+            grdAddProdutos.DataBind()
+        End If
+
+        divMovItens.Visible = grdAddProdutos.Rows.Count > 0
+
+    End Sub
+
+
+    Protected Sub drpCategoria_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles drpCategoria.SelectedIndexChanged
+
+        BindProdutosAdd(drpCategoria.SelectedValue, ViewState("IDPEDIDO"))
+
+    End Sub
+
+
+    Protected Sub btnAdicionarProduto_Click(sender As Object, e As System.EventArgs) Handles btnAdicionarProduto.Click
+
+        For Each row As GridViewRow In grdAddProdutos.Rows
+
+            If row.RowType = DataControlRowType.DataRow Then
+                Dim IdProd As HiddenField = row.FindControl("hidIdProduto")
+                Dim txtQuant As TextBox = row.FindControl("txtQuantidade")
+                Dim txtPreco As TextBox = row.FindControl("txtPreco")
+
+                Dim strIdProduto As String = "", strQuant As String = "", strPreco As String = ""
+
+                If Not IdProd Is Nothing Then
+                    strIdProduto = IdProd.Value
+                End If
+                If Not txtQuant Is Nothing Then
+                    strQuant = txtQuant.Text
+                End If
+                If Not txtPreco Is Nothing Then
+                    strPreco = txtPreco.Text
+                End If
+
+                If txtQuant.Text <> "" Then
+                    txtPreco.Enabled = True
+                Else
+                    txtPreco.Enabled = False
+                End If
+
+                'É permitido adicionar o item à movimentação se o ID do produto for diferente de vazio, se a qtde for maior que 0 e se o usuário digitou um preço.
+                If strIdProduto <> "" And strQuant > "0" And strPreco > "0,00" Then
+                    ped.AdicionarProduto(strIdProduto, strQuant, strPreco, 0)
+                End If
+
+            End If
+
+        Next
+
+        BindProdutos()
+
+    End Sub
+
+
+    Protected Sub BindProdutos()
+        m_decTotal = 0
+        blnBloqueado = False
+        grdProdutos.DataSource = ped.ListarItens()
+        grdProdutos.DataBind()
+        ltrTotal.Text = FormatCurrency(m_decTotal, 2)
+        'btnAvancar.Enabled = (m_decTotal > 0 And blnBloqueado = False)
+        btnAvancar.Enabled = (grdProdutos.Rows.Count > 0 And blnBloqueado = False)
+        lstErros.Items.Clear()
+        If blnBloqueado Then lstErros.Items.Add("O pedido possui itens com quantidade zero! Por favor edite o item ou retire do pedido.")
+        If grdProdutos.Rows.Count = 0 Then lstErros.Items.Add("O pedido não possui itens! Adicione pelo menos um produto.")
+
+    End Sub
+
+
+    Protected Function GetSubTotal(ByVal vQuantidade As Integer, ByVal vPreco As Decimal) As String
+        m_decTotal += (vQuantidade * vPreco)
+        If vQuantidade = 0 Then blnBloqueado = True
+        Return FormatCurrency(vQuantidade * vPreco, 2)
+    End Function
+
+
+    Protected Sub btnAvancar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAvancar.Click
+        Response.Redirect("pedido.aspx?idpedido=" & Server.UrlEncode(ped.IDPedido) & "&idcliente=" & ped.IDCliente)
+    End Sub
+
+
+    Protected Sub btnCancelarEdicao_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancelarEdicao.Click
+        Dim intIDCliente As Integer = ped.IDCliente
+        If ped.StatusPedido = 0 Then
+            ped.CancelarPedido()
+            Response.Redirect("cancelado.aspx?idcliente=" & intIDCliente)
+        End If
+    End Sub
+
+
+    'Protected Sub grdProdutos_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles grdProdutos.RowCommand
+    '    If e.CommandName = "Excluir" Then
+    '        ped.RetirarProduto(CStr(grdProdutos.DataKeys(e.CommandArgument).Value.ToString))
+    '        BindProdutos()
+    '    ElseIf e.CommandName = "Editar" Then
+    '        ltrTextoAdicionar.Text = "Editar produto"
+    '        Dim vProduto() As String = Split(e.CommandArgument, "|")
+
+    '        ProcurarProduto(vProduto(0))
+    '        If CInt("0" & vProduto(1)) <> 0 Then txtQuantidade.Text = vProduto(1)
+    '    End If
+    'End Sub
+
+
+
+    'Protected Sub ProcurarProduto(ByVal vCodigo As String)
+    '    If vCodigo <> "" Then
+    '        Dim prd As New clsProduto
+    '        If prd.Load(vCodigo, ped.IDCliente) Then
+
+    '            lblDescricao.Text = prd.Descricao
+    '            lblCodigo.Text = prd.Codigo
+    '            lblPrecoBase.Text = FormatNumber(prd.PrecoUnitario, 2)
+    '            txtPreco.Text = FormatNumber(prd.PrecoUnitario, 2)
+    '            txtQuantidade.Text = ""
+
+    '            ViewState("IDPRODUTO") = prd.IDProduto
+
+    '            plhAdicionar.Visible = True
+    '            plhProcurar.Visible = False
+
+    '        Else
+
+    '            lblProcurarMensagem.Text = "Produto não localizado!"
+    '            txtCodigo.Text = ""
+
+    '        End If
+    '    End If
+    'End Sub
+
+
+
+    'Protected Sub btnProcurarProduto_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnProcurarProduto.Click
+    '    ProcurarProduto(txtCodigo.Text)
+    '    txtCodigo.Text = ""
+    '    ltrTextoAdicionar.Text = "Adicionar novo produto"
+    'End Sub
+
+
+
+    'Protected Sub btnAdicionarProduto_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAdicionarProduto.Click
+
+    '    plhAdicionar.Visible = False
+    '    plhProcurar.Visible = True
+    '    txtCodigo.Text = ""
+
+    '    If IsNumeric(txtPreco.Text) Then
+
+    '        Dim strPreco As String = FormatNumber(txtPreco.Text, 2) '.Replace(",", ".")
+    '        ped.AdicionarProduto(ViewState("IDPRODUTO"), txtQuantidade.Text, strPreco, 0)
+    '        BindProdutos()
+
+    '    End If
+
+    'End Sub
+
+
+
+    'Protected Sub btnAdicionarCancelar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAdicionarCancelar.Click
+
+    '    plhAdicionar.Visible = False
+    '    plhProcurar.Visible = True
+    '    txtCodigo.Text = ""
+
+    'End Sub
+
+
+
+End Class

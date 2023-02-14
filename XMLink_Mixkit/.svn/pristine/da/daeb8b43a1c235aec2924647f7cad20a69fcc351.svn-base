@@ -1,0 +1,947 @@
+
+.MenuLateral img
+{
+    height:30px;
+    margin-right:16px;
+    margin-left:15px;
+    display:none;
+}
+
+.MenuLateralHover img
+{
+    height:60px;
+    margin-right:0px;
+    margin-left:0px;
+    display:none;
+}
+
+#TarefaTab span
+{
+    height:20px;
+}
+
+.Teste
+{
+	background-color:#333333;
+}
+
+
+
+.VerRoteiro
+{
+	background-color:#6699cc;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+}
+
+.VerRoteiro table
+{
+	color:White;
+	width:95%;
+}
+
+
+.PaginateControl
+{
+	background-color:White;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	text-align:left;
+	width:100%;
+}
+
+.PaginateControl a[disabled="disabled"], a.disabled 
+    {
+        color:gray;
+    }
+
+
+/***************** TELA DE HORARIO DE FUNCIONAMENTO ****************/
+
+#tblAddHorario td
+{
+    color:White;
+    font-weight:bold;
+}
+
+
+/***************** BOX PESQUISA LISTA PRODUTOS *********************/
+#AdicionarProdutoPesquisa
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPesquisa
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:290px;
+}
+
+#AdicionarProdutoPesquisa table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPesquisa td
+{
+	width:33%;
+}
+#AdicionarProdutoPesquisa select
+{
+	width:90%;
+}
+#AdicionarProdutoPesquisa input
+{
+	float:right;
+}
+#AreaProdutoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPesquisa .ListaItens
+{
+	height:285px;
+}
+
+#AreaProdutoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:285px;
+}
+
+/***************** BOX PERGUNTA LISTA PRODUTOS *********************/
+
+#AreaRespostasPergunta
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:468px;
+}
+
+
+#AdicionarProdutoPergunta
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPergunta
+{
+	width:48%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:468px;
+}
+
+#AdicionarProdutoPergunta table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPergunta td
+{
+	width:25%;
+}
+#AdicionarProdutoPergunta select
+{
+	width:90%;
+}
+#AdicionarProdutoPergunta input
+{
+	float:right;
+}
+#AreaProdutoPergunta h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPergunta .ListaItens
+{
+	height:335px;
+}
+
+#AreaProdutoPergunta .ListaItens div
+{
+	overflow:auto;
+	height:335px;
+}
+
+/***************** BOX PROMOTOR LISTA PRODUTOS *********************/
+
+
+#AdicionarProdutoPromotor
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPromotor
+{
+	width:100%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:268px;
+}
+
+#AdicionarProdutoPromotor table
+{
+	width:100%;
+	color:White;
+}
+#AdicionarProdutoPromotor td
+{
+	width:33%;
+}
+#AdicionarProdutoPromotor select
+{
+	width:90%;
+}
+#AdicionarProdutoPromotor input
+{
+	float:right;
+}
+#AreaProdutoPromotor h4
+{
+	margin-bottom:4px;
+}
+
+#AreaProdutoPromotor .ListaItens
+{
+	height:135px;
+}
+
+#AreaProdutoPromotor .ListaItens div
+{
+	overflow:auto;
+	height:135px;
+}
+
+
+/***************** BOX ADVPRICE LISTA PRODUTOS *********************/
+
+#ADVPriceAreaProdutos
+{
+	width:48%;
+	background-color:#6699cc; /*DEE8F5;*/
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	float:left;
+	margin-bottom:20px;
+	height:400px;	
+}
+
+#ADVPriceAreaClientes
+{
+	width:48%;
+	background-color:#6699cc;
+	border-color:#6699cc;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	float:right;
+	margin-bottom:20px;
+	height:400px;	
+}
+
+#ADVPriceAreaClientes .botaoFiltrar
+{
+    width:50px;
+}
+
+#ADVPriceAreaClientes .ListaItens
+{
+	overflow:auto;
+	height:285px;
+}
+
+#ADVPriceAreaProdutos .ListaFiltro
+{
+    height:60px;
+}
+
+#ADVPriceAreaClientes .ListaFiltro
+{
+    height:60px;
+}
+
+
+#ADVPriceAreaProdutos .ListaFiltro input
+{
+    float:left;
+}
+
+#ADVPriceAreaProdutos .ListaFiltro select
+{
+    float:left;
+}
+
+
+#ADVPriceAreaProdutos .ListaItens
+{
+	overflow:auto;
+	height:325px;
+	background-color:#DEE8F5;
+}
+
+
+#ADVPriceAreaClientes .ListaItens
+{
+	overflow:auto;
+	height:325px;
+	background-color:#DEE8F5;
+}
+
+#ADVPriceAreaClientes h4
+{
+    float:left ;
+}
+
+/***************** BOX CLIENTE VENDEDOR *********************/
+#AdicionarVendedor
+{
+	background-color:#6699cc;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	height:40px;
+}
+
+
+#AdicionarVendedor h4
+{
+	margin-bottom:4px;
+}
+
+#AdicionarVendedor select
+{
+	float:left;
+}
+
+#AdicionarVendedor input
+{
+	float:left;
+}
+
+
+#ListaVendedores .ListaItens
+{
+	height:200px;
+}
+
+#ListaVendedores .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#RoteiroPeriodo
+{
+	width:100%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+}
+
+#RoteiroPeriodo h4
+{
+    color:White;
+}
+
+#RoteiroPeriodo table
+{
+    background-color:white;
+}
+
+#RoteiroPeriodo table td
+{
+    text-align:center;
+}
+
+
+.Roteiro_Dia
+{
+    background-color:white;
+    writing-mode: tb-rl; filter: flipH() flipV();
+}
+
+.Roteiro_Loja
+{
+    background-color:#DEE8F5;
+}
+
+.1Roteiro_lojaAlt
+{
+    /*background-color:#BED4DE;*/
+}
+
+.Roteiro_LojaDiaAlt
+{
+    background-color:#759EB3;
+    /*border: solid 1px black;*/
+    
+}
+
+.Roteiro_LojaDia
+{
+    background-color:#ACC1D1 /*97CBE6; 6D93A6; MUDAR*/ 
+    /*border: solid 1px black;*/
+}
+
+.Roteiro_DiaAlt
+{
+    background-color:#759EB3;
+    writing-mode: tb-rl; filter: flipH() flipV();
+    /*border: solid 1px black;*/
+    color:White;
+}
+
+.Roteiro_LojaHeader
+{
+    background-color:#759EB3;
+    color:White;
+    font-weight:bold;
+}
+
+
+/*************************  TELA DE CLIENTES **************************/
+
+
+.EditArea .divEditArea #trCliente .tdField
+{
+    width:100%;
+}
+
+.ListaFormasPagamento
+{
+    width:200px;
+}
+
+.ListaTabelasPreco
+{
+    background-color:#6699cc;
+    color:White;
+    border-color:#2461BF;
+    border-width:1px;
+    border-style:solid;
+    width:200px;
+    margin-top:5px;
+}
+
+.ListaTabelasPreco h5
+{
+    padding:2px;
+}
+
+.ListaCondicoesPagamento
+{
+    background-color:#6699cc;
+    color:White;
+    border-color:#2461BF;
+    border-width:1px;
+    border-style:solid;
+    width:200px;
+    margin-top:5px;
+}
+
+.ListaCondicoesPagamento h5
+{
+    padding:2px;
+}
+.ListaFormasPagamento
+{
+    background-color:#6699cc;
+    color:White;
+    border-color:#2461BF;
+    border-width:1px;
+    border-style:solid;
+    width:200px;
+    margin-top:5px;
+}
+
+.ListaFormasPagamento h5
+{
+    padding:2px;
+}
+
+#divClientesLinhaNegocio
+{
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	background-color:#6699cc;
+	color:White;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	width:100%;
+}
+
+/**************************************************** RECADOS *******************************************/
+
+#divNovoRecado
+{
+	background-color:#6699cc;
+	border-style:none;
+    margin-bottom:10px;
+    width:100%;
+    color:White;
+    padding:2px 2px 2px 2px;
+    
+}
+
+#divNovoRecado .Destinatario
+{
+    float:left;
+    width:300px;
+}
+
+#divNovoRecado .Destinatario select
+{
+    width:300px;
+}
+
+
+#divNovoRecado .BotaoEnviar
+{
+    clear:both;
+    float:right;
+}
+
+#divNovoRecado .Mensagem
+{
+    float:right;
+}
+
+
+.spHelp
+{
+    color:Green;
+    font-style:italic;
+    font-size:xx-small;
+}
+
+/************************************ TELA DE ROTEIROS *****************************************/
+#divVendedoresRoteiro
+{
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	background-color:#6699cc;
+	color:White;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	width:100%;
+}
+
+#divVendedoresRoteiro #tdProcurar
+{
+	background-color:#DEE8F5;
+	width:33%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#divClientesRoteiro
+{
+	background-color:#6699cc;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divClientesRoteiro table
+{
+    width:100%;
+	/*background-color:White;*/
+}
+
+#divClientesRoteiro td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+
+#divClientesRoteiro #tdProcurar
+{
+	background-color:#DEE8F5;
+	width:45%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#divClientesRoteiro #tdProcurar input
+{
+	float:left;
+	vertical-align:middle;
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	margin-right:10px;
+	
+}
+
+#divClientesRoteiro #tdListaCliente
+{
+	background-color:#DEE8F5;
+	width:50%;
+	margin-right:2px;
+	vertical-align:top;
+	height:200px;
+}
+
+#divClientesRoteiro #tdListaCliente div
+{
+	height:300px;
+	overflow:auto;
+}
+
+.imgBtnAdd
+{
+	border:0;
+}
+
+.Roteiro
+{
+	background-color:#6699cc;
+	padding:10px 10px 10px 10px;
+	height:200px;
+	color:Black;
+	font-weight:bold;
+	clear:both;
+}
+
+.Roteiro label
+{
+	color:Gray;
+}
+
+
+.LinkLimpar
+{
+	float:right;
+	color:#666666;
+	vertical-align:bottom;
+	margin-right:5px;
+}
+
+.Roteiro span
+{
+	margin-left:5px;
+}
+
+.PanelDia
+{
+	background-color:#D1DDF1;
+	height:180px;
+	width:100%;
+	margin-right:2px;
+	color:Black;
+}
+.PanelMes
+{
+	background-color:#EFF3FB;
+	height:180px;
+	width:100%;
+	margin-right:2px;
+	color:Black;
+}
+.PanelDiaSemana
+{
+	background-color:#DEE8F5;
+	height:180px;
+	width:100%;
+	margin-right:2px;
+	color:Black;
+}
+
+.PanelSemanaMes
+{
+	background-color:#EFF3FB;
+	height:180px;
+	width:100%;
+	margin-right:2px;
+	color:Black;
+}
+
+.PanelAno
+{
+	background-color:#DEE8F5;
+	height:180px;
+	margin-right:2px;
+	color:Black;
+}
+
+/******************************************************* TELA DE TABELAS ************************************************/
+
+
+#divTipoPreco
+{
+    background-color:#6699cc;
+}
+
+#divTipoPreco label
+{
+    color:black;
+}
+
+/******************************************************* FAIXA DE PREÇO **************************************************/
+
+#tabFaixaPreco  input[disabled="disabled"], input.disabled 
+    {
+        background-color:#bbbbbb;
+    }
+    
+    
+#tabFaixaPreco .DisabledText
+{
+        background-color:#bbbbbb;
+}
+
+#tabFaixaPreco
+{
+    background-color:#D1DDF1;
+    width:100%;
+}
+
+#tabFaixaPreco td
+{
+    padding:1px 4px 1px 4px;
+}
+
+
+#tabFaixaPreco .trVenda
+{
+    background-color:white;
+}
+
+#tabFaixaPreco th
+{
+    background-color:#5F7C9C;
+    color:White;
+}
+
+
+.boxFaixaPreco
+{
+    background-color:#6699cc;
+    color:White;
+    border-color:#2461BF;
+    border-width:1px;
+    border-style:solid;
+    width:500px;
+    margin-top:5px;
+}
+
+/****************************************************** SEGMENTACAO ********************************************************/
+
+
+#AreaSegmentacao
+{
+	width:100%;
+	background-color:#507CD1;
+	border-color:#2461BF;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:290px;
+}
+
+#AreaSegmentacao h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaSegmentacao #AreaLista
+{
+    width:50%;
+    float:left;
+}
+
+#AreaSegmentacao .ListaItens
+{
+	height:285px;
+}
+
+#AreaSegmentacao .ListaItens div
+{
+	overflow:auto;
+	height:285px;
+}
+
+#AreaSegmentacao #AdicionarSegmento
+{
+	background-color:#2461BF;
+	margin-top:10px;
+	font-family:Arial;
+	color:White;
+	font-size:x-small;
+	text-align:left;
+	float:right;
+	width:40%;
+
+}
+
+#AreaSegmentacao #AdicionarSegmento table
+{
+	width:100%;
+	color:White;
+}
+#AreaSegmentacao #AdicionarSegmento td
+{
+	width:33%;
+}
+#AreaSegmentacao #AdicionarSegmento select
+{
+	width:90%;
+}
+#AreaSegmentacao #AdicionarSegmento input
+{
+	float:right;
+}
+
+
+/********************************************************** ESTOQUE CONSIGNADO ******************************************************/
+
+.EstoqueConsignado
+{
+    background-color:#6699cc;
+}
+
+.EstoqueConsignado h4
+{
+    color:White;
+}
+
+.EstoqueConsignado #tblProduto td
+{
+    color:White;
+}
+
+/*****  */
+
+#divTabelasMultiplas .gridTabela
+{
+    padding-left:3px;
+}
+
+#divTabelasMultiplas .gridTabela label
+{
+    padding-left:3px;
+}
+
+#divTabelasSimples 
+{
+    padding:3px;
+}

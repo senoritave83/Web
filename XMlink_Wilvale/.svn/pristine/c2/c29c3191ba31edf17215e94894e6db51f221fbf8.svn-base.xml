@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/home/default.aspx" title="Home" description="Home" caption="Home" roles="*" img="~/imagens/home.png">
+    <siteMapNode url="~/pedidos/default.aspx" title="Principal"  description="" caption="Principal" img="~/imagens/cadastros.png" Secao="Principal">
+      <siteMapNode url="~/Pedidos/pedidos.aspx" title="Pedidos" description="Lista os pedidos no sistema" caption="Lista de Pedidos" img="~/imagens/notasfiscais.jpg" Secao="Pedidos">
+        <siteMapNode url="~/Pedidos/pedido.aspx" title="Pedido" description="Visualiza os dados do pedido selecionado" parameters="idpedido" caption="Dados do Pedido" img="~/imagens/notasfiscais.jpg" Secao="Pedidos" />
+      </siteMapNode>
+      <siteMapNode url="~/Pedidos/visitas.aspx" title="Visitas" description="Lista as visitas no sistema" caption="Lista de Visitas" img="~/imagens/down.png" Secao="Visitas">
+        <siteMapNode url="~/Pedidos/visita.aspx" title="Visita" description="Visualiza os dados da visita selecionada" parameters="idvisita" caption="Dados da Visita" img="~/imagens/down.png" Secao="Visitas" />
+      </siteMapNode>
+      <siteMapNode url="~/controle/vendedores.aspx" title="Roteiros" description="Lista os vendedores cadastrados no sistema" caption="Lista de Vendedores" img="~/imagens/condicao.gif" Secao="Roteiros">
+        <siteMapNode url="~/controle/vendedorroteiros.aspx" title="Roteiros" description="Lista de roteiros associados ao vendedor" parameters="IDVendedor,IDRoteiro" caption="Lista de roteiros" img="~/imagens/condicao.gif" Secao="Roteiros">
+          <siteMapNode url="~/controle/Roteiro.aspx" title="Roteiro" description="Edição de um roteiro associado a um vendedor" parameters="IDVendedor,IDRoteiro" caption="Edição de roteiro" img="~/imagens/condicao.gif" Secao="Roteiros" />
+        </siteMapNode>
+      </siteMapNode>
+      
+    </siteMapNode>
+    <siteMapNode url="~/Cadastros/default.aspx" title="Cadastros"  description="" caption="Cadastros" roles="Administrador" img="~/imagens/cadastros.png" Secao="Cadastros">
+      <siteMapNode url="~/Cadastros/categorias.aspx" title="Categorias" description="Lista as categorias cadastradas no sistema" caption="Lista de categorias de produto" img="~/imagens/categorias.jpg" Secao="Cadastro de Categoria" >
+        <siteMapNode url="~/Cadastros/categoria.aspx" title="Categoria" description="Editar a categoria selecionada" parameters="idcategoria" caption="Edição da categoria de produto" img="~/imagens/categorias.jpg" Secao="Cadastro de Categoria" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/produtos.aspx" title="Produtos" description="Lista os produtos cadastrados no sistema" caption="Lista de Produtos" img="~/imagens/produtos.png" Secao="Cadastro de Produto" >
+        <siteMapNode url="~/Cadastros/produto.aspx" title="Produto" description="Editar os dados do produto selecionado" parameters="idproduto" caption="Edição do Produto" img="~/imagens/produtos.png" Secao="Cadastro de Produto" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/grupos.aspx" title="Grupos de venda" description="Lista os grupos de vendas cadastrados no sistema" caption="Lista de grupos de vendas" img="~/imagens/filiais.png" Secao="Cadastro de Grupo" >
+        <siteMapNode url="~/Cadastros/grupo.aspx" title="Grupo de venda" description="Editar os dados do grupo de venda selecionado" parameters="idgrupo" caption="Edição do grupo de venda" img="~/imagens/filiais.png" Secao="Cadastro de Grupo" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/formapagamentos.aspx" title="Formas de Pagamentos" description="Lista as formas de pagamentos cadastradas no sistema" caption="Lista de Formas de Pagamentos" img="~/imagens/desconto.png" Secao="Cadastro de Forma de Pagamento" >
+        <siteMapNode url="~/Cadastros/formapagamento.aspx" title="Forma de Pagamento" description="Editar os dados da forma de pagamento selecionada" parameters="idformapagamento" caption="Edição da Forma de Pagamento" img="~/imagens/desconto.png" Secao="Cadastro de Forma de Pagamento" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/vendedores.aspx" title="Vendedores" description="Lista os vendedores cadastrados no sistema" caption="Lista de Vendedores" img="~/imagens/responsavel6060.jpg" Secao="Cadastro de Vendedor" >
+        <siteMapNode url="~/Cadastros/vendedor.aspx" title="Vendedor" description="Editar os dados do vendedor selecionado" parameters="idvendedor" caption="Edição do Vendedor" img="~/imagens/responsavel6060.jpg" Secao="Cadastro de Vendedor" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/condicoes.aspx" title="Condições de pagamento" description="Lista as condições de pagamento cadastradas no sistema" caption="Lista de Condições de pagamento" img="~/imagens/desconto.png" Secao="Cadastro de Condição">
+        <siteMapNode url="~/Cadastros/condicao.aspx" title="Condição de pagamento" description="Editar os dados da condição de pagamento selecionada" parameters="idcondicao" caption="Edição da Condição de pagamento" img="~/imagens/desconto.png" Secao="Cadastro de Condição" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/situacaopedidos.aspx" title="Situações de pedidos" description="Lista as situações de pedidos cadastradas no sistema" caption="Lista de Situações de Pedidos" img="~/imagens/cadastros.png" Secao="Situação de Pedidos">
+        <siteMapNode url="~/Cadastros/situacaopedido.aspx" title="Situação de pedido" description="Editar os dados da situação de pedido selecionada" parameters="idsituacaopedido" caption="Edição da Situação de Pedido" img="~/imagens/cadastros.png" Secao="Situação de Pedidos" />
+      </siteMapNode>
+      <siteMapNode url="~/Cadastros/clientes.aspx" title="Clientes" description="Lista os clientes cadastrados no sistema" caption="Lista de Clientes" img="~/imagens/cliente.jpg" Secao="Cadastro de Cliente">
+        <siteMapNode url="~/Cadastros/cliente.aspx" title="Cliente" description="Editar os dados do cliente selecionado" parameters="idcliente" caption="Edição do Cliente" img="~/imagens/cliente.jpg" Secao="Cadastro de Cliente" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/relatorios/default.aspx" title="Relatórios"  description="" caption="Relatórios" roles="Relatorios" img="~/imagens/reports.gif" Secao="Relatórios">
+      <siteMapNode url="~/relatorios/relatorios.aspx" title="Relatório de uso" description="Relatório de uso" caption="Relatório de uso" img="~/imagens/reports.gif" Secao="Relatórios" />
+    </siteMapNode>
+    <siteMapNode url="~/sistema/default.aspx" title="Sistema"  description="" caption="Informações do sistema" roles="Administrador" img="~/imagens/config.png" Secao="Sistema" >
+      <siteMapNode url="~/sistema/usuarios.aspx" title="Usuários" description="Lista os usuários cadastrados no sistema" caption="Lista de Usuários" img="~/imagens/users.png" Secao="Cadastro de Usuário" >
+        <siteMapNode url="~/sistema/usuario.aspx" title="Usuário" description="Editar os dados do usuário selecionado" parameters="" caption="Edição do Usuário" img="~/imagens/users.png" Secao="Cadastro de Usuário" />
+      </siteMapNode>
+      <siteMapNode url="~/sistema/permissoes.aspx" title="Permissões do Sistema" description="Permissões dos Usuários do Sistema" caption="Permissões do Sistema" img="~/imagens/permissao.png" Secao="Permissões do Sistema" >
+        <siteMapNode url="~/sistema/permissao.aspx" title="Cadastro de permissão" description="Cadastramento das permissões do Sistema" parameters="IDPermissao" caption="Permissões do Sistema" img="~/imagens/permissao.png" Secao="Permissões do Sistema" />
+      </siteMapNode>
+      <siteMapNode url="~/sistema/horariofuncionamentos.aspx" title="Horário de Funcionamento" description="Lista os horários de funcionamento cadastrados no sistema" caption="Lista de Horários Funcionamentos" img="~/imagens/controleacesso.png" />
+      <siteMapNode url="~/Integracao/exportacao.aspx" title="Exportação" description="Exporte os dados dos pedidos enviados pelos seus vendedores ao XMLink " caption="Exportação de dados" img="~/imagens/down.png" Secao="Exportar Dados" />
+      <siteMapNode url="~/Integracao/processos.aspx" title="Importação" description="Importe os dados gerados pelo sistema para dentro do XMLink" caption="Exportação de dados" img="~/imagens/uplo.png" Secao="Integração" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

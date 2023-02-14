@@ -1,0 +1,100 @@
+﻿<%@ Master Language="VB" CodeFile="Principal.master.vb" Inherits="Principal" %>
+
+<html>
+<head runat="server">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>..: XMLink Itaipava :..</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	
+
+	<asp:ContentPlaceHolder id="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id='MainArea'>
+            <table width="100%" height="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td id="logo_geo"></td>
+                    <td class='MainHeader' align='center' valign="top" >
+						<div class="MenuBg"><asp:Menu ID="mnuSuperior" runat="server" SkinID='Superior' CssClass="ar"/></div>
+                    </td>
+                </tr>         
+                <tr valign="top" height='22px'>
+                    <td class='divUserPanel' valign="bottom"  style="width:15%;">
+						<asp:LoginView runat="server" SkinID="BarraLateral" ID='LoginView1'>
+                            <LoggedInTemplate>
+                                <h5>logado como <asp:LoginName ID="LoginName1" runat="server"  /></h5>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </td>
+                    <td id="menu_horizontal"><!-- C5DBE6 -->
+					<asp:Label  Runat="server" ID='lblTitulo' SkinID='XMTitulo.Titulo'></asp:Label><span style="color:#A60B15">&nbsp;>></span>
+						<asp:Label Runat="server" ID='lblDescricao' SkinID='XMTitulo.Descricao' ></asp:Label>
+                    </td>
+                   </tr>
+                   <tr valign='top'>
+                    <td id='tdLateral' style="width: 263px">
+						<asp:LoginView runat="server" SkinID="BarraLateral" ID='ljvLoginView'>
+                            <LoggedInTemplate>
+                                    <div class="campo_revenda">
+                                    <span style="float:left;"><b><%=Me.GetRevenda()%></b></span><br>
+                                    <span style="float:left;"><a href="../home/trocar.aspx">Trocar senha</a></span>
+                                    <span style="float:right; font-weight:bold;"><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="sair" /></span>
+                                    </div>
+                            </LoggedInTemplate>
+                        </asp:LoginView>                       
+                        <asp:Menu ID="mnuLateral" runat="server" SkinID='Lateral2'                        		
+                                BackColor="#A60B15" DynamicHorizontalOffset="1" Font-Names="Sans-serif" Font-Size="0.8em" ForeColor="Transparent"
+                                StaticDisplayLevels="1" Width="100%"
+                                StaticSubMenuIndent="10px" MaximumDynamicDisplayLevels="0" >
+                                <StaticSelectedStyle BackColor="#C92438" />
+                                <StaticMenuItemStyle HorizontalPadding="12px" VerticalPadding="2px" Height='48px' Font-Size="13px" Font-Bold="false" width="100%" CssClass="menu_largura"  />
+                                <StaticHoverStyle BackColor="#898989" ForeColor="White" />
+                                <LevelSelectedStyles>
+                                    <asp:MenuItemStyle Font-Underline="False" Font-Bold="true" />
+                                    <asp:MenuItemStyle Font-Underline="False" ForeColor="White" />
+                                </LevelSelectedStyles>
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle BackColor="#A60B15" Font-Underline="False" ForeColor="White" />
+                                    <asp:MenuItemStyle BackColor="#D1DDF1" Font-Underline="False" ForeColor="Black" />
+                                </LevelMenuItemStyles>                                                    
+                        </asp:Menu>
+                        
+                    </td>
+                    <td width="100%" class='MainContent'>
+                        <table width="100%" cellpadding="1" cellspacing="1">
+	                        <tr valign="middle" runat='server' id='trTopo' visible='false'>
+		                        <td>
+			                        <img border="0" runat="server" id='imgImagem' alt="" src="~/imagens/controleacesso.png" visible="false" />
+		                        </td>
+		                        <td width="100%">
+		                        </td>
+	                        </tr>
+	                        <tr>
+	                            <td colspan='2' align='left'>
+									<asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Arial" Font-Size="0.6em"
+                                        PathSeparator=" : ">
+                                        <PathSeparatorStyle Font-Bold="True" ForeColor="#6C6E71" />
+                                        <CurrentNodeStyle ForeColor="#333333" />
+                                        <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                                        <RootNodeStyle Font-Bold="True" ForeColor="#6C6E71" />
+                                    </asp:SiteMapPath>
+	                            </td>
+	                        </tr>
+                        </table>
+						<asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                        </asp:contentplaceholder>
+                    </td>
+                </tr>
+                <tr  height=20px>
+                    <td colspan="3" class="bg_footer">
+                        <div id='MainFooter'><a><span style="font-weight:bold; font-size:xx-small;">&copy;<%=Year(now)%>&nbsp;XM Sistemas Distribu&iacute;dos Ltda.</span> Todos os direitos reservados.</a></div>
+                        <!--<%=Environment.MachineName %>-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

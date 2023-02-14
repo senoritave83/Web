@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XMGMapControl
+</name>
+</assembly>
+<members>
+<member name="P:XMSistemas.Web.XMGMapControl.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:XMSistemas.Web.XMGMapControl.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:XMSistemas.Web.XMGMapControl.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.#ctor">
+	<remarks/>
+</member><member name="E:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.RegistraPosicionamentoCompleted">
+	<remarks/>
+</member><member name="M:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.RegistraPosicionamento(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.RegistraPosicionamentoAsync(System.String)">
+	<remarks/>
+</member><member name="M:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.RegistraPosicionamentoAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.GMapService">
+	<remarks/>
+</member><member name="T:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.RegistraPosicionamentoCompletedEventHandler">
+	<remarks/>
+</member><member name="P:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.RegistraPosicionamentoCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:XMSistemas.Web.XMGMapControl.xmsistemas.services.xmgmapservice.RegistraPosicionamentoCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

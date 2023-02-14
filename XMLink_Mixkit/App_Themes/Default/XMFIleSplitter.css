@@ -1,0 +1,62 @@
+﻿        
+        .XMFileSplitter
+        {
+            font-family:Courier, Courier New;
+        }
+        
+        .XMFileSplitter thead 
+        {
+            background-color:#999999;
+        }
+
+        .XMFileSplitter .datarow td
+        {
+            font-family:Courier;
+        }
+
+
+        .XMFileSplitter header
+        {
+            font-size:8pt;
+        }
+
+
+        .XMFileSplitter thead th
+        {
+            font-weight:normal;
+            font-family:Courier;
+            cursor:pointer;
+        }
+
+        .XMFileSplitter .headerrow .top
+        {
+            border-top:solid 1px blue;
+        }
+        .XMFileSplitter .headerrow .bottom
+        {
+            border-bottom:solid 1px blue;
+        }
+        .XMFileSplitter .datarow .bottom
+        {
+            border-bottom:solid 1px blue;
+        }
+
+        .XMFileSplitter .headerrow .alternate
+        {
+            background-color:#CCCCCC;
+        }
+
+        .XMFileSplitter .datarow .alternate
+        {
+            background-color:#DDDDDD;
+        }
+
+        .XMFileSplitter .separate
+        {
+            border-left:solid 1px black;
+        }
+
+        .XMFileSplitter .endline
+        {
+            border-right:solid 1px red;
+        }

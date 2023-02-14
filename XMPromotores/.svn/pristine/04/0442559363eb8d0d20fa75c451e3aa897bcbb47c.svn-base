@@ -1,0 +1,60 @@
+﻿<%@ Master Language="VB"  %>
+
+<%@ Register Src="controls/XMTitulo.ascx" TagName="XMTitulo" TagPrefix="uc1" %>
+<%@ Register assembly="XMWeb" namespace="XMSistemas.Web.Controls" tagprefix="xm" %>
+<%@ Register src="controls/MenuOptions.ascx" tagname="MenuOptions" tagprefix="uc3" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
+<html>
+<head id="Head1" runat="server">
+    <title>XM Promotores - Yes Mobile</title>       
+</head>
+	<body>
+		<form id="form1" runat="server">
+		    <ajaxToolkit:ToolkitScriptManager runat="Server" ID="scriptManager">
+            <Scripts>
+                <asp:ScriptReference Path="~/Js/jquery-1.6.2.min.js" />
+                <asp:ScriptReference Path="~/Js/jquery-1.8.2.min.js" />
+                <asp:ScriptReference Path="~/Js/jquery-ui-1.8.16.custom.min.js" />
+                <asp:ScriptReference Path="~/Js/functions.js" />
+            </Scripts>
+		    </ajaxToolkit:ToolkitScriptManager>
+		
+			<div id="Main">
+				<div id="Header">
+					<span class="logoXM">&nbsp;</span>
+					<span class='MainUserPanel' runat="server" id="divMainUserPainel">						
+		                <asp:LoginView runat="server" SkinID="BarraLateral" ID='ljvLoginView'>
+		                    <LoggedInTemplate>
+		                        <div class='divUserPanel'>
+		                            <Label>logado como</Label> <br>
+		                            <asp:LoginName ID="LoginName1" runat="server"  />
+		                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="sair" />
+		                        </div> 
+		                    </LoggedInTemplate>
+		                </asp:LoginView>
+					</span>
+				</div>
+				<div id="Main-Menu">
+					<span id="next"></span>
+					<span style="float:left; border-left:1px solid #F2F2F2; border-right:1px solid #F2F2F2;" ><img src="~/imagens/next_ico.png" runat="server" /></span>					
+					<span><uc3:MenuOptions ID="MenuOptions1" runat="server" IDMenuSuperior='mnuSuperior' IDMenuLateral='mnuLateral' SideMenuCascading='false' SideMenuVisible='true' SideMenuShowFirstNode='true' TopMenuVisible='true' TopMenuShowFirstNode='false'   /></span>
+					<span><asp:Menu MenuRenderingMode="List" ID="mnuSuperior" runat="server" SkinID='Superior' /></span>
+				</div>
+				<div id="MenuLateral">
+					<asp:Menu MenuRenderingMode="List" ID="mnuLateral" runat="server" SkinID='Lateral' />
+				</div>
+				
+				<div id="MainContent" class="ajust-width">
+					<uc1:XMTitulo ID="XMTitulo1" runat="server"/>
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+				</div>
+				<div style="clear:both">&nbsp;</div>
+				<div id="footer">
+					<p>&copy;<%=Year(now)%> XM Sistemas Distribu&iacute;dos Ltda. Todos os direitos reservados.<img src="../imagens/logo_xm_pq.png"/></p>
+				</div>
+			</div>
+		</form>	
+	</body>
+</html>

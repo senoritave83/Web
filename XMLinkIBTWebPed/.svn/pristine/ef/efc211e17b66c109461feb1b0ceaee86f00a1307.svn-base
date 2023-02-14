@@ -1,0 +1,109 @@
+﻿Imports Classes
+
+
+Partial Class pedidos_cliente
+    Inherits XMWebPage
+    Protected cls As clsAtendimentoCliente
+    Protected intIDCliente As Integer
+
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        cls = New clsAtendimentoCliente
+        If Not Page.IsPostBack Then
+            intIDCliente = CInt("0" & Request("idcliente"))
+            If intIDCliente = 0 Then Response.Redirect("default.aspx", True)
+            cls.Load(intIDCliente)
+            ViewState("IDCLIENTE") = intIDCliente
+            Inflate()
+            BindPedidos()
+        Else
+            intIDCliente = ViewState("IDCLIENTE")
+            cls.Load(intIDCliente)
+        End If
+
+
+    End Sub
+
+    Protected Sub Inflate()
+        With cls
+            lblCliente.Text = .Cliente
+
+            Dim cli As New clsCliente
+            cli.Load(cls.IDCliente)
+            lblCNPJ.Text = cli.CNPJ
+            lblCodigo.Text = cli.Codigo
+            cli = Nothing
+
+            lblData.Text = .Data
+            lblStatus.Text = .Status
+            btnFechar.Visible = Not .Finalizado
+            btnFechar.Enabled = .Executado
+            btnReabrir.Visible = .Finalizado
+            btnReabrir.Enabled = Not .Vencido
+
+            trJustificativa.Visible = .Justificado
+            lblJustificativa.Text = .Justificativa
+
+            btnNovoPedido.Enabled = Not .Finalizado And Not .Justificado And .PermitePedido
+            btnBonificacao.Enabled = Not .Finalizado And Not .Justificado
+            btnJustificar.Enabled = (.Finalizado = False And .Justificado = False And .Pedidos = 0)
+            btnJustificar.Visible = Not .Justificado
+            btnCancelarJustificativa.Visible = .Justificado
+            btnCancelarJustificativa.Enabled = (.Finalizado = False And .Justificado = True And .Pedidos = 0)
+
+
+        End With
+
+    End Sub
+
+    Protected Sub BindPedidos()
+        grdPedidos.DataSource = cls.ListarPedidos()
+        grdPedidos.DataBind()
+    End Sub
+
+    Protected Sub lnkNovoPedido_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnNovoPedido.Click
+        Response.Redirect("novopedido.aspx?idcliente=" & cls.IDCliente & "&idvisita=" & cls.IDVisita & "&tipopedido=" & enTipoPedido.Normal)
+    End Sub
+
+    Protected Sub lnkJustificar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnJustificar.Click
+        Response.Redirect("justificar.aspx?idcliente=" & cls.IDCliente & "&idvisita=" & cls.IDVisita)
+    End Sub
+
+    Protected Sub lnkBonificacao_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBonificacao.Click
+        Response.Redirect("novopedido.aspx?idcliente=" & cls.IDCliente & "&idvisita=" & cls.IDVisita & "&tipopedido=" & enTipoPedido.Bonficacao)
+    End Sub
+
+    Protected Sub btnCancelarJustificativa_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancelarJustificativa.Click
+        cls.Justificar(0)
+        Response.Redirect("cliente.aspx?idcliente=" & cls.IDCliente)
+    End Sub
+
+    Protected Sub btnFechar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnFechar.Click
+        cls.Finalizar()
+        Response.Redirect("default.aspx")
+    End Sub
+
+    Protected Sub btnReabrir_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnReabrir.Click
+        cls.ReabrirAtendimento()
+        Response.Redirect("cliente.aspx?idcliente=" & cls.IDCliente)
+    End Sub
+
+    Protected Sub btnVoltar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnVoltar.Click
+        Response.Redirect("default.aspx")
+    End Sub
+
+    Protected Sub grdPedidos_RowDataBound(sender As Object, e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles grdPedidos.RowDataBound
+
+        Dim atc As New clsAtendimentoCliente
+        atc.Load(ViewState("IDCLIENTE"))
+
+        If e.Row.RowType = DataControlRowType.DataRow Then
+            Dim lnk As HtmlAnchor = e.Row.FindControl("lnkEditar")
+
+            '*** O link "Editar" só é ativado quando o STATUS do PEDIDO for 0 (indefinido) ou 3 ("Em trânsito") e se o ATENDIMENTO não estiver finalizado.
+            lnk.Visible = e.Row.DataItem("IDStatusPedido") = 0 Or e.Row.DataItem("IDStatusPedido") = 3 And atc.Finalizado = False
+
+        End If
+
+    End Sub
+End Class

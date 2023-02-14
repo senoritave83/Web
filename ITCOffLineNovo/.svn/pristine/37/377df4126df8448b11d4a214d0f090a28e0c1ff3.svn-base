@@ -1,0 +1,340 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ITCOffLine
+</name>
+</assembly>
+<members>
+<member name="P:ITCOffLine.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:ITCOffLine.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:ITCOffLine.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:ITCOffLine.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:ITCOffLine.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:ITCOffLine.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.clsPedidos.Inflate(System.Data.DataRow)">
+	<summary>
+ 	Função privada que carrega nas variaveis internas os valores presentes no DataRow
+ </summary>
+	<param name="row">objeto DataRow com os valores obtidos do banco de dados</param>
+</member><member name="M:ITCOffLine.clsPedidos.Deflate">
+	<summary>
+ 	Função privada que carrega a variavel strDeflate com os valores obtidos do formulário para gravação no banco de dados
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidos.Delete(System.Int32)">
+	<summary>
+ 	Rotina que apaga o registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidos.Update(System.Int32)">
+	<summary>
+ 	Função que grava os dados do registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidos.#ctor">
+	<summary>
+ 	Construtor padrão da classe Pedidos
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidos.#ctor(System.Int32)">
+	<summary>
+ 	Construtor da classe Pedidos, Instância a classe e obtem os dados do registro solicitado
+ </summary>
+	<param name="p_intCodigo">Chave primaria IDPedido</param>
+</member><member name="M:ITCOffLine.clsPedidos.Load(System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="p_intCodigo">Chave primaria IDEmpresa</param>
+</member><member name="M:ITCOffLine.clsPedidos.Clear">
+	<summary>
+ 	Função interna que limpa as variaveis internas
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidos.List(System.Int32,System.String,System.String,System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com filtragem
+ </summary>
+	<param name="p_IDPedido">Filtra a pesquisa pelo ID do Pedido</param>
+	<param name="p_RazaoSocial">Filtra a pesquisa pela Razão Social do Associado</param>
+	<param name="p_CNPJ">Filtra a pesquisa pelo CNPJ do Associado</param>
+	<param name="p_Registros">Quantidade de resgistro que serão mostrados por vez</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsPedidos.ListaPedido(System.Int32,System.String,System.String,System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com filtragem e ordenação
+ </summary>
+	<param name="p_NumPedido">Filtra a pesquisa pelo Número do Pedido</param>
+	<param name="p_RazaoSocial">Filtra a pesquisa pela Razão Social do Associado</param>
+	<param name="p_CNPJ">Filtra a pesquisa pelo CNPJ do Associado</param>
+	<param name="p_Registros">Quantidade de resgistro que serão mostrados por vez</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsPedidos.DeleteItemContato(System.Int32,System.Int32)">
+	<summary>
+ 	Rotina que apaga os Contatos/Usuários do Associado no registro (Pedido) atual
+ </summary>
+	<param name="p_IdContato">Deleta o Contato do Pedido pela chave primária do Contato</param>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Inflate(System.Data.SqlClient.SqlDataReader)">
+	<summary>
+ 	Função protegida que carrega nas variaveis internas os valores presentes no DataRow
+ </summary>
+	<param name="row">objeto DataRow com os valores obtidos do banco de dados</param>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.SalvarPropostaOrcamentoItem(System.Int32,System.Int32,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String)">
+	<summary>
+ 	Função que grava os dados do registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.ListPropostaOrcamentoItem(System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com a listagem dos planos inclusos na proposta
+ </summary>
+	<param name="p_IdOrcamento">Filtra a pesquisa pelo Número do Orcamento</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.ListFormPropostaOrcamentoItem(System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com a listagem dos planos inclusos na proposta
+ </summary>
+	<param name="p_IdOrcamento">Filtra a pesquisa pelo Número do Orcamento</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Load(System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="vIdOrcamento">Chave primaria IdOrcamento</param>
+	<returns>Boolean</returns>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Load(System.Int32,System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="vIdOrcamento">Chave primaria IdOrcamento</param>
+	<param name="vIdPropostaItem">Chave primaria IdPropostaItem</param>
+	<returns>Boolean</returns>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Clear">
+	<summary>
+ 	Função interna que limpa as variaveis internas
+ </summary>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Delete">
+	<summary>
+ 	Rotina que apaga o registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsPropostaOrcamentos.Listar(System.String,System.String,System.Boolean,System.Int32,System.Int32)">
+	<summary>
+ 	Função que retorna um Data Reader com filtragem, navegação e ordenação
+ </summary>
+	<param name="vFilter">Filtro a ser utilizado na pesquisa dos dados</param>
+	<param name="vOrder">Campo a ser utilizado na ordenação</param>
+	<param name="vDescending">Informa qual tipo de ordenação utilizar. ascendente ou decrescente</param>
+	<param name="vPage">Número da página a exibir</param>
+	<param name="vPageSize">Tamanho da página em registros</param>
+	<returns>PaginateResult</returns>
+</member><member name="M:ITCOffLine.ITC._setDateTimePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data padrão em data interna
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.ITC._getDateTimePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data interna em uma data padrão
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.ITC._getDatePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data interna em uma data padrão
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.ITC._getDateTimeDBValue(System.DateTime)">
+	<summary>
+ Função Responsável por transformar o valor gravado no SQL em formato string interno 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.ITC._setDateTimeDBValue(System.String)">
+	<summary>
+ Função Responsável por transformar o valor no formato string interno em um valor Date 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ITCOffLine.clsEmpresas.Inflate(System.Data.DataRow)">
+	<summary>
+ 	Função privada que carrega nas variaveis internas os valores presentes no DataRow
+ </summary>
+	<param name="row">objeto DataRow com os valores obtidos do banco de dados</param>
+</member><member name="M:ITCOffLine.clsEmpresas.Deflate">
+	<summary>
+ 	Função privada que carrega a variavel strDeflate com os valores obtidos do formulário para gravação no banco de dados
+ </summary>
+</member><member name="M:ITCOffLine.clsEmpresas.Update">
+	<summary>
+ 	Função que grava os dados do registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsEmpresas.#ctor(System.Int32)">
+	<summary>
+ 	Construtor da classe Empresas
+ </summary>
+	<param name="p_intCodigo">Chave primaria IDEmpresa</param>
+</member><member name="M:ITCOffLine.clsEmpresas.Load(System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="p_intCodigo">Chave primaria IDEmpresa</param>
+</member><member name="M:ITCOffLine.clsEmpresas.Clear">
+	<summary>
+ 	Função interna que limpa as variaveis internas
+ </summary>
+</member><member name="M:ITCOffLine.clsEmpresas.List(System.String,System.String,System.String,System.String,ITCOffLine.clsEmpresas.Ordenacao,System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com filtragem e ordenação
+ </summary>
+	<param name="p_Fantasia">Filtra a pesquisa pelo nome Fantasia da Empresa</param>
+	<param name="p_RazaoSocial">Filtra a pesquisa pela Razão Social da Empresa</param>
+	<param name="p_DataInicial">Filtra a pesquisa a partir de uma data inicial</param>
+	<param name="p_DataFinal">Filtra a pesquisa até uma data final</param>
+	<param name="Ordem">Ordena a pesquisa por Nome Fantasia, Razão Social, Endereço ou UF</param>
+	<param name="Status">Filtra a pesquisa pelo Status da Empresa</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsEmpresas.Find(System.String)">
+	<summary>
+ 	Função que retorna um DataSet com filtragem
+ </summary>
+	<param name="RazaoSocialEmpresa">Filtra a pesquisa pela Razão Social da Empresa</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsEmpresas.VerificaCNPJ(System.String)">
+	<summary>
+ 	Função que Verifica se o CNPJ já está cadastrado p/ uma empresa
+ </summary>
+	<param name="CNPJ">Filtra a pesquisa pelo CNPJ da Empresa</param>
+	<returns>Boolean</returns>
+</member><member name="M:ITCOffLine.clsEmpresas.Apagar">
+	<summary>
+ 	Rotina que apaga o registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.Inflate(System.Data.IDataReader)">
+	<summary>
+ 	Função privada que carrega nas variaveis internas os valores presentes no DataRow
+ </summary>
+	<param name="dr">objeto IDataReader com os valores obtidos do banco de dados</param>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.Load(System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="p_IdPedido">Chave primaria do pedido</param>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.Load(System.Int32,System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="p_IdPedido">Chave primaria do pedido</param>
+	<param name="p_IdPedidoItem">Chave primaria da junção pedido plano</param>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.clear">
+	<summary>
+ 	Função privada que limpa as variáveis internas 
+ </summary>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.Update(System.Int32,System.Int32,System.DateTime,System.DateTime,System.Double,System.String,System.String,System.String,System.Int32,System.Int32)">
+	<summary>
+ 	Função que grava os dados do registro atual
+ </summary>
+	<param name="p_IdPedido">Chave primária do Pedido</param>
+	<param name="p_IdPlano">Chave primária do Plano selecionado</param>
+	<param name="p_Inicio">Data de inicio do plano</param>
+	<param name="p_Termino">Data de finalização do plano</param>
+	<param name="p_Valor">Valor do plano selecionado</param>
+	<param name="p_PlanoEspecifico">Plano não cadastrado no sistema</param>
+	<param name="p_Periodo">Periodo em que o plano é valido</param>
+	<param name="p_CondPagamento">Condição de pagamento para cada plano</param>
+	<param name="p_IdPedidoItem">Chave primário do plano já atribuído a um pedido</param>
+	<param name="p_IdUsuario">Chave primária do usuário do sistema</param>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.ListPedidoItem(System.Int32)">
+	<summary>
+ 	Função que retorna um DataSet com a listagem dos planos inclusos no pedido
+ </summary>
+	<param name="p_IdPedido">Filtra a pesquisa pelo Número do Pedido</param>
+	<returns>DataSet</returns>
+</member><member name="M:ITCOffLine.clsPedidoPlanos.DeleteItem(System.Int32,System.Int32)">
+	<summary>
+ 	Rotina que apaga o plano vinculado ao pedido atual
+ </summary>
+	<param name="p_IdPedidoItem">Chave primária do plano agregado ao pedido</param>
+	<param name="p_IdUsuario">Chave primária do Usuário do sistema</param>
+</member><member name="P:ITCOffLine.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ITCOffLine.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ITCOffLine.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:ITCOffLine.clsProposta.Inflate(System.Data.IDataReader)">
+	<summary>
+ 	Função protegida que carrega nas variaveis internas os valores presentes no Data Reader
+ </summary>
+	<param name="dr">objeto IDataReader com os valores obtidos do banco de dados</param>
+</member><member name="M:ITCOffLine.clsProposta.Update">
+	<summary>
+ 	Função que grava os dados do registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsProposta.RenovarProposta(System.Int32)">
+	<summary>
+ 	Função que grava os dados do registro atual para uma proposta em renovação
+ </summary>
+</member><member name="M:ITCOffLine.clsProposta.Load(System.Int32)">
+	<summary>
+ 	Função que obtem os dados do registro solicitado 
+ </summary>
+	<param name="vIdProposta">Chave primaria IdProposta</param>
+	<returns>Boolean</returns>
+</member><member name="M:ITCOffLine.clsProposta.Clear">
+	<summary>
+ 	Função interna que limpa as variaveis internas
+ </summary>
+</member><member name="M:ITCOffLine.clsProposta.Delete">
+	<summary>
+ 	Rotina que apaga o registro atual
+ </summary>
+</member><member name="M:ITCOffLine.clsProposta.Listar(System.String,System.Int32,System.String,System.Boolean,System.Int32,System.Int32)">
+	<summary>
+ 	Função que retorna um Data Reader com filtragem, navegação e ordenação
+ </summary>
+	<param name="vFilter">Filtro a ser utilizado na pesquisa dos dados</param>
+	<param name="vIdProposta">Filtro</param>
+	<param name="vOrder">Campo a ser utilizado na ordenação</param>
+	<param name="vDescending">Informa qual tipo de ordenação utilizar. ascendente ou decrescente</param>
+	<param name="vPage">Número da página a exibir</param>
+	<param name="vPageSize">Tamanho da página em registros</param>
+	<returns>PaginateResult</returns>
+</member><member name="M:ITCOffLine.clsProposta.DeleteItemContato(System.Int32)">
+	<summary>
+ 	Rotina que apaga os Contatos/Usuários do Associado no registro (Pedido) atual
+ </summary>
+	<param name="p_IdContato">Filtra a pesquisa pelo Número do Pedido</param>
+</member><member name="M:ITCOffLine.clsProposta.VerificaPropostaExistente(System.Int32)">
+	<summary>
+ 	Rotina que verifica se existe uma proposta para o associado selecionado
+ </summary>
+	<param name="IdAssociado">Chave primária do Associado que será usada para buscar a proposta</param>
+</member>
+</members>
+</doc>

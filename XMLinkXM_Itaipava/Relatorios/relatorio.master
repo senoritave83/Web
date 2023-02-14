@@ -1,0 +1,44 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="relatorio.master.vb" Inherits="Relatorios_relatorio" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+<HTML>
+	<head id="Head1" runat="server">
+		<title>RELATÓRIO</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<asp:Literal runat='server' ID='ltrScroll'>
+        <style type="text/css">
+            @import url(../css/scrolling_table.css);
+        </style>
+        <!--[if IE]>
+            <style type="text/css">
+                @import url(../css/scrolling_table.ie.css);
+            </style>
+        <![endif]-->
+        <script language='javascript' type="text/javascript" src="../Js/functions.js"></script>
+		</asp:Literal>
+		</head>
+	<body>
+		<form id="Form1" method="post" runat="server">
+            <asp:ScriptManager runat='server'></asp:ScriptManager>
+			<table width="100%">
+				<tr valign="middle" runat='server' id='trHeader'>
+					<td style="width: 200px; height:92px;" align="center">
+					    <img src='../imagens/Logo_eouro_barra.jpg' />
+					</td>
+					<td align='left' style="background-color:transparent;">
+					</td>
+				</tr>
+				<tr valign="top">
+					<td colspan='2' class='ConteudoRelatorio'>
+						<span style="font-size:16px;text-align:left;"><asp:Literal runat='server' ID='ltrTitulo' /></span><br />
+						<asp:Literal runat='server' ID='ltrPeriodo'></asp:Literal>
+						<script type='text/javascript'>						    window.print();</script>					
+						<asp:ContentPlaceHolder runat='server' ID='cphRelatorio' />
+					</td>
+				</tr>
+			</table>
+        </form>
+    </body>
+</HTML>

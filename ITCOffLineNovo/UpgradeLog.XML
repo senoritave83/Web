@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ITCOffLine_Novo">
+</Property><Property Name="Solution File" Value="C:\Users\wagner.XMSISTEMAS\Documents\Visual Studio 2010\WebSites\ITCOff_Novo\ITCOffLine_Novo.sln">
+</Property><Property Name="Date" Value="segunda-feira, 27 de junho de 2011">
+</Property><Property Name="Time" Value="16:46:11">
+</Property></Properties><Event ErrorLevel="2" Project="C:\Users\wagner.XMSISTEMAS\Documents\Visual Studio 2010\WebSites\ITCOff_Novo\ITCOffLine_Novo.vbproj" Source="ITCOffLine_Novo.vbproj" Description="To access local IIS Web sites, you must install the following IIS components:&#xA;&#xA;      Internet Information Services&#xA;      IIS 6 Metabase and IIS 6 Configuration Compatibility&#xA;      ASP.NET&#xA;&#xA;In addition, you must run Visual Studio in the context of an administrator account.&#xA;&#xA;For more information, press F1.">
+</Event><Event ErrorLevel="2" Project="" Source="ITCOffLine_Novo.vbproj" Description="The operation could not be completed. Erro não especificado ">
+</Event></UpgradeLog>

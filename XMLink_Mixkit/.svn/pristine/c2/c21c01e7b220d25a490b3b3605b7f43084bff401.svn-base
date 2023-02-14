@@ -1,0 +1,28 @@
+﻿<%@ Master Language="VB" CodeFile="relatorio.master.vb" Inherits="Relatorios_relatorio" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<head runat="server">
+		<title>RELATÓRIO</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form id="Form1" method="post" runat="server">
+			<table width="100%">
+				<tr vAlign="middle">
+					<td>
+						<asp:Literal runat='server' ID='ltrTitulo' />
+					</td>
+				</tr>
+				<tr vAlign="middle">
+					<td>
+						<asp:ContentPlaceHolder runat='server' ID='cphRelatorio' />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</HTML>

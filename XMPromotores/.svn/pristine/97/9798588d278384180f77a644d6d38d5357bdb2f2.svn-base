@@ -1,0 +1,15 @@
+<%@ Page Language="VB" MasterPageFile="~/login.master" AutoEventWireup="false" CodeFile="login.aspx.vb" Inherits="login" title="XM Promotores - Yes Mobile" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:Literal runat="server" ID="ltHtml"/>    
+    <div id="divLogin" align="center">
+
+	    <asp:Login ID="Login1" runat="server"  PasswordLabelText="Senha" RememberMeText="Lembrar senha" UserNameLabelText="Login" Font-Overline="False" Font-Strikeout="False" Height="91px" TitleText="&amp;nbsp;" Width="263px" FailureText="login ou senha inv&aacute;lida."  LoginButtonText="Login">
+		    <FailureTextStyle VerticalAlign="Middle" Wrap="True" />
+		    <LoginButtonStyle CssClass="bt_ok_login" />
+		    <TextBoxStyle BorderColor="#C6C6C6" BorderStyle="Solid" BorderWidth="1px" CssClass="formulario" />
+		</asp:Login>			
+
+	</div>
+	
+</asp:Content>

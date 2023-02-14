@@ -1,0 +1,53 @@
+﻿#pnlShow .tituloprincipal {
+	font-family: Arial;
+	color: #E05206;
+	font-weight: bold;
+	text-align: center;
+    font-size: 14px;
+    text-decoration:underline;
+    height:44px;
+}
+#pnlShow .texto {
+	font-family: Arial;
+	font-size: 12px;
+}
+#pnlShow .titulo {
+	font-family: Arial;
+	font-size: 14px;
+	color: #E05206;
+	font-weight: bold;
+	margin-top:20px;
+}
+#pnlShow .palavraschaves {
+	font-family: Arial;
+	font-size: 12px;
+	color: #6d6b6b;
+}
+#pnlShow .subtitulo {
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #E05206;
+}
+#pnlShow table tr td {
+	font-family: Arial;
+	font-size: 12px;
+	padding:2px 2px 2px 2px;
+	
+}
+
+#pnlShow p {margin-bottom:10px;}
+
+
+#pnlShow {width:519px;}
+
+#pnlShow table {width:519px;}
+
+#pnlShow .comando
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	}
+}

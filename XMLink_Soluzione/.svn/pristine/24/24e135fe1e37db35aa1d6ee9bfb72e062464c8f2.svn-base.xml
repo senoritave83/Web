@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmsistemas.com.br/services/xmgmapservice" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://xmsistemas.com.br/services/xmgmapservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://xmsistemas.com.br/services/xmgmapservice">
+      <s:element name="RegistraPosicionamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistraPosicionamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistraPosicionamentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistraPosicionamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistraPosicionamento" />
+  </wsdl:message>
+  <wsdl:message name="RegistraPosicionamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistraPosicionamentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GMapServiceSoap">
+    <wsdl:operation name="RegistraPosicionamento">
+      <wsdl:input message="tns:RegistraPosicionamentoSoapIn" />
+      <wsdl:output message="tns:RegistraPosicionamentoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GMapServiceSoap" type="tns:GMapServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistraPosicionamento">
+      <soap:operation soapAction="http://xmsistemas.com.br/services/xmgmapservice/RegistraPosicionamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GMapServiceSoap12" type="tns:GMapServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="RegistraPosicionamento">
+      <soap12:operation soapAction="http://xmsistemas.com.br/services/xmgmapservice/RegistraPosicionamento" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GMapService">
+    <wsdl:port name="GMapServiceSoap" binding="tns:GMapServiceSoap">
+      <soap:address location="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GMapServiceSoap12" binding="tns:GMapServiceSoap12">
+      <soap12:address location="http://maps.xmsistemas.com/xmgmapservice/gmapservice.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

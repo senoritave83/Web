@@ -1,0 +1,274 @@
+.titulo11{
+	font-family:Verdana, Arial;
+	font-size:11px;
+	color:#AF570C;
+	font-weight:bold;
+}
+.titulo16{
+	font-family:Verdana, Arial;
+	font-size:16px;
+	color:#AF570C;
+	font-weight:bold;
+}
+.texto10{
+	font-family:Verdana, Arial;
+	font-size:10px;
+	color:#000000;
+}
+.texto11{
+	font-family:Verdana, Arial;
+	font-size:11px;
+	color:#000000;
+}
+.texto12{
+	font-family:Verdana, Arial;
+	font-size:12px;
+	color:#000000;
+}
+.texto14{
+	font-family:Verdana, Arial;
+	font-size:14px;
+	color:#000000;
+}
+.textoBranco9{
+	font-family:Verdana, Arial;
+	font-size:9px;
+	color:#FFFFFF;
+}
+.textoBranco11{
+	font-family:Verdana, Arial;
+	font-size:11px;
+	color:#FFFFFF;
+}
+.botao {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(imgs/bg_botao.gif);
+	background-repeat: repeat-x;
+}
+.caixas {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+.lnkCinza10{
+	font-family:Verdana, Arial;
+	font-size:10px;
+	color:#3D3D3C;
+	text-decoration: none;
+}
+.lnkCinza10:hover{
+	font-family:Verdana, Arial;
+	font-size:10px;
+	color:#3D3D3C;
+	text-decoration: underline;
+	background:none;
+}
+.lnkPreto11{
+	font-family:Verdana, Arial;
+	font-size:11px;
+	color:#000000;
+	text-decoration: none;
+	background:none;
+}
+.lnkPreto11:hover{
+	font-family:Verdana, Arial;
+	font-size:11px;
+	color:#000000;
+	text-decoration: underline;
+	background:none;
+}
+A{
+	background:none;
+	font-weight:normal;
+}
+A:hover{
+	background:#F2F2F2;
+	font-weight:bold;
+}
+
+a.release{background:none; text-decoration:none}
+a.release:hover{background:none; font-weight:normal; text-decoration:none}
+
+.bgCinza{
+	background-color:#F2F2F2;
+}
+.bgCinza1{
+	background-color:#CCCCCC;
+}
+.contentTit1{
+	font-family:Verdana, Arial;
+	text-decoration: none;
+	color:#7F7F7F;
+	font-size:11px;
+}
+contentTit1:hover{
+	font-family:Verdana, Arial;
+	text-decoration: underline;
+	color:#000000;
+	font-size:11px;
+}
+.listagem a {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	padding: 5px;
+	display:block;
+	height:45px;
+	text-align:left;
+	background:#FFFFFF;
+	border-bottom:solid 1px #B7B7B6;
+	font-weight:normal;
+
+}
+.listagem:hover {
+	background:#F2F2F2;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 5px;
+	color: #AF570C;
+	font-weight:normal;
+}
+.menu, .popup {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	padding: 5px 0px 0px 5px;
+	display:block;
+	height:17px;
+	*height:23px;
+	text-align:left;
+	background-color:#FFFFFF;
+	border-bottom:solid 1px #B7B7B6;
+}
+.menu:hover, .popup:hover{
+	background-color:#F4F4F4;
+	text-decoration: none;
+	padding: 5px 0px 0px 10px;
+	color: #AF570C;
+	font-weight:bold;
+}
+.menu:hover{
+	border-right:solid 5px #AF570C;
+}
+.popup:hover{
+	border-left:solid 5px #AF570C;
+}
+.submenu {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	padding: 5px 0px 0px 5px;
+	width:150px;
+	height:21px;
+	text-align:left;
+	background-color:#F4F4F4;
+}
+.submenu:hover {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	color: #000000;
+	text-decoration:none;
+	width:145px;
+	padding: 5px 0px 0px 5px;
+	background-color:#EBEBEB;
+}
+.menuEsq A{
+	height:20px;
+	padding-top:3px;
+	DISPLAY:block;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background: #F7F7F7 url('../imgs/marcador1.gif') no-repeat 5px 7px;
+	padding-left:16px;
+	text-decoration:none;
+	width:150px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E7E9E2;
+}
+.menuEsq A:hover{
+	DISPLAY: block;font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	color: #000000; 
+	background-color: #F2F2F2;
+	padding-left:16px;
+	text-decoration:none;
+}
+.menuEsqSub A{
+	height:20px;
+	padding-top:3px;
+	DISPLAY:block;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background: #F7F7F7 url('../imgs/marcador2.gif') no-repeat 15px 7px;
+	padding-left:24px;
+	text-decoration:none;
+	width:150px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E7E9E2;
+}
+.menuEsqSub A:hover{
+	DISPLAY: block;font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	color: #000000; 
+	background-color: #F2F2F2;
+	padding-left:24px;
+	text-decoration:none;
+}
+.titulos14 {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+	letter-spacing: -0.5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E7E9E2;
+}
+.itemNoticia{
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:20px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background: url('../imgs/marcador1.gif') no-repeat 8px 7px;
+	text-decoration:none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E7E9E2;
+}
+.tituloItem{
+	color: #0071BD;
+	text-decoration:none;
+}
+#pop_segmentos{
+	position:relative;
+	width:108px;
+	z-index:2;
+	visibility: hidden;
+	margin: 31px 0 0 -2px;
+}
+#pop_informa{
+	position:relative;
+	width:170px;
+	z-index:3;
+	visibility: hidden;
+	margin: -90px 0 -85px -2px;
+}
+#banner_topo{
+	height:150px;
+	z-index:1;
+	background:url(../imgsPages/topo.jpg) top no-repeat;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<xml>
+	<OS>
+		<Cliente>Cliente EOL</Cliente>
+		<Endereco>Rua das Aves, 1000</Endereco>
+		<Referencia>Jardins - Próximo à NEXTEL SP</Referencia>
+		<Responsavel>1177777777</Responsavel>
+		<Observacao>Nova instalação efetuada</Observacao>
+	</OS>
+	<OS>
+		<Cliente>Cliente EOL</Cliente>
+		<Endereco>Rua das Aves, 1000</Endereco>
+		<Referencia>Jardins - Próximo à NEXTEL SP</Referencia>
+		<Responsavel>1177777777</Responsavel>
+		<Observacao>Nova instalação efetuada</Observacao>
+		<DataAgenda>2007-01-20T14:00</DataAgenda>
+	</OS>
+	
+</xml>

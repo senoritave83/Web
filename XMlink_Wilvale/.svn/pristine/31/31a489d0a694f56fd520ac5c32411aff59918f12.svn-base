@@ -1,0 +1,131 @@
+
+Imports Classes
+
+Namespace Pages.Cadastros
+
+    Partial Public Class Cliente
+        Inherits XMWebPage
+
+        Dim cls As clsCliente
+        Protected Const VW_IDCLIENTE As String = "IDCliente"
+
+        
+        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+            cls = New clsCliente()
+            If Not Page.IsPostBack Then
+                subAddConfirm(btnApagar, "Deseja realmente apagar esta cliente?")
+                ViewState(VW_IDCLIENTE) = Cint("0" & Request("IDCliente"))
+                cls.Load(ViewState(VW_IDCLIENTE))
+
+                btnGravar.Enabled = IIf(cls.IsNew(), VerificaPermissao(Secao, ACAO_ADICIONAR), VerificaPermissao(Secao, ACAO_EDITAR))
+                btnNovo.Disabled = Not VerificaPermissao(Secao, ACAO_ADICIONAR)
+                btnApagar.Enabled = IIf(cls.IsNew(), False, VerificaPermissao(Secao, ACAO_APAGAR))
+
+                Dim ven As New clsVendedor
+                cboIDVendedor.DataSource = ven.Listar
+                cboIDVendedor.DataBind()
+                cboIDVendedor.Items.Insert(0, New ListItem("Selecione...", "0"))
+                ven = Nothing
+
+                pnlVendedores.Visible = cls.IDCliente > 0
+
+                valReqCNPJ.Enabled = MustValidate("Cliente", enValidateField.CNPJ)
+
+                Inflate()
+            Else
+                cls.Load(ViewState(VW_IDCLIENTE))
+          End If
+        End Sub
+
+
+        Protected Sub BindVendedores()
+            grdVendedores.DataSource = cls.ListarVendedores
+            grdVendedores.DataBind()
+
+
+        End Sub
+
+        Protected Sub Inflate()
+			txtCodigo.Text = cls.Codigo
+            txtCliente.Text = cls.Cliente
+			txtCNPJ.Text = cls.CNPJ
+			txtEndereco.Text = cls.Endereco
+			txtReferencia.Text = cls.Referencia
+			txtBairro.Text = cls.Bairro
+			txtCidade.Text = cls.Cidade
+			txtCEP.Text = cls.CEP
+			SetComboValue(cboUF, cls.UF)
+			txtTelefone.Text = cls.Telefone
+			txtContato.Text = cls.Contato
+			txtObservacao.Text = cls.Observacao
+			If cls.Criado = "" Then
+			    lblCriado.Text = "Sem data de cria&ccedil;&atilde;o"
+			Else
+			    lblCriado.Text = cls.Criado
+			End If
+			txtTabelaPreco.Text = cls.TabelaPreco
+			txtDescontoMax.Text = cls.DescontoMax
+            txtLimiteCredito.Text = cls.LimiteCredito.ToString("#0.00")
+
+            BindVendedores()
+        End Sub
+
+        Protected Sub Deflate()
+			cls.Codigo = txtCodigo.Text
+            cls.Cliente = txtCliente.Text
+			cls.CNPJ = txtCNPJ.Text
+			cls.Endereco = txtEndereco.Text
+			cls.Referencia = txtReferencia.Text
+			cls.Bairro = txtBairro.Text
+			cls.Cidade = txtCidade.Text
+			cls.CEP = txtCEP.Text
+			cls.UF = cboUF.SelectedValue
+			cls.Telefone = txtTelefone.Text
+			cls.Contato = txtContato.Text
+			cls.Observacao = txtObservacao.Text
+			cls.TabelaPreco = txtTabelaPreco.Text
+			cls.DescontoMax = txtDescontoMax.Text
+			cls.LimiteCredito = txtLimiteCredito.Text
+        End Sub
+
+        Protected Sub btnGravar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGravar.Click
+
+            If (cls.IsNew() And VerificaPermissao(Secao, ACAO_ADICIONAR) = False) Or (cls.IsNew() = False And VerificaPermissao(Secao, ACAO_EDITAR) = False) Then
+                Exit Sub
+            End If
+
+            Deflate()
+
+            If cls.isValid Then
+                cls.Update()
+                Inflate()
+                MostraGravado("~/Cadastros/Cliente.aspx?idcliente=" & cls.idcliente)
+            End If
+            lstErros.DataSource = cls.BrokenRules
+            lstErros.DataBind()
+
+        End Sub
+
+        Private Sub btnApagar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnApagar.Click
+            If VerificaPermissao(Secao, ACAO_APAGAR) Then
+                cls.Delete()
+                Response.Redirect("Clientes.aspx")
+            End If
+        End Sub
+
+        Protected Sub btnAddVendedor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnAddVendedor.Click
+            cls.AdicionarVendedor(cboIDVendedor.SelectedValue)
+            BindVendedores()
+            cboIDVendedor.SelectedIndex = -1
+        End Sub
+
+        Protected Sub grdVendedores_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles grdVendedores.RowCommand
+            If e.CommandName = "Excluir" Then
+                cls.RetirarVendedor(e.CommandArgument)
+            End If
+            BindVendedores()
+        End Sub
+    End Class
+
+End Namespace
+

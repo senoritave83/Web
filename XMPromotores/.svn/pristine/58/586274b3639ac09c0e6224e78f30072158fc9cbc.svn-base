@@ -1,0 +1,176 @@
+﻿<?xml version="1.0"?>
+<settings theme="Disney" title="XMPromotores" reportspath="/xmpromotores/xmsistemas" imagePath="/Paodeacucar_imgs" >
+  <ConfiguracoesGerais>
+    <PesquisaAmostragem visible="true"></PesquisaAmostragem>
+    <PerguntaCondicional visible="true"></PerguntaCondicional>
+    <ComponenteLocalizacao modo="BuscaAutomatica"></ComponenteLocalizacao>
+    <!--<ComponenteLocalizacao modo="Padrao"></ComponenteLocalizacao>-->
+  </ConfiguracoesGerais>
+  <Segmentacao>
+    <Produto datafield="Descricao"/>
+  </Segmentacao>
+  <ReportViewer visible="false">
+    <Relatorios>
+      <Relatorio Nome="Relatório Gráfico Preço Médio" NomeTela="Preço Médio de Produtos"></Relatorio>
+    </Relatorios>
+  </ReportViewer>
+  <Produto caption="Produto" precoporestado="True">
+    <Mensagens>
+      <Mensagem3 texto="No produto"></Mensagem3>
+      <Mensagem4 texto="Não há produtos com o filtro selecionado!"></Mensagem4>
+      <Mensagem5 texto="Atenção ! Alterando o produto para NÃO PESQUISADO ou NÃO ENCONTRADO as respostas das perguntas abaixo serão eliminadas."></Mensagem5>
+      <Mensagem6 texto="Atenção ! Alterando o produto para NÃO PESQUISADO ou NÃO ENCONTRADO as respostas das perguntas abaixo serão eliminadas.\n Deseja continuar ?"></Mensagem6>
+      <Mensagem7 texto="Produtos a serem pesquisados"></Mensagem7>
+      <Mensagem8 texto="Produtos pesquisados"></Mensagem8>
+      <Mensagem9 texto="Status do Produto"></Mensagem9>
+      <Mensagem10 texto="Não há produtos pesquisados nesta visita!"></Mensagem10>
+      <Mensagem11 texto="Produtos Concorrentes"></Mensagem11>
+    </Mensagens>
+    <PrecoMaximo required="false" visible="true" />
+    <PrecoMinimo required="false" />
+    <PrecoSugerido required="false" visible="true" />
+    <StatusPesquisa required="true" visible="true" />
+    <StatusComercio visible="true" />
+    <Frequencia visible="true" />
+    <Conversor visible="true" />
+    <Resolucao visible="true" />
+    <TamanhoTela visible="true" />
+    <CategoriaCombinada visible="true" />
+  </Produto>
+  <Roteiro>
+    <AdicionarPeriodo visible="false" />
+    <AdicionarPadrao visible="true" />
+    <SemanaMes visible="true" />
+  </Roteiro>
+  <Cliente>
+    <Exportar visible="true" />
+    <EmptyRow caption="Não há clientes com o filtro selecionado!" />
+    <Fantasia caption="Nome Fantasia" />
+  </Cliente>
+  <Categoria caption="Segmento" captionid="IdSegmento">
+    <Mensagens>
+      <Mensagem1 texto="O Segmento não pode ser apagado, pois existe(m) categoria(s) vinculada(s) a ele!"></Mensagem1>
+      <Mensagem2 texto="Deseja realmente apagar este segmento?"></Mensagem2>
+      <Mensagem3 texto="No segmento"></Mensagem3>
+      <Mensagem4 texto="Não há segmentos com o filtro selecionado!"></Mensagem4>
+      <Mensagem5 texto="Segmento é um campo obrigatório"></Mensagem5>
+      <Mensagem6 texto="Perguntas de segmento"></Mensagem6>
+      <Mensagem7 texto="Não existem perguntas de segmento respondidas para esta visita!"></Mensagem7>
+    </Mensagens>
+    <Exportar visible="true"/>
+  </Categoria>
+  <Classificacao>
+    <Exportar visible="true"/>
+  </Classificacao>
+  <SubCategoria caption="Categoria"  captionid="IdCategoria">
+    <Mensagens>
+      <Mensagem1 texto="A categoria não pode ser apagada, pois existe(m) produtos(s) vinculado(s) a ela!"></Mensagem1>
+      <Mensagem2 texto="Deseja realmente apagar esta categoria?"></Mensagem2>
+      <Mensagem3 texto="Na categoria"></Mensagem3>
+      <Mensagem4 texto="Não há categorias com o filtro selecionado!"></Mensagem4>
+      <Mensagem5 texto="Categoria é um campo obrigatório"></Mensagem5>
+      <Mensagem6 texto="Perguntas de categoria"></Mensagem6>
+      <Mensagem7 texto="Não existem perguntas de categoria respondidas para esta visita!"></Mensagem7>
+    </Mensagens>
+    <Exportar visible="true"/>
+  </SubCategoria>
+  <Pergunta>
+    <Exportar visible="true"/>
+    <MinMax visible="true"/>
+  </Pergunta>
+  <Pesquisa>
+    <Exportar visible="true"/>
+    <SegmentoLoja campoloja="CodigoLoja" />
+  </Pesquisa>
+  <Coordenadores caption="Supevisor">
+    <Exportar visible="true"/>
+    <BotaoGravar visible="true" />
+    <BotaoApagar visible="false" />
+    <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'" />
+    <BotaoNovo visible="true"  />
+  </Coordenadores>
+  <Operadora>
+    <Exportar visible="true" />
+  </Operadora>
+  <TipoJustificativa>
+    <Exportar visible="true" />
+    <AplicarRuptura visible="true"/>
+  </TipoJustificativa>
+  <Regiao caption="Região">
+    <Mensagens>
+      <Mensagem2 texto="Deseja realmente apagar esta região?"></Mensagem2>
+      <Mensagem4 texto="Não há regiões com o filtro selecionado!"></Mensagem4>
+      <Mensagem5 texto="Região é um campo obrigatório"></Mensagem5>
+    </Mensagens>
+    <Exportar visible="true" />
+  </Regiao>
+  <Shopping>
+    <Exportar visible="true" />
+  </Shopping>
+  <TipoLoja caption="Categoria do IMS">
+    <Exportar visible="true" />
+  </TipoLoja>
+  <Fornecedor caption="Fornecedor">
+    <Mensagens>
+      <Mensagem4 texto="Não há fornecedores com o filtro selecionado!"></Mensagem4>
+      <Mensagem5 texto="Fornecedor é um campo obrigatório"></Mensagem5>
+    </Mensagens>
+    <Exportar visible="true" />
+  </Fornecedor>
+  <Lider caption="Líder">
+    <Exportar visible="true" />
+    <Foto visible="false" />
+    <BotaoGravar visible="true" />
+    <BotaoApagar visible="false" />
+    <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'" />
+    <BotaoNovo visible="true"  />
+  </Lider>
+  <Mensagem TamanhoMaximo="1000">
+    <Exportar visible="true" />
+  </Mensagem>
+  <Promotor caption="Promotor">
+    <Senha required="true" visible="true" />
+    <CPF validate="false" />
+    <Exportar visible="true"/>
+    <Foto visible="true" />
+    <Fax caption="Celular YesMobile" />
+    <BotaoGravar visible="false" />
+    <BotaoApagar visible="false" />
+    <BotaoNovo2 visible="true" onclick="location.href='http://yesmobile.xmpromotores.com.br/Cadastro'"/>
+    <BotaoNovo visible="true" />
+  </Promotor>
+  <Loja>
+    <Codigo codigoautomatico="true"  iscnpj="true" visible="false" required="false"  />
+    <CNPJ validate="false" valida_CPFCNPJ="true" IsCNPJ="false" visible="true" required="false" />
+    <Filial visible="true" required="false" />
+    <ClassificacaoLoja visible="true" required="false" />
+    <Tamanho visible="true" required="false" />
+    <TamanhoEletronicos visible="true" required="false" />
+    <ClassificacaoConsumo visible="true" required="false" />
+    <Operadora visible="true" required="false" />
+    <Segmento visible="true" required="false" />
+    <RazaoSocial visible="true" required="false" />
+    <GerenteConta visible="true" required="false" />
+    <Exportar visible="true" />
+    <Foto visible="false" />
+    <TipoLoja caption="Categoria do IMS"></TipoLoja>
+    <TipoCliente visible="true"></TipoCliente>
+  </Loja>
+  <IsCNPJ loja.codigo="true">
+  </IsCNPJ>
+  <Visita excluir="false" Excluir="false">
+    <Localizacao visible="true" />
+    <Loja alterar="true" />
+    <Exportar visible="true" />
+  </Visita>
+  <Relatorios>
+    <DescricaoBandeira nomebandeira="Revenda"></DescricaoBandeira>
+  </Relatorios>
+  <ExportarDados>
+    <Exportacao qtdemaximadias="0"></Exportacao>
+  </ExportarDados>
+  <Usuario>
+    <Permissoes travarpermissoesusuario="|5|7|9|"></Permissoes>
+    <Exportar visible="true" />
+  </Usuario>
+</settings>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<settings theme="Default" title="Gestor_de_Os">
+  <ConfiguracoesGerais>
+
+    <ListaDeOs>
+      <rptHistorico  visible="True"></rptHistorico>
+      <Numero caption="Numero" label="Numero"></Numero>
+      <Cliente caption="Cliente" label="Cliente"></Cliente>
+      <Enviada caption="Enviada" label="Enviada"></Enviada>
+      <Responsavel caption="Responsavel" label="Responsavel"></Responsavel>
+      <Status caption="Status" label="Status"></Status>
+      <Data caption="Data" label="Data"></Data>
+      <Prioridade caption="Prioridade" label="Prioridade"></Prioridade>
+    </ListaDeOs>
+
+    <EnviodeOS>
+      <cliente caption="Cliente" label="Cliente"></cliente>
+      <Endereco caption="Endereco" label="Endereco"></Endereco>
+      <LocalRef caption="Local de Referência" label="Local de Referência"></LocalRef>
+      <Responsavel caption="Responsavel" label="Responsavel"></Responsavel>
+      <Prioridade caption="Prioridade" label="Prioridade"></Prioridade>
+      <Descricao caption="Descrição" label="Descrição"></Descricao>
+    </EnviodeOS>
+
+  </ConfiguracoesGerais>
+</settings>

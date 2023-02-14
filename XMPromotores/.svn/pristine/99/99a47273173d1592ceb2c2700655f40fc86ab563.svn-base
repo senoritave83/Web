@@ -1,0 +1,2663 @@
+﻿* {border:0px; padding:0px; margin:0px; font-family:Arial, Helvetica, sans-serif;}
+
+body {
+	background-image:url('../../imagens/bg_sistem.png');
+}
+/*---------------------------------------------------------------------- Positionamento */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cr {clear:right;}
+.cl{
+	clear:left;
+}
+
+.ac{text-align:center;}
+.ar{text-align:right;}
+
+.separator { padding:3px;}
+.clear {clear:both; display:block !important; float:none !important; font-size:0px !important; height:1px !important; margin:0 !important; overflow:hidden; visibility:hidden;}
+/*---------------------------------------------------------------------- USUARIO */
+
+.EditArea_Acesso {
+	margin:10px 20px 11px 20px;
+	padding-top:20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	width:98%;
+	border:1px #DDDDDD solid;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+
+
+}
+
+
+#dados_acesso{
+	padding-left:15px;
+	width:78%;
+	display:block;
+}
+
+#dados_acesso ul {
+	padding-left:5px;
+	list-style:none;
+
+	
+}
+
+#dados_acesso ul li {
+	float:left;
+	margin-top:11px;
+	width:175px;
+	width:149px\9;
+
+	
+}
+
+#dados_pessoais{
+	padding-left:10px;
+	width:100%;
+	margin-bottom:7px;
+	display:table;
+	padding-top:12px;
+}
+
+#dados_pessoais ul{
+	padding-left:5px;
+	list-style:none;	
+	margin-top:10px;
+	margin-left:20px;
+
+}
+
+#dados_pessoais ul li{
+	float:left;
+	margin-top:6px;
+	margin-right:30px;
+	width:175px;	
+	
+}
+
+.InputField
+{
+	margin: 8px 0 10px;
+    padding: 3px;
+    width: 170px;
+    border:1px #CCCCCC solid;
+   	height:22px;
+}
+
+
+h2 {
+	color:#666666;
+	font-size:15px;
+	
+
+	
+}
+
+label{
+	font-weight:bold;
+	color:#333333;
+	
+}
+
+.divEmptyRow {
+	margin-left:21px;
+	margin-right:10px;
+	color:#FF0000;
+	}
+
+/*---------------------------------------------------------------------- MASTER PAGE */
+
+* {
+    PADDING-BOTTOM: 0px; MARGIN: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; PADDING-LEFT: 0px; OUTLINE-WIDTH: medium; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana,Arial,Helvetica; FONT-SIZE: 8pt; PADDING-TOP: 0px
+}
+
+.Titulo_pg{
+	color:#A60B16;
+	font-weight:bold;
+	}
+	
+.xmtitulo {
+	padding:11px 0px 11px 11px; 
+	padding-left:10px\9;
+}
+	
+
+.root_pg{
+	color:#A60B16;
+}
+
+.node_pg {
+	color:#808080;
+	font-weight:bold;
+	text-decoration:none;
+}	
+
+.current_pg{
+	color:#808080;
+	text-decoration:none;
+	
+}
+
+
+#imgLinha
+{
+	background-color:#FFFFFF;
+	background-image:url(../../imagens/bluebarh.gif) ;
+	background-repeat:no-repeat;
+	height:1px;
+	width:100%;
+}
+.divUserPanel
+{
+	background-color:#E2E2E2;
+	height:20px\9;
+	color:#A60B16;
+	padding:14px 5px 8px 17px;
+	width:230px;
+	width:253px\9;
+	border-right:1px #CCCCCC solid;
+}
+
+.divuserPanel a
+{
+	color:#EA9E06;
+	text-align:right;
+}
+
+.MainPage
+{
+	background-color:Gray;
+	height:100%;
+	width:100%;
+}
+
+/*
+#333333
+#FFE401
+#D1DDF1
+#EFF3FB
+#DEE8F5
+#2461BF
+#FFE401
+#2461BF
+*/
+
+.MainUserPanel {
+	width:253px; 
+	float:left;
+	clear:both;}
+
+.MainLateral 
+	{
+	width:253px; 
+	float:left;
+	clear:left;
+	background:	-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	padding-right:5px*; 
+	height:100%; 	
+	border-right:1px #D8D8D8 solid;
+	
+	}
+	
+.MainLateral td {
+	width:250px;
+	padding-right:5px*; 	
+	
+}
+
+.MainLateral tr {
+	width:252px;
+	background:	url('../../imagens/bg_menu_lat.png') repeat-x scroll left center;	
+	border-bottom:1px #CCCCCC solid;
+	border-top:1px #F5F7F7 solid;
+	
+
+}
+
+.MainLateral tr a {
+	line-height:20px;
+}
+
+.MainArea
+{
+	background-color:Black;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:100%;
+}
+
+.Main
+{
+    width:100%;
+    height:100%;    
+}
+
+.MainContent
+{
+	PADDING-BOTTOM: 10px; OVERFLOW: hidden; PADDING-TOP: 0px; width:100%\9;
+	
+
+}
+
+.MainTeste2
+{
+	width:100%;
+}
+
+
+.MainHeaderLeft
+{
+	padding-right:0px\9;
+	background:url('../../imagens/Itaipava_imgs/logo_Promotores.png') no-repeat scroll right 0px;
+	width:253px;
+	float:left;
+	height:57px;
+	margin-bottom:0px;
+
+	
+}
+
+.MainHeader
+{
+	background: url('../../imagens/Itaipava_imgs/bg_header.png') repeat-x;
+	height:57px;
+	width:100%\9;
+	float:right\9;
+	clear:left\9;
+	border-bottom:1px solid #940F0F;
+
+	
+}
+
+.MainHeader tr td
+{
+	height:15px;	
+}
+
+#MainFooter 
+{
+	height:25px;
+	height:35px\9;
+	color:white;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:11px;	 
+	border-top:1px #A60B15 solid;	
+	position:relative;
+}
+
+#MainFooter img{
+	position:absolute;
+	top:0;
+}
+
+.bg_footer{
+	height:35px;
+	background: -moz-linear-gradient(center bottom , #000000 44%, #333333 88%) repeat scroll 0 0 #333333;
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000)) repeat-X;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#333333, endColorstr=#000000)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#333333, endColorstr=#000000);
+
+}
+
+
+#tdLateral
+{
+	background-color: #000000;
+}
+
+.leteral_entrelinhas{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+
+/*---------------------------------------------------------------------- TITULO */
+
+.AreaTitulo
+{
+	background-color:#CCCCCC;
+	border-color:#CCCCCC;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+.AreaSubTitulo
+{
+	color:Black;
+	font-family:Arial;
+	font-size:medium;
+	text-align:left;
+	font-weight:bold;
+	clear:both;
+	height:10px;
+}
+
+/*---------------------------------------------------------------------- AREA COMUNS */
+.AreaBotoes
+{
+	margin-top:51px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:20px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+#divErros
+{
+	background-color:#E8E8E8;
+	border:1px #D4D4D4 solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	height:auto;
+	color:#FF0000;
+	margin-left:10px;
+	margin-right:10px;
+	width:80%\9;
+}
+
+#divErros {
+	padding-left:15px;
+}
+
+
+.AreaBotoes input
+{
+	width:96px;
+	border:1px #DE7F80 solid;
+	float:left;	
+	margin-right:10px;
+	height:28px;
+	color:#FFFFFF;
+	background: rgb(148,15,15); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIzNCUiIHN0b3AtY29sb3I9IiM5NDBmMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzgyNTJkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top,  rgba(148,15,15,1) 34%, rgba(200,37,45,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(34%,rgba(148,15,15,1)), color-stop(100%,rgba(200,37,45,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(148,15,15,1) 34%,rgba(200,37,45,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(148,15,15,1) 34%,rgba(200,37,45,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(148,15,15,1) 34%,rgba(200,37,45,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(148,15,15,1) 34%,rgba(200,37,45,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#940f0f', endColorstr='#A60B16',GradientType=0 ); /* IE6-8 */
+
+}
+
+.AreaAjuda
+{
+	background-color:#E8E8E8;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:#666666;
+	font-size:x-small;
+	text-align:left;
+	margin-left:10px;
+	margin-right:10px;
+	width:80%\9;
+
+}
+
+
+
+/*---------------------------------------------------------------------- LISTA */
+
+#divLista 
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+
+#divCadastro
+{
+	height:400px;
+	width:97%;
+	border:solid thin Gray;
+	overflow:auto;
+	background-color:Gainsboro;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:xx-small;
+	text-align:left;
+	clear:both;
+}
+
+.TextDefault
+{
+	font-family:Verdana,Arial,Helvetica;
+	font-size:10pt;
+
+}
+.TextDefault td a {
+	color:#EA9E06;
+	}
+
+.TextDefault tr td {
+	height:20px;
+	padding-left:5px;
+ 
+}
+
+.TextDefault th {
+	padding:4px 0px 4px 5px;
+}
+
+.Titulo_perguntas {
+	padding:3px 50px 3px 5px;
+	padding-right:43px\9;
+}
+
+.Filtro 
+{
+	border:1px #CCCCCC solid;
+	margin-top:10px;
+	margin-bottom:20px;
+	margin-left:21px;
+	margin-right:21px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	font-size:x-small;
+	text-align:left;
+	color:Black;
+	font-weight:bold;	
+	clear:both;
+	height:150px;
+	height:30px\9;
+	width:80%\9;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	
+}
+
+#DivLinkFiltro {
+	width:78%;
+	text-align:right;
+}
+
+
+/*
+<asp:DetailsView ID="DetailsView1" runat="server" CellPadding="4"
+                    ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
+                    <FooterStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <FieldHeaderStyle BackColor="#DEE8F5" Font-Bold="True" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <HeaderStyle BackColor="#FFE401" Font-Bold="True" ForeColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <AlternatingRowStyle BackColor="White" />
+                </asp:DetailsView>
+*/
+
+.Filtro .FiltroTitulo
+{
+	font-weight:bold;
+	font-family:Arial;
+	color:Black;
+}
+
+.Filtro .FiltroBotao
+{
+	float:right;
+	margin-left:10px;
+	text-align:left;
+	vertical-align:baseline;
+	margin-bottom:5px;
+}
+
+.Filtro .FiltroBotao input
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:100px;
+	height:25px;
+	border:1px #CDCECF solid;
+	border-radius:2px;
+}
+
+.Filtro .FiltroItem
+{
+	float:left;
+	width:127px;
+	text-align:left;
+	margin-bottom:5px;
+	margin-right:11px;
+	padding-left:5px;
+	color:#555555;
+}
+
+.FiltroItem input {
+	border:1px #CDCECF solid;
+}
+
+.FiltroItem Select{
+	width:100px;
+	border:1px #CDCECF solid;
+	
+	
+}
+
+.Select {
+	border:1px #CDCECF solid;
+	display:block;
+
+}
+
+
+.FiltroLetras
+{
+	float:left;
+	width:320px;
+	text-align:left;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+.FiltroLetras a
+{
+	color:Gray;
+}
+
+.FiltroLetras .SelectedLetra
+{
+    color:Black;
+}
+/*---------------------------------------------------------------------- Geral */
+
+.pNormal{margin:10px 0;}
+
+.mb10{margin-bottom:10px !important;}
+
+.mtb20{margin:20px 0 20px 0 !important;}
+
+.mt0{margin-top:0 !important;}
+
+.mt20{margin-top:20px !important;}
+
+.f10{font-size:10px !important;}
+.f11{font-size:11px !important;}
+.f12, .f12 *{font-size:12px !important;}
+
+
+.noBg{background:none !important;}
+
+
+.TituloArea
+{
+	font-size:15px;
+	font-weight:bold;
+	color:Black;
+	font-family:Arial;
+	text-align:left;
+}
+
+.ReportArea
+{
+
+
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	width:100%;
+	margin-bottom:20px;
+	padding-bottom:20px;
+	vertical-align:top;
+}
+
+/******************************* AREA DE EDIÇÃO **************************/
+
+.EditArea
+{
+	margin:10px 20px 11px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	width:94%;
+	width:80%\9;
+	border:1px #DDDDDD solid;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	
+
+	
+}
+
+.EditArea ul {
+	list-style:none;
+	float:left;
+	margin-right:10px;
+
+}
+
+.EditArea ul li {
+	float:left;
+	display:inline;
+	margin-right:22px;
+	margin-top:5px;
+	margin-bottom:3px;
+
+}
+
+.EditArea ul li label {
+	color: #666666;
+	font-weight:bold;
+}
+
+
+.clear {
+	display:block !important; 
+	float:none !important; 
+	height:1px !important;
+	margin:0 !important; 
+	overflow:hidden !important; 
+	visibility:hidden !important; 
+	clear:both !important;
+}
+
+#edit-visita{
+	float:none;
+	padding:10px 20px 20px 20px;	
+}
+
+#edit-visita li{
+	display:inline-table;
+	width:25%;	
+	float:none;
+	vertical-align:middle;
+}
+
+#edit-visita strong{
+	color:#555555;
+}
+
+#edit-visita~div{
+	width:67%;	
+}
+
+.EditArea .trEditHeader
+{
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: #C6C6C4;
+	margin-bottom:10px;
+}
+
+.EditArea .trEditFooter
+{
+	margin-bottom:5px;
+}
+
+.EditArea table 
+{
+	width:100%;
+	border-collapse: collapse;
+}
+
+.EditArea .divHeader
+{
+background-color:#CCCCCC;
+margin-bottom:10px;
+}
+
+.EditArea #tblEditArea
+{
+	margin-bottom:20px;
+	border-collapse: collapse;
+	margin-left:10px;
+	margin-right:10px;
+	width:99%;
+	width:97%\9;
+}
+
+.EditArea #tblEditArea h2 {
+	margin-top:10px;
+}
+
+.EditArea #tblEditArea td
+{
+    	padding:2px 2px 2px 2px;
+}
+
+.EditArea #tblEditArea .trField
+{
+    padding-bottom:5px;
+}
+
+.EditArea #tblEditArea .trField .tdFieldHeader
+{
+	float:left;
+	width:120px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+	padding-top:3px;
+}
+
+.tdFieldHeader a {
+	color:gray;
+	font-weight:bold;
+}
+
+.tdFieldHeader cb fl a {
+	color:#555555;
+	font-weight:bold;
+	padding-bottom:5px;
+}
+
+
+.EditArea #tblEditArea .trField .tdFieldHeader2
+{
+	float:left;
+	width:220px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+}
+
+
+.EditArea #tblEditArea .trField .tdField
+{
+	padding-left:5px;
+	float:left;
+	color:Black;
+}
+
+.EditArea #tblEditArea .trField .tdField input
+{
+	width:24px;
+}
+
+
+
+
+.EditArea .tdField {
+	padding:4px 0 4px 0;
+}
+ 
+
+DropDownList{
+	border:1px #CCCCCC solid;	
+	
+}
+
+
+/*-------------------------------------------------*/
+.EditArea #tblEditArea2
+{
+	margin-bottom:20px;
+	BORDER-RIGHT: #ccddef 1px solid; BORDER-LEFT: #ccddef 1px solid; BORDER-BOTTOM: #ccddef 1px solid; border-top: ##ccddef 2px solid;
+	border-collapse: collapse;
+}
+
+.EditArea #tblEditArea2 td
+{
+    	padding:2px 2px 2px 2px;
+}
+
+.EditArea #tblEditArea2 .trField
+{
+    padding-bottom:5px;
+}
+
+.EditArea #tblEditArea2 .trField .tdFieldHeader
+{
+	float:left;
+	width:120px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+	padding-top:3px;
+}
+
+.EditArea #tblEditArea2 .trField .tdFieldHeader2
+{
+	float:left;
+	width:100px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+}
+
+
+.EditArea #tblEditArea2 .trField .tdField
+{
+	padding-left:5px;
+	float:left;
+	color:Black;
+}
+
+.EditArea #tblEditArea2 .trField .tdField input
+{
+	width:120px;}
+
+
+.formulario{
+	border:1px #CCCCCC solid;
+	border-radius:2px;
+	height:20px\9;
+	padding:3px;
+	font-size:11px;}
+
+/*-------------------------------------------------*/
+
+.FieldShopping
+{
+width:250px;
+}
+
+
+.EditArea .divEditArea 
+{
+	BORDER: #C0C0C0 1px solid;
+	border:none\9;
+	border-collapse: collapse;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+
+
+
+.EditArea .divEditArea .trField
+{
+    white-space: nowrap;
+    margin-top:2px;
+    margin-bottom:2px;
+	padding:0px 2px 0px 0px;
+}
+
+.EditArea .divEditArea
+{
+	margin-bottom:20px;
+}
+
+.EditArea .divEditArea .trField .tdFieldHeader
+{
+	width:130px;
+	color:Gray;
+	font-weight:bold;
+	text-align:right;
+	padding-top:3px;
+    float:left;
+}
+
+.EditArea .divEditArea .divHeader
+{
+    background-color:#C6C6C4;
+    margin-bottom:10px;
+}
+
+
+.EditArea .divEditArea .trField .tdField
+{
+	padding-left:3px;
+	color:Black;
+}
+
+..EditArea .divEditArea .divBottom
+{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+
+
+
+/******************************* RELATORIOS **************************/
+
+
+
+
+
+/*
+
+.tblReportFilterArea .trField .tdFieldHeader
+{
+	float:left;
+	color:Black;
+	font-weight:bold;
+	text-align:left;
+}
+
+.tblReportFilterArea .trField .tdField
+{
+	padding-left:10px;
+	float:left;
+	color:Black;
+}
+
+*/
+
+.tblReportFilterArea
+{
+	width:100%;
+	vertical-align:top;
+}
+
+
+.tblReportFilterArea #divLojas
+{
+	background-color:#F0F0F0;
+	width:42%;
+	float:left;
+	border:1px #C0C0C0 solid;
+	margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+
+
+
+.tblReportFilterArea #tblRegioes
+{
+	border:1px #C0C0C0 solid;
+	width:100%;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#tblRegioes td {
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+
+}
+
+.tblReportFilterArea #divPromotores
+{
+	background-color:#CCCCCC;
+	border-color:#CCCCCC;
+	width:49%;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+
+.tblReportFilterArea #divProdutos
+{
+	background-color:#F0F0F0;
+	width:75%;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	border:1px solid #C0C0C0;
+}
+
+
+.tblReportFilterArea #divLojas table
+{
+	/*background-color:Black;*/
+}
+
+.tblReportFilterArea #divLojas td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+.FieldCell input
+{
+	width:150px;
+
+}
+
+.menu .bot {
+}
+
+.space{
+	clear: both;
+	height: 35px;
+}
+
+.Botao
+{
+	margin-bottom: 4px; 
+	font-family:Arial, Helvetica, sans-serif;	
+	font-size:xx-small; 
+	font-weight:bold;
+	color:gray;
+	text-transform:uppercase;
+	padding:2px 5px 2px 5px;
+	float:left;
+	border:1px solid #CDCECF;
+	margin-right:10px;
+	background-image:url('../../imagens/Itaipava/bg_botoes.png');
+	background-repeat:repeat-x;
+	}
+	}
+
+
+/*
+#2461BF
+#333333
+#D1DDF1
+#EFF3FB
+#DEE8F5
+#FFE401
+
+*/
+
+.Roteiro
+{
+	background-color:#FFFFFF;
+	height:200px;
+	color:Black;
+	font-weight:bold;
+	clear:both;
+	margin-left:10px;
+	margin-right:10px;
+	
+}
+
+.Roteiro label
+{
+	color:Gray;
+}
+
+
+.LinkLimpar
+{
+	float:right;
+	color:#666666;
+	vertical-align:bottom;
+	margin-right:5px;
+}
+
+.Roteiro span
+{
+	float:left;
+	margin-left:5px;
+}
+
+.PanelDia
+{
+	background-color:#F0F0F0;
+	height:180px;
+	width:32%;
+	float:left;
+	margin-right:2px;
+	color:Black;
+	margin-right:8px;
+	padding:10px;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px #CCCCCC solid;
+}
+
+.PanelMes
+{
+	background-color:#F0F0F0;
+	height:180px;
+	height:191px\9;
+	width:32%;
+	width:26%\9;
+	float:left;
+	color:Black;
+	margin-right:8px;
+	padding:10px;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px #CCCCCC solid;
+
+
+}
+.PanelDiaSemana
+{
+	background-color:#F0F0F0;
+	height:180px;
+	width:27%;
+	width:20%\9;
+	float:left;
+	color:Black;
+	padding:10px;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px #CCCCCC solid;
+
+
+}
+
+.Teste
+{
+	background-color:#333333;
+}
+
+
+
+.VerRoteiro
+{
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	width:83%\9;
+}
+
+.VerRoteiro table
+{
+	color:Black;
+	width:95%;
+}
+
+
+.PaginateControl
+{
+	background-color:White;
+	margin-top:10px;
+	margin-left:21px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:#BAA00F;
+	font-weight:bold;
+	font-size:x-small;
+	text-align:right;
+	width:28%;
+}
+
+.PaginateControl td a{
+	color:#A60B16;
+
+}
+
+#divLojasRoteiro 
+{
+	margin-top:47px;
+	margin-top:10px\9;	
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divImportRoteiro 
+{
+	background-color:#CCCCCC;
+	border-color:#CCCCCC;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 20px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divLojasRoteiro table
+{
+	/*background-color:Black;*/
+}
+
+#divLojasRoteiro td
+{
+	padding: 5px 5px 5px 5px;
+
+
+}
+
+
+
+#divLojasRoteiro #tdProcurar
+{
+	background-color:#CCCCCC;
+	width:33%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#tdProcurar input
+{
+	float:left;
+	vertical-align:middle;
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+	width:150px;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	margin-right:10px;
+	
+}
+
+#divLojasRoteiro #tdProcuraLoja
+{
+
+	width:50%;
+	margin-right:2px;
+	vertical-align:top;
+}
+
+#tdProcuraLoja input
+{
+	vertical-align:middle;
+	margin-top: 4px; 
+	margin-bottom: 4px; 
+	font-family: Verdana,Arial,Helvetica; 
+	font-size:xx-small; 
+	text-transform:uppercase;
+
+	
+}
+
+#divLojasRoteiro #tdListaLoja
+{
+
+	width:50%;
+	margin-right:2px;
+	vertical-align:top;
+	height:200px;
+}
+
+#tdListaLoja div
+{
+	height:300px;
+	overflow:auto;
+	margin-top:10px;
+}
+
+.imgBtnAdd
+{
+	border:0;
+}
+
+
+.ListArea {
+	margin-left:10px; 
+	margin-right:10px; 
+	width:79%\9;
+}
+
+#AreaPerguntaPesquisa{
+	width:80%;
+	padding-left:20px;
+}
+
+/***************** BOX PESQUISA LISTA PRODUTOS *********************/
+#AdicionarProdutoPesquisa
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPesquisa
+{
+	width:48%;
+	background-color:#CCCCCC;
+	border-color:#CCCCCC;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:left;
+	height:290px;
+}
+
+#AdicionarProdutoPesquisa table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPesquisa td
+{
+	width:33%;
+}
+#AdicionarProdutoPesquisa select
+{
+	width:90%;
+}
+#AdicionarProdutoPesquisa input
+{
+	float:right;
+}
+#AreaProdutoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPesquisa .ListaItens
+{
+	height:285px;
+}
+
+#AreaProdutoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:285px;
+}
+
+/***************** BOX PERGUNTA LISTA PRODUTOS *********************/
+
+#AreaRespostasPergunta
+{
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	margin-left:11px;
+	float:left;
+	
+}
+
+.gridRespostas {
+	padding:5px;
+}
+
+#AdicionarProdutoPergunta
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+
+#AdicionarProdutoPergunta table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPergunta td
+{
+	width:25%;
+}
+#AdicionarProdutoPergunta select
+{
+	width:90%;
+}
+#AdicionarProdutoPergunta input
+{
+	float:right;
+}
+#AreaProdutoPergunta h4
+{
+	margin-bottom:4px;
+}
+
+
+#AreaProdutoPergunta .ListaItens
+{
+	height:335px;
+}
+
+#AreaProdutoPergunta .ListaItens div
+{
+	overflow:auto;
+	height:335px;
+}
+
+/***************** BOX PROMOTOR LISTA PRODUTOS *********************/
+
+
+#AdicionarProdutoPromotor
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AreaProdutoPromotor
+{
+	width:100%;
+	background-color:#CCCCCC;
+	border-color:#CCCCCC;
+	border-style:solid;
+	border-width:thin;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	height:268px;
+}
+
+#AdicionarProdutoPromotor table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarProdutoPromotor td
+{
+	width:33%;
+}
+#AdicionarProdutoPromotor select
+{
+	width:90%;
+}
+#AdicionarProdutoPromotor input
+{
+	float:right;
+}
+#AreaProdutoPromotor h4
+{
+	margin-bottom:4px;
+}
+
+#AreaProdutoPromotor .ListaItens
+{
+	height:135px;
+}
+
+#AreaProdutoPromotor .ListaItens div
+{
+	overflow:auto;
+	height:135px;
+}
+
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#AdicionarSegmentoPesquisa
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaSegmentoPesquisa
+{
+	width:48%;
+	background-color:#CCCCCC;
+	border:1px #DDDDDD solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	margin-bottom:20px;
+	float:right;
+	margin-left:10px;	
+	height:300px;	
+}
+
+#AdicionarSegmentoPesquisa table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarSegmentoPesquisa td
+{
+	width:33%;
+}
+#AdicionarSegmentoPesquisa select
+{
+	width:100%;
+}
+#AdicionarSegmentoPesquisa .txtCidade
+{
+	width:100%;
+}
+#AdicionarSegmentoPesquisa .BotaoAdicionar
+{
+	float:right;
+	width:100px;
+	border:1px #CDCECF solid;
+	}
+#AdicionarSegmentoPesquisa h4
+{
+	margin-bottom:4px;
+}
+
+#AreaSegmentoPesquisa .ListaItens
+{
+	height:200px;
+}
+
+#AreaSegmentoPesquisa .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+/***************** BOX PESQUISA LISTA SEGMENTOS *********************/
+#RoteiroPeriodo
+{
+	width:100%;
+	background-color:#CCCCCC;
+	border:1px #DDDDDD solid;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+}
+
+#RoteiroPeriodo h4
+{
+    color:Black;
+}
+
+#RoteiroPeriodo table
+{
+    background-color:#CCCCCC;
+}
+
+#RoteiroPeriodo table td
+{
+    text-align:center;
+}
+
+.Roteiro_Dia
+{
+    background-color:#CCCCCC;
+    /*writing-mode: tb-rl; filter: flipH() flipV();*/
+}
+
+.Roteiro_Loja
+{
+	background-color: #F4F480;
+	text-align:left;
+}
+
+.Roteiro_lojaAlt
+{
+    background-color:#F5F5A1;
+    text-align:left;
+}
+
+.Roteiro_LojaDiaAlt
+{
+    background-color:#CCCCCC;
+    
+}
+
+.Roteiro_LojaDia
+{
+    background-color:#CCCCCC;
+}
+
+.Roteiro_DiaAlt
+{
+    background-color:#CCCCCC;
+    /*writing-mode: tb-rl; filter: flipH() flipV();*/
+    /*border: solid 1px black;*/
+    color:Black;
+}
+
+.Roteiro_LojaHeader
+{
+    background-color:#CCCCCC;
+    color:black;
+    font-weight:bold;
+        
+}
+/***************** BOX VISITA PRODUTOS *********************/
+
+#AreaVisitaProdutos
+{
+	width:100%;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	height:300px;	
+}
+
+#AreaVisitaProdutos .Filtro
+{
+
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaVisitaProdutos .PaginateControl a
+{
+    font-weight:bold;
+    color:Black;
+}
+
+/***************** BOX PERGUNTA LOJAS *********************/
+#AdicionarLojaPergunta
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaLojaPergunta
+{
+	width:78%;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	margin-left:10px;
+	height:300px;	
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	
+
+}
+
+#AreaLojaPergunta h2 {
+	margin-bottom:10px;
+	margin-top:10px;
+
+	
+}
+
+
+#AdicionarLojaPergunta table
+{
+	width:100%;
+	color:Black;
+}
+#AdicionarLojaPergunta select
+{
+	width:100%;
+}
+#AdicionarLojaPergunta .txtCidade
+{
+	width:100%;
+}
+#AdicionarLojaPergunta .BotaoAdicionar
+{
+	float:right;
+	width:150px;
+}
+#AdicionarLojaPergunta h4
+{
+	margin-bottom:4px;
+}
+
+
+
+#AreaLojaPergunta .ListaItens
+{
+	height:200px;
+}
+
+#AreaLojaPergunta .ListaItens div
+{
+	overflow:auto;
+	height:200px;
+}
+
+
+
+#tblEditAcao
+{
+    width:100%;
+    background-color:#F0F0F0;
+}
+
+.tblAbono
+{
+	width:100%;
+}
+
+.tblAbono label
+{
+    margin-left:10px;
+	width:200px;
+	border:none;
+}
+
+
+#tblEditAcao td
+{
+    width:33%;
+}
+
+/********************************** EXPORTACAO *****************************/
+
+
+
+.ExportArea
+{
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	width:100%;
+	margin-bottom:20px;
+	padding-bottom:20px;
+	vertical-align:top;
+}
+
+.ExportArea #txtDataInicial
+{
+    width:80px;
+}
+
+.ExportArea #txtDataFinal
+{
+    width:80px;
+}
+
+
+.ExportArea .tblExportFilterArea select
+{
+    width:100%;
+    height:91px;
+}
+
+.ExportArea .tblExportFilterArea table
+{
+    width:100%;
+}
+
+.tblExportFilterArea
+{
+	width:100%;
+	vertical-align:top;
+}
+
+
+.tblExportFilterArea #divLojas
+{
+	float:left;
+	width:310px;
+	width:320px\9;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	margin-right:10px;
+	border:1px solid #DDDDDD;
+	
+}
+
+.tblExportFilterArea #tblRegioes
+{
+	width:80%;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	text-align:left;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+}
+
+.tblExportFilterArea #divPromotores
+{
+	width:310px;
+	width:320px\9;
+	float:left;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px solid #DDDDDD;
+}
+
+.tblExportFilterArea #divPromotores td{
+	padding-top:6px;
+}
+
+
+.tblExportFilterArea #divProdutos
+{
+	width:310px;
+	width:320px\9;
+	height:375x;
+	height:294px\9;
+	margin-right:10px;
+	float:left;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px solid #DDDDDD;
+}
+
+.tblExportFilterArea #divProdutos td {
+	padding-top:6px;
+}
+
+.tblRelatorioSalvo
+{
+	width:450;
+	vertical-align:top;
+}
+#StatusLoja div
+{
+    width:30%;
+    float:left;
+}
+
+.tblExportFilterArea #divLojas table
+{
+	/*background-color:Black;*/
+}
+
+.tblExportFilterArea #divLojas td
+{
+	padding-top:6px;
+}
+
+
+
+/********************************** FORMULÁRIO VISITA *****************************/
+
+#FormularioVisita
+{
+	background-color:#CCCCCC;
+	border-color:#ccddef;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:10px;
+}
+
+
+#DadosVisita
+{
+    width:100%;
+}
+
+#PerguntasVisitas
+{
+	width:92%;
+	width:78%\9;	
+	float:left;
+	border:1px solid #DDDDDD;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	margin-left:10px;	
+	height:300px;	
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');		
+}
+
+#ProdutosVisita
+{
+	width:45%;
+	width:38%\9;
+	float:left;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	margin-left:10px;	
+	height:300px;
+	border:1px solid #DDDDDD;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');		
+}
+
+
+#PesquisasVisita
+{
+	width:45%;
+	width:38%\9;
+	float:left;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	margin-left:10px;	
+	height:300px;	
+	border:1px solid #DDDDDD;	
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	
+	
+}
+
+
+.AcaoArea
+{
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	height:100%;
+	height:1752px;
+	margin-left:15px;
+	width:90%;
+	width:79%\9;	
+	border:1px solid #DDDDDD;
+	
+}
+
+.AcaoArea .Secao
+{
+	margin-top:10px;
+	padding: 0px 0px 0px 0px;
+	font-family:Arial;
+	color:black;
+	font-size:x-small;
+	width:200px;
+	text-align:left;
+	float:left;
+	margin-left:5px;
+
+}
+
+.AcaoArea .Secao .SecaoHeader
+{
+
+	color:#999999;
+	width:100%;
+	margin-top:0px;
+}
+
+.AcaoArea .Secao .Acoes
+{
+	background-color:#FFFFFF;
+	padding:5px;
+	border:1px solid #CDCECF;
+	margin-right:4px;
+	margin-left:4px;
+}
+
+
+
+/**************************** FORMULARIO DE PRODUTOS **************************/
+
+#divFormularioProdutos table {width:100%;}
+#divFormularioProdutos table select {border:1px solid #CCCCCC; border-radius:2px 2px 2px 2px; padding:3px;}
+#divFormularioProdutos table input {border:1px solid #CCCCCC; border-radius:2px 2px 2px 2px; padding:3px;}
+
+#divFormularioProdutos table thead tr {height:20px;}
+#divFormularioProdutos table thead tr th {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thProduto {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thStatus {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thFornecedor {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table thead tr .thSubCategoria {background-color:#CCCCCC;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tbody .trAlternate td {background-color:white;white-space:nowrap;color:black;vertical-align:middle;}
+#divFormularioProdutos table tbody .trAlternate .tdProduto {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdStatus {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdFornecedor {background-color:white;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trAlternate .tdSubCategoria {background-color:white;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tbody .trNormal td {background-color:#CCCCCC;white-space:nowrap;color:black;vertical-align:middle;}
+#divFormularioProdutos table tbody .trNormal .tdProduto {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdStatus {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdFornecedor {background-color:#CCCCCC;white-space:nowrap;color:black;}
+#divFormularioProdutos table tbody .trNormal .tdSubCategoria {background-color:#CCCCCC;white-space:nowrap;color:black;}
+
+#divFormularioProdutos table tfoot tr td {background-color:#CCCCCC;white-space:nowrap;color:white;}
+
+#divFormularioProdutos table tbody tr .td10 {background-color:#CCCCCC;}
+#divFormularioProdutos table tbody tr .td11 {background-color:#CCCCCC;}
+#divFormularioProdutos table tbody tr .td01 {background-color:white;}
+#divFormularioProdutos table tbody tr .td00 {background-color:white;}
+
+/************************************* IMAGE ROTATOR **************************************************/
+
+.ImageRotator {text-align:center; padding:1px\9; width:102px; border-left:1px solid #C6C6C4; border-right:1px solid #C6C6C4;}
+.ImageRotator .ImageRotatorTable {height:15px;border: none 0px; padding:0px 0px 0px 0px;width:102px; width:100px\9; top:0px;position:relative;font-family:Arial;color:White; z-index:1;}
+.ImageRotator .ImageRotatorTable tr {height:15px;}
+.ImageRotator .ImageRototorImg {width:100px;}
+.ImageRotator .tdSeparator {width:3px;}
+.ImageRotator .tdButton {background-color:#C6C6C4;width:20px; border:1px #FFFFFF solid; border-left:none\9; border-top:none\9; border-bottom:none\9; padding:0px;}
+.ImageRotator .tdBtRev {background-color:#617E93;width:18px; width:20px\9; border:1px #FFFFFF solid; border-left:none\9; border-top:none\9; border-bottom:none\9; background-image:url('../../imagens/player_rev.png');}
+.ImageRotator .tdBtRev:hover { background-image:url('../../imagens/player_rev_over.png');}
+
+.ImageRotator .tdCaption {background-color:#C6C6C4; border:1px solid #FFFFFF; border-left:none\9; border-top:none\9; border-bottom:none\9; padding:0px;}
+.ImageRotator .tdCaption span {color:#FFFFFF;}
+    
+.ControlPergunta .ImageRotator {background-color:Black;text-align:center;padding:1px 1px 1px 1px;width:502px;}
+.ControlPergunta .ImageRotator .ImageRotatorTable {height:15px;border: none 0px; padding:0px 0px 0px 0px;width:500px;font-family:Arial;color:White; z-index:1;}
+.ControlPergunta .ImageRotator .ImageRotatorTable tr {height:15px;}
+.ControlPergunta .ImageRotator .ImageRototorImg {width:500px;}
+.ControlPergunta .ImageRotator .tdSeparator {width:3px;}
+.ControlPergunta .ImageRotator .tdButton {background-color:black;width:15px;height:15px;padding:0px 0px 0px 0px;}
+.ControlPergunta .ImageRotator .tdCaption {background-color:Gray;}
+   
+/******************************************* IMAGE UPLOADER ****************************************************/
+
+.ImageUploader {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 171px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 29px; PADDING-TOP: 1px;float:left;
+}
+.ImageUploader .normal {
+	FILTER: alpha(opacity=100); WIDTH: 150px; opacity: 1;
+	border:2px #AABDD4 solid;
+}
+.ImageUploader .troca {
+	FILTER: alpha(opacity=30); WIDTH: 150px; opacity: 0.3
+}
+
+.ImageUploader img
+{
+	border:1px #FACB01 solid; WIDTH: 150px;
+	border-color:#FACB01;
+	border-width:1px !Important;
+}
+
+.ImageUploader .ImagemTrocar
+{
+	 width:150px;
+}
+
+.ImageUploader .ImagemTrocar input
+{
+	width:152px;
+	height:27px;
+	margin-bottom:2px;
+	background-color:#0c7ea3;
+	border:2px #2392ae solid;	
+	color:#FFFFFF;
+	padding-bottom:3px;
+}
+
+.btn_edit_cancel
+{
+	width:50%;
+	width:52%\9;
+	color:#0C7EA3;
+	float:left\9;
+	border-right:1px #AABDD4 solid;
+}
+
+.btn_edit_ok
+{
+	color:#0C7EA3;
+	float:left\9;
+	padding-left:8px;
+}
+
+
+.ImageUploader #SpanUpload
+{
+	 display:none;width:150px;background-color:Gray;
+}
+
+.bt_sel_img{
+	background:#CCC;
+	color:#0C7EA3;
+	cursor:pointer;
+	height:28px; 
+	width:150px; 
+	margin-bottom:2px; 
+	margin-bottom:0px\9;
+}
+
+
+/* SEGMENTAÇÂO */
+
+
+#AdicionarSegmento
+{
+	background-color:#C6C6C4;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+
+}
+
+#AdicionarSegmento table
+{
+	width:100%;
+	color:Black;
+	padding:7px;
+}
+#AdicionarSegmento td
+{
+	width:25%;
+}
+#AdicionarSegmento select
+{
+	width:200px;
+}
+#AdicionarSegmento input
+{
+	float:right;
+}
+
+
+#AreaSegmentacao
+{
+	width:78%;
+	background-color:#F0F0F0;
+	border:1px #D4D4D4 solid;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	margin-top:10px;
+	margin-left:8px;
+	height:468px;
+}
+
+#AreaSegmentacao .ListaItens
+{
+	height:180px;
+}
+
+
+#AreaLocalizacao
+{
+	width:77%;
+	background:-moz-linear-gradient(center bottom , #E8E8E8 0%, #F2F2F1 50%) repeat scroll 0 0 #F5F5F4;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F2F2F1', EndColorStr='#E8E8E8');
+	border:1px #D4D4D4 solid;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin:0 0px 0px 21px;
+}
+
+#AdicionarLocalizacao
+{
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+	padding:10px;
+
+}
+
+#AreaLocalizacao .ListaItens
+{
+	height:180px;
+}
+
+#AdicionarLocalizacao table
+{
+	width:100%;
+	color:Black;
+	background:#D1D1D1;
+	padding-top:10px;
+	
+}
+#AdicionarLocalizacao td
+{
+	width:40%;
+	padding:0px 20px 10px 20px;
+
+}
+#AdicionarLocalizacao select
+{
+	width:90%;
+
+}
+#AdicionarLocalizacao input
+{
+	float:left;
+}
+
+#AdicionarLocalizacao .tdFieldHeader
+{
+	text-align:left;
+	width:150px;
+}
+
+#AdicionarLocalizacao .tdField
+{
+	text-align:left;
+}
+
+
+.divFoto
+{
+	width:400px;
+}
+
+
+#ctl00_ContentPlaceHolder1_cboIDCargo
+{
+	width:140px;
+}
+
+
+#AreaSegmentacaoUsuario #AreaSegmentacao 
+{
+	width:100%;
+}
+
+
+#AreaVisitaEntidades
+{
+	width:98%;
+	margin-top:10px;
+	padding: 10px 10px 10px 10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	margin-bottom:20px;
+	height:300px;	
+}
+
+#AreaVisitaEntidades .Filtro
+{
+	background-color:#CCCCCC;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	clear:both;
+}
+
+#AreaVisitaEntidades .PaginateControl a
+{
+    font-weight:bold;
+    color:Black;
+}
+
+#cartao_xm{
+	position:absolute;
+	z-index: 9999; 
+	width:816px;
+	height:581px;
+	left:26%;
+	top:102px;	
+}
+
+.borda_cartao{
+	border:1px #CCCCCC solid;
+}
+
+#divLogin
+{
+
+    background:url('../../imagens/Itaipava_imgs/bg_login_ita.png')  no-repeat scroll center 1px;
+	height:480px; 
+    height:610px\9;   
+    padding-top:186px;   
+    overflow:hidden;
+	width:640px;
+    width:400px\9;
+    position:relative;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -320px; 
+	margin-top:140px;
+	margin-top:-100px\9;
+}
+
+#divLogin table{
+	position:absolute;
+	left:27%;
+	position:relative\9;
+	left:-5px\9;	
+}
+       
+#divLogin tr {
+	text-align:center;
+}   
+
+#divLogin .formulario {
+	margin-bottom:5px;
+	margin-top:5px;
+	height:24px;
+	height:22\9;
+	width:177px;
+}  
+
+#divLogin input[type=checkbox] {
+	margin-right:5px;
+	vertical-align:text-top;
+	
+} 
+
+#divLogin label {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+} 
+
+.bt_ok_login{
+	margin-right:72px;
+	margin-top:3px;
+	width:110px;
+	height:30px;
+	background: #cc0000; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cc0000 0%, #a50500 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc0000), color-stop(100%,#a50500)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cc0000 0%,#a50500 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cc0000 0%,#a50500 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cc0000 0%,#a50500 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cc0000 0%,#a50500 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#a50500',GradientType=0 ); /* IE6-9 */
+	color:#FFF;	
+}
+    
+    
+#divHome
+{
+    visibility:visible;
+    vertical-align:middle; 
+    height:200px; 
+    padding-top:200px;
+    width:73%\9;
+}
+
+/******************************************** XM REPORT FILTERS **********************************************/
+
+
+.XMReportFilters
+{
+	width:100%;
+	margin-top:10px;
+	padding: 5px 5px 5px 5px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.XMReportFilters .Header {
+	padding:5px;
+	font-weight:bold;
+	background-color:#DDDDDE;
+}
+
+#ContentPlaceHolder1_btnVisualizar {
+	margin-left:15px;
+	clear:left;	
+}
+
+#ContentPlaceHolder1_XMReportFilters1_pnlHeader {
+	margin-left:15px;
+}
+
+.XMReportFilters .Report_Item
+{
+	width:20%;
+	width:18%\9;
+	float:left;
+	margin-top:10px;
+	margin-right:10px;
+	margin-left:15px;	
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+.XMReportFilters .DivVendedores
+{
+	width:30%;
+	float:left;
+	background:blue;
+	margin-top:10px;
+	margin-right:10px;
+	margin-left:15px;	
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+}
+
+#divItem_IDVENDEDOR {
+	width:31%;
+	width:25%\9;
+	margin:10px 0px 0px 15px;
+	
+}
+
+
+.XMReportFilters .Report_Item select
+{
+	width:100%;
+	border:1px #CDCECF solid;
+}
+
+.XMReportFilters .Datepicker
+{
+	width:18%;
+	width:15%\9;
+	float:left;
+	margin-top:10px;
+	font-family:Arial;
+	color:Black;
+	font-size:x-small;
+	text-align:left;
+	border:1px #CDCECF solid;
+	margin-right:10px;
+}
+
+.container-fotos{
+	width:96%;
+	margin-left:20px;
+	border:1px solid #CDCECF;
+	background-color:#F8F8F8;
+}
+
+.container-fotos h2{
+	margin:0px;	
+	padding:5px;
+	font-size:12px;
+	background:#C6C6C4;
+	font-weight:normal;		
+	border-bottom:1px #C2C2C2 solid;
+	border-top:1px #C2C2C2 solid;
+}
+
+.container-fotos b{
+	height:18px;
+	line-height:18px;	
+	font-size:12px;
+	display:inline-block;
+}
+
+.container-fotos .album .figure{
+	display:inline-block;
+	display:inline\9;	
+	margin:0px;
+	overflow:hidden;
+	width:120px;
+	height:116px;
+	background-color:#FCFCFC;
+	border:2px #CCCCCC solid;
+    position:relative;
+    margin:0px 8px 8px 0px;
+    text-align:center;  		
+}
+
+.container-fotos .album .figure img{
+	border:2px #FFFFFF solid;
+	text-align:center;
+	width:120px;
+	height:90px;
+}
+
+
+.container-fotos .album .figure a{
+	cursor:auto;
+	display:block;
+}
+
+.container-fotos .listas{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+.container-fotos .listas .fotos{
+	padding:5px;
+	border-bottom:1px #C2C2C2 solid;
+	background-color:#FFFFFF;
+	}	
+	
+.container-fotos .listas .fotos input{
+	vertical-align:text-top;
+}	
+
+.container-fotos .listas .fotos .abrir-fotos{
+	cursor:pointer;
+	width:98%;
+	margin:0px;	
+	font-weight:normal;
+	display:inline-block;
+	color:#4B94C1;	
+	vertical-align:middle;
+}
+
+.container-fotos .album .figure .rotate{
+	position:absolute;
+	right:-1px;
+	top:64px;
+	height:24px;
+	width:32px;
+	height:32px;	
+	background:url('../../imagens/icones/rotate_icon.png') no-repeat scroll right center;
+}
+
+.album{
+	background-color:#EBEBEB;
+	margin-top:10px;
+	padding:5px;
+	display:none;	
+	color:#666666;
+}
+
+.container-fotos .botoes{
+	padding:10px 0px 5px 10px;
+	text-align:right;
+}
+
+.letreiro {
+   white-space: nowrap;
+   font-weight: normal;
+}
+
+.filtro-fotos{
+	list-style:none;
+}
+
+#busca-cargo{
+	width:auto;
+}
+
+#busca-cargo select[name=usuarios]{
+	width:auto;
+}
+

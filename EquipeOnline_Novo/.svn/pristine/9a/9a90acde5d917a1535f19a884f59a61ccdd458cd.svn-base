@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<help Name="Ajuda dos Sistemas EOL 2.0" ID="Ajuda_Sistemas_EOL.htm">
+  <help Name="Configurações" ID="1_tela_configuracoes.htm">
+    <help Name="Configurações Básicas" ID="1_tela_configuracoes.htm">
+      <help ID="4_grupos.htm" Name="Grupos">
+        <help ID="4_grupos_cadastro.htm" Name="Cadastro de Grupos"/>
+        <help ID="4_grupos_lista.htm" Name="Lista de Grupos"/>
+      </help>
+      <help ID="2_operadores_administradores.htm" Name="Operadores/Administradores">
+        <help ID="2_operadores_administradores_cadastro.htm" Name="Cadastro de Operadores/Administradores" url=""/>
+        <help ID="2_operadores_administradores_lista.htm" Name="Lista de Operadores/Administradores" url=""/>
+      </help>
+      <help ID="3_radios.htm" Name="Rádios">
+        <help ID="3_radios_cadastro.htm" Name="Cadastro de Rádios"/>
+        <help ID="3_radios_lista.htm" Name="Lista de Rádios"/>
+      </help>
+    </help>
+    <help Name="Configurações Especiais" ID="Configuracoes_Especiais.htm">
+      <help Name="Clientes" ID="Clientes.htm">
+        <help Name="Cadastro de Clientes" ID="Cadastro_Clientes.htm" />
+        <help Name="Lista de Clientes" ID="Lista_Clientes.htm" />
+      </help>
+      <help Name="Contingência" ID="contingencia.htm" />
+      <help Name="Mensagem Padrão" ID="Mensagens_Padrao.htm" />
+      <help Name="Numeração de Ordem de Serviço" ID="Numeracao_Ordem_Servico.htm" />
+      <help Name="Respostas" ID="Respostas.htm">
+        <help Name="Cadastro de Respostas" ID="Cadastro_Respostas.htm" />
+        <help Name="Subníveis de Respostas" ID="Cadastro_Respostas_Subniveis.htm" />
+      </help>
+      <help Name="Etapas" ID="etapas.htm" />
+    </help>
+  </help>
+  <help ID="0_definicoes.htm" Name="Definições" />
+  <help Name="Interface WAP" ID="Interface_WAP.htm" />
+  <help Name="Lista de Ordens de Serviço" ID="Lista_Ordens_Servico.htm">
+    <help Name="Detalhes da Ordem de Serviço" ID="Detalhes_Ordem_Servico.htm" />
+    <help Name="Exportação de Dados" ID="Exportacao_Dados.htm" />
+    <help Name="Tela de Recado Digital" ID="Tela_Recado_Digital.htm" />
+  </help>
+  <help Name="Nova Ordem de Serviço" ID="Nova_Ordem_Servico.htm">
+    <help Name="Agendar Ordem de Serviço" ID="Agendar_Ordem_Servico.htm" />
+  </help>
+  <help Name="Pastas" ID="Pastas.htm" />
+  <help Name="Calendário" ID="Calendario.htm" />
+  <help Name="Agendamento" ID="Agendamento.htm" />
+  <help Name="Nova O.S. Programada" ID="Nova_OS_Programada.htm" />
+  <help Name="Integração" ID="Integracao.htm">
+    <help Name="Importar arquivos de O.S." ID="importar.htm" />
+    <help Name="EOL Integrator 2.0" ID="eolintegrator.htm" />
+  </help>
+  <help Name="Relatórios" ID="Tela_Relatorios.htm" />
+  <help Name="Roteiro para Utilização da Interface WAP" ID="Roteiro_WAP.htm" />
+  <help ID="tela_login.htm" Name="Tela de Login" />
+</help>
+

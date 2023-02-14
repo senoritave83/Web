@@ -1,0 +1,94 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XMWeb
+</name>
+</assembly>
+<members>
+<member name="P:XMSistemas.Web.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:XMSistemas.Web.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_FirstPage_Text">
+	<summary>
+  Looks up a localized string similar to Primeiro.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_LastPage_Text">
+	<summary>
+  Looks up a localized string similar to Último.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_NextPage_Text">
+	<summary>
+  Looks up a localized string similar to Próximo.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_PageCount_Format">
+	<summary>
+  Looks up a localized string similar to (página {0} de {1}).
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_PreviousPage_Text">
+	<summary>
+  Looks up a localized string similar to Anterior.
+</summary>
+</member><member name="P:XMSistemas.Web.My.Resources.PageResources.Paginate_ResultsPage_Text">
+	<summary>
+  Looks up a localized string similar to Resultados:.
+</summary>
+</member><member name="T:XMSistemas.Web.My.Resources.PageResources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:XMSistemas.Web.Base.DataClass._setDateTimePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data padrão em data interna
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:XMSistemas.Web.Base.DataClass._getDateTimePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data interna em uma data padrão
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:XMSistemas.Web.Base.DataClass._getDatePropertyValue(System.String)">
+	<summary>
+ Função Responsável por tranformar a data interna em uma data padrão
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:XMSistemas.Web.Base.DataClass._getDateTimeDBValue(System.DateTime)">
+	<summary>
+ Função Responsável por transformar o valor gravado no SQL em formato string interno 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:XMSistemas.Web.Base.DataClass._setDateTimeDBValue(System.String)">
+	<summary>
+ Função Responsável por transformar o valor no formato string interno em um valor Date 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
